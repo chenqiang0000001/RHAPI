@@ -1,0 +1,145 @@
+2025-03-19 13:32:05,690 - test_login.py:[25] - [INFO] - ����������ִ�У�test_login
+2025-03-19 13:32:05,866 - test_login.py:[29] - [INFO] - ��ȡ���Ľ���ǣ����ݸ��³ɹ�, �����Ľ����:���ݸ��³ɹ�������token
+2025-03-19 13:36:56,506 - test_login.py:[23] - [INFO] - 本用例正在执行：test_login
+2025-03-19 13:36:56,679 - test_login.py:[27] - [INFO] - 获取到的结果是：数据更新成功, 期望的结果是:数据更新成功，返回token
+2025-03-19 13:56:35,576 - test_login.py:[21] - [INFO] - 本用例正在执行：test_login
+2025-03-19 13:56:35,747 - test_login.py:[25] - [INFO] - 获取到的结果是：数据更新成功, 期望的结果是:数据更新成功，返回token
+2025-03-19 13:57:08,413 - test_login.py:[21] - [INFO] - 本用例正在执行：test_login
+2025-03-19 13:57:08,439 - test_login.py:[25] - [INFO] - 获取到的结果是：用户不存在, 期望的结果是:数据更新成功，返回token
+2025-03-19 13:57:08,439 - test_login.py:[31] - [INFO] - 登录页面：test_login 断言失败，展开结果与预期不符
+2025-03-19 14:09:58,726 - test_login.py:[21] - [INFO] - 本用例正在执行：test_login
+2025-03-19 14:09:58,908 - test_login.py:[25] - [INFO] - 获取到的结果是：数据更新成功, 期望的结果是:数据更新成功，返回token
+2025-03-19 14:12:49,847 - test_login.py:[21] - [INFO] - 本用例正在执行：test_login
+2025-03-19 14:12:50,011 - test_login.py:[25] - [INFO] - 获取到的结果是：数据更新成功, 期望的结果是:数据更新成功，返回token
+2025-03-19 14:14:10,483 - test_login.py:[21] - [INFO] - 本用例正在执行：test_login
+2025-03-19 14:14:10,504 - test_login.py:[25] - [INFO] - 获取到的结果是：用户不存在, 期望的结果是:数据更新成功，返回token
+2025-03-19 14:14:10,504 - test_login.py:[31] - [ERROR] - 登录页面：test_login 断言失败，展开结果与预期不符
+2025-03-19 14:17:39,574 - test_login.py:[24] - [INFO] - 本用例正在执行：test_login。获取到的结果是：用户不存在, 期望的结果是:数据更新成功，返回token
+2025-03-19 14:17:39,575 - test_login.py:[30] - [ERROR] - 登录页面：test_login 断言失败，展开结果与预期不符
+2025-03-19 14:21:25,198 - test_login.py:[24] - [INFO] - 本用例正在执行：test_login。获取到的结果是：用户不存在, 期望的结果是:数据更新成功，返回token
+2025-03-19 14:21:25,202 - test_login.py:[30] - [ERROR] - 登录页面：test_login 断言失败，展开结果与预期不符
+2025-03-19 14:24:25,491 - test_login.py:[24] - [INFO] - 本用例正在执行：test_login。获取到的结果是：数据更新成功, 期望的结果是:数据更新成功，返回token
+2025-03-19 14:25:19,969 - test_login.py:[24] - [INFO] - 本用例正在执行：test_login。获取到的结果是：数据更新成功, 期望的结果是:数据更新成功，返回token
+2025-03-19 14:35:31,930 - test_login.py:[24] - [INFO] - 本用例正在执行：test_login。获取到的结果是：数据更新成功, 期望的结果是:数据更新成功，返回token
+2025-03-19 14:35:42,057 - test_login.py:[24] - [INFO] - 本用例正在执行：test_login。获取到的结果是：数据更新成功, 期望的结果是:数据更新成功，返回token
+2025-03-19 14:39:12,684 - test_login.py:[24] - [INFO] - 本用例正在执行：test_login。获取到的结果是：数据更新成功, 期望的结果是:数据更新成功，返回token
+2025-03-19 15:24:42,046 - test_login.py:[24] - [INFO] - 本用例正在执行：test_login。获取到的结果是：数据更新成功, 期望的结果是:数据更新成功，返回token
+2025-03-19 15:25:12,085 - test_login.py:[24] - [INFO] - 本用例正在执行：test_login。获取到的结果是：数据更新成功, 期望的结果是:数据更新成功，返回token
+2025-03-19 15:29:25,556 - test_login.py:[24] - [INFO] - 本用例正在执行：test_login。获取到的结果是：数据更新成功, 期望的结果是:数据更新成功，返回token
+2025-03-19 15:38:57,583 - test_login.py:[24] - [INFO] - 本用例正在执行：test_login。获取到的结果是：数据更新成功, 期望的结果是:数据更新成功，返回token
+2025-03-19 15:39:53,897 - test_login.py:[24] - [INFO] - 本用例正在执行：test_login。获取到的结果是：数据更新成功, 期望的结果是:数据更新成功，返回token
+2025-03-19 15:46:17,545 - test_login.py:[24] - [INFO] - 本用例正在执行：test_login。获取到的结果是：数据更新成功, 期望的结果是:数据更新成功，返回token
+2025-03-19 15:51:40,707 - main1.py:[20] - [ERROR] - 生成 Allure 报告时出现错误: Command '['pytest', 'test_login.py', '--alluredir=./AllureReport']' returned non-zero exit status 4.
+2025-03-19 15:51:40,707 - main1.py:[20] - [ERROR] - 生成 Allure 报告时出现错误: Command '['pytest', 'test_login.py', '--alluredir=./AllureReport']' returned non-zero exit status 4.
+2025-03-19 15:51:40,708 - zip_file.py:[23] - [INFO] - 成功将 AllureReport 压缩到 AllureReport.zip
+2025-03-19 15:51:40,708 - zip_file.py:[23] - [INFO] - 成功将 AllureReport 压缩到 AllureReport.zip
+2025-03-19 15:51:41,024 - main1.py:[42] - [ERROR] - 上传文件到钉钉失败，错误信息: 不合法的access_token
+2025-03-19 15:51:41,024 - main1.py:[42] - [ERROR] - 上传文件到钉钉失败，错误信息: 不合法的access_token
+2025-03-19 15:54:53,592 - main1.py:[124] - [ERROR] - 生成 Allure 报告时出现错误: Command '['pytest', 'test_login.py', '--alluredir=AllureData']' returned non-zero exit status 4.
+2025-03-19 15:54:53,592 - main1.py:[124] - [ERROR] - 生成 Allure 报告时出现错误: Command '['pytest', 'test_login.py', '--alluredir=AllureData']' returned non-zero exit status 4.
+2025-03-19 15:54:53,594 - zip_file.py:[23] - [INFO] - 成功将 AllureReport 压缩到 AllureReport.zip
+2025-03-19 15:54:53,594 - zip_file.py:[23] - [INFO] - 成功将 AllureReport 压缩到 AllureReport.zip
+2025-03-19 15:54:53,812 - main1.py:[146] - [ERROR] - 上传文件到钉钉失败，错误信息: 不合法的access_token
+2025-03-19 15:54:53,812 - main1.py:[146] - [ERROR] - 上传文件到钉钉失败，错误信息: 不合法的access_token
+2025-03-19 16:05:03,244 - main1.py:[26] - [ERROR] - 生成 Allure 报告时出现错误: Command '['pytest', 'test_login.py', '--alluredir=AllureData']' returned non-zero exit status 4.
+2025-03-19 16:05:03,244 - main1.py:[26] - [ERROR] - 生成 Allure 报告时出现错误: Command '['pytest', 'test_login.py', '--alluredir=AllureData']' returned non-zero exit status 4.
+2025-03-19 16:05:03,245 - zip_file.py:[23] - [INFO] - 成功将 AllureReport 压缩到 AllureReport.zip
+2025-03-19 16:05:03,245 - zip_file.py:[23] - [INFO] - 成功将 AllureReport 压缩到 AllureReport.zip
+2025-03-19 16:05:03,509 - main1.py:[48] - [ERROR] - 上传文件到钉钉失败，错误信息: 不合法的access_token
+2025-03-19 16:05:03,509 - main1.py:[48] - [ERROR] - 上传文件到钉钉失败，错误信息: 不合法的access_token
+2025-03-19 16:06:39,035 - test_login.py:[24] - [INFO] - 本用例正在执行：test_login。获取到的结果是：数据更新成功, 期望的结果是:数据更新成功，返回token
+2025-03-19 16:10:35,759 - main1.py:[26] - [ERROR] - 生成 Allure 报告时出现错误: Command '['pytest', 'test_login.py', '--alluredir=AllureData']' returned non-zero exit status 4.
+2025-03-19 16:10:35,759 - main1.py:[26] - [ERROR] - 生成 Allure 报告时出现错误: Command '['pytest', 'test_login.py', '--alluredir=AllureData']' returned non-zero exit status 4.
+2025-03-19 16:10:35,760 - zip_file.py:[23] - [INFO] - 成功将 AllureReport 压缩到 AllureReport.zip
+2025-03-19 16:10:35,760 - zip_file.py:[23] - [INFO] - 成功将 AllureReport 压缩到 AllureReport.zip
+2025-03-19 16:10:35,995 - main1.py:[48] - [ERROR] - 上传文件到钉钉失败，错误信息: 不合法的access_token
+2025-03-19 16:10:35,995 - main1.py:[48] - [ERROR] - 上传文件到钉钉失败，错误信息: 不合法的access_token
+2025-03-19 16:11:09,444 - main1.py:[26] - [ERROR] - 生成 Allure 报告时出现错误: Command '['pytest', 'D:/apiAutomation(ruiHui)/stCase/test_login.py', '--alluredir=AllureData']' returned non-zero exit status 4.
+2025-03-19 16:11:09,444 - main1.py:[26] - [ERROR] - 生成 Allure 报告时出现错误: Command '['pytest', 'D:/apiAutomation(ruiHui)/stCase/test_login.py', '--alluredir=AllureData']' returned non-zero exit status 4.
+2025-03-19 16:11:09,445 - zip_file.py:[23] - [INFO] - 成功将 AllureReport 压缩到 AllureReport.zip
+2025-03-19 16:11:09,445 - zip_file.py:[23] - [INFO] - 成功将 AllureReport 压缩到 AllureReport.zip
+2025-03-19 16:11:09,683 - main1.py:[48] - [ERROR] - 上传文件到钉钉失败，错误信息: 不合法的access_token
+2025-03-19 16:11:09,683 - main1.py:[48] - [ERROR] - 上传文件到钉钉失败，错误信息: 不合法的access_token
+2025-03-19 16:11:54,950 - test_login.py:[24] - [INFO] - 本用例正在执行：test_login。获取到的结果是：数据更新成功, 期望的结果是:数据更新成功，返回token
+2025-03-19 16:12:20,183 - test_login.py:[24] - [INFO] - 本用例正在执行：test_login。获取到的结果是：数据更新成功, 期望的结果是:数据更新成功，返回token
+2025-03-19 16:16:00,158 - main1.py:[31] - [ERROR] - 生成 Allure 报告时出现错误: Command '['pytest', '"D:/apiAutomation(ruiHui)/TestCase/test_login.py"', '--alluredir=AllureData']' returned non-zero exit status 1.
+2025-03-19 16:16:00,158 - main1.py:[31] - [ERROR] - 生成 Allure 报告时出现错误: Command '['pytest', '"D:/apiAutomation(ruiHui)/TestCase/test_login.py"', '--alluredir=AllureData']' returned non-zero exit status 1.
+2025-03-19 16:16:00,160 - zip_file.py:[23] - [INFO] - 成功将 AllureReport 压缩到 AllureReport.zip
+2025-03-19 16:16:00,160 - zip_file.py:[23] - [INFO] - 成功将 AllureReport 压缩到 AllureReport.zip
+2025-03-19 16:16:00,382 - main1.py:[53] - [ERROR] - 上传文件到钉钉失败，错误信息: 不合法的access_token
+2025-03-19 16:16:00,382 - main1.py:[53] - [ERROR] - 上传文件到钉钉失败，错误信息: 不合法的access_token
+2025-03-19 16:30:25,969 - main1.py:[31] - [ERROR] - 生成 Allure 报告时出现错误: Command '['pytest', '"D:/apiAutomation(ruiHui)/TestCase/test_login.py"', '--alluredir=AllureData']' returned non-zero exit status 1.
+2025-03-19 16:30:25,969 - main1.py:[31] - [ERROR] - 生成 Allure 报告时出现错误: Command '['pytest', '"D:/apiAutomation(ruiHui)/TestCase/test_login.py"', '--alluredir=AllureData']' returned non-zero exit status 1.
+2025-03-19 16:30:25,971 - zip_file.py:[23] - [INFO] - 成功将 AllureReport 压缩到 AllureReport.zip
+2025-03-19 16:30:25,971 - zip_file.py:[23] - [INFO] - 成功将 AllureReport 压缩到 AllureReport.zip
+2025-03-19 16:30:26,228 - main1.py:[53] - [ERROR] - 上传文件到钉钉失败，错误信息: 不合法的access_token
+2025-03-19 16:30:26,228 - main1.py:[53] - [ERROR] - 上传文件到钉钉失败，错误信息: 不合法的access_token
+2025-03-19 16:33:25,799 - main1.py:[31] - [ERROR] - 生成 Allure 报告时出现错误: Command '['pytest', '"D:/apiAutomationRH/TestCase/test_login.py"', '--alluredir=AllureData']' returned non-zero exit status 1.
+2025-03-19 16:33:25,799 - main1.py:[31] - [ERROR] - 生成 Allure 报告时出现错误: Command '['pytest', '"D:/apiAutomationRH/TestCase/test_login.py"', '--alluredir=AllureData']' returned non-zero exit status 1.
+2025-03-19 16:33:25,800 - zip_file.py:[23] - [INFO] - 成功将 AllureReport 压缩到 AllureReport.zip
+2025-03-19 16:33:25,800 - zip_file.py:[23] - [INFO] - 成功将 AllureReport 压缩到 AllureReport.zip
+2025-03-19 16:33:26,019 - main1.py:[53] - [ERROR] - 上传文件到钉钉失败，错误信息: 不合法的access_token
+2025-03-19 16:33:26,019 - main1.py:[53] - [ERROR] - 上传文件到钉钉失败，错误信息: 不合法的access_token
+2025-03-19 16:44:37,496 - main1.py:[31] - [ERROR] - 生成 Allure 报告时出现错误: Command '['pytest', '"D:/apiAutomationRH/TestCase/test_login.py"', '--alluredir=AllureData']' returned non-zero exit status 1.
+2025-03-19 16:44:37,496 - main1.py:[31] - [ERROR] - 生成 Allure 报告时出现错误: Command '['pytest', '"D:/apiAutomationRH/TestCase/test_login.py"', '--alluredir=AllureData']' returned non-zero exit status 1.
+2025-03-19 16:44:37,498 - zip_file.py:[23] - [INFO] - 成功将 AllureReport 压缩到 AllureReport.zip
+2025-03-19 16:44:37,498 - zip_file.py:[23] - [INFO] - 成功将 AllureReport 压缩到 AllureReport.zip
+2025-03-19 16:44:37,758 - main1.py:[53] - [ERROR] - 上传文件到钉钉失败，错误信息: 不合法的access_token
+2025-03-19 16:44:37,758 - main1.py:[53] - [ERROR] - 上传文件到钉钉失败，错误信息: 不合法的access_token
+2025-03-19 16:53:28,201 - main1.py:[32] - [ERROR] - 生成 Allure 报告时出现错误: Command '['pytest', '"D:/apiAutomationRH/TestCase/test_login.py"', '--alluredir=AllureData']' returned non-zero exit status 1.
+2025-03-19 16:53:28,201 - main1.py:[32] - [ERROR] - 生成 Allure 报告时出现错误: Command '['pytest', '"D:/apiAutomationRH/TestCase/test_login.py"', '--alluredir=AllureData']' returned non-zero exit status 1.
+2025-03-19 16:53:28,202 - zip_file.py:[23] - [INFO] - 成功将 AllureReport 压缩到 AllureReport.zip
+2025-03-19 16:53:28,202 - zip_file.py:[23] - [INFO] - 成功将 AllureReport 压缩到 AllureReport.zip
+2025-03-19 16:53:28,480 - main1.py:[49] - [ERROR] - 上传文件到钉钉失败，错误信息: 不合法的access_token
+2025-03-19 16:53:28,480 - main1.py:[49] - [ERROR] - 上传文件到钉钉失败，错误信息: 不合法的access_token
+2025-03-19 17:01:21,253 - main1.py:[32] - [ERROR] - 生成 Allure 报告时出现错误: Command '['pytest', '"D:/apiAutomationRH/testCase"', '--alluredir=AllureData']' returned non-zero exit status 1.
+2025-03-19 17:01:21,253 - main1.py:[32] - [ERROR] - 生成 Allure 报告时出现错误: Command '['pytest', '"D:/apiAutomationRH/testCase"', '--alluredir=AllureData']' returned non-zero exit status 1.
+2025-03-19 17:01:21,254 - zip_file.py:[23] - [INFO] - 成功将 AllureReport 压缩到 AllureReport.zip
+2025-03-19 17:01:21,254 - zip_file.py:[23] - [INFO] - 成功将 AllureReport 压缩到 AllureReport.zip
+2025-03-19 17:01:21,527 - main1.py:[49] - [ERROR] - 上传文件到钉钉失败，错误信息: 不合法的access_token
+2025-03-19 17:01:21,527 - main1.py:[49] - [ERROR] - 上传文件到钉钉失败，错误信息: 不合法的access_token
+2025-03-19 17:03:57,547 - test_login.py:[24] - [INFO] - 本用例正在执行：test_login。获取到的结果是：数据更新成功, 期望的结果是:数据更新成功，返回token
+2025-03-19 17:10:57,271 - test_login.py:[24] - [INFO] - 本用例正在执行：test_login。获取到的结果是：数据更新成功, 期望的结果是:数据更新成功，返回token
+2025-03-19 17:16:54,649 - test_login.py:[24] - [INFO] - 本用例正在执行：test_login。获取到的结果是：数据更新成功, 期望的结果是:数据更新成功，返回token
+2025-03-19 17:18:23,967 - test_login.py:[24] - [INFO] - 本用例正在执行：test_login。获取到的结果是：数据更新成功, 期望的结果是:数据更新成功，返回token
+2025-03-19 17:23:53,123 - main1.py:[27] - [ERROR] - 生成 Allure 报告时出现错误: Command '['pytest', '"D:/apiAutomationRH/testCase"', '--alluredir=AllureData']' returned non-zero exit status 1.
+2025-03-19 17:23:53,123 - main1.py:[27] - [ERROR] - 生成 Allure 报告时出现错误: Command '['pytest', '"D:/apiAutomationRH/testCase"', '--alluredir=AllureData']' returned non-zero exit status 1.
+2025-03-19 17:38:33,989 - test_login.py:[24] - [INFO] - 本用例正在执行：test_login。获取到的结果是：数据更新成功, 期望的结果是:数据更新成功，返回token
+2025-03-19 17:48:44,129 - test_login.py:[24] - [INFO] - 本用例正在执行：test_login。获取到的结果是：数据更新成功, 期望的结果是:数据更新成功，返回token
+2025-03-19 17:55:40,372 - main1.py:[122] - [ERROR] - 未知错误: [WinError 2] 系统找不到指定的文件。
+2025-03-19 17:58:34,817 - main1.py:[125] - [ERROR] - 未知错误: [WinError 2] 系统找不到指定的文件。
+2025-03-19 18:12:16,607 - main1.py:[119] - [ERROR] - 测试执行失败，错误信息: ERROR: file or directory not found: test_login.py
+
+
+2025-03-19 18:12:16,608 - main1.py:[180] - [WARNING] - 测试执行失败，跳过报告生成和钉钉通知。
+2025-03-19 18:23:26,852 - test_login.py:[24] - [INFO] - 本用例正在执行：test_login。获取到的结果是：数据更新成功, 期望的结果是:数据更新成功，返回token
+2025-03-19 18:25:38,463 - test_login.py:[24] - [INFO] - 本用例正在执行：test_login。获取到的结果是：数据更新成功, 期望的结果是:数据更新成功，返回token
+2025-03-19 18:25:39,534 - test_login.py:[24] - [INFO] - 本用例正在执行：test_login。获取到的结果是：数据更新成功, 期望的结果是:数据更新成功，返回token
+2025-03-19 18:30:29,940 - test_login.py:[24] - [INFO] - 本用例正在执行：test_login。获取到的结果是：数据更新成功, 期望的结果是:数据更新成功，返回token
+2025-03-19 18:35:03,190 - test_login.py:[24] - [INFO] - 本用例正在执行：test_login。获取到的结果是：数据更新成功, 期望的结果是:数据更新成功，返回token
+2025-03-19 18:37:11,811 - main1.py:[32] - [ERROR] - 生成 Allure 报告时出现错误: Command '['pytest', '"D:/apiAutomationRH/testCase"', '--alluredir=AllureData']' returned non-zero exit status 1.
+2025-03-19 18:37:11,811 - main1.py:[32] - [ERROR] - 生成 Allure 报告时出现错误: Command '['pytest', '"D:/apiAutomationRH/testCase"', '--alluredir=AllureData']' returned non-zero exit status 1.
+2025-03-19 18:37:11,969 - zip_file.py:[23] - [INFO] - 成功将 AllureReport 压缩到 AllureReport.zip
+2025-03-19 18:37:11,969 - zip_file.py:[23] - [INFO] - 成功将 AllureReport 压缩到 AllureReport.zip
+2025-03-19 18:37:12,532 - main1.py:[49] - [ERROR] - 上传文件到钉钉失败，错误信息: 不合法的access_token
+2025-03-19 18:37:12,532 - main1.py:[49] - [ERROR] - 上传文件到钉钉失败，错误信息: 不合法的access_token
+2025-03-19 18:39:43,042 - test_login.py:[24] - [INFO] - 本用例正在执行：test_login。获取到的结果是：数据更新成功, 期望的结果是:数据更新成功，返回token
+2025-03-19 18:39:44,033 - test_login.py:[24] - [INFO] - 本用例正在执行：test_login。获取到的结果是：数据更新成功, 期望的结果是:数据更新成功，返回token
+2025-03-19 18:46:30,127 - test_login.py:[24] - [INFO] - 本用例正在执行：test_login。获取到的结果是：数据更新成功, 期望的结果是:数据更新成功，返回token
+2025-03-19 18:46:33,762 - main1.py:[48] - [ERROR] - 未配置钉钉 Webhook，请设置 DINGTALK_WEBHOOK 环境变量。
+2025-03-19 18:46:33,762 - main1.py:[83] - [INFO] - 钉钉发送状态码: 500
+2025-03-19 18:48:04,322 - test_login.py:[24] - [INFO] - 本用例正在执行：test_login。获取到的结果是：数据更新成功, 期望的结果是:数据更新成功，返回token
+2025-03-19 18:48:07,808 - main1.py:[49] - [ERROR] - 未配置钉钉 Webhook，请设置 DINGTALK_WEBHOOK 环境变量。
+2025-03-19 18:48:07,809 - main1.py:[84] - [INFO] - 钉钉发送状态码: 500
+2025-03-19 18:51:34,491 - test_login.py:[24] - [INFO] - 本用例正在执行：test_login。获取到的结果是：数据更新成功, 期望的结果是:数据更新成功，返回token
+2025-03-19 18:51:38,135 - main1.py:[48] - [ERROR] - 未配置钉钉 Webhook，请设置 DINGTALK_WEBHOOK 环境变量。
+2025-03-19 18:51:38,136 - main1.py:[83] - [INFO] - 钉钉发送状态码: 500
+2025-03-19 18:53:05,717 - test_login.py:[24] - [INFO] - 本用例正在执行：test_login。获取到的结果是：数据更新成功, 期望的结果是:数据更新成功，返回token
+2025-03-19 18:53:18,752 - main1.py:[48] - [ERROR] - 未配置钉钉 Webhook，请设置 DINGTALK_WEBHOOK 环境变量。
+2025-03-19 18:53:18,753 - main1.py:[83] - [INFO] - 钉钉发送状态码: 500
+2025-03-19 18:56:46,809 - test_login.py:[24] - [INFO] - 本用例正在执行：test_login。获取到的结果是：数据更新成功, 期望的结果是:数据更新成功，返回token
+2025-03-19 18:56:51,401 - main1.py:[84] - [INFO] - 钉钉发送状态码: 200
+2025-03-19 19:00:32,625 - test_login.py:[24] - [INFO] - 本用例正在执行：test_login。获取到的结果是：数据更新成功, 期望的结果是:数据更新成功，返回token
+2025-03-19 19:00:36,607 - main1.py:[82] - [INFO] - 钉钉发送状态码: 200
+2025-03-19 19:01:37,559 - test_login.py:[24] - [INFO] - 本用例正在执行：test_login。获取到的结果是：数据更新成功, 期望的结果是:数据更新成功，返回token
+2025-03-19 19:01:41,240 - main1.py:[84] - [INFO] - 钉钉发送状态码: 200

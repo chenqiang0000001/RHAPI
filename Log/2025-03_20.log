@@ -1,0 +1,290 @@
+2025-03-20 08:15:15,855 - test_login.py:[24] - [INFO] - 本用例正在执行：test_login。获取到的结果是：数据更新成功, 期望的结果是:数据更新成功，返回token
+2025-03-20 08:15:26,147 - main1.py:[84] - [INFO] - 钉钉发送状态码: 200
+2025-03-20 17:51:33,883 - test_login.py:[24] - [INFO] - 本用例正在执行：test_login。获取到的结果是：数据更新成功, 期望的结果是:数据更新成功，返回token
+2025-03-20 17:51:49,522 - main1.py:[199] - [INFO] - 钉钉发送状态码: 200
+2025-03-20 18:03:47,185 - main1.py:[133] - [ERROR] - 测试执行失败，错误信息: Traceback (most recent call last):
+  File "c:\python37\lib\runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "c:\python37\lib\runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "C:\Python37\Scripts\pytest.exe\__main__.py", line 7, in <module>
+  File "c:\python37\lib\site-packages\_pytest\config\__init__.py", line 187, in console_main
+    code = main()
+  File "c:\python37\lib\site-packages\_pytest\config\__init__.py", line 145, in main
+    config = _prepareconfig(args, plugins)
+  File "c:\python37\lib\site-packages\_pytest\config\__init__.py", line 325, in _prepareconfig
+    pluginmanager=pluginmanager, args=args
+  File "c:\python37\lib\site-packages\pluggy\_hooks.py", line 265, in __call__
+    return self._hookexec(self.name, self.get_hookimpls(), kwargs, firstresult)
+  File "c:\python37\lib\site-packages\pluggy\_manager.py", line 80, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "c:\python37\lib\site-packages\pluggy\_callers.py", line 55, in _multicall
+    gen.send(outcome)
+  File "c:\python37\lib\site-packages\_pytest\helpconfig.py", line 102, in pytest_cmdline_parse
+    config: Config = outcome.get_result()
+  File "c:\python37\lib\site-packages\pluggy\_result.py", line 60, in get_result
+    raise ex[1].with_traceback(ex[2])
+  File "c:\python37\lib\site-packages\pluggy\_callers.py", line 39, in _multicall
+    res = hook_impl.function(*args)
+  File "c:\python37\lib\site-packages\_pytest\config\__init__.py", line 1016, in pytest_cmdline_parse
+    self.parse(args)
+  File "c:\python37\lib\site-packages\_pytest\config\__init__.py", line 1304, in parse
+    self._preparse(args, addopts=addopts)
+  File "c:\python37\lib\site-packages\_pytest\config\__init__.py", line 1172, in _preparse
+    self._initini(args)
+  File "c:\python37\lib\site-packages\_pytest\config\__init__.py", line 1095, in _initini
+    config=self,
+  File "c:\python37\lib\site-packages\_pytest\config\findpaths.py", line 186, in determine_setup
+    rootdir, inipath, inicfg = locate_config([ancestor])
+  File "c:\python37\lib\site-packages\_pytest\config\findpaths.py", line 108, in locate_config
+    ini_config = load_config_dict_from_file(p)
+  File "c:\python37\lib\site-packages\_pytest\config\findpaths.py", line 45, in load_config_dict_from_file
+    iniconfig = _parse_ini_config(filepath)
+  File "c:\python37\lib\site-packages\_pytest\config\findpaths.py", line 30, in _parse_ini_config
+    return iniconfig.IniConfig(str(path))
+  File "c:\python37\lib\site-packages\iniconfig\__init__.py", line 54, in __init__
+    tokens = self._parse(iter(f))
+  File "c:\python37\lib\site-packages\iniconfig\__init__.py", line 82, in _parse
+    for lineno, line in enumerate(line_iter):
+UnicodeDecodeError: 'gbk' codec can't decode byte 0xae in position 50: illegal multibyte sequence
+
+2025-03-20 18:03:53,182 - main1.py:[199] - [INFO] - 钉钉发送状态码: 200
+2025-03-20 18:10:28,819 - main1.py:[133] - [ERROR] - 测试执行失败，错误信息: Traceback (most recent call last):
+  File "c:\python37\lib\runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "c:\python37\lib\runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "C:\Python37\Scripts\pytest.exe\__main__.py", line 7, in <module>
+  File "c:\python37\lib\site-packages\_pytest\config\__init__.py", line 187, in console_main
+    code = main()
+  File "c:\python37\lib\site-packages\_pytest\config\__init__.py", line 145, in main
+    config = _prepareconfig(args, plugins)
+  File "c:\python37\lib\site-packages\_pytest\config\__init__.py", line 325, in _prepareconfig
+    pluginmanager=pluginmanager, args=args
+  File "c:\python37\lib\site-packages\pluggy\_hooks.py", line 265, in __call__
+    return self._hookexec(self.name, self.get_hookimpls(), kwargs, firstresult)
+  File "c:\python37\lib\site-packages\pluggy\_manager.py", line 80, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "c:\python37\lib\site-packages\pluggy\_callers.py", line 55, in _multicall
+    gen.send(outcome)
+  File "c:\python37\lib\site-packages\_pytest\helpconfig.py", line 102, in pytest_cmdline_parse
+    config: Config = outcome.get_result()
+  File "c:\python37\lib\site-packages\pluggy\_result.py", line 60, in get_result
+    raise ex[1].with_traceback(ex[2])
+  File "c:\python37\lib\site-packages\pluggy\_callers.py", line 39, in _multicall
+    res = hook_impl.function(*args)
+  File "c:\python37\lib\site-packages\_pytest\config\__init__.py", line 1016, in pytest_cmdline_parse
+    self.parse(args)
+  File "c:\python37\lib\site-packages\_pytest\config\__init__.py", line 1304, in parse
+    self._preparse(args, addopts=addopts)
+  File "c:\python37\lib\site-packages\_pytest\config\__init__.py", line 1172, in _preparse
+    self._initini(args)
+  File "c:\python37\lib\site-packages\_pytest\config\__init__.py", line 1095, in _initini
+    config=self,
+  File "c:\python37\lib\site-packages\_pytest\config\findpaths.py", line 186, in determine_setup
+    rootdir, inipath, inicfg = locate_config([ancestor])
+  File "c:\python37\lib\site-packages\_pytest\config\findpaths.py", line 108, in locate_config
+    ini_config = load_config_dict_from_file(p)
+  File "c:\python37\lib\site-packages\_pytest\config\findpaths.py", line 45, in load_config_dict_from_file
+    iniconfig = _parse_ini_config(filepath)
+  File "c:\python37\lib\site-packages\_pytest\config\findpaths.py", line 30, in _parse_ini_config
+    return iniconfig.IniConfig(str(path))
+  File "c:\python37\lib\site-packages\iniconfig\__init__.py", line 54, in __init__
+    tokens = self._parse(iter(f))
+  File "c:\python37\lib\site-packages\iniconfig\__init__.py", line 82, in _parse
+    for lineno, line in enumerate(line_iter):
+UnicodeDecodeError: 'gbk' codec can't decode byte 0xae in position 50: illegal multibyte sequence
+
+2025-03-20 18:10:34,419 - main1.py:[199] - [INFO] - 钉钉发送状态码: 200
+2025-03-20 18:17:35,269 - main1.py:[133] - [ERROR] - 测试执行失败，错误信息: Traceback (most recent call last):
+  File "c:\python37\lib\runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "c:\python37\lib\runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "C:\Python37\Scripts\pytest.exe\__main__.py", line 7, in <module>
+  File "c:\python37\lib\site-packages\_pytest\config\__init__.py", line 187, in console_main
+    code = main()
+  File "c:\python37\lib\site-packages\_pytest\config\__init__.py", line 145, in main
+    config = _prepareconfig(args, plugins)
+  File "c:\python37\lib\site-packages\_pytest\config\__init__.py", line 325, in _prepareconfig
+    pluginmanager=pluginmanager, args=args
+  File "c:\python37\lib\site-packages\pluggy\_hooks.py", line 265, in __call__
+    return self._hookexec(self.name, self.get_hookimpls(), kwargs, firstresult)
+  File "c:\python37\lib\site-packages\pluggy\_manager.py", line 80, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "c:\python37\lib\site-packages\pluggy\_callers.py", line 55, in _multicall
+    gen.send(outcome)
+  File "c:\python37\lib\site-packages\_pytest\helpconfig.py", line 102, in pytest_cmdline_parse
+    config: Config = outcome.get_result()
+  File "c:\python37\lib\site-packages\pluggy\_result.py", line 60, in get_result
+    raise ex[1].with_traceback(ex[2])
+  File "c:\python37\lib\site-packages\pluggy\_callers.py", line 39, in _multicall
+    res = hook_impl.function(*args)
+  File "c:\python37\lib\site-packages\_pytest\config\__init__.py", line 1016, in pytest_cmdline_parse
+    self.parse(args)
+  File "c:\python37\lib\site-packages\_pytest\config\__init__.py", line 1304, in parse
+    self._preparse(args, addopts=addopts)
+  File "c:\python37\lib\site-packages\_pytest\config\__init__.py", line 1172, in _preparse
+    self._initini(args)
+  File "c:\python37\lib\site-packages\_pytest\config\__init__.py", line 1095, in _initini
+    config=self,
+  File "c:\python37\lib\site-packages\_pytest\config\findpaths.py", line 186, in determine_setup
+    rootdir, inipath, inicfg = locate_config([ancestor])
+  File "c:\python37\lib\site-packages\_pytest\config\findpaths.py", line 108, in locate_config
+    ini_config = load_config_dict_from_file(p)
+  File "c:\python37\lib\site-packages\_pytest\config\findpaths.py", line 45, in load_config_dict_from_file
+    iniconfig = _parse_ini_config(filepath)
+  File "c:\python37\lib\site-packages\_pytest\config\findpaths.py", line 30, in _parse_ini_config
+    return iniconfig.IniConfig(str(path))
+  File "c:\python37\lib\site-packages\iniconfig\__init__.py", line 54, in __init__
+    tokens = self._parse(iter(f))
+  File "c:\python37\lib\site-packages\iniconfig\__init__.py", line 82, in _parse
+    for lineno, line in enumerate(line_iter):
+UnicodeDecodeError: 'gbk' codec can't decode byte 0xae in position 38: illegal multibyte sequence
+
+2025-03-20 18:17:40,981 - main1.py:[199] - [INFO] - 钉钉发送状态码: 200
+2025-03-20 18:19:03,797 - main1.py:[133] - [ERROR] - 测试执行失败，错误信息: Traceback (most recent call last):
+  File "c:\python37\lib\runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "c:\python37\lib\runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "C:\Python37\Scripts\pytest.exe\__main__.py", line 7, in <module>
+  File "c:\python37\lib\site-packages\_pytest\config\__init__.py", line 187, in console_main
+    code = main()
+  File "c:\python37\lib\site-packages\_pytest\config\__init__.py", line 145, in main
+    config = _prepareconfig(args, plugins)
+  File "c:\python37\lib\site-packages\_pytest\config\__init__.py", line 325, in _prepareconfig
+    pluginmanager=pluginmanager, args=args
+  File "c:\python37\lib\site-packages\pluggy\_hooks.py", line 265, in __call__
+    return self._hookexec(self.name, self.get_hookimpls(), kwargs, firstresult)
+  File "c:\python37\lib\site-packages\pluggy\_manager.py", line 80, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "c:\python37\lib\site-packages\pluggy\_callers.py", line 55, in _multicall
+    gen.send(outcome)
+  File "c:\python37\lib\site-packages\_pytest\helpconfig.py", line 102, in pytest_cmdline_parse
+    config: Config = outcome.get_result()
+  File "c:\python37\lib\site-packages\pluggy\_result.py", line 60, in get_result
+    raise ex[1].with_traceback(ex[2])
+  File "c:\python37\lib\site-packages\pluggy\_callers.py", line 39, in _multicall
+    res = hook_impl.function(*args)
+  File "c:\python37\lib\site-packages\_pytest\config\__init__.py", line 1016, in pytest_cmdline_parse
+    self.parse(args)
+  File "c:\python37\lib\site-packages\_pytest\config\__init__.py", line 1304, in parse
+    self._preparse(args, addopts=addopts)
+  File "c:\python37\lib\site-packages\_pytest\config\__init__.py", line 1172, in _preparse
+    self._initini(args)
+  File "c:\python37\lib\site-packages\_pytest\config\__init__.py", line 1095, in _initini
+    config=self,
+  File "c:\python37\lib\site-packages\_pytest\config\findpaths.py", line 186, in determine_setup
+    rootdir, inipath, inicfg = locate_config([ancestor])
+  File "c:\python37\lib\site-packages\_pytest\config\findpaths.py", line 108, in locate_config
+    ini_config = load_config_dict_from_file(p)
+  File "c:\python37\lib\site-packages\_pytest\config\findpaths.py", line 45, in load_config_dict_from_file
+    iniconfig = _parse_ini_config(filepath)
+  File "c:\python37\lib\site-packages\_pytest\config\findpaths.py", line 30, in _parse_ini_config
+    return iniconfig.IniConfig(str(path))
+  File "c:\python37\lib\site-packages\iniconfig\__init__.py", line 54, in __init__
+    tokens = self._parse(iter(f))
+  File "c:\python37\lib\site-packages\iniconfig\__init__.py", line 82, in _parse
+    for lineno, line in enumerate(line_iter):
+UnicodeDecodeError: 'gbk' codec can't decode byte 0xae in position 38: illegal multibyte sequence
+
+2025-03-20 18:19:09,264 - main1.py:[199] - [INFO] - 钉钉发送状态码: 200
+2025-03-20 18:23:38,464 - main1.py:[133] - [ERROR] - 测试执行失败，错误信息: Traceback (most recent call last):
+  File "c:\python37\lib\runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "c:\python37\lib\runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "C:\Python37\Scripts\pytest.exe\__main__.py", line 7, in <module>
+  File "c:\python37\lib\site-packages\_pytest\config\__init__.py", line 187, in console_main
+    code = main()
+  File "c:\python37\lib\site-packages\_pytest\config\__init__.py", line 145, in main
+    config = _prepareconfig(args, plugins)
+  File "c:\python37\lib\site-packages\_pytest\config\__init__.py", line 325, in _prepareconfig
+    pluginmanager=pluginmanager, args=args
+  File "c:\python37\lib\site-packages\pluggy\_hooks.py", line 265, in __call__
+    return self._hookexec(self.name, self.get_hookimpls(), kwargs, firstresult)
+  File "c:\python37\lib\site-packages\pluggy\_manager.py", line 80, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "c:\python37\lib\site-packages\pluggy\_callers.py", line 55, in _multicall
+    gen.send(outcome)
+  File "c:\python37\lib\site-packages\_pytest\helpconfig.py", line 102, in pytest_cmdline_parse
+    config: Config = outcome.get_result()
+  File "c:\python37\lib\site-packages\pluggy\_result.py", line 60, in get_result
+    raise ex[1].with_traceback(ex[2])
+  File "c:\python37\lib\site-packages\pluggy\_callers.py", line 39, in _multicall
+    res = hook_impl.function(*args)
+  File "c:\python37\lib\site-packages\_pytest\config\__init__.py", line 1016, in pytest_cmdline_parse
+    self.parse(args)
+  File "c:\python37\lib\site-packages\_pytest\config\__init__.py", line 1304, in parse
+    self._preparse(args, addopts=addopts)
+  File "c:\python37\lib\site-packages\_pytest\config\__init__.py", line 1172, in _preparse
+    self._initini(args)
+  File "c:\python37\lib\site-packages\_pytest\config\__init__.py", line 1095, in _initini
+    config=self,
+  File "c:\python37\lib\site-packages\_pytest\config\findpaths.py", line 186, in determine_setup
+    rootdir, inipath, inicfg = locate_config([ancestor])
+  File "c:\python37\lib\site-packages\_pytest\config\findpaths.py", line 108, in locate_config
+    ini_config = load_config_dict_from_file(p)
+  File "c:\python37\lib\site-packages\_pytest\config\findpaths.py", line 45, in load_config_dict_from_file
+    iniconfig = _parse_ini_config(filepath)
+  File "c:\python37\lib\site-packages\_pytest\config\findpaths.py", line 30, in _parse_ini_config
+    return iniconfig.IniConfig(str(path))
+  File "c:\python37\lib\site-packages\iniconfig\__init__.py", line 54, in __init__
+    tokens = self._parse(iter(f))
+  File "c:\python37\lib\site-packages\iniconfig\__init__.py", line 82, in _parse
+    for lineno, line in enumerate(line_iter):
+UnicodeDecodeError: 'gbk' codec can't decode byte 0xae in position 38: illegal multibyte sequence
+
+2025-03-20 18:23:52,726 - main1.py:[199] - [INFO] - 钉钉发送状态码: 200
+2025-03-20 18:30:54,510 - main1.py:[133] - [ERROR] - 测试执行失败，错误信息: Traceback (most recent call last):
+  File "c:\python37\lib\runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "c:\python37\lib\runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "C:\Python37\Scripts\pytest.exe\__main__.py", line 7, in <module>
+  File "c:\python37\lib\site-packages\_pytest\config\__init__.py", line 187, in console_main
+    code = main()
+  File "c:\python37\lib\site-packages\_pytest\config\__init__.py", line 145, in main
+    config = _prepareconfig(args, plugins)
+  File "c:\python37\lib\site-packages\_pytest\config\__init__.py", line 325, in _prepareconfig
+    pluginmanager=pluginmanager, args=args
+  File "c:\python37\lib\site-packages\pluggy\_hooks.py", line 265, in __call__
+    return self._hookexec(self.name, self.get_hookimpls(), kwargs, firstresult)
+  File "c:\python37\lib\site-packages\pluggy\_manager.py", line 80, in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+  File "c:\python37\lib\site-packages\pluggy\_callers.py", line 55, in _multicall
+    gen.send(outcome)
+  File "c:\python37\lib\site-packages\_pytest\helpconfig.py", line 102, in pytest_cmdline_parse
+    config: Config = outcome.get_result()
+  File "c:\python37\lib\site-packages\pluggy\_result.py", line 60, in get_result
+    raise ex[1].with_traceback(ex[2])
+  File "c:\python37\lib\site-packages\pluggy\_callers.py", line 39, in _multicall
+    res = hook_impl.function(*args)
+  File "c:\python37\lib\site-packages\_pytest\config\__init__.py", line 1016, in pytest_cmdline_parse
+    self.parse(args)
+  File "c:\python37\lib\site-packages\_pytest\config\__init__.py", line 1304, in parse
+    self._preparse(args, addopts=addopts)
+  File "c:\python37\lib\site-packages\_pytest\config\__init__.py", line 1172, in _preparse
+    self._initini(args)
+  File "c:\python37\lib\site-packages\_pytest\config\__init__.py", line 1095, in _initini
+    config=self,
+  File "c:\python37\lib\site-packages\_pytest\config\findpaths.py", line 186, in determine_setup
+    rootdir, inipath, inicfg = locate_config([ancestor])
+  File "c:\python37\lib\site-packages\_pytest\config\findpaths.py", line 108, in locate_config
+    ini_config = load_config_dict_from_file(p)
+  File "c:\python37\lib\site-packages\_pytest\config\findpaths.py", line 45, in load_config_dict_from_file
+    iniconfig = _parse_ini_config(filepath)
+  File "c:\python37\lib\site-packages\_pytest\config\findpaths.py", line 30, in _parse_ini_config
+    return iniconfig.IniConfig(str(path))
+  File "c:\python37\lib\site-packages\iniconfig\__init__.py", line 54, in __init__
+    tokens = self._parse(iter(f))
+  File "c:\python37\lib\site-packages\iniconfig\__init__.py", line 82, in _parse
+    for lineno, line in enumerate(line_iter):
+UnicodeDecodeError: 'gbk' codec can't decode byte 0xae in position 38: illegal multibyte sequence
+
+2025-03-20 18:31:00,267 - main1.py:[199] - [INFO] - 钉钉发送状态码: 200
+2025-03-20 18:43:06,942 - test_login.py:[24] - [INFO] - 本用例正在执行：test_login。获取到的结果是：数据更新成功, 期望的结果是:数据更新成功，返回token
+2025-03-20 18:43:13,235 - main1.py:[199] - [INFO] - 钉钉发送状态码: 200
+2025-03-20 18:56:39,069 - main1.py:[133] - [ERROR] - 测试执行失败，错误信息: 
+2025-03-20 18:56:45,355 - main1.py:[199] - [INFO] - 钉钉发送状态码: 200

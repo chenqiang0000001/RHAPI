@@ -1,0 +1,1 @@
+{"ae6530b00f99c6fac13bd1292c712a96":{"statistic":{"failed":0,"broken":1,"skipped":0,"passed":0,"unknown":0,"total":1},"items":[{"uid":"b007be2f0c86dba9","status":"broken","statusDetails":"_pytest.fixtures.FixtureLookupError: ('self', <FixtureRequest for <Function test_login>>)","time":{"start":1742894381368,"stop":1742894381368,"duration":0}}]}}
