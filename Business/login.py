@@ -12,7 +12,8 @@ class Login:
         """
         登录接口
         :param user_code: 登录账号
-        :return:
+        :param user_code:登录密码
+        :return: 登陆信息
         """
         uploads = {
             "passWord": pass_word,

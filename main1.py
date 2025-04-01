@@ -20,7 +20,7 @@ def run_tests():
                 subprocess.run(["rm", "-rf", "allure-results"], check=True)
 
         # 执行测试命令
-        command = f"pytest D:\\apiAutomationRH\\testCase --alluredir=./allure-results -v"
+        command = f"pytest D:\\apiAutomationRH\\TestCase --alluredir=./allure-results -v"
         result = subprocess.run(
             command,
             shell=True,
