@@ -48,6 +48,7 @@ def generate_report():
         return None
 
 
+
 def send_dingtalk(report_path, test_result):
     try:
         with open("test_stats.json", "r", encoding="utf-8") as f:

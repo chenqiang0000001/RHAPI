@@ -2,7 +2,7 @@ import math
 import random
 
 
-def generate_container_number():
+def random_characters():
     # 集装箱编号由4位字母和6位数字组成
     letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
     numbers = '0123456789'
@@ -29,4 +29,4 @@ def generate_container_number():
     return container_number
 
 
-print(generate_container_number())
+print(random_characters())
