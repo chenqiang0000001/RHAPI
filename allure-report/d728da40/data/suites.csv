@@ -1,2 +1,0 @@
-"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
-"","168","正确账号密码登陆","testCase","Tue Mar 25 18:22:11 CST 2025","passed","Tue Mar 25 18:22:12 CST 2025","TestLogin","test_login","",""
