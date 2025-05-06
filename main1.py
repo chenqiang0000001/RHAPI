@@ -6,7 +6,6 @@ import time
 import uuid
 import zipfile
 import smtplib
-import subprocess
 import os
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
@@ -14,6 +13,7 @@ from email.mime.application import MIMEApplication
 from email.header import Header
 from datetime import datetime
 from Toolbox.log_module import Logger
+
 logger = Logger(name="my_logger").get_logger()  # 实例化日志记录器
 
 
@@ -89,6 +89,28 @@ def send_dingtalk(report_path, test_result):
     return response.status_code
 
 
+import socket
+
+def find_available_port(start_port=8000):
+    port = start_port
+    while True:
+        with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+            result = s.connect_ex(('localhost', port))
+            logger.info(f"检查端口 {port}，连接结果: {result}")
+            if result != 0:
+                return port
+        port += 1
+def get_local_ip():
+    try:
+        s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+        s.connect(("8.8.8.8", 80))
+        ip = s.getsockname()[0]
+        s.close()
+        return ip
+    except Exception as e:
+        logger.error(f"获取本地 IP 地址失败: {e}")
+        return None
+
 def send_email(report_dir):
     # 邮件配置
     sender = 'chq18870425154@163.com'
@@ -112,14 +134,16 @@ def send_email(report_dir):
     report_link = None
     if report_dir:
         try:
-            # 启动 Python 简易 HTTP 服务器
-            server_port = 8000
+            # 查找可用端口
+            server_port = find_available_port()
             # 在后台启动服务器，避免阻塞主线程
             if os.name == 'nt':  # Windows 系统
-                subprocess.Popen(f'python -m http.server {server_port} --directory {report_dir}', shell=True)
+                subprocess.Popen(f'python -m http.server {server_port} --directory {report_dir} > server.log 2>&1', shell=True)
             else:  # Linux 或 macOS 系统
-                subprocess.Popen(f'python3 -m http.server {server_port} --directory {report_dir}', shell=True)
-            report_link = f"http://192.168.88.1:{server_port}"
+                subprocess.Popen(f'python3 -m http.server {server_port} --directory {report_dir} > server.log 2>&1', shell=True)
+            local_ip = get_local_ip()
+            if local_ip:
+                report_link = f"http://{local_ip}:{server_port}"
         except Exception as e:
             logger.error(f"启动 HTTP 服务器失败: {e}")
 
@@ -157,10 +181,11 @@ if __name__ == "__main__":
 
     if report_dir:
         # 发送钉钉通知
-        ding_status = send_dingtalk(report_dir, test_result)
-        logger.info(f"钉钉发送状态码: {ding_status}")
+        # ding_status = send_dingtalk(report_dir, test_result)
+        # logger.info(f"钉钉发送状态码: {ding_status}")
 
         # 发送邮件
         send_email(report_dir)
     else:
         logger.warning("测试报告生成失败，跳过钉钉通知和邮件发送。")
+
