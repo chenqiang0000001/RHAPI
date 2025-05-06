@@ -14,7 +14,6 @@ from email.mime.application import MIMEApplication
 from email.header import Header
 from datetime import datetime
 from Toolbox.log_module import Logger
-
 logger = Logger(name="my_logger").get_logger()  # 实例化日志记录器
 
 
