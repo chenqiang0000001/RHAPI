@@ -1,0 +1,20 @@
+# 钉钉配置
+dingtalk:
+  webhook_url: DINGTALK_WEBHOOK
+
+# 邮箱配置
+email:
+  sender: ['chenqiangt@cptgroup.cn']
+  receivers: ['chq18870425154@163.com']
+  smtp_server: smtp.cptgroup.cn
+  smtp_port: 587
+  username: chenqiangt@cptgroup.cn
+  password: SZgTA33Q25dzp9u7
+
+# 数据库配置
+database:
+  host: 121.40.244.254
+  user: chenqiang
+  password: cozHLpjNiHfOrYBo
+  database: test_femooi
+  charset: utf8

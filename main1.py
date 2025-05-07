@@ -4,17 +4,17 @@ import subprocess
 import requests
 import time
 import uuid
-import zipfile
 import smtplib
-import os
+import socket
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
-from email.mime.application import MIMEApplication
 from email.header import Header
 from datetime import datetime
 from Toolbox.log_module import Logger
+from Toolbox.yaml_util import read_yaml
 
 logger = Logger(name="my_logger").get_logger()  # 实例化日志记录器
+config = read_yaml('config.yaml')
 
 
 def run_tests():
@@ -84,32 +84,14 @@ def send_dingtalk(report_path, test_result):
                     f" - @grade_4: {test_data['priority_stats']['grade_4']}\n"
         }
     }
-    response = requests.post(webhook_url, json=message)
-    response.raise_for_status()
-    return response.status_code
-
-
-import socket
-
-def find_available_port(start_port=8000):
-    port = start_port
-    while True:
-        with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
-            result = s.connect_ex(('localhost', port))
-            logger.info(f"检查端口 {port}，连接结果: {result}")
-            if result != 0:
-                return port
-        port += 1
-def get_local_ip():
     try:
-        s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-        s.connect(("8.8.8.8", 80))
-        ip = s.getsockname()[0]
-        s.close()
-        return ip
-    except Exception as e:
-        logger.error(f"获取本地 IP 地址失败: {e}")
-        return None
+        response = requests.post(webhook_url, json=message)
+        response.raise_for_status()
+        return response.status_code
+    except requests.RequestException as e:
+        logger.error(f"发送钉钉通知失败: {e}")
+        return 500
+
 
 def send_email(report_dir):
     # 邮件配置
@@ -133,19 +115,45 @@ def send_email(report_dir):
     # 生成 Allure 报告链接
     report_link = None
     if report_dir:
-        try:
-            # 查找可用端口
-            server_port = find_available_port()
-            # 在后台启动服务器，避免阻塞主线程
-            if os.name == 'nt':  # Windows 系统
-                subprocess.Popen(f'python -m http.server {server_port} --directory {report_dir} > server.log 2>&1', shell=True)
-            else:  # Linux 或 macOS 系统
-                subprocess.Popen(f'python3 -m http.server {server_port} --directory {report_dir} > server.log 2>&1', shell=True)
-            local_ip = get_local_ip()
-            if local_ip:
-                report_link = f"http://{local_ip}:{server_port}"
-        except Exception as e:
-            logger.error(f"启动 HTTP 服务器失败: {e}")
+        start_port = 8000
+        max_port = 8100
+        server_port = None
+        for port in range(start_port, max_port):
+            try:
+                # 检查端口是否可用
+                with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+                    s.bind(('0.0.0.0', port))
+                logger.info(f"端口 {port} 可用，尝试启动服务器...")
+                # 启动 Python 简易 HTTP 服务器
+                if os.name == 'nt':  # Windows 系统
+                    subprocess.Popen(f'python -m http.server {port} --directory {report_dir}', shell=True)
+                else:  # Linux 或 macOS 系统
+                    subprocess.Popen(f'python3 -m http.server {port} --directory {report_dir}', shell=True)
+                server_port = port
+
+                # 增加等待时间
+                time.sleep(3)
+
+                # 检查端口是否可连接
+                s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+                s.connect(("8.8.8.8", 80))
+                local_ip = s.getsockname()[0]
+                s.close()
+                with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as check_sock:
+                    result = check_sock.connect_ex((local_ip, server_port))
+                    if result == 0:
+                        logger.info(f"端口 {server_port} 可连接，生成报告链接...")
+                        report_link = f"http://{local_ip}:{server_port}"
+                        break
+                    else:
+                        logger.error(f"端口 {server_port} 无法连接，可能服务器启动失败，继续尝试下一个端口...")
+                        continue
+            except OSError:
+                # logger.info(f"端口 {port} 已被占用或不可用，继续尝试下一个端口...")
+                continue
+
+        if not report_link:
+            logger.error("未找到可用且可连接的端口")
 
     if report_link:
         body = f"测试 Allure 报告链接：{report_link}"
@@ -181,11 +189,10 @@ if __name__ == "__main__":
 
     if report_dir:
         # 发送钉钉通知
-        # ding_status = send_dingtalk(report_dir, test_result)
-        # logger.info(f"钉钉发送状态码: {ding_status}")
+        ding_status = send_dingtalk(report_dir, test_result)
+        logger.info(f"钉钉发送状态码: {ding_status}")
 
         # 发送邮件
         send_email(report_dir)
     else:
         logger.warning("测试报告生成失败，跳过钉钉通知和邮件发送。")
-

@@ -13,4 +13,3 @@ def read_yaml(file_path: str) -> dict:
         raise FileNotFoundError(f"YAML 文件 {file_path_obj} 不存在")
     with open(file_path_obj, "r", encoding="utf-8") as f:
         return yaml.safe_load(f)
-
