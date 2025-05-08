@@ -170,3 +170,17 @@
 2025-05-07 15:02:02,835 - main1.py:[126] - [INFO] - 端口 8017 可用，尝试启动服务器...
 2025-05-07 15:02:05,855 - main1.py:[145] - [INFO] - 端口 8017 可连接，生成报告链接...
 2025-05-07 15:02:06,965 - main1.py:[172] - [INFO] - 邮件发送成功
+2025-05-07 16:39:09,062 - test_login.py:[24] - [INFO] - 本用例正在执行：test_login01。获取到的结果是：数据更新成功, 期望的结果是:数据更新成功，返回token
+2025-05-07 16:39:09,062 - test_login.py:[24] - [INFO] - 本用例正在执行：test_login01。获取到的结果是：数据更新成功, 期望的结果是:数据更新成功，返回token
+2025-05-07 16:39:09,276 - test_login.py:[41] - [INFO] - 本用例正在执行：test_login02。获取到的结果是：密码错误, 期望的结果是:账号错误，不返回token
+2025-05-07 16:39:09,276 - test_login.py:[41] - [INFO] - 本用例正在执行：test_login02。获取到的结果是：密码错误, 期望的结果是:账号错误，不返回token
+2025-05-07 16:39:09,276 - test_login.py:[41] - [INFO] - 本用例正在执行：test_login02。获取到的结果是：密码错误, 期望的结果是:账号错误，不返回token
+2025-05-07 16:39:09,307 - test_login.py:[58] - [INFO] - 本用例正在执行：test_login03。获取到的结果是：用户不存在, 期望的结果是:用户不存在，不返回token
+2025-05-07 16:39:09,307 - test_login.py:[58] - [INFO] - 本用例正在执行：test_login03。获取到的结果是：用户不存在, 期望的结果是:用户不存在，不返回token
+2025-05-07 16:39:09,307 - test_login.py:[58] - [INFO] - 本用例正在执行：test_login03。获取到的结果是：用户不存在, 期望的结果是:用户不存在，不返回token
+2025-05-07 16:39:09,307 - test_login.py:[58] - [INFO] - 本用例正在执行：test_login03。获取到的结果是：用户不存在, 期望的结果是:用户不存在，不返回token
+2025-05-07 16:39:18,732 - main1.py:[92] - [ERROR] - 发送钉钉通知失败: HTTPSConnectionPool(host='oapi.dingtalk.com', port=443): Max retries exceeded with url: /robot/send?access_token=727fef137b72ab2cabd7dfded3f55a95dbe8dc71c1bd1496f0673f3fc250d33c (Caused by ProxyError('Cannot connect to proxy.', OSError(0, 'Error')))
+2025-05-07 16:39:18,732 - main1.py:[193] - [INFO] - 钉钉发送状态码: 500
+2025-05-07 16:39:18,732 - main1.py:[126] - [INFO] - 端口 8018 可用，尝试启动服务器...
+2025-05-07 16:39:21,751 - main1.py:[145] - [INFO] - 端口 8018 可连接，生成报告链接...
+2025-05-07 16:39:22,818 - main1.py:[172] - [INFO] - 邮件发送成功
