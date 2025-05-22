@@ -21,3 +21,6 @@ ProcessName = "自动化测试工序01"  #工序名称
 ProcessRoutingCode = "Automation011"  # 工艺路线编码
 ProcessRoutingName = "自动化测试工艺路线01" # 工艺路线名称
 ProcessRoutingCode1 = "Automation01-1"  # 工艺路线编码,新建后会自动加序号
+#设备管理
+EquipmentCode = "Automation01" # 设备编码
+EquipmentName = "自动化测试设备"  #设备名称

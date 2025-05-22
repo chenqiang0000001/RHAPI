@@ -1,1 +1,0 @@
-INFO     my_logger:test_login.py:58 本用例正在执行：test_login03。获取到的结果是：用户不存在, 期望的结果是:用户不存在，不返回token

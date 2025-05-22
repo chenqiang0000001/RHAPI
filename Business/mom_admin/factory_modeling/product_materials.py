@@ -187,7 +187,6 @@ class MaterialsBOM:
             "index": 1,
         }
         urlRemoveMaterialInfoData = url + apiRemoveMaterialInfoData
-        # print(f'此次请求为执行删除物料BOM接口：removeManufactureBomData，\n请求体为：{uploads}，\nID为：{id}')
         try:
             response = requests.post(url=urlRemoveMaterialInfoData, headers=self.headers, json=uploads)
             response.raise_for_status()

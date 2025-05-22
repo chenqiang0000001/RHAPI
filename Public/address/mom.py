@@ -21,3 +21,7 @@ apiStoreProcessRoutingData = "ProductRouteApi/StoreProcessRoutingData"  # 新增
 apiRemoveProcessRoutingData = "ProductRouteApi/RemoveProcessRoutingData"  # 删除工艺路线
 
 apiAdjustProcessRoutingEntry = "ProductRouteApi/AdjustProcessRoutingEntry"  # 工艺路线绑定工序
+apiStoreBatchProductProcessRouteDatas = "ProductRouteApi/StoreBatchProductProcessRouteDatas" # 产品绑定工艺路线
+apiSelectManufactureBom = "ProductRouteApi/SelectManufactureBom"# 产品工序BOM绑定
+apiStoreEquipmentLedgerData = "EquipmentLedgerApi/StoreEquipmentLedgerData"   # 新增设备台账
+apiRemoveBatchEquipmentLedger = "EquipmentLedgerApi/RemoveBatchEquipmentLedgerDatas"   # 删除设备台账
