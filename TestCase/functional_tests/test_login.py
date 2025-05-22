@@ -1,5 +1,5 @@
 import allure
-from Business.mom_admin.login_mom_admin import LoginMomAdmin
+from Business.mom_admin.login_mom.login_mom_admin import LoginMomAdmin
 from Toolbox.log_module import Logger
 from markers import grade_1, grade_3
 import pytest

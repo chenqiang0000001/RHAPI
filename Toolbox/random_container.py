@@ -27,6 +27,3 @@ def random_characters():
 
     container_number = base_number + str(check_code)
     return container_number
-
-
-print(random_characters())

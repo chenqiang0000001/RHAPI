@@ -156,7 +156,7 @@ def send_email(report_dir):
             logger.error("未找到可用且可连接的端口")
 
     if report_link:
-        body = f"测试 Allure 报告链接：{report_link}"
+        body = f"尊敬的各位领导.同事:\n  MOM接口自动化测试脚本已运行完成，\n  Allure 报告链接：{report_link}\n   此报告为执行完毕自动发送"
     else:
         body = "测试报告生成失败，无报告链接"
 
