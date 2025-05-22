@@ -1,0 +1,4 @@
+2025-05-17 15:16:01,521 - test_factory_modeling.py:[25] - [INFO] - 本用例正在执行：test_productaterials01。获取到的结果是：数据新增成功, 期望的结果是:数据更新成功
+2025-05-17 15:16:01,521 - test_factory_modeling.py:[25] - [INFO] - 本用例正在执行：test_productaterials01。获取到的结果是：数据新增成功, 期望的结果是:数据更新成功
+2025-05-17 15:16:01,528 - test_factory_modeling.py:[31] - [ERROR] - 登录页面：test_login01 断言失败，展开结果与预期不符
+2025-05-17 15:16:01,528 - test_factory_modeling.py:[31] - [ERROR] - 登录页面：test_login01 断言失败，展开结果与预期不符
