@@ -30,7 +30,6 @@ class ProcessRelated:
         try:
             response = requests.post(url=urlStoreProcessInfoData, headers=self.headers, json=uploads)
             response.raise_for_status()
-            self.logger.info(f"当前执行新增工序接口：storeProcessInfoData，\n请求 URL: {urlStoreProcessInfoData}，\n请求头: {self.headers}，\n请求体: {uploads}")
             return response
         except requests.RequestException as e:
             self.logger.error(f"请求发生错误: {e}，请求 URL: {urlStoreProcessInfoData}，请求头: {self.headers}，请求体: {uploads}")

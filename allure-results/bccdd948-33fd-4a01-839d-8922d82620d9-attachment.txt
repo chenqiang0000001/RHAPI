@@ -1,0 +1,2 @@
+INFO     TestProductMaterials:test_product_materials.py:146 本用例正在执行：test_gremoveManufactureBomData01。获取到的结果是：数据删除成功, 数据删除成功
+INFO     delete_data:delete_data.py:31 物料数据删除成功

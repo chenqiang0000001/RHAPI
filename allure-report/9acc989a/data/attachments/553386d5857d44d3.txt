@@ -1,0 +1,2 @@
+2025-05-30 08:17:02,765 - delete_data.py:[23] - [INFO] - 物料数据删除成功
+2025-05-30 08:17:04,015 - test_product_materials.py:[28] - [INFO] - 本用例正在执行：test_productaterials01。获取到的结果是：数据新增成功, 期望的结果是: 数据新增成功

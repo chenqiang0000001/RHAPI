@@ -1,0 +1,5 @@
+正在执行：removeOrganizationStructureData，
+URL: http://192.168.0.135:8288/FactoryOrganizationApi/RemoveOrganizationStructureData，
+请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxOTUyMjgsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.d8xWQ39W7LFyskOYRYogCNNkKUN70cKNBpd6GUKou-U'}，
+请求体: {'OrganizationStructureCode': 'QBOL14259310', 'OrganizationStructureParentCode': '00000.00001', 'OrganizationStructureName': '自动化测试车间', 'OrganizationStructureDisplayName': '自动化测试车间', 'OrganizationGroup': 'Product', 'CreatorUserName': 'CQ', 'CreatorUserRealName': '陈强', 'CompanyCode': '00000', 'FactoryCode': '00000.00001'},
+响应体为{'Record': 1, 'Message': '数据删除成功', 'Success': True}

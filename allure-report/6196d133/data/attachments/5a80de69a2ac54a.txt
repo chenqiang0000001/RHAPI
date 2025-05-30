@@ -1,0 +1,1 @@
+2025-05-30 15:33:41,791 - test_equipment_ledger.py:[47] - [INFO] - 本用例正在执行：test_storeEquipmentLedgerData02。获取到的结果是：已有重复数据录入!, 期望的结果是: 已有重复数据录入!

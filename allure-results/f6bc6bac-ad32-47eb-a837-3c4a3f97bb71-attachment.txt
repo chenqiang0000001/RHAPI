@@ -1,0 +1,1 @@
+2025-05-30 15:34:14,616 - test_process_related.py:[168] - [INFO] - 本用例正在执行：test_selectManufactureBom01。获取到的结果是：数据保存成功, 期望的结果是: 数据保存成功

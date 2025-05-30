@@ -25,3 +25,6 @@ apiStoreBatchProductProcessRouteDatas = "ProductRouteApi/StoreBatchProductProces
 apiSelectManufactureBom = "ProductRouteApi/SelectManufactureBom"# 产品工序BOM绑定
 apiStoreEquipmentLedgerData = "EquipmentLedgerApi/StoreEquipmentLedgerData"   # 新增设备台账
 apiRemoveBatchEquipmentLedger = "EquipmentLedgerApi/RemoveBatchEquipmentLedgerDatas"   # 删除设备台账
+
+apiStoreOrganizationStructureData ="FactoryOrganizationApi/StoreOrganizationStructureData"  # 新增车间(工厂布局通用接口)
+apiRemoveOrganizationStructureData = "FactoryOrganizationApi/RemoveOrganizationStructureData" # 删除车间(工厂布局通用接口)

@@ -1,0 +1,2 @@
+INFO     PlantLayout:test_plant_layout.py:96 本用例正在执行：test_storeOrganizationStructureData_productionline02。获取到的结果是：不能在具有唯一索引“OrganizationStructureCode”的对象“dbo.FactoryLayout_OrganizationStructure”中插入重复键的行。重复键值为 (Automation01)。
+语句已终止。

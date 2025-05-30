@@ -1,0 +1,2 @@
+2025-05-23 17:39:22,336 - test_product_materials.py:[147] - [INFO] - 本用例正在执行：test_gremoveManufactureBomData01。获取到的结果是：数据删除成功, 数据删除成功
+2025-05-23 17:39:23,552 - delete_data.py:[23] - [INFO] - 物料数据删除成功

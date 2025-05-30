@@ -19,10 +19,9 @@ class TestProductMaterials:
     @pytest.mark.run(order=1)  # 执行顺序
     @grade_1  # 优先级
     @allure.title("创建物料")  # 在allure报告中自定义测试用例标题
-    @allure.description("使用符合要求的物料信息创建物料，创建成功")  # 报告中测试用例的详细描述
+    @allure.description("使用符合要求的车间信息创建物料，创建成功")  # 报告中测试用例的详细描述
     def test_productaterials01(self):
-        with allure.step("是否成功创建物料"):  # 在报告中记录测试用例中的测试步骤或详细信息
-            DataCleaner().delete_data(1)  #自动清除数据-删除物料
+        with allure.step("是否成功创建车间"):  # 在报告中记录测试用例中的测试步骤或详细信息
             res = ProductMaterials().storeMaterialInfoData() # 实例登录接口
             resBody = res.json()  # 响应数据转化JSON
         logger.info(f"本用例正在执行：test_productaterials01。获取到的结果是：{resBody['Message']}, 期望的结果是: 数据新增成功")  # 日志记录结果

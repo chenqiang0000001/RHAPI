@@ -24,3 +24,10 @@ ProcessRoutingCode1 = "Automation01-1"  # 工艺路线编码,新建后会自动�
 #设备管理
 EquipmentCode = "Automation01" # 设备编码
 EquipmentName = "自动化测试设备"  #设备名称
+
+#工厂布局
+OrganizationStructureCode =  "Automation01" #车间编码
+OrganizationStructureName =  "自动化测试车间" #车间名称
+OrganizationStructureCode2 = "Automation01" #产线编码
+OrganizationStructureName2 = "自动化测试产线" #产线名称
+OrganizationStructureParentCode = "00000.00001.00003" #产线父节点编码

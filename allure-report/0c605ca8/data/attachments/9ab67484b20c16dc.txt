@@ -1,0 +1,1 @@
+2025-05-23 17:36:01,409 - test_product_materials.py:[96] - [INFO] - 本用例正在执行：test_storeManufactureBomData01。获取到的结果是：数据新增成功, 期望的结果是: 数据新增成功

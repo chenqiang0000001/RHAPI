@@ -1,0 +1,298 @@
+2025-05-29 17:55:23,749 - production_process.py:[33] - [INFO] - 当前执行新增工序接口：storeProcessInfoData，
+请求 URL: http://192.168.0.135:8282/ProductRouteApi/StoreProcessInfoData，
+请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxMTczMjEsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.C4pMNeTrMJCPMrS05k6iZcMNYlsBK6rgSjRuDv4x35Y'}，
+请求体: {'ProcessCode': 'Automation01', 'ProcessName': '自动化测试工序01'}
+2025-05-29 17:55:23,750 - test_process_related.py:[25] - [INFO] - 本用例正在执行：test_storeProcessInfoData01。获取到的结果是：数据新增成功, 期望的结果是: 数据新增成功
+2025-05-29 17:55:25,349 - production_process.py:[33] - [INFO] - 当前执行新增工序接口：storeProcessInfoData，
+请求 URL: http://192.168.0.135:8282/ProductRouteApi/StoreProcessInfoData，
+请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxMTczMjMsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.qsbKhVDjF6okGJUM7Jj_IcBHxNbfGvL6Vy5zqp2tOA8'}，
+请求体: {'ProcessCode': 'Automation01', 'ProcessName': '自动化测试工序01'}
+2025-05-29 17:55:25,349 - production_process.py:[33] - [INFO] - 当前执行新增工序接口：storeProcessInfoData，
+请求 URL: http://192.168.0.135:8282/ProductRouteApi/StoreProcessInfoData，
+请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxMTczMjMsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.qsbKhVDjF6okGJUM7Jj_IcBHxNbfGvL6Vy5zqp2tOA8'}，
+请求体: {'ProcessCode': 'Automation01', 'ProcessName': '自动化测试工序01'}
+2025-05-29 17:55:25,350 - test_process_related.py:[42] - [INFO] - 本用例正在执行：test_storeProcessInfoData02。获取到的结果是：已有重复数据录入!, 期望的结果是: 已有重复数据录入!
+2025-05-29 17:55:26,964 - test_process_related.py:[58] - [INFO] - 本用例正在执行：test_removeProcessInfoData01。获取到的结果是：数据删除成功, 期望的结果是: 数据删除成功
+2025-05-29 17:55:28,491 - test_process_related.py:[74] - [INFO] - 本用例正在执行：test_storeProcessRoutingData01。获取到的结果是：数据新增成功, 期望的结果是: 数据新增成功
+2025-05-29 17:55:30,033 - test_process_related.py:[90] - [INFO] - 本用例正在执行：test_storeProcessRoutingData02。获取到的结果是：数据新增成功, 期望的结果是: 数据新增成功
+2025-05-29 17:55:32,111 - test_process_related.py:[106] - [INFO] - 本用例正在执行：test_removeProcessRoutingData01。获取到的结果是：数据删除成功, 期望的结果是: 数据删除成功
+2025-05-29 17:55:34,193 - test_process_related.py:[122] - [INFO] - 本用例正在执行：test_adjustProcessRoutingEntry01。获取到的结果是：数据保存成功, 期望的结果是: 数据新增成功
+2025-05-29 17:55:34,198 - test_process_related.py:[127] - [ERROR] - 物料信息维护页面：test_adjustProcessRoutingEntry01 断言失败，展开结果与预期不符
+2025-05-29 17:55:36,420 - delete_data.py:[23] - [INFO] - 物料数据删除成功
+2025-05-29 17:55:37,906 - test_product_materials.py:[28] - [INFO] - 本用例正在执行：test_productaterials01。获取到的结果是：数据新增成功, 期望的结果是: 数据新增成功
+2025-05-29 17:55:39,316 - test_product_materials.py:[45] - [INFO] - 本用例正在执行：test_productaterials02。获取到的结果是：已有重复数据录入!, 期望的结果是:已有重复数据录入!
+2025-05-29 17:55:40,604 - test_product_materials.py:[61] - [INFO] - 本用例正在执行：test_getMaterialInfoAutoQueryDatas01。获取到的结果是：获取数据成功！, 期望的结果是: 获取数据成功！
+2025-05-29 17:55:41,858 - test_product_materials.py:[78] - [INFO] - 本用例正在执行：test_removeMaterialInfoData01。获取到的结果是：数据删除成功, 期望的结果是: 获取数据成功！
+2025-05-29 17:55:44,853 - test_product_materials.py:[96] - [INFO] - 本用例正在执行：test_storeManufactureBomData01。获取到的结果是：数据新增成功, 期望的结果是: 数据新增成功
+2025-05-29 17:55:55,777 - production_process.py:[33] - [INFO] - 当前执行新增工序接口：storeProcessInfoData，
+请求 URL: http://192.168.0.135:8282/ProductRouteApi/StoreProcessInfoData，
+请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxMTczNTQsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.6gDjXA6_f6WtzpC-3yZgGtT0L3CRGC6lJ_Z86dxYddg'}，
+请求体: {'ProcessCode': 'Automation01', 'ProcessName': '自动化测试工序01'}
+2025-05-29 17:55:55,780 - test_process_related.py:[25] - [INFO] - 本用例正在执行：test_storeProcessInfoData01。获取到的结果是：数据新增成功, 期望的结果是: 数据新增成功
+2025-05-29 17:55:57,376 - production_process.py:[33] - [INFO] - 当前执行新增工序接口：storeProcessInfoData，
+请求 URL: http://192.168.0.135:8282/ProductRouteApi/StoreProcessInfoData，
+请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxMTczNTUsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.Ex6Bk4ob3DgZ0an05bQry4InzSZgIBoGJ0-OqcBG7YE'}，
+请求体: {'ProcessCode': 'Automation01', 'ProcessName': '自动化测试工序01'}
+2025-05-29 17:55:57,376 - production_process.py:[33] - [INFO] - 当前执行新增工序接口：storeProcessInfoData，
+请求 URL: http://192.168.0.135:8282/ProductRouteApi/StoreProcessInfoData，
+请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxMTczNTUsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.Ex6Bk4ob3DgZ0an05bQry4InzSZgIBoGJ0-OqcBG7YE'}，
+请求体: {'ProcessCode': 'Automation01', 'ProcessName': '自动化测试工序01'}
+2025-05-29 17:55:57,377 - test_process_related.py:[42] - [INFO] - 本用例正在执行：test_storeProcessInfoData02。获取到的结果是：已有重复数据录入!, 期望的结果是: 已有重复数据录入!
+2025-05-29 17:55:58,717 - test_process_related.py:[58] - [INFO] - 本用例正在执行：test_removeProcessInfoData01。获取到的结果是：数据删除成功, 期望的结果是: 数据删除成功
+2025-05-29 17:56:00,222 - test_process_related.py:[74] - [INFO] - 本用例正在执行：test_storeProcessRoutingData01。获取到的结果是：数据新增成功, 期望的结果是: 数据新增成功
+2025-05-29 17:56:01,588 - test_process_related.py:[90] - [INFO] - 本用例正在执行：test_storeProcessRoutingData02。获取到的结果是：数据新增成功, 期望的结果是: 数据新增成功
+2025-05-29 17:56:03,080 - test_process_related.py:[106] - [INFO] - 本用例正在执行：test_removeProcessRoutingData01。获取到的结果是：数据删除成功, 期望的结果是: 数据删除成功
+2025-05-29 17:56:04,654 - test_process_related.py:[122] - [INFO] - 本用例正在执行：test_adjustProcessRoutingEntry01。获取到的结果是：数据保存成功, 期望的结果是: 数据新增成功
+2025-05-29 17:56:04,656 - test_process_related.py:[127] - [ERROR] - 物料信息维护页面：test_adjustProcessRoutingEntry01 断言失败，展开结果与预期不符
+2025-05-29 17:56:06,550 - delete_data.py:[23] - [INFO] - 物料数据删除成功
+2025-05-29 17:56:07,768 - test_product_materials.py:[28] - [INFO] - 本用例正在执行：test_productaterials01。获取到的结果是：数据新增成功, 期望的结果是: 数据新增成功
+2025-05-29 17:56:09,232 - test_product_materials.py:[45] - [INFO] - 本用例正在执行：test_productaterials02。获取到的结果是：已有重复数据录入!, 期望的结果是:已有重复数据录入!
+2025-05-29 17:56:10,854 - test_product_materials.py:[61] - [INFO] - 本用例正在执行：test_getMaterialInfoAutoQueryDatas01。获取到的结果是：获取数据成功！, 期望的结果是: 获取数据成功！
+2025-05-29 17:56:12,094 - test_product_materials.py:[78] - [INFO] - 本用例正在执行：test_removeMaterialInfoData01。获取到的结果是：数据删除成功, 期望的结果是: 获取数据成功！
+2025-05-29 17:56:15,020 - test_product_materials.py:[96] - [INFO] - 本用例正在执行：test_storeManufactureBomData01。获取到的结果是：数据新增成功, 期望的结果是: 数据新增成功
+2025-05-29 17:56:16,255 - test_product_materials.py:[130] - [INFO] - 本用例正在执行：test_getGetBomMasterViewAutoQueryDatas01。获取到的结果是：获取数据成功！, 期望的结果是:获取数据成功！
+2025-05-29 17:56:18,712 - test_product_materials.py:[147] - [INFO] - 本用例正在执行：test_gremoveManufactureBomData01。获取到的结果是：数据删除成功, 数据删除成功
+2025-05-29 17:56:19,946 - delete_data.py:[23] - [INFO] - 物料数据删除成功
+2025-05-29 17:56:20,131 - test_login.py:[24] - [INFO] - 本用例正在执行：test_login01。获取到的结果是：数据更新成功, 期望的结果是:数据更新成功，返回token
+2025-05-29 17:56:20,131 - test_login.py:[24] - [INFO] - 本用例正在执行：test_login01。获取到的结果是：数据更新成功, 期望的结果是:数据更新成功，返回token
+2025-05-29 17:56:20,310 - test_login.py:[41] - [INFO] - 本用例正在执行：test_login02。获取到的结果是：密码错误, 期望的结果是:账号错误，不返回token
+2025-05-29 17:56:20,310 - test_login.py:[41] - [INFO] - 本用例正在执行：test_login02。获取到的结果是：密码错误, 期望的结果是:账号错误，不返回token
+2025-05-29 17:56:20,310 - test_login.py:[41] - [INFO] - 本用例正在执行：test_login02。获取到的结果是：密码错误, 期望的结果是:账号错误，不返回token
+2025-05-29 17:56:20,340 - test_login.py:[58] - [INFO] - 本用例正在执行：test_login03。获取到的结果是：用户不存在, 期望的结果是:用户不存在，不返回token
+2025-05-29 17:56:20,340 - test_login.py:[58] - [INFO] - 本用例正在执行：test_login03。获取到的结果是：用户不存在, 期望的结果是:用户不存在，不返回token
+2025-05-29 17:56:20,340 - test_login.py:[58] - [INFO] - 本用例正在执行：test_login03。获取到的结果是：用户不存在, 期望的结果是:用户不存在，不返回token
+2025-05-29 17:56:20,340 - test_login.py:[58] - [INFO] - 本用例正在执行：test_login03。获取到的结果是：用户不存在, 期望的结果是:用户不存在，不返回token
+2025-05-29 17:56:20,680 - main1.py:[47] - [ERROR] - 测试执行失败，错误信息: ============================= test session starts =============================
+platform win32 -- Python 3.11.6, pytest-8.3.5, pluggy-1.6.0 -- D:\apiAutomationRH\.venv\Scripts\python.exe
+cachedir: .pytest_cache
+metadata: {'Python': '3.11.6', 'Platform': 'Windows-10-10.0.19045-SP0', 'Packages': {'pytest': '8.3.5', 'pluggy': '1.6.0'}, 'Plugins': {'allure-pytest': '2.14.2', 'html': '4.1.1', 'metadata': '3.1.1', 'ordering': '0.6', 'xdist': '3.7.0'}, 'JAVA_HOME': 'C:\\Program Files\\Java\\jdk-21'}
+rootdir: D:\apiAutomationRH
+configfile: pytest.ini
+plugins: allure-pytest-2.14.2, html-4.1.1, metadata-3.1.1, ordering-0.6, xdist-3.7.0
+collecting ... collected 17 items
+
+TestCase/functional_tests/test_factory_modeling/test_process_related.py::TestProcessRelated::test_storeProcessInfoData01 PASSED [  5%]
+TestCase/functional_tests/test_factory_modeling/test_process_related.py::TestProcessRelated::test_storeProcessInfoData02 PASSED [ 11%]
+TestCase/functional_tests/test_factory_modeling/test_process_related.py::TestProcessRelated::test_removeProcessInfoData01 PASSED [ 17%]
+TestCase/functional_tests/test_factory_modeling/test_process_related.py::TestProcessRelated::test_storeProcessRoutingData01 PASSED [ 23%]
+TestCase/functional_tests/test_factory_modeling/test_process_related.py::TestProcessRelated::test_storeProcessRoutingData02 PASSED [ 29%]
+TestCase/functional_tests/test_factory_modeling/test_process_related.py::TestProcessRelated::test_removeProcessRoutingData01 PASSED [ 35%]
+TestCase/functional_tests/test_factory_modeling/test_process_related.py::TestProcessRelated::test_adjustProcessRoutingEntry01 FAILED [ 41%]
+TestCase/functional_tests/test_factory_modeling/test_product_materials.py::TestProductMaterials::test_productaterials01 PASSED [ 47%]
+TestCase/functional_tests/test_factory_modeling/test_product_materials.py::TestProductMaterials::test_productaterials02 PASSED [ 52%]
+TestCase/functional_tests/test_factory_modeling/test_product_materials.py::TestProductMaterials::test_getMaterialInfoAutoQueryDatas01 PASSED [ 58%]
+TestCase/functional_tests/test_factory_modeling/test_product_materials.py::TestProductMaterials::test_removeMaterialInfoData01 PASSED [ 64%]
+TestCase/functional_tests/test_factory_modeling/test_product_materials.py::TestProductMaterials::test_storeManufactureBomData01 PASSED [ 70%]
+TestCase/functional_tests/test_factory_modeling/test_product_materials.py::TestProductMaterials::test_getGetBomMasterViewAutoQueryDatas01 PASSED [ 76%]
+TestCase/functional_tests/test_factory_modeling/test_product_materials.py::TestProductMaterials::test_gremoveManufactureBomData01 PASSED [ 82%]
+TestCase/functional_tests/test_login.py::TestLogin::test_login01 PASSED  [ 88%]
+TestCase/functional_tests/test_login.py::TestLogin::test_login02 PASSED  [ 94%]
+TestCase/functional_tests/test_login.py::TestLogin::test_login03 PASSED  [100%]
+
+================================== FAILURES ===================================
+_____________ TestProcessRelated.test_adjustProcessRoutingEntry01 _____________
+
+self = <TestCase.functional_tests.test_factory_modeling.test_process_related.TestProcessRelated object at 0x00000276477A6B10>
+
+    @pytest.mark.run(order=1)  # 执行顺序
+    @grade_1  # 优先级
+    @allure.title("工艺路线绑定工序")  # 在allure报告中自定义测试用例标题
+    @allure.description("工艺路线绑定工序，绑定成功")  # 报告中测试用例的详细描述
+    def test_adjustProcessRoutingEntry01(self):
+        with allure.step("工艺路线是否成功绑定工序"):  # 在报告中记录测试用例中的测试步骤或详细信息
+            res = ProcessRelated().adjustProcessRoutingEntry() # 实例登录接口
+            resBody = res.json()  # 响应数据转化JSON
+        logger.info(f"本用例正在执行：test_adjustProcessRoutingEntry01。获取到的结果是：{resBody['Message']}, 期望的结果是: 数据新增成功")  # 日志记录结果
+        try:
+            assert res.status_code == 200  # 断言响应状态码为200
+            assert resBody['Message'] ==  "数据新增成功"  # 断言数据更新成功
+        except AssertionError as e:
+            logger.error("物料信息维护页面：test_adjustProcessRoutingEntry01 断言失败，展开结果与预期不符")  # 错误日志记录
+>           raise e
+
+TestCase\functional_tests\test_factory_modeling\test_process_related.py:128: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <TestCase.functional_tests.test_factory_modeling.test_process_related.TestProcessRelated object at 0x00000276477A6B10>
+
+    @pytest.mark.run(order=1)  # 执行顺序
+    @grade_1  # 优先级
+    @allure.title("工艺路线绑定工序")  # 在allure报告中自定义测试用例标题
+    @allure.description("工艺路线绑定工序，绑定成功")  # 报告中测试用例的详细描述
+    def test_adjustProcessRoutingEntry01(self):
+        with allure.step("工艺路线是否成功绑定工序"):  # 在报告中记录测试用例中的测试步骤或详细信息
+            res = ProcessRelated().adjustProcessRoutingEntry() # 实例登录接口
+            resBody = res.json()  # 响应数据转化JSON
+        logger.info(f"本用例正在执行：test_adjustProcessRoutingEntry01。获取到的结果是：{resBody['Message']}, 期望的结果是: 数据新增成功")  # 日志记录结果
+        try:
+            assert res.status_code == 200  # 断言响应状态码为200
+>           assert resBody['Message'] ==  "数据新增成功"  # 断言数据更新成功
+E           AssertionError: assert '数据保存成功' == '数据新增成功'
+E             
+E             - 数据新增成功
+E             + 数据保存成功
+
+TestCase\functional_tests\test_factory_modeling\test_process_related.py:125: AssertionError
+---------------------------- Captured stderr call -----------------------------
+2025-05-29 17:56:04,654 - test_process_related.py:[122] - [INFO] - 本用例正在执行：test_adjustProcessRoutingEntry01。获取到的结果是：数据保存成功, 期望的结果是: 数据新增成功
+2025-05-29 17:56:04,656 - test_process_related.py:[127] - [ERROR] - 物料信息维护页面：test_adjustProcessRoutingEntry01 断言失败，展开结果与预期不符
+------------------------------ Captured log call ------------------------------
+INFO     TestProcessRelated:test_process_related.py:122 本用例正在执行：test_adjustProcessRoutingEntry01。获取到的结果是：数据保存成功, 期望的结果是: 数据新增成功
+ERROR    TestProcessRelated:test_process_related.py:127 物料信息维护页面：test_adjustProcessRoutingEntry01 断言失败，展开结果与预期不符
+=========================== short test summary info ===========================
+FAILED TestCase/functional_tests/test_factory_modeling/test_process_related.py::TestProcessRelated::test_adjustProcessRoutingEntry01
+======================== 1 failed, 16 passed in 27.30s ========================
+
+2025-05-29 17:56:29,118 - main1.py:[215] - [INFO] - 钉钉发送状态码: 200
+2025-05-29 17:56:29,119 - main1.py:[148] - [INFO] - 端口 8000 可用，尝试启动服务器...
+2025-05-29 17:56:32,152 - main1.py:[167] - [INFO] - 端口 8000 可连接，生成报告链接...
+2025-05-29 17:56:33,272 - main1.py:[194] - [INFO] - 邮件发送成功
+2025-05-29 18:04:46,263 - production_process.py:[33] - [INFO] - 当前执行新增工序接口：storeProcessInfoData，
+请求 URL: http://192.168.0.135:8282/ProductRouteApi/StoreProcessInfoData，
+请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxMTc4ODQsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.XJPmvOTHtQ6rWKe4WXK2P1Tg6jTmZHDT1V14XErp9lw'}，
+请求体: {'ProcessCode': 'Automation01', 'ProcessName': '自动化测试工序01'}
+2025-05-29 18:05:25,497 - production_process.py:[33] - [INFO] - 当前执行新增工序接口：storeProcessInfoData，
+请求 URL: http://192.168.0.135:8282/ProductRouteApi/StoreProcessInfoData，
+请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxMTc5MjMsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.JGl3UvEoc7CciY8LtkEFHIZaQ_B071W1u1OPPfGbp3c'}，
+请求体: {'ProcessCode': 'Automation01', 'ProcessName': '自动化测试工序01'}
+2025-05-29 18:05:25,499 - test_process_related.py:[25] - [INFO] - 本用例正在执行：test_storeProcessInfoData01。获取到的结果是：已有重复数据录入!, 期望的结果是: 数据新增成功
+2025-05-29 18:05:25,501 - test_process_related.py:[31] - [ERROR] - 物料信息维护页面：test_storeProcessInfoData01 断言失败，展开结果与预期不符
+2025-05-29 18:05:27,383 - production_process.py:[33] - [INFO] - 当前执行新增工序接口：storeProcessInfoData，
+请求 URL: http://192.168.0.135:8282/ProductRouteApi/StoreProcessInfoData，
+请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxMTc5MjUsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.xVLhVcpc1pvcyobrm71a_hPiB5RUUAMOFbpuwiuTJvs'}，
+请求体: {'ProcessCode': 'Automation01', 'ProcessName': '自动化测试工序01'}
+2025-05-29 18:05:27,383 - production_process.py:[33] - [INFO] - 当前执行新增工序接口：storeProcessInfoData，
+请求 URL: http://192.168.0.135:8282/ProductRouteApi/StoreProcessInfoData，
+请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxMTc5MjUsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.xVLhVcpc1pvcyobrm71a_hPiB5RUUAMOFbpuwiuTJvs'}，
+请求体: {'ProcessCode': 'Automation01', 'ProcessName': '自动化测试工序01'}
+2025-05-29 18:05:27,384 - test_process_related.py:[42] - [INFO] - 本用例正在执行：test_storeProcessInfoData02。获取到的结果是：已有重复数据录入!, 期望的结果是: 已有重复数据录入!
+2025-05-29 18:05:28,955 - test_process_related.py:[58] - [INFO] - 本用例正在执行：test_removeProcessInfoData01。获取到的结果是：数据删除成功, 期望的结果是: 数据删除成功
+2025-05-29 18:05:30,236 - test_process_related.py:[74] - [INFO] - 本用例正在执行：test_storeProcessRoutingData01。获取到的结果是：数据新增成功, 期望的结果是: 数据新增成功
+2025-05-29 18:05:31,688 - test_process_related.py:[90] - [INFO] - 本用例正在执行：test_storeProcessRoutingData02。获取到的结果是：数据新增成功, 期望的结果是: 数据新增成功
+2025-05-29 18:05:33,181 - test_process_related.py:[106] - [INFO] - 本用例正在执行：test_removeProcessRoutingData01。获取到的结果是：数据删除成功, 期望的结果是: 数据删除成功
+2025-05-29 18:05:34,737 - test_process_related.py:[122] - [INFO] - 本用例正在执行：test_adjustProcessRoutingEntry01。获取到的结果是：数据保存成功, 期望的结果是: 数据新增成功
+2025-05-29 18:05:34,738 - test_process_related.py:[127] - [ERROR] - 物料信息维护页面：test_adjustProcessRoutingEntry01 断言失败，展开结果与预期不符
+2025-05-29 18:16:31,971 - delete_data.py:[23] - [INFO] - 工序数据删除成功
+2025-05-29 18:16:33,971 - production_process.py:[33] - [INFO] - 当前执行新增工序接口：storeProcessInfoData，
+请求 URL: http://192.168.0.135:8282/ProductRouteApi/StoreProcessInfoData，
+请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxMTg1OTEsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.PZV8dz0T8_j0wuR0W5dsokMNqhMdnPhMeMNzoRsqE00'}，
+请求体: {'ProcessCode': 'Automation01', 'ProcessName': '自动化测试工序01'}
+2025-05-29 18:16:33,971 - production_process.py:[33] - [INFO] - 当前执行新增工序接口：storeProcessInfoData，
+请求 URL: http://192.168.0.135:8282/ProductRouteApi/StoreProcessInfoData，
+请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxMTg1OTEsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.PZV8dz0T8_j0wuR0W5dsokMNqhMdnPhMeMNzoRsqE00'}，
+请求体: {'ProcessCode': 'Automation01', 'ProcessName': '自动化测试工序01'}
+2025-05-29 18:16:33,973 - test_process_related.py:[36] - [INFO] - 本用例正在执行：test_storeProcessInfoData01。获取到的结果是：数据新增成功, 期望的结果是: 数据新增成功
+2025-05-29 18:16:36,028 - production_process.py:[33] - [INFO] - 当前执行新增工序接口：storeProcessInfoData，
+请求 URL: http://192.168.0.135:8282/ProductRouteApi/StoreProcessInfoData，
+请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxMTg1OTMsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.IAPZ0OhHzsLNCdWBeBUaOb1s6FFkQunosMJxtRz8ET4'}，
+请求体: {'ProcessCode': 'Automation01', 'ProcessName': '自动化测试工序01'}
+2025-05-29 18:16:36,028 - production_process.py:[33] - [INFO] - 当前执行新增工序接口：storeProcessInfoData，
+请求 URL: http://192.168.0.135:8282/ProductRouteApi/StoreProcessInfoData，
+请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxMTg1OTMsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.IAPZ0OhHzsLNCdWBeBUaOb1s6FFkQunosMJxtRz8ET4'}，
+请求体: {'ProcessCode': 'Automation01', 'ProcessName': '自动化测试工序01'}
+2025-05-29 18:16:36,028 - production_process.py:[33] - [INFO] - 当前执行新增工序接口：storeProcessInfoData，
+请求 URL: http://192.168.0.135:8282/ProductRouteApi/StoreProcessInfoData，
+请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxMTg1OTMsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.IAPZ0OhHzsLNCdWBeBUaOb1s6FFkQunosMJxtRz8ET4'}，
+请求体: {'ProcessCode': 'Automation01', 'ProcessName': '自动化测试工序01'}
+2025-05-29 18:16:36,030 - test_process_related.py:[53] - [INFO] - 本用例正在执行：test_storeProcessInfoData02。获取到的结果是：已有重复数据录入!, 期望的结果是: 已有重复数据录入!
+2025-05-29 18:16:37,775 - test_process_related.py:[69] - [INFO] - 本用例正在执行：test_removeProcessInfoData01。获取到的结果是：数据删除成功, 期望的结果是: 数据删除成功
+2025-05-29 18:16:39,405 - test_process_related.py:[85] - [INFO] - 本用例正在执行：test_storeProcessRoutingData01。获取到的结果是：数据新增成功, 期望的结果是: 数据新增成功
+2025-05-29 18:16:40,910 - test_process_related.py:[101] - [INFO] - 本用例正在执行：test_storeProcessRoutingData02。获取到的结果是：数据新增成功, 期望的结果是: 数据新增成功
+2025-05-29 18:16:42,466 - test_process_related.py:[117] - [INFO] - 本用例正在执行：test_removeProcessRoutingData01。获取到的结果是：数据删除成功, 期望的结果是: 数据删除成功
+2025-05-29 18:16:44,339 - test_process_related.py:[133] - [INFO] - 本用例正在执行：test_adjustProcessRoutingEntry01。获取到的结果是：数据保存成功, 期望的结果是: 数据保存成功
+2025-05-29 18:44:52,517 - delete_data.py:[23] - [INFO] - 工序数据删除成功
+2025-05-29 18:44:53,667 - production_process.py:[33] - [INFO] - 当前执行新增工序接口：storeProcessInfoData，
+请求 URL: http://192.168.0.135:8282/ProductRouteApi/StoreProcessInfoData，
+请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxMjAyOTIsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.9LQ3vU6c3Iy4dZZnXD9PaVjrFhH1cleXyMK8_OQfsCA'}，
+请求体: {'ProcessCode': 'Automation01', 'ProcessName': '自动化测试工序01'}
+2025-05-29 18:44:53,667 - production_process.py:[33] - [INFO] - 当前执行新增工序接口：storeProcessInfoData，
+请求 URL: http://192.168.0.135:8282/ProductRouteApi/StoreProcessInfoData，
+请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxMjAyOTIsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.9LQ3vU6c3Iy4dZZnXD9PaVjrFhH1cleXyMK8_OQfsCA'}，
+请求体: {'ProcessCode': 'Automation01', 'ProcessName': '自动化测试工序01'}
+2025-05-29 18:44:53,671 - test_process_related.py:[36] - [INFO] - 本用例正在执行：test_storeProcessInfoData01。获取到的结果是：数据新增成功, 期望的结果是: 数据新增成功
+2025-05-29 18:44:54,839 - production_process.py:[33] - [INFO] - 当前执行新增工序接口：storeProcessInfoData，
+请求 URL: http://192.168.0.135:8282/ProductRouteApi/StoreProcessInfoData，
+请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxMjAyOTMsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.1jvuY7vkSLJkvHWQRmQPF41s6Gr425D3wNoQIhjmmzY'}，
+请求体: {'ProcessCode': 'Automation01', 'ProcessName': '自动化测试工序01'}
+2025-05-29 18:44:54,839 - production_process.py:[33] - [INFO] - 当前执行新增工序接口：storeProcessInfoData，
+请求 URL: http://192.168.0.135:8282/ProductRouteApi/StoreProcessInfoData，
+请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxMjAyOTMsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.1jvuY7vkSLJkvHWQRmQPF41s6Gr425D3wNoQIhjmmzY'}，
+请求体: {'ProcessCode': 'Automation01', 'ProcessName': '自动化测试工序01'}
+2025-05-29 18:44:54,839 - production_process.py:[33] - [INFO] - 当前执行新增工序接口：storeProcessInfoData，
+请求 URL: http://192.168.0.135:8282/ProductRouteApi/StoreProcessInfoData，
+请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxMjAyOTMsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.1jvuY7vkSLJkvHWQRmQPF41s6Gr425D3wNoQIhjmmzY'}，
+请求体: {'ProcessCode': 'Automation01', 'ProcessName': '自动化测试工序01'}
+2025-05-29 18:44:54,841 - test_process_related.py:[53] - [INFO] - 本用例正在执行：test_storeProcessInfoData02。获取到的结果是：已有重复数据录入!, 期望的结果是: 已有重复数据录入!
+2025-05-29 18:44:56,004 - test_process_related.py:[69] - [INFO] - 本用例正在执行：test_removeProcessInfoData01。获取到的结果是：数据删除成功, 期望的结果是: 数据删除成功
+2025-05-29 18:44:57,159 - test_process_related.py:[85] - [INFO] - 本用例正在执行：test_storeProcessRoutingData01。获取到的结果是：数据新增成功, 期望的结果是: 数据新增成功
+2025-05-29 18:44:58,311 - test_process_related.py:[101] - [INFO] - 本用例正在执行：test_storeProcessRoutingData02。获取到的结果是：数据新增成功, 期望的结果是: 数据新增成功
+2025-05-29 18:44:59,459 - test_process_related.py:[117] - [INFO] - 本用例正在执行：test_removeProcessRoutingData01。获取到的结果是：数据删除成功, 期望的结果是: 数据删除成功
+2025-05-29 18:45:00,820 - test_process_related.py:[133] - [INFO] - 本用例正在执行：test_adjustProcessRoutingEntry01。获取到的结果是：数据保存成功, 期望的结果是: 数据保存成功
+2025-05-29 18:45:01,993 - production_process.py:[33] - [INFO] - 当前执行新增工序接口：storeProcessInfoData，
+请求 URL: http://192.168.0.135:8282/ProductRouteApi/StoreProcessInfoData，
+请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxMjAzMDAsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.87YgyQOjOgpX5Yo-mb2ElRdDVFEtmpPZLyiJiS_jpa4'}，
+请求体: {'ProcessCode': 'Automation01', 'ProcessName': '自动化测试工序01'}
+2025-05-29 18:45:01,993 - production_process.py:[33] - [INFO] - 当前执行新增工序接口：storeProcessInfoData，
+请求 URL: http://192.168.0.135:8282/ProductRouteApi/StoreProcessInfoData，
+请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxMjAzMDAsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.87YgyQOjOgpX5Yo-mb2ElRdDVFEtmpPZLyiJiS_jpa4'}，
+请求体: {'ProcessCode': 'Automation01', 'ProcessName': '自动化测试工序01'}
+2025-05-29 18:45:01,993 - production_process.py:[33] - [INFO] - 当前执行新增工序接口：storeProcessInfoData，
+请求 URL: http://192.168.0.135:8282/ProductRouteApi/StoreProcessInfoData，
+请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxMjAzMDAsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.87YgyQOjOgpX5Yo-mb2ElRdDVFEtmpPZLyiJiS_jpa4'}，
+请求体: {'ProcessCode': 'Automation01', 'ProcessName': '自动化测试工序01'}
+2025-05-29 18:45:01,993 - production_process.py:[33] - [INFO] - 当前执行新增工序接口：storeProcessInfoData，
+请求 URL: http://192.168.0.135:8282/ProductRouteApi/StoreProcessInfoData，
+请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxMjAzMDAsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.87YgyQOjOgpX5Yo-mb2ElRdDVFEtmpPZLyiJiS_jpa4'}，
+请求体: {'ProcessCode': 'Automation01', 'ProcessName': '自动化测试工序01'}
+2025-05-29 18:45:01,993 - production_process.py:[33] - [INFO] - 当前执行新增工序接口：storeProcessInfoData，
+请求 URL: http://192.168.0.135:8282/ProductRouteApi/StoreProcessInfoData，
+请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxMjAzMDAsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.87YgyQOjOgpX5Yo-mb2ElRdDVFEtmpPZLyiJiS_jpa4'}，
+请求体: {'ProcessCode': 'Automation01', 'ProcessName': '自动化测试工序01'}
+2025-05-29 18:45:01,993 - production_process.py:[33] - [INFO] - 当前执行新增工序接口：storeProcessInfoData，
+请求 URL: http://192.168.0.135:8282/ProductRouteApi/StoreProcessInfoData，
+请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxMjAzMDAsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.87YgyQOjOgpX5Yo-mb2ElRdDVFEtmpPZLyiJiS_jpa4'}，
+请求体: {'ProcessCode': 'Automation01', 'ProcessName': '自动化测试工序01'}
+2025-05-29 18:45:01,993 - production_process.py:[33] - [INFO] - 当前执行新增工序接口：storeProcessInfoData，
+请求 URL: http://192.168.0.135:8282/ProductRouteApi/StoreProcessInfoData，
+请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxMjAzMDAsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.87YgyQOjOgpX5Yo-mb2ElRdDVFEtmpPZLyiJiS_jpa4'}，
+请求体: {'ProcessCode': 'Automation01', 'ProcessName': '自动化测试工序01'}
+2025-05-29 18:45:01,993 - production_process.py:[33] - [INFO] - 当前执行新增工序接口：storeProcessInfoData，
+请求 URL: http://192.168.0.135:8282/ProductRouteApi/StoreProcessInfoData，
+请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxMjAzMDAsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.87YgyQOjOgpX5Yo-mb2ElRdDVFEtmpPZLyiJiS_jpa4'}，
+请求体: {'ProcessCode': 'Automation01', 'ProcessName': '自动化测试工序01'}
+2025-05-29 18:45:01,993 - production_process.py:[33] - [INFO] - 当前执行新增工序接口：storeProcessInfoData，
+请求 URL: http://192.168.0.135:8282/ProductRouteApi/StoreProcessInfoData，
+请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxMjAzMDAsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.87YgyQOjOgpX5Yo-mb2ElRdDVFEtmpPZLyiJiS_jpa4'}，
+请求体: {'ProcessCode': 'Automation01', 'ProcessName': '自动化测试工序01'}
+2025-05-29 18:45:05,470 - test_process_related.py:[152] - [INFO] - 本用例正在执行：test_adjustProcessRoutingEntry01。获取到的结果是：数据保存成功, 期望的结果是: 数据新增成功
+2025-05-29 18:45:05,478 - test_process_related.py:[157] - [ERROR] - 物料信息维护页面：test_adjustProcessRoutingEntry01 断言失败，展开结果与预期不符
+2025-05-29 18:45:07,160 - test_process_related.py:[168] - [INFO] - 本用例正在执行：test_selectManufactureBom01。获取到的结果是：当前选择Bom对应明细为空，保存失败！, 期望的结果是: 数据新增成功
+2025-05-29 18:45:07,164 - test_process_related.py:[173] - [ERROR] - 物料信息维护页面：test_selectManufactureBom01 断言失败，展开结果与预期不符
+2025-05-29 19:26:08,465 - delete_data.py:[23] - [INFO] - 工序数据删除成功
+2025-05-29 19:26:09,609 - equipment_ledger_management.py:[40] - [INFO] - 当前执行新增设备台账接口：storeProcessInfoData，
+请求 URL: http://192.168.0.135:8282/EquipmentLedgerApi/StoreEquipmentLedgerData，
+请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxMjI3NjgsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.NRIPhUHmpDKxDEuNnCiT_TBaf9ewTuOqFJQ8SeKhios'}，
+请求体: {'EquipmentCode': 'Automation01', 'EquipmentName': '自动化测试设备', 'OrganizationStructureCode': '00000.00001.00001', 'StopTime': 3, 'EquipmentGroupCode': 'Q', 'OrganizationStructureName': '注塑车间', 'OrganizationStructureExternalCode': 'ZSCJ', 'EquipmentGroupName': 'Q组', 'OpSign': 1, 'CompanyCode': '00000', 'FactoryCode': '00000.00001'}
+2025-05-29 19:26:09,614 - test_equipment_ledger.py:[31] - [INFO] - 本用例正在执行：test_storeEquipmentLedgerData01。获取到的结果是：数据新增成功, 期望的结果是: 数据新增成功
+2025-05-29 19:26:10,769 - equipment_ledger_management.py:[40] - [INFO] - 当前执行新增设备台账接口：storeProcessInfoData，
+请求 URL: http://192.168.0.135:8282/EquipmentLedgerApi/StoreEquipmentLedgerData，
+请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxMjI3NjksImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.UgFjqGKrwX1WFMyhGn4b0uDi5fkT90qJb5s75sNmy38'}，
+请求体: {'EquipmentCode': 'Automation01', 'EquipmentName': '自动化测试设备', 'OrganizationStructureCode': '00000.00001.00001', 'StopTime': 3, 'EquipmentGroupCode': 'Q', 'OrganizationStructureName': '注塑车间', 'OrganizationStructureExternalCode': 'ZSCJ', 'EquipmentGroupName': 'Q组', 'OpSign': 1, 'CompanyCode': '00000', 'FactoryCode': '00000.00001'}
+2025-05-29 19:26:10,769 - equipment_ledger_management.py:[40] - [INFO] - 当前执行新增设备台账接口：storeProcessInfoData，
+请求 URL: http://192.168.0.135:8282/EquipmentLedgerApi/StoreEquipmentLedgerData，
+请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxMjI3NjksImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.UgFjqGKrwX1WFMyhGn4b0uDi5fkT90qJb5s75sNmy38'}，
+请求体: {'EquipmentCode': 'Automation01', 'EquipmentName': '自动化测试设备', 'OrganizationStructureCode': '00000.00001.00001', 'StopTime': 3, 'EquipmentGroupCode': 'Q', 'OrganizationStructureName': '注塑车间', 'OrganizationStructureExternalCode': 'ZSCJ', 'EquipmentGroupName': 'Q组', 'OpSign': 1, 'CompanyCode': '00000', 'FactoryCode': '00000.00001'}
+2025-05-29 19:26:10,771 - test_equipment_ledger.py:[48] - [INFO] - 本用例正在执行：test_storeEquipmentLedgerData02。获取到的结果是：已有重复数据录入!, 期望的结果是: 已有重复数据录入!
+2025-05-29 19:26:12,019 - equipment_ledger_management.py:[40] - [INFO] - 当前执行新增设备台账接口：storeProcessInfoData，
+请求 URL: http://192.168.0.135:8282/EquipmentLedgerApi/StoreEquipmentLedgerData，
+请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxMjI3NzAsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.uawJq_8jvB0xXDIPO22ui33MeVFNVkZR-_pvMyeJtJw'}，
+请求体: {'EquipmentCode': 'Automation01', 'EquipmentName': '自动化测试设备', 'OrganizationStructureCode': '00000.00001.00001', 'StopTime': 3, 'EquipmentGroupCode': 'Q', 'OrganizationStructureName': '注塑车间', 'OrganizationStructureExternalCode': 'ZSCJ', 'EquipmentGroupName': 'Q组', 'OpSign': 1, 'CompanyCode': '00000', 'FactoryCode': '00000.00001'}
+2025-05-29 19:26:12,019 - equipment_ledger_management.py:[40] - [INFO] - 当前执行新增设备台账接口：storeProcessInfoData，
+请求 URL: http://192.168.0.135:8282/EquipmentLedgerApi/StoreEquipmentLedgerData，
+请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxMjI3NzAsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.uawJq_8jvB0xXDIPO22ui33MeVFNVkZR-_pvMyeJtJw'}，
+请求体: {'EquipmentCode': 'Automation01', 'EquipmentName': '自动化测试设备', 'OrganizationStructureCode': '00000.00001.00001', 'StopTime': 3, 'EquipmentGroupCode': 'Q', 'OrganizationStructureName': '注塑车间', 'OrganizationStructureExternalCode': 'ZSCJ', 'EquipmentGroupName': 'Q组', 'OpSign': 1, 'CompanyCode': '00000', 'FactoryCode': '00000.00001'}
+2025-05-29 19:26:12,019 - equipment_ledger_management.py:[40] - [INFO] - 当前执行新增设备台账接口：storeProcessInfoData，
+请求 URL: http://192.168.0.135:8282/EquipmentLedgerApi/StoreEquipmentLedgerData，
+请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxMjI3NzAsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.uawJq_8jvB0xXDIPO22ui33MeVFNVkZR-_pvMyeJtJw'}，
+请求体: {'EquipmentCode': 'Automation01', 'EquipmentName': '自动化测试设备', 'OrganizationStructureCode': '00000.00001.00001', 'StopTime': 3, 'EquipmentGroupCode': 'Q', 'OrganizationStructureName': '注塑车间', 'OrganizationStructureExternalCode': 'ZSCJ', 'EquipmentGroupName': 'Q组', 'OpSign': 1, 'CompanyCode': '00000', 'FactoryCode': '00000.00001'}
+2025-05-29 19:26:12,020 - test_equipment_ledger.py:[65] - [INFO] - 本用例正在执行：test_removeBatchEquipmentLedger01。获取到的结果是：已有重复数据录入!, 期望的结果是: 已有重复数据录入!

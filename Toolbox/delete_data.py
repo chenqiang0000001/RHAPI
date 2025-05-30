@@ -1,7 +1,7 @@
 import json
 from typing import Optional
 import requests
-from Business.mom_admin.equipment_management.equipment_ledger.equipment_ledger_management import \
+from Business.mom_admin.equipment_management.equipment_ledger_management import \
     EquipmentLedgerManagement
 from Toolbox.log_module import Logger
 from Business.mom_admin.factory_modeling.product_materials import ProductMaterials

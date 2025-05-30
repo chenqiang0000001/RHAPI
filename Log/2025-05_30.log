@@ -1,0 +1,899 @@
+2025-05-30 08:16:41,792 - delete_data.py:[23] - [INFO] - 工序数据删除成功
+2025-05-30 08:16:42,992 - equipment_ledger_management.py:[40] - [INFO] - 当前执行新增设备台账接口：storeProcessInfoData，
+请求 URL: http://192.168.0.135:8282/EquipmentLedgerApi/StoreEquipmentLedgerData，
+请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxNjkwMDEsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.tV0INxjlfn2iY1A9VO-T6ZmQCX6_V_3SMwGcR7YdjqU'}，
+请求体: {'EquipmentCode': 'Automation01', 'EquipmentName': '自动化测试设备', 'OrganizationStructureCode': '00000.00001.00001', 'StopTime': 3, 'EquipmentGroupCode': 'Q', 'OrganizationStructureName': '注塑车间', 'OrganizationStructureExternalCode': 'ZSCJ', 'EquipmentGroupName': 'Q组', 'OpSign': 1, 'CompanyCode': '00000', 'FactoryCode': '00000.00001'}
+2025-05-30 08:16:42,993 - test_equipment_ledger.py:[31] - [INFO] - 本用例正在执行：test_storeEquipmentLedgerData01。获取到的结果是：已有重复数据录入!, 期望的结果是: 数据新增成功
+2025-05-30 08:16:42,995 - test_equipment_ledger.py:[37] - [ERROR] - 新建设备页面：test_storeEquipmentLedgerData01 断言失败，展开结果与预期不符
+2025-05-30 08:16:44,442 - equipment_ledger_management.py:[40] - [INFO] - 当前执行新增设备台账接口：storeProcessInfoData，
+请求 URL: http://192.168.0.135:8282/EquipmentLedgerApi/StoreEquipmentLedgerData，
+请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxNjkwMDMsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.ZYZY-vqirShdAY5gk_mSpehPIo1BxlIme0YQ4OMHRo0'}，
+请求体: {'EquipmentCode': 'Automation01', 'EquipmentName': '自动化测试设备', 'OrganizationStructureCode': '00000.00001.00001', 'StopTime': 3, 'EquipmentGroupCode': 'Q', 'OrganizationStructureName': '注塑车间', 'OrganizationStructureExternalCode': 'ZSCJ', 'EquipmentGroupName': 'Q组', 'OpSign': 1, 'CompanyCode': '00000', 'FactoryCode': '00000.00001'}
+2025-05-30 08:16:44,442 - equipment_ledger_management.py:[40] - [INFO] - 当前执行新增设备台账接口：storeProcessInfoData，
+请求 URL: http://192.168.0.135:8282/EquipmentLedgerApi/StoreEquipmentLedgerData，
+请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxNjkwMDMsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.ZYZY-vqirShdAY5gk_mSpehPIo1BxlIme0YQ4OMHRo0'}，
+请求体: {'EquipmentCode': 'Automation01', 'EquipmentName': '自动化测试设备', 'OrganizationStructureCode': '00000.00001.00001', 'StopTime': 3, 'EquipmentGroupCode': 'Q', 'OrganizationStructureName': '注塑车间', 'OrganizationStructureExternalCode': 'ZSCJ', 'EquipmentGroupName': 'Q组', 'OpSign': 1, 'CompanyCode': '00000', 'FactoryCode': '00000.00001'}
+2025-05-30 08:16:44,443 - test_equipment_ledger.py:[48] - [INFO] - 本用例正在执行：test_storeEquipmentLedgerData02。获取到的结果是：已有重复数据录入!, 期望的结果是: 已有重复数据录入!
+2025-05-30 08:16:45,619 - equipment_ledger_management.py:[40] - [INFO] - 当前执行新增设备台账接口：storeProcessInfoData，
+请求 URL: http://192.168.0.135:8282/EquipmentLedgerApi/StoreEquipmentLedgerData，
+请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxNjkwMDQsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.qEfzlhqRSMX43A2agFfQNOKlcYQcY_MJQ-12A5MaVvQ'}，
+请求体: {'EquipmentCode': 'Automation01', 'EquipmentName': '自动化测试设备', 'OrganizationStructureCode': '00000.00001.00001', 'StopTime': 3, 'EquipmentGroupCode': 'Q', 'OrganizationStructureName': '注塑车间', 'OrganizationStructureExternalCode': 'ZSCJ', 'EquipmentGroupName': 'Q组', 'OpSign': 1, 'CompanyCode': '00000', 'FactoryCode': '00000.00001'}
+2025-05-30 08:16:45,619 - equipment_ledger_management.py:[40] - [INFO] - 当前执行新增设备台账接口：storeProcessInfoData，
+请求 URL: http://192.168.0.135:8282/EquipmentLedgerApi/StoreEquipmentLedgerData，
+请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxNjkwMDQsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.qEfzlhqRSMX43A2agFfQNOKlcYQcY_MJQ-12A5MaVvQ'}，
+请求体: {'EquipmentCode': 'Automation01', 'EquipmentName': '自动化测试设备', 'OrganizationStructureCode': '00000.00001.00001', 'StopTime': 3, 'EquipmentGroupCode': 'Q', 'OrganizationStructureName': '注塑车间', 'OrganizationStructureExternalCode': 'ZSCJ', 'EquipmentGroupName': 'Q组', 'OpSign': 1, 'CompanyCode': '00000', 'FactoryCode': '00000.00001'}
+2025-05-30 08:16:45,619 - equipment_ledger_management.py:[40] - [INFO] - 当前执行新增设备台账接口：storeProcessInfoData，
+请求 URL: http://192.168.0.135:8282/EquipmentLedgerApi/StoreEquipmentLedgerData，
+请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxNjkwMDQsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.qEfzlhqRSMX43A2agFfQNOKlcYQcY_MJQ-12A5MaVvQ'}，
+请求体: {'EquipmentCode': 'Automation01', 'EquipmentName': '自动化测试设备', 'OrganizationStructureCode': '00000.00001.00001', 'StopTime': 3, 'EquipmentGroupCode': 'Q', 'OrganizationStructureName': '注塑车间', 'OrganizationStructureExternalCode': 'ZSCJ', 'EquipmentGroupName': 'Q组', 'OpSign': 1, 'CompanyCode': '00000', 'FactoryCode': '00000.00001'}
+2025-05-30 08:16:45,620 - test_equipment_ledger.py:[65] - [INFO] - 本用例正在执行：test_removeBatchEquipmentLedger01。获取到的结果是：已有重复数据录入!, 期望的结果是: 已有重复数据录入!
+2025-05-30 08:16:46,912 - delete_data.py:[23] - [INFO] - 工序数据删除成功
+2025-05-30 08:16:48,059 - production_process.py:[33] - [INFO] - 当前执行新增工序接口：storeProcessInfoData，
+请求 URL: http://192.168.0.135:8282/ProductRouteApi/StoreProcessInfoData，
+请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxNjkwMDcsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.OlljEXRj2dpMso9e--5rGOtpwte5tOXQ48S6IxFT7rU'}，
+请求体: {'ProcessCode': 'Automation01', 'ProcessName': '自动化测试工序01'}
+2025-05-30 08:16:48,059 - production_process.py:[33] - [INFO] - 当前执行新增工序接口：storeProcessInfoData，
+请求 URL: http://192.168.0.135:8282/ProductRouteApi/StoreProcessInfoData，
+请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxNjkwMDcsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.OlljEXRj2dpMso9e--5rGOtpwte5tOXQ48S6IxFT7rU'}，
+请求体: {'ProcessCode': 'Automation01', 'ProcessName': '自动化测试工序01'}
+2025-05-30 08:16:48,059 - production_process.py:[33] - [INFO] - 当前执行新增工序接口：storeProcessInfoData，
+请求 URL: http://192.168.0.135:8282/ProductRouteApi/StoreProcessInfoData，
+请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxNjkwMDcsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.OlljEXRj2dpMso9e--5rGOtpwte5tOXQ48S6IxFT7rU'}，
+请求体: {'ProcessCode': 'Automation01', 'ProcessName': '自动化测试工序01'}
+2025-05-30 08:16:48,060 - test_process_related.py:[36] - [INFO] - 本用例正在执行：test_storeProcessInfoData01。获取到的结果是：已有重复数据录入!, 期望的结果是: 数据新增成功
+2025-05-30 08:16:48,061 - test_process_related.py:[42] - [ERROR] - 物料信息维护页面：test_storeProcessInfoData01 断言失败，展开结果与预期不符
+2025-05-30 08:16:49,363 - production_process.py:[33] - [INFO] - 当前执行新增工序接口：storeProcessInfoData，
+请求 URL: http://192.168.0.135:8282/ProductRouteApi/StoreProcessInfoData，
+请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxNjkwMDgsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.TbiGkAgaIXtr3IocqWWm6SERByyTwgHu2cLfCPmLMEA'}，
+请求体: {'ProcessCode': 'Automation01', 'ProcessName': '自动化测试工序01'}
+2025-05-30 08:16:49,363 - production_process.py:[33] - [INFO] - 当前执行新增工序接口：storeProcessInfoData，
+请求 URL: http://192.168.0.135:8282/ProductRouteApi/StoreProcessInfoData，
+请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxNjkwMDgsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.TbiGkAgaIXtr3IocqWWm6SERByyTwgHu2cLfCPmLMEA'}，
+请求体: {'ProcessCode': 'Automation01', 'ProcessName': '自动化测试工序01'}
+2025-05-30 08:16:49,363 - production_process.py:[33] - [INFO] - 当前执行新增工序接口：storeProcessInfoData，
+请求 URL: http://192.168.0.135:8282/ProductRouteApi/StoreProcessInfoData，
+请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxNjkwMDgsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.TbiGkAgaIXtr3IocqWWm6SERByyTwgHu2cLfCPmLMEA'}，
+请求体: {'ProcessCode': 'Automation01', 'ProcessName': '自动化测试工序01'}
+2025-05-30 08:16:49,363 - production_process.py:[33] - [INFO] - 当前执行新增工序接口：storeProcessInfoData，
+请求 URL: http://192.168.0.135:8282/ProductRouteApi/StoreProcessInfoData，
+请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxNjkwMDgsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.TbiGkAgaIXtr3IocqWWm6SERByyTwgHu2cLfCPmLMEA'}，
+请求体: {'ProcessCode': 'Automation01', 'ProcessName': '自动化测试工序01'}
+2025-05-30 08:16:49,364 - test_process_related.py:[53] - [INFO] - 本用例正在执行：test_storeProcessInfoData02。获取到的结果是：已有重复数据录入!, 期望的结果是: 已有重复数据录入!
+2025-05-30 08:16:50,549 - test_process_related.py:[69] - [INFO] - 本用例正在执行：test_removeProcessInfoData01。获取到的结果是：数据删除成功, 期望的结果是: 数据删除成功
+2025-05-30 08:16:51,813 - test_process_related.py:[85] - [INFO] - 本用例正在执行：test_storeProcessRoutingData01。获取到的结果是：数据新增成功, 期望的结果是: 数据新增成功
+2025-05-30 08:16:53,024 - test_process_related.py:[101] - [INFO] - 本用例正在执行：test_storeProcessRoutingData02。获取到的结果是：数据新增成功, 期望的结果是: 数据新增成功
+2025-05-30 08:16:54,213 - test_process_related.py:[117] - [INFO] - 本用例正在执行：test_removeProcessRoutingData01。获取到的结果是：数据删除成功, 期望的结果是: 数据删除成功
+2025-05-30 08:16:55,439 - test_process_related.py:[133] - [INFO] - 本用例正在执行：test_adjustProcessRoutingEntry01。获取到的结果是：数据保存成功, 期望的结果是: 数据保存成功
+2025-05-30 08:16:56,597 - production_process.py:[33] - [INFO] - 当前执行新增工序接口：storeProcessInfoData，
+请求 URL: http://192.168.0.135:8282/ProductRouteApi/StoreProcessInfoData，
+请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxNjkwMTUsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.4S7q_EULpEi_meBipm6QT1e6E25ZTHKimQeDtzHYhsY'}，
+请求体: {'ProcessCode': 'Automation01', 'ProcessName': '自动化测试工序01'}
+2025-05-30 08:16:56,597 - production_process.py:[33] - [INFO] - 当前执行新增工序接口：storeProcessInfoData，
+请求 URL: http://192.168.0.135:8282/ProductRouteApi/StoreProcessInfoData，
+请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxNjkwMTUsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.4S7q_EULpEi_meBipm6QT1e6E25ZTHKimQeDtzHYhsY'}，
+请求体: {'ProcessCode': 'Automation01', 'ProcessName': '自动化测试工序01'}
+2025-05-30 08:16:56,597 - production_process.py:[33] - [INFO] - 当前执行新增工序接口：storeProcessInfoData，
+请求 URL: http://192.168.0.135:8282/ProductRouteApi/StoreProcessInfoData，
+请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxNjkwMTUsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.4S7q_EULpEi_meBipm6QT1e6E25ZTHKimQeDtzHYhsY'}，
+请求体: {'ProcessCode': 'Automation01', 'ProcessName': '自动化测试工序01'}
+2025-05-30 08:16:56,597 - production_process.py:[33] - [INFO] - 当前执行新增工序接口：storeProcessInfoData，
+请求 URL: http://192.168.0.135:8282/ProductRouteApi/StoreProcessInfoData，
+请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxNjkwMTUsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.4S7q_EULpEi_meBipm6QT1e6E25ZTHKimQeDtzHYhsY'}，
+请求体: {'ProcessCode': 'Automation01', 'ProcessName': '自动化测试工序01'}
+2025-05-30 08:16:56,597 - production_process.py:[33] - [INFO] - 当前执行新增工序接口：storeProcessInfoData，
+请求 URL: http://192.168.0.135:8282/ProductRouteApi/StoreProcessInfoData，
+请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxNjkwMTUsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.4S7q_EULpEi_meBipm6QT1e6E25ZTHKimQeDtzHYhsY'}，
+请求体: {'ProcessCode': 'Automation01', 'ProcessName': '自动化测试工序01'}
+2025-05-30 08:16:56,597 - production_process.py:[33] - [INFO] - 当前执行新增工序接口：storeProcessInfoData，
+请求 URL: http://192.168.0.135:8282/ProductRouteApi/StoreProcessInfoData，
+请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxNjkwMTUsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.4S7q_EULpEi_meBipm6QT1e6E25ZTHKimQeDtzHYhsY'}，
+请求体: {'ProcessCode': 'Automation01', 'ProcessName': '自动化测试工序01'}
+2025-05-30 08:16:56,597 - production_process.py:[33] - [INFO] - 当前执行新增工序接口：storeProcessInfoData，
+请求 URL: http://192.168.0.135:8282/ProductRouteApi/StoreProcessInfoData，
+请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxNjkwMTUsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.4S7q_EULpEi_meBipm6QT1e6E25ZTHKimQeDtzHYhsY'}，
+请求体: {'ProcessCode': 'Automation01', 'ProcessName': '自动化测试工序01'}
+2025-05-30 08:16:56,597 - production_process.py:[33] - [INFO] - 当前执行新增工序接口：storeProcessInfoData，
+请求 URL: http://192.168.0.135:8282/ProductRouteApi/StoreProcessInfoData，
+请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxNjkwMTUsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.4S7q_EULpEi_meBipm6QT1e6E25ZTHKimQeDtzHYhsY'}，
+请求体: {'ProcessCode': 'Automation01', 'ProcessName': '自动化测试工序01'}
+2025-05-30 08:16:56,597 - production_process.py:[33] - [INFO] - 当前执行新增工序接口：storeProcessInfoData，
+请求 URL: http://192.168.0.135:8282/ProductRouteApi/StoreProcessInfoData，
+请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxNjkwMTUsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.4S7q_EULpEi_meBipm6QT1e6E25ZTHKimQeDtzHYhsY'}，
+请求体: {'ProcessCode': 'Automation01', 'ProcessName': '自动化测试工序01'}
+2025-05-30 08:16:56,597 - production_process.py:[33] - [INFO] - 当前执行新增工序接口：storeProcessInfoData，
+请求 URL: http://192.168.0.135:8282/ProductRouteApi/StoreProcessInfoData，
+请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxNjkwMTUsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.4S7q_EULpEi_meBipm6QT1e6E25ZTHKimQeDtzHYhsY'}，
+请求体: {'ProcessCode': 'Automation01', 'ProcessName': '自动化测试工序01'}
+2025-05-30 08:17:00,164 - test_process_related.py:[152] - [INFO] - 本用例正在执行：test_adjustProcessRoutingEntry01。获取到的结果是：数据保存成功, 期望的结果是: 数据保存成功
+2025-05-30 08:17:01,518 - test_process_related.py:[168] - [INFO] - 本用例正在执行：test_selectManufactureBom01。获取到的结果是：数据保存成功, 期望的结果是: 数据保存成功
+2025-05-30 08:17:02,765 - delete_data.py:[23] - [INFO] - 物料数据删除成功
+2025-05-30 08:17:04,015 - test_product_materials.py:[28] - [INFO] - 本用例正在执行：test_productaterials01。获取到的结果是：数据新增成功, 期望的结果是: 数据新增成功
+2025-05-30 08:17:05,221 - test_product_materials.py:[45] - [INFO] - 本用例正在执行：test_productaterials02。获取到的结果是：已有重复数据录入!, 期望的结果是:已有重复数据录入!
+2025-05-30 08:17:06,589 - test_product_materials.py:[61] - [INFO] - 本用例正在执行：test_getMaterialInfoAutoQueryDatas01。获取到的结果是：获取数据成功！, 期望的结果是: 获取数据成功！
+2025-05-30 08:17:07,945 - test_product_materials.py:[78] - [INFO] - 本用例正在执行：test_removeMaterialInfoData01。获取到的结果是：数据删除成功, 期望的结果是: 获取数据成功！
+2025-05-30 08:17:10,546 - test_product_materials.py:[96] - [INFO] - 本用例正在执行：test_storeManufactureBomData01。获取到的结果是：数据新增成功, 期望的结果是: 数据新增成功
+2025-05-30 08:17:11,788 - test_product_materials.py:[130] - [INFO] - 本用例正在执行：test_getGetBomMasterViewAutoQueryDatas01。获取到的结果是：获取数据成功！, 期望的结果是:获取数据成功！
+2025-05-30 08:17:14,215 - test_product_materials.py:[147] - [INFO] - 本用例正在执行：test_gremoveManufactureBomData01。获取到的结果是：数据删除成功, 数据删除成功
+2025-05-30 08:17:15,485 - delete_data.py:[23] - [INFO] - 物料数据删除成功
+2025-05-30 08:17:15,661 - test_login.py:[24] - [INFO] - 本用例正在执行：test_login01。获取到的结果是：数据更新成功, 期望的结果是:数据更新成功，返回token
+2025-05-30 08:17:15,661 - test_login.py:[24] - [INFO] - 本用例正在执行：test_login01。获取到的结果是：数据更新成功, 期望的结果是:数据更新成功，返回token
+2025-05-30 08:17:15,844 - test_login.py:[41] - [INFO] - 本用例正在执行：test_login02。获取到的结果是：密码错误, 期望的结果是:账号错误，不返回token
+2025-05-30 08:17:15,844 - test_login.py:[41] - [INFO] - 本用例正在执行：test_login02。获取到的结果是：密码错误, 期望的结果是:账号错误，不返回token
+2025-05-30 08:17:15,844 - test_login.py:[41] - [INFO] - 本用例正在执行：test_login02。获取到的结果是：密码错误, 期望的结果是:账号错误，不返回token
+2025-05-30 08:17:15,871 - test_login.py:[58] - [INFO] - 本用例正在执行：test_login03。获取到的结果是：用户不存在, 期望的结果是:用户不存在，不返回token
+2025-05-30 08:17:15,871 - test_login.py:[58] - [INFO] - 本用例正在执行：test_login03。获取到的结果是：用户不存在, 期望的结果是:用户不存在，不返回token
+2025-05-30 08:17:15,871 - test_login.py:[58] - [INFO] - 本用例正在执行：test_login03。获取到的结果是：用户不存在, 期望的结果是:用户不存在，不返回token
+2025-05-30 08:17:15,871 - test_login.py:[58] - [INFO] - 本用例正在执行：test_login03。获取到的结果是：用户不存在, 期望的结果是:用户不存在，不返回token
+2025-05-30 08:17:16,102 - main1.py:[47] - [ERROR] - 测试执行失败，错误信息: ============================= test session starts =============================
+platform win32 -- Python 3.11.6, pytest-8.3.5, pluggy-1.6.0 -- D:\apiAutomationRH\.venv\Scripts\python.exe
+cachedir: .pytest_cache
+metadata: {'Python': '3.11.6', 'Platform': 'Windows-10-10.0.19045-SP0', 'Packages': {'pytest': '8.3.5', 'pluggy': '1.6.0'}, 'Plugins': {'allure-pytest': '2.14.2', 'html': '4.1.1', 'metadata': '3.1.1', 'ordering': '0.6', 'xdist': '3.7.0'}, 'JAVA_HOME': 'C:\\Program Files\\Java\\jdk-21'}
+rootdir: D:\apiAutomationRH
+configfile: pytest.ini
+plugins: allure-pytest-2.14.2, html-4.1.1, metadata-3.1.1, ordering-0.6, xdist-3.7.0
+collecting ... collected 22 items
+
+TestCase/functional_tests/test_equipment_management/test_equipment_ledger.py::TestEquipmentLedger::test_storeEquipmentLedgerData01 FAILED [  4%]
+TestCase/functional_tests/test_equipment_management/test_equipment_ledger.py::TestEquipmentLedger::test_storeEquipmentLedgerData02 PASSED [  9%]
+TestCase/functional_tests/test_equipment_management/test_equipment_ledger.py::TestEquipmentLedger::test_removeBatchEquipmentLedger01 PASSED [ 13%]
+TestCase/functional_tests/test_factory_modeling/test_process_related.py::TestProcessRelated::test_storeProcessInfoData01 FAILED [ 18%]
+TestCase/functional_tests/test_factory_modeling/test_process_related.py::TestProcessRelated::test_storeProcessInfoData02 PASSED [ 22%]
+TestCase/functional_tests/test_factory_modeling/test_process_related.py::TestProcessRelated::test_removeProcessInfoData01 PASSED [ 27%]
+TestCase/functional_tests/test_factory_modeling/test_process_related.py::TestProcessRelated::test_storeProcessRoutingData01 PASSED [ 31%]
+TestCase/functional_tests/test_factory_modeling/test_process_related.py::TestProcessRelated::test_storeProcessRoutingData02 PASSED [ 36%]
+TestCase/functional_tests/test_factory_modeling/test_process_related.py::TestProcessRelated::test_removeProcessRoutingData01 PASSED [ 40%]
+TestCase/functional_tests/test_factory_modeling/test_process_related.py::TestProcessRelated::test_adjustProcessRoutingEntry01 PASSED [ 45%]
+TestCase/functional_tests/test_factory_modeling/test_process_related.py::TestProcessRelated::test_storeBatchProductProcessRouteDatas01 PASSED [ 50%]
+TestCase/functional_tests/test_factory_modeling/test_process_related.py::TestProcessRelated::test_selectManufactureBom01 PASSED [ 54%]
+TestCase/functional_tests/test_factory_modeling/test_product_materials.py::TestProductMaterials::test_productaterials01 PASSED [ 59%]
+TestCase/functional_tests/test_factory_modeling/test_product_materials.py::TestProductMaterials::test_productaterials02 PASSED [ 63%]
+TestCase/functional_tests/test_factory_modeling/test_product_materials.py::TestProductMaterials::test_getMaterialInfoAutoQueryDatas01 PASSED [ 68%]
+TestCase/functional_tests/test_factory_modeling/test_product_materials.py::TestProductMaterials::test_removeMaterialInfoData01 PASSED [ 72%]
+TestCase/functional_tests/test_factory_modeling/test_product_materials.py::TestProductMaterials::test_storeManufactureBomData01 PASSED [ 77%]
+TestCase/functional_tests/test_factory_modeling/test_product_materials.py::TestProductMaterials::test_getGetBomMasterViewAutoQueryDatas01 PASSED [ 81%]
+TestCase/functional_tests/test_factory_modeling/test_product_materials.py::TestProductMaterials::test_gremoveManufactureBomData01 PASSED [ 86%]
+TestCase/functional_tests/test_login.py::TestLogin::test_login01 PASSED  [ 90%]
+TestCase/functional_tests/test_login.py::TestLogin::test_login02 PASSED  [ 95%]
+TestCase/functional_tests/test_login.py::TestLogin::test_login03 PASSED  [100%]
+
+================================== FAILURES ===================================
+_____________ TestEquipmentLedger.test_storeEquipmentLedgerData01 _____________
+
+self = <class 'TestCase.functional_tests.test_equipment_management.test_equipment_ledger.TestEquipmentLedger'>
+
+    @classmethod
+    # def setup_class(cls):
+    #     DataCleaner().clean_related_data()
+    #
+    # @classmethod
+    #
+    # def teardown_class(cls):
+    #     DataCleaner().clean_related_data()
+    
+    @pytest.mark.run(order=1)  # 执行顺序
+    @grade_1  # 优先级
+    @allure.title("新建设备")  # 在allure报告中自定义测试用例标题
+    @allure.description("使用符合要求的信息新建设备，新建成功")  # 报告中测试用例的详细描述
+    def test_storeEquipmentLedgerData01(self):
+        with allure.step("是否成功新建设备"):  # 在报告中记录测试用例中的测试步骤或详细信息
+            DataCleaner().delete_data(2)
+            res = EquipmentLedgerManagement().storeEquipmentLedgerData()  # 实例登录接口
+            resBody = res.json()  # 响应数据转化JSON
+        logger.info(
+            f"本用例正在执行：test_storeEquipmentLedgerData01。获取到的结果是：{resBody['Message']}, 期望的结果是: 数据新增成功")  # 日志记录结果
+        try:
+            assert res.status_code == 200  # 断言响应状态码为200
+            assert resBody['Message'] == "数据新增成功"  # 断言数据更新成功
+        except AssertionError as e:
+            logger.error("新建设备页面：test_storeEquipmentLedgerData01 断言失败，展开结果与预期不符")  # 错误日志记录
+>           raise e
+
+TestCase\functional_tests\test_equipment_management\test_equipment_ledger.py:38: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <class 'TestCase.functional_tests.test_equipment_management.test_equipment_ledger.TestEquipmentLedger'>
+
+    @classmethod
+    # def setup_class(cls):
+    #     DataCleaner().clean_related_data()
+    #
+    # @classmethod
+    #
+    # def teardown_class(cls):
+    #     DataCleaner().clean_related_data()
+    
+    @pytest.mark.run(order=1)  # 执行顺序
+    @grade_1  # 优先级
+    @allure.title("新建设备")  # 在allure报告中自定义测试用例标题
+    @allure.description("使用符合要求的信息新建设备，新建成功")  # 报告中测试用例的详细描述
+    def test_storeEquipmentLedgerData01(self):
+        with allure.step("是否成功新建设备"):  # 在报告中记录测试用例中的测试步骤或详细信息
+            DataCleaner().delete_data(2)
+            res = EquipmentLedgerManagement().storeEquipmentLedgerData()  # 实例登录接口
+            resBody = res.json()  # 响应数据转化JSON
+        logger.info(
+            f"本用例正在执行：test_storeEquipmentLedgerData01。获取到的结果是：{resBody['Message']}, 期望的结果是: 数据新增成功")  # 日志记录结果
+        try:
+            assert res.status_code == 200  # 断言响应状态码为200
+>           assert resBody['Message'] == "数据新增成功"  # 断言数据更新成功
+E           AssertionError: assert '已有重复数据录入!' == '数据新增成功'
+E             
+E             - 数据新增成功
+E             + 已有重复数据录入!
+
+TestCase\functional_tests\test_equipment_management\test_equipment_ledger.py:35: AssertionError
+---------------------------- Captured stderr call -----------------------------
+2025-05-30 08:16:41,792 - delete_data.py:[23] - [INFO] - 工序数据删除成功
+2025-05-30 08:16:42,992 - equipment_ledger_management.py:[40] - [INFO] - 当前执行新增设备台账接口：storeProcessInfoData，
+请求 URL: http://192.168.0.135:8282/EquipmentLedgerApi/StoreEquipmentLedgerData，
+请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxNjkwMDEsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.tV0INxjlfn2iY1A9VO-T6ZmQCX6_V_3SMwGcR7YdjqU'}，
+请求体: {'EquipmentCode': 'Automation01', 'EquipmentName': '自动化测试设备', 'OrganizationStructureCode': '00000.00001.00001', 'StopTime': 3, 'EquipmentGroupCode': 'Q', 'OrganizationStructureName': '注塑车间', 'OrganizationStructureExternalCode': 'ZSCJ', 'EquipmentGroupName': 'Q组', 'OpSign': 1, 'CompanyCode': '00000', 'FactoryCode': '00000.00001'}
+2025-05-30 08:16:42,993 - test_equipment_ledger.py:[31] - [INFO] - 本用例正在执行：test_storeEquipmentLedgerData01。获取到的结果是：已有重复数据录入!, 期望的结果是: 数据新增成功
+2025-05-30 08:16:42,995 - test_equipment_ledger.py:[37] - [ERROR] - 新建设备页面：test_storeEquipmentLedgerData01 断言失败，展开结果与预期不符
+------------------------------ Captured log call ------------------------------
+INFO     delete_data:delete_data.py:23 工序数据删除成功
+INFO     EquipmentLedgerManagement:equipment_ledger_management.py:40 当前执行新增设备台账接口：storeProcessInfoData，
+请求 URL: http://192.168.0.135:8282/EquipmentLedgerApi/StoreEquipmentLedgerData，
+请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxNjkwMDEsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.tV0INxjlfn2iY1A9VO-T6ZmQCX6_V_3SMwGcR7YdjqU'}，
+请求体: {'EquipmentCode': 'Automation01', 'EquipmentName': '自动化测试设备', 'OrganizationStructureCode': '00000.00001.00001', 'StopTime': 3, 'EquipmentGroupCode': 'Q', 'OrganizationStructureName': '注塑车间', 'OrganizationStructureExternalCode': 'ZSCJ', 'EquipmentGroupName': 'Q组', 'OpSign': 1, 'CompanyCode': '00000', 'FactoryCode': '00000.00001'}
+INFO     TestEquipmentLedger:test_equipment_ledger.py:31 本用例正在执行：test_storeEquipmentLedgerData01。获取到的结果是：已有重复数据录入!, 期望的结果是: 数据新增成功
+ERROR    TestEquipmentLedger:test_equipment_ledger.py:37 新建设备页面：test_storeEquipmentLedgerData01 断言失败，展开结果与预期不符
+_______________ TestProcessRelated.test_storeProcessInfoData01 ________________
+
+self = <class 'TestCase.functional_tests.test_factory_modeling.test_process_related.TestProcessRelated'>
+
+    @classmethod
+    
+    # def setup_class(cls):
+    #     DataCleaner().clean_related_data()
+    #
+    # @classmethod
+    #
+    # def teardown_class(cls):
+    #     DataCleaner().clean_related_data()
+    
+    @pytest.mark.run(order=1)  # 执行顺序
+    @grade_1  # 优先级
+    @allure.title("创建工序")  # 在allure报告中自定义测试用例标题
+    @allure.description("使用符合要求的信息创建工序，创建成功")  # 报告中测试用例的详细描述
+    def test_storeProcessInfoData01(self):
+        with allure.step("是否成功创建工序"):  # 在报告中记录测试用例中的测试步骤或详细信息
+            DataCleaner().delete_data(2)
+            res = ProcessRelated().storeProcessInfoData() # 实例登录接口
+            resBody = res.json()  # 响应数据转化JSON
+        logger.info(f"本用例正在执行：test_storeProcessInfoData01。获取到的结果是：{resBody['Message']}, 期望的结果是: 数据新增成功")  # 日志记录结果
+        try:
+            assert res.status_code == 200  # 断言响应状态码为200
+            assert resBody['Message'] ==  "数据新增成功"  # 断言数据更新成功
+            assert resBody['Attach']['ProcessCode'] == ProcessCode
+        except AssertionError as e:
+            logger.error("物料信息维护页面：test_storeProcessInfoData01 断言失败，展开结果与预期不符")  # 错误日志记录
+>           raise e
+
+TestCase\functional_tests\test_factory_modeling\test_process_related.py:43: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <class 'TestCase.functional_tests.test_factory_modeling.test_process_related.TestProcessRelated'>
+
+    @classmethod
+    
+    # def setup_class(cls):
+    #     DataCleaner().clean_related_data()
+    #
+    # @classmethod
+    #
+    # def teardown_class(cls):
+    #     DataCleaner().clean_related_data()
+    
+    @pytest.mark.run(order=1)  # 执行顺序
+    @grade_1  # 优先级
+    @allure.title("创建工序")  # 在allure报告中自定义测试用例标题
+    @allure.description("使用符合要求的信息创建工序，创建成功")  # 报告中测试用例的详细描述
+    def test_storeProcessInfoData01(self):
+        with allure.step("是否成功创建工序"):  # 在报告中记录测试用例中的测试步骤或详细信息
+            DataCleaner().delete_data(2)
+            res = ProcessRelated().storeProcessInfoData() # 实例登录接口
+            resBody = res.json()  # 响应数据转化JSON
+        logger.info(f"本用例正在执行：test_storeProcessInfoData01。获取到的结果是：{resBody['Message']}, 期望的结果是: 数据新增成功")  # 日志记录结果
+        try:
+            assert res.status_code == 200  # 断言响应状态码为200
+>           assert resBody['Message'] ==  "数据新增成功"  # 断言数据更新成功
+E           AssertionError: assert '已有重复数据录入!' == '数据新增成功'
+E             
+E             - 数据新增成功
+E             + 已有重复数据录入!
+
+TestCase\functional_tests\test_factory_modeling\test_process_related.py:39: AssertionError
+---------------------------- Captured stderr call -----------------------------
+2025-05-30 08:16:46,912 - delete_data.py:[23] - [INFO] - 工序数据删除成功
+2025-05-30 08:16:48,059 - production_process.py:[33] - [INFO] - 当前执行新增工序接口：storeProcessInfoData，
+请求 URL: http://192.168.0.135:8282/ProductRouteApi/StoreProcessInfoData，
+请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxNjkwMDcsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.OlljEXRj2dpMso9e--5rGOtpwte5tOXQ48S6IxFT7rU'}，
+请求体: {'ProcessCode': 'Automation01', 'ProcessName': '自动化测试工序01'}
+2025-05-30 08:16:48,059 - production_process.py:[33] - [INFO] - 当前执行新增工序接口：storeProcessInfoData，
+请求 URL: http://192.168.0.135:8282/ProductRouteApi/StoreProcessInfoData，
+请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxNjkwMDcsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.OlljEXRj2dpMso9e--5rGOtpwte5tOXQ48S6IxFT7rU'}，
+请求体: {'ProcessCode': 'Automation01', 'ProcessName': '自动化测试工序01'}
+2025-05-30 08:16:48,059 - production_process.py:[33] - [INFO] - 当前执行新增工序接口：storeProcessInfoData，
+请求 URL: http://192.168.0.135:8282/ProductRouteApi/StoreProcessInfoData，
+请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxNjkwMDcsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.OlljEXRj2dpMso9e--5rGOtpwte5tOXQ48S6IxFT7rU'}，
+请求体: {'ProcessCode': 'Automation01', 'ProcessName': '自动化测试工序01'}
+2025-05-30 08:16:48,060 - test_process_related.py:[36] - [INFO] - 本用例正在执行：test_storeProcessInfoData01。获取到的结果是：已有重复数据录入!, 期望的结果是: 数据新增成功
+2025-05-30 08:16:48,061 - test_process_related.py:[42] - [ERROR] - 物料信息维护页面：test_storeProcessInfoData01 断言失败，展开结果与预期不符
+------------------------------ Captured log call ------------------------------
+INFO     delete_data:delete_data.py:23 工序数据删除成功
+INFO     ProcessRelated:production_process.py:33 当前执行新增工序接口：storeProcessInfoData，
+请求 URL: http://192.168.0.135:8282/ProductRouteApi/StoreProcessInfoData，
+请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxNjkwMDcsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.OlljEXRj2dpMso9e--5rGOtpwte5tOXQ48S6IxFT7rU'}，
+请求体: {'ProcessCode': 'Automation01', 'ProcessName': '自动化测试工序01'}
+INFO     TestProcessRelated:test_process_related.py:36 本用例正在执行：test_storeProcessInfoData01。获取到的结果是：已有重复数据录入!, 期望的结果是: 数据新增成功
+ERROR    TestProcessRelated:test_process_related.py:42 物料信息维护页面：test_storeProcessInfoData01 断言失败，展开结果与预期不符
+=========================== short test summary info ===========================
+FAILED TestCase/functional_tests/test_equipment_management/test_equipment_ledger.py::TestEquipmentLedger::test_storeEquipmentLedgerData01
+FAILED TestCase/functional_tests/test_factory_modeling/test_process_related.py::TestProcessRelated::test_storeProcessInfoData01
+======================== 2 failed, 20 passed in 36.17s ========================
+
+2025-05-30 08:17:21,869 - main1.py:[215] - [INFO] - 钉钉发送状态码: 200
+2025-05-30 08:17:21,870 - main1.py:[148] - [INFO] - 端口 8000 可用，尝试启动服务器...
+2025-05-30 08:17:24,893 - main1.py:[167] - [INFO] - 端口 8000 可连接，生成报告链接...
+2025-05-30 08:17:25,782 - main1.py:[194] - [INFO] - 邮件发送成功
+2025-05-30 08:42:33,790 - equipment_ledger_management.py:[40] - [INFO] - 当前执行新增设备台账接口：storeProcessInfoData，
+请求 URL: http://192.168.0.135:8282/EquipmentLedgerApi/StoreEquipmentLedgerData，
+请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxNzA1NTIsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.nnNyouSj20LGn9-wJPNQYbk4VJmDpVCkYXg_cnzea98'}，
+请求体: {'EquipmentCode': 'Automation01', 'EquipmentName': '自动化测试设备', 'OrganizationStructureCode': '00000.00001.00001', 'StopTime': 3, 'EquipmentGroupCode': 'Q', 'OrganizationStructureName': '注塑车间', 'OrganizationStructureExternalCode': 'ZSCJ', 'EquipmentGroupName': 'Q组', 'OpSign': 1, 'CompanyCode': '00000', 'FactoryCode': '00000.00001'}
+2025-05-30 09:00:44,435 - equipment_ledger_management.py:[72] - [ERROR] - 请求发生错误: 404 Client Error: Not Found for url: http://192.168.0.135:8282/RemoveBatchEquipmentLedger，请求 URL: http://192.168.0.135:8282/RemoveBatchEquipmentLedger，请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxNzE2NDMsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.Jhg47c7Iy51KPVMpp8dqv9LlJabM9TW3rOsn41lRxEg'}，请求体: {'EquipmentCode': 'example_equipment_code', 'EquipmentName': 'example_equipment_name', 'OrganizationStructureCode': '00000.00001.00001', 'StopTime': 3, 'EquipmentGroupCode': 'Q', 'OrganizationStructureName': '注塑车间', 'OrganizationStructureExternalCode': 'ZSCJ', 'EquipmentGroupName': 'Q组', 'OpSign': 1, 'CompanyCode': '00000', 'FactoryCode': '00000.00001'}
+2025-05-30 09:00:44,436 - delete_data.py:[38] - [ERROR] - 未知错误: 'NoneType' object has no attribute 'raise_for_status'
+Traceback (most recent call last):
+  File "D:\apiAutomationRH\Toolbox\delete_data.py", line 26, in delete_data
+    response.raise_for_status()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'raise_for_status'
+2025-05-30 09:03:48,614 - equipment_ledger_management.py:[72] - [ERROR] - 请求发生错误: 404 Client Error: Not Found for url: http://192.168.0.135:8282/apiRemoveBatchEquipmentLedger，请求 URL: http://192.168.0.135:8282/apiRemoveBatchEquipmentLedger，请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxNzE4MjcsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.6zMQ1YGzt4uqzYCd6ZOB5r9JS9mf8VmtzPmtVhd1j6A'}，请求体: {'EquipmentCode': 'example_equipment_code', 'EquipmentName': 'example_equipment_name', 'OrganizationStructureCode': '00000.00001.00001', 'StopTime': 3, 'EquipmentGroupCode': 'Q', 'OrganizationStructureName': '注塑车间', 'OrganizationStructureExternalCode': 'ZSCJ', 'EquipmentGroupName': 'Q组', 'OpSign': 1, 'CompanyCode': '00000', 'FactoryCode': '00000.00001'}
+2025-05-30 09:03:48,615 - delete_data.py:[35] - [ERROR] - 响应解析错误: 设备台账接口返回空响应
+2025-05-30 09:12:52,470 - equipment_ledger_management.py:[72] - [ERROR] - 请求发生错误: 404 Client Error: Not Found for url: http://192.168.0.135:8282/apiRemoveBatchEquipmentLedger，请求 URL: http://192.168.0.135:8282/apiRemoveBatchEquipmentLedger，请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxNzIzNzEsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.95yesbRzv2Soub6L3IbkE5VIzvT4nKQCPZqCG5l3Dyw'}，请求体: {'EquipmentCode': 'Automation01', 'EquipmentName': '自动化测试设备', 'OrganizationStructureCode': '00000.00001.00001', 'StopTime': 3, 'EquipmentGroupCode': 'Q', 'OrganizationStructureName': '注塑车间', 'OrganizationStructureExternalCode': 'ZSCJ', 'EquipmentGroupName': 'Q组', 'OpSign': 1, 'CompanyCode': '00000', 'FactoryCode': '00000.00001'}
+2025-05-30 09:12:52,472 - delete_data.py:[35] - [ERROR] - 响应解析错误: 设备台账接口返回空响应
+2025-05-30 09:14:46,581 - equipment_ledger_management.py:[72] - [ERROR] - 请求发生错误: 404 Client Error: Not Found for url: http://192.168.0.135:8282/RemoveBatchEquipmentLedger，请求 URL: http://192.168.0.135:8282/RemoveBatchEquipmentLedger，请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxNzI0ODUsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.Opc3hCbTEsIpiAC3lBCWuO42uokiGv0oCSq9fCXSDuo'}，请求体: {'EquipmentCode': 'Automation01', 'EquipmentName': '自动化测试设备', 'OrganizationStructureCode': '00000.00001.00001', 'StopTime': 3, 'EquipmentGroupCode': 'Q', 'OrganizationStructureName': '注塑车间', 'OrganizationStructureExternalCode': 'ZSCJ', 'EquipmentGroupName': 'Q组', 'OpSign': 1, 'CompanyCode': '00000', 'FactoryCode': '00000.00001'}
+2025-05-30 09:14:46,581 - delete_data.py:[35] - [ERROR] - 响应解析错误: 设备台账接口返回空响应
+2025-05-30 09:15:52,522 - equipment_ledger_management.py:[69] - [INFO] - 当前执行删除设备台账接口：storeProcessInfoData，
+请求 URL: http://192.168.0.135:8282/EquipmentLedgerApi/RemoveBatchEquipmentLedgerDatas，
+请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxNzI1NTEsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.W_zWtBlWV9WmMZQapKNyrbV5MNkPJuFqjkVJRN111ks'}，
+请求体: {'EquipmentCode': 'Automation01', 'EquipmentName': '自动化测试设备', 'OrganizationStructureCode': '00000.00001.00001', 'StopTime': 3, 'EquipmentGroupCode': 'Q', 'OrganizationStructureName': '注塑车间', 'OrganizationStructureExternalCode': 'ZSCJ', 'EquipmentGroupName': 'Q组', 'OpSign': 1, 'CompanyCode': '00000', 'FactoryCode': '00000.00001'}
+2025-05-30 09:15:52,523 - delete_data.py:[27] - [INFO] - 设备台账数据删除成功
+2025-05-30 09:17:33,157 - equipment_ledger_management.py:[69] - [INFO] - 当前执行删除设备台账接口：storeProcessInfoData，
+请求 URL: http://192.168.0.135:8282/EquipmentLedgerApi/RemoveBatchEquipmentLedgerDatas，
+请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxNzI2NTIsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.Q9R0fO0hsgM9iHCRG6fddnGfKNzIeYyony3SD_PCdWM'}，
+请求体: {'EquipmentCode': 'Automation01', 'EquipmentName': '自动化测试设备', 'OrganizationStructureCode': '00000.00001.00001', 'StopTime': 3, 'EquipmentGroupCode': 'Q', 'OrganizationStructureName': '注塑车间', 'OrganizationStructureExternalCode': 'ZSCJ', 'EquipmentGroupName': 'Q组', 'OpSign': 1, 'CompanyCode': '00000', 'FactoryCode': '00000.00001'}
+2025-05-30 09:17:33,158 - delete_data.py:[27] - [INFO] - 设备台账数据删除成功
+2025-05-30 09:17:34,320 - equipment_ledger_management.py:[40] - [INFO] - 当前执行新增设备台账接口：storeProcessInfoData，
+请求 URL: http://192.168.0.135:8282/EquipmentLedgerApi/StoreEquipmentLedgerData，
+请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxNzI2NTMsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.K-TVtXwB_68AUUNY24dssifZFewnDTE36c5CRqpUPU4'}，
+请求体: {'EquipmentCode': 'Automation01', 'EquipmentName': '自动化测试设备', 'OrganizationStructureCode': '00000.00001.00001', 'StopTime': 3, 'EquipmentGroupCode': 'Q', 'OrganizationStructureName': '注塑车间', 'OrganizationStructureExternalCode': 'ZSCJ', 'EquipmentGroupName': 'Q组', 'OpSign': 1, 'CompanyCode': '00000', 'FactoryCode': '00000.00001'}
+2025-05-30 09:17:34,320 - equipment_ledger_management.py:[40] - [INFO] - 当前执行新增设备台账接口：storeProcessInfoData，
+请求 URL: http://192.168.0.135:8282/EquipmentLedgerApi/StoreEquipmentLedgerData，
+请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxNzI2NTMsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.K-TVtXwB_68AUUNY24dssifZFewnDTE36c5CRqpUPU4'}，
+请求体: {'EquipmentCode': 'Automation01', 'EquipmentName': '自动化测试设备', 'OrganizationStructureCode': '00000.00001.00001', 'StopTime': 3, 'EquipmentGroupCode': 'Q', 'OrganizationStructureName': '注塑车间', 'OrganizationStructureExternalCode': 'ZSCJ', 'EquipmentGroupName': 'Q组', 'OpSign': 1, 'CompanyCode': '00000', 'FactoryCode': '00000.00001'}
+2025-05-30 09:17:34,320 - test_equipment_ledger.py:[31] - [INFO] - 本用例正在执行：test_storeEquipmentLedgerData01。获取到的结果是：已有重复数据录入!, 期望的结果是: 数据新增成功
+2025-05-30 09:17:34,325 - test_equipment_ledger.py:[37] - [ERROR] - 新建设备页面：test_storeEquipmentLedgerData01 断言失败，展开结果与预期不符
+2025-05-30 09:17:35,707 - equipment_ledger_management.py:[40] - [INFO] - 当前执行新增设备台账接口：storeProcessInfoData，
+请求 URL: http://192.168.0.135:8282/EquipmentLedgerApi/StoreEquipmentLedgerData，
+请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxNzI2NTQsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.5kAZtI-QTGUESbY5Xo2SuBx2ZXRkV-3jq3j1PJNUC5Q'}，
+请求体: {'EquipmentCode': 'Automation01', 'EquipmentName': '自动化测试设备', 'OrganizationStructureCode': '00000.00001.00001', 'StopTime': 3, 'EquipmentGroupCode': 'Q', 'OrganizationStructureName': '注塑车间', 'OrganizationStructureExternalCode': 'ZSCJ', 'EquipmentGroupName': 'Q组', 'OpSign': 1, 'CompanyCode': '00000', 'FactoryCode': '00000.00001'}
+2025-05-30 09:17:35,707 - equipment_ledger_management.py:[40] - [INFO] - 当前执行新增设备台账接口：storeProcessInfoData，
+请求 URL: http://192.168.0.135:8282/EquipmentLedgerApi/StoreEquipmentLedgerData，
+请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxNzI2NTQsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.5kAZtI-QTGUESbY5Xo2SuBx2ZXRkV-3jq3j1PJNUC5Q'}，
+请求体: {'EquipmentCode': 'Automation01', 'EquipmentName': '自动化测试设备', 'OrganizationStructureCode': '00000.00001.00001', 'StopTime': 3, 'EquipmentGroupCode': 'Q', 'OrganizationStructureName': '注塑车间', 'OrganizationStructureExternalCode': 'ZSCJ', 'EquipmentGroupName': 'Q组', 'OpSign': 1, 'CompanyCode': '00000', 'FactoryCode': '00000.00001'}
+2025-05-30 09:17:35,707 - equipment_ledger_management.py:[40] - [INFO] - 当前执行新增设备台账接口：storeProcessInfoData，
+请求 URL: http://192.168.0.135:8282/EquipmentLedgerApi/StoreEquipmentLedgerData，
+请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxNzI2NTQsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.5kAZtI-QTGUESbY5Xo2SuBx2ZXRkV-3jq3j1PJNUC5Q'}，
+请求体: {'EquipmentCode': 'Automation01', 'EquipmentName': '自动化测试设备', 'OrganizationStructureCode': '00000.00001.00001', 'StopTime': 3, 'EquipmentGroupCode': 'Q', 'OrganizationStructureName': '注塑车间', 'OrganizationStructureExternalCode': 'ZSCJ', 'EquipmentGroupName': 'Q组', 'OpSign': 1, 'CompanyCode': '00000', 'FactoryCode': '00000.00001'}
+2025-05-30 09:17:35,708 - test_equipment_ledger.py:[48] - [INFO] - 本用例正在执行：test_storeEquipmentLedgerData02。获取到的结果是：已有重复数据录入!, 期望的结果是: 已有重复数据录入!
+2025-05-30 09:17:36,896 - equipment_ledger_management.py:[40] - [INFO] - 当前执行新增设备台账接口：storeProcessInfoData，
+请求 URL: http://192.168.0.135:8282/EquipmentLedgerApi/StoreEquipmentLedgerData，
+请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxNzI2NTUsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.wFRPltbtqBMgSsq3eczlrUwCFUrz0G_5FiD0bdozo4M'}，
+请求体: {'EquipmentCode': 'Automation01', 'EquipmentName': '自动化测试设备', 'OrganizationStructureCode': '00000.00001.00001', 'StopTime': 3, 'EquipmentGroupCode': 'Q', 'OrganizationStructureName': '注塑车间', 'OrganizationStructureExternalCode': 'ZSCJ', 'EquipmentGroupName': 'Q组', 'OpSign': 1, 'CompanyCode': '00000', 'FactoryCode': '00000.00001'}
+2025-05-30 09:17:36,896 - equipment_ledger_management.py:[40] - [INFO] - 当前执行新增设备台账接口：storeProcessInfoData，
+请求 URL: http://192.168.0.135:8282/EquipmentLedgerApi/StoreEquipmentLedgerData，
+请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxNzI2NTUsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.wFRPltbtqBMgSsq3eczlrUwCFUrz0G_5FiD0bdozo4M'}，
+请求体: {'EquipmentCode': 'Automation01', 'EquipmentName': '自动化测试设备', 'OrganizationStructureCode': '00000.00001.00001', 'StopTime': 3, 'EquipmentGroupCode': 'Q', 'OrganizationStructureName': '注塑车间', 'OrganizationStructureExternalCode': 'ZSCJ', 'EquipmentGroupName': 'Q组', 'OpSign': 1, 'CompanyCode': '00000', 'FactoryCode': '00000.00001'}
+2025-05-30 09:17:36,896 - equipment_ledger_management.py:[40] - [INFO] - 当前执行新增设备台账接口：storeProcessInfoData，
+请求 URL: http://192.168.0.135:8282/EquipmentLedgerApi/StoreEquipmentLedgerData，
+请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxNzI2NTUsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.wFRPltbtqBMgSsq3eczlrUwCFUrz0G_5FiD0bdozo4M'}，
+请求体: {'EquipmentCode': 'Automation01', 'EquipmentName': '自动化测试设备', 'OrganizationStructureCode': '00000.00001.00001', 'StopTime': 3, 'EquipmentGroupCode': 'Q', 'OrganizationStructureName': '注塑车间', 'OrganizationStructureExternalCode': 'ZSCJ', 'EquipmentGroupName': 'Q组', 'OpSign': 1, 'CompanyCode': '00000', 'FactoryCode': '00000.00001'}
+2025-05-30 09:17:36,896 - equipment_ledger_management.py:[40] - [INFO] - 当前执行新增设备台账接口：storeProcessInfoData，
+请求 URL: http://192.168.0.135:8282/EquipmentLedgerApi/StoreEquipmentLedgerData，
+请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxNzI2NTUsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.wFRPltbtqBMgSsq3eczlrUwCFUrz0G_5FiD0bdozo4M'}，
+请求体: {'EquipmentCode': 'Automation01', 'EquipmentName': '自动化测试设备', 'OrganizationStructureCode': '00000.00001.00001', 'StopTime': 3, 'EquipmentGroupCode': 'Q', 'OrganizationStructureName': '注塑车间', 'OrganizationStructureExternalCode': 'ZSCJ', 'EquipmentGroupName': 'Q组', 'OpSign': 1, 'CompanyCode': '00000', 'FactoryCode': '00000.00001'}
+2025-05-30 09:17:36,900 - test_equipment_ledger.py:[65] - [INFO] - 本用例正在执行：test_removeBatchEquipmentLedger01。获取到的结果是：已有重复数据录入!, 期望的结果是: 已有重复数据录入!
+2025-05-30 09:20:20,788 - equipment_ledger_management.py:[69] - [INFO] - 当前执行删除设备台账接口：storeProcessInfoData，
+请求 URL: http://192.168.0.135:8282/EquipmentLedgerApi/RemoveBatchEquipmentLedgerDatas，
+请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxNzI4MTksImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.KvXj1wAzl6IdcswcvyLjgnIG1Z-o3hhjUx7Km3U_zxM'}，
+请求体: {'EquipmentCode': 'Automation01', 'EquipmentName': '自动化测试设备', 'OrganizationStructureCode': '00000.00001.00001', 'StopTime': 3, 'EquipmentGroupCode': 'Q', 'OrganizationStructureName': '注塑车间', 'OrganizationStructureExternalCode': 'ZSCJ', 'EquipmentGroupName': 'Q组', 'OpSign': 1, 'CompanyCode': '00000', 'FactoryCode': '00000.00001'}
+2025-05-30 09:20:20,788 - delete_data.py:[27] - [INFO] - 设备台账数据删除成功
+2025-05-30 09:23:17,761 - equipment_ledger_management.py:[69] - [INFO] - 当前执行删除设备台账接口：storeProcessInfoData，
+请求 URL: http://192.168.0.135:8282/EquipmentLedgerApi/RemoveBatchEquipmentLedgerDatas，
+请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxNzI5OTYsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.IwJGH_3cusoxf5mV57uACtZKiGgAnRJw4bXkYS7aSzA'}，
+请求体: {'EquipmentCode': 'Automation01', 'EquipmentName': '自动化测试设备', 'OrganizationStructureCode': '00000.00001.00001', 'StopTime': 3, 'EquipmentGroupCode': 'Q', 'OrganizationStructureName': '注塑车间', 'OrganizationStructureExternalCode': 'ZSCJ', 'EquipmentGroupName': 'Q组', 'OpSign': 1, 'CompanyCode': '00000', 'FactoryCode': '00000.00001'},
+响应体: {'Record': 0, 'Attach': None, 'Message': '请求失败，状态码400,错误信息:{"Errors":{"EquipmentCode":["Cannot deserialize the current JSON object (e.g. {\\"name\\":\\"value\\"}) into type \'System.Collections.Generic.List`1[RH.Product.Mom.DomainModel.BusinessCenter.EquipmentManagement.EquipmentLedger.EquipmentLedgerManagement.EquipmentLedgerDto]\' because the type requires a JSON array (e.g. [1,2,3]) to deserialize correctly.\\r\\nTo fix this error either change the JSON to a JSON array (e.g. [1,2,3]) or change the deserialized type so that it is a normal .NET type (e.g. not a primitive type like integer, not a collection type like an array or List<T>) that can be deserialized from a JSON object. JsonObjectAttribute can also be added to the type to force it to deserialize from a JSON object.\\r\\nPath \'EquipmentCode\', line 1, position 17."]},"Type":"https://tools.ietf.org/html/rfc9110#section-15.5.1","Title":"One or more validation errors occurred.","Status":400,"Detail":null,"Instance":null,"Extensions":{"traceId":"00-4461689ef5587257379a8eedade2ae60-327d069b4e62939a-00"}}', 'Success': False}
+2025-05-30 09:23:17,762 - delete_data.py:[27] - [INFO] - 设备台账数据删除成功
+2025-05-30 09:27:26,260 - equipment_ledger_management.py:[69] - [INFO] - 当前执行删除设备台账接口：storeProcessInfoData，
+请求 URL: http://192.168.0.135:8282/EquipmentLedgerApi/RemoveBatchEquipmentLedgerDatas，
+请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxNzMyNDUsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.rgcsYaIpWB-3h3gFB5qHxKPJQiLJBredvrDFej0phGQ'}，
+请求体: [{'EquipmentCode': 'Automation01', 'EquipmentName': '自动化测试设备', 'OrganizationStructureCode': '00000.00001.00001', 'StopTime': 3, 'EquipmentGroupCode': 'Q', 'OrganizationStructureName': '注塑车间', 'OrganizationStructureExternalCode': 'ZSCJ', 'EquipmentGroupName': 'Q组', 'OpSign': 1, 'CompanyCode': '00000', 'FactoryCode': '00000.00001'}],
+响应体: {'Record': 1, 'Attach': None, 'Message': '数据删除成功', 'Success': True}
+2025-05-30 09:27:26,263 - delete_data.py:[27] - [INFO] - 设备台账数据删除成功
+2025-05-30 09:39:00,615 - delete_data.py:[104] - [INFO] - 物料数据清理完成
+2025-05-30 09:39:01,911 - delete_data.py:[106] - [INFO] - 工序数据清理完成
+2025-05-30 09:39:03,174 - delete_data.py:[108] - [INFO] - 工艺路线数据清理完成
+2025-05-30 09:39:04,372 - equipment_ledger_management.py:[69] - [INFO] - 当前执行删除设备台账接口：storeProcessInfoData，
+请求 URL: http://192.168.0.135:8282/EquipmentLedgerApi/RemoveBatchEquipmentLedgerDatas，
+请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxNzM5NDMsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.RRTYo9HdRPGi2EtNarUftggInuJikF-tfSTB1Y49IPA'}，
+请求体: [{'EquipmentCode': 'Automation01', 'EquipmentName': '自动化测试设备', 'OrganizationStructureCode': '00000.00001.00001', 'StopTime': 3, 'EquipmentGroupCode': 'Q', 'OrganizationStructureName': '注塑车间', 'OrganizationStructureExternalCode': 'ZSCJ', 'EquipmentGroupName': 'Q组', 'OpSign': 1, 'CompanyCode': '00000', 'FactoryCode': '00000.00001'}],
+响应体: {'Record': 0, 'Attach': None, 'Message': '数据删除成功', 'Success': True}
+2025-05-30 09:39:04,372 - delete_data.py:[110] - [INFO] - 设备台账数据清理完成
+2025-05-30 09:39:04,373 - delete_data.py:[38] - [ERROR] - 未知错误: 'NoneType' object has no attribute 'raise_for_status'
+Traceback (most recent call last):
+  File "D:\apiAutomationRH\Toolbox\delete_data.py", line 26, in delete_data
+    response.raise_for_status()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'raise_for_status'
+2025-05-30 09:41:23,889 - delete_data.py:[107] - [INFO] - 物料数据清理完成
+2025-05-30 09:41:25,389 - delete_data.py:[109] - [INFO] - 工序数据清理完成
+2025-05-30 09:41:26,602 - delete_data.py:[111] - [INFO] - 工艺路线数据清理完成
+2025-05-30 09:41:27,834 - equipment_ledger_management.py:[69] - [INFO] - 当前执行删除设备台账接口：storeProcessInfoData，
+请求 URL: http://192.168.0.135:8282/EquipmentLedgerApi/RemoveBatchEquipmentLedgerDatas，
+请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxNzQwODYsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.OqVdRBD-geUuLe0Rw4Q6eBqpanDuObNcvtRqtzIvGhs'}，
+请求体: [{'EquipmentCode': 'Automation01', 'EquipmentName': '自动化测试设备', 'OrganizationStructureCode': '00000.00001.00001', 'StopTime': 3, 'EquipmentGroupCode': 'Q', 'OrganizationStructureName': '注塑车间', 'OrganizationStructureExternalCode': 'ZSCJ', 'EquipmentGroupName': 'Q组', 'OpSign': 1, 'CompanyCode': '00000', 'FactoryCode': '00000.00001'}],
+响应体: {'Record': 0, 'Attach': None, 'Message': '数据删除成功', 'Success': True}
+2025-05-30 09:41:27,835 - delete_data.py:[113] - [INFO] - 设备台账数据清理完成
+2025-05-30 09:41:27,835 - delete_data.py:[38] - [ERROR] - 未知错误: 'NoneType' object has no attribute 'raise_for_status'
+Traceback (most recent call last):
+  File "D:\apiAutomationRH\Toolbox\delete_data.py", line 26, in delete_data
+    response.raise_for_status()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'raise_for_status'
+2025-05-30 09:46:15,299 - delete_data.py:[138] - [INFO] - 物料数据清理完成
+2025-05-30 09:46:16,562 - delete_data.py:[140] - [INFO] - 工序数据清理完成
+2025-05-30 09:46:17,779 - delete_data.py:[142] - [INFO] - 工艺路线数据清理完成
+2025-05-30 09:46:19,657 - equipment_ledger_management.py:[74] - [INFO] - 当前执行删除设备台账接口：storeProcessInfoData，
+请求 URL: http://192.168.0.135:8282/EquipmentLedgerApi/RemoveBatchEquipmentLedgerDatas，
+请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxNzQzNzcsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.aDT2UYkBg3fbHDK8xTW2GiWlAG9vtsWUw8wI5Z9rqLA'}，
+请求体: [{'EquipmentCode': 'Automation01', 'EquipmentName': '自动化测试设备', 'OrganizationStructureCode': '00000.00001.00001', 'StopTime': 3, 'EquipmentGroupCode': 'Q', 'OrganizationStructureName': '注塑车间', 'OrganizationStructureExternalCode': 'ZSCJ', 'EquipmentGroupName': 'Q组', 'OpSign': 1, 'CompanyCode': '00000', 'FactoryCode': '00000.00001'}],
+响应体: {'Record': 0, 'Attach': None, 'Message': '数据删除成功', 'Success': True}
+2025-05-30 09:46:19,658 - delete_data.py:[144] - [INFO] - 设备台账数据清理完成
+2025-05-30 09:46:19,658 - delete_data.py:[39] - [ERROR] - 未知错误: 'NoneType' object has no attribute 'raise_for_status'
+Traceback (most recent call last):
+  File "D:\apiAutomationRH\Toolbox\delete_data.py", line 27, in delete_data
+    response.raise_for_status()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'raise_for_status'
+2025-05-30 09:54:28,120 - delete_data.py:[137] - [INFO] - 物料数据清理完成
+2025-05-30 09:54:29,335 - delete_data.py:[139] - [INFO] - 工序数据清理完成
+2025-05-30 09:54:30,497 - delete_data.py:[141] - [INFO] - 工艺路线数据清理完成
+2025-05-30 09:54:31,661 - equipment_ledger_management.py:[74] - [INFO] - 当前执行删除设备台账接口：storeProcessInfoData，
+请求 URL: http://192.168.0.135:8282/EquipmentLedgerApi/RemoveBatchEquipmentLedgerDatas，
+请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxNzQ4NzAsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.xiAgrZlOjN_Rdhmc3KPf-JRo0SSc-8jBQRXCR-ocEBU'}，
+请求体: [{'EquipmentCode': 'Automation01', 'EquipmentName': '自动化测试设备', 'OrganizationStructureCode': '00000.00001.00001', 'StopTime': 3, 'EquipmentGroupCode': 'Q', 'OrganizationStructureName': '注塑车间', 'OrganizationStructureExternalCode': 'ZSCJ', 'EquipmentGroupName': 'Q组', 'OpSign': 1, 'CompanyCode': '00000', 'FactoryCode': '00000.00001'}],
+响应体: {'Record': 0, 'Attach': None, 'Message': '数据删除成功', 'Success': True}
+2025-05-30 09:54:31,661 - delete_data.py:[143] - [INFO] - 设备台账数据清理完成
+2025-05-30 09:54:31,661 - delete_data.py:[40] - [ERROR] - 未知错误: 'NoneType' object has no attribute 'raise_for_status'
+Traceback (most recent call last):
+  File "D:\apiAutomationRH\Toolbox\delete_data.py", line 28, in delete_data
+    response.raise_for_status()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'raise_for_status'
+2025-05-30 09:58:44,025 - delete_data.py:[137] - [INFO] - 物料数据清理完成
+2025-05-30 09:58:45,180 - delete_data.py:[139] - [INFO] - 工序数据清理完成
+2025-05-30 09:58:46,329 - delete_data.py:[141] - [INFO] - 工艺路线数据清理完成
+2025-05-30 09:58:47,466 - equipment_ledger_management.py:[74] - [INFO] - 当前执行删除设备台账接口：storeProcessInfoData，
+请求 URL: http://192.168.0.135:8282/EquipmentLedgerApi/RemoveBatchEquipmentLedgerDatas，
+请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxNzUxMjYsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.jPA5OiL13sYMFpNLq6axIBmscNe5NG518SnjnNPsxZg'}，
+请求体: [{'EquipmentCode': 'Automation01', 'EquipmentName': '自动化测试设备', 'OrganizationStructureCode': '00000.00001.00001', 'StopTime': 3, 'EquipmentGroupCode': 'Q', 'OrganizationStructureName': '注塑车间', 'OrganizationStructureExternalCode': 'ZSCJ', 'EquipmentGroupName': 'Q组', 'OpSign': 1, 'CompanyCode': '00000', 'FactoryCode': '00000.00001'}],
+响应体: {'Record': 0, 'Attach': None, 'Message': '数据删除成功', 'Success': True}
+2025-05-30 09:58:47,467 - delete_data.py:[143] - [INFO] - 设备台账数据清理完成
+2025-05-30 10:06:28,990 - equipment_ledger_management.py:[40] - [INFO] - 当前执行新增设备台账接口：storeProcessInfoData，
+请求 URL: http://192.168.0.135:8282/EquipmentLedgerApi/StoreEquipmentLedgerData，
+请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxNzU1ODcsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.PXS7-95v-8aVn3Fi5Kr1Kz-Pa2ZWoFwD3Qg8TAArcHQ'}，
+请求体: {'EquipmentCode': 'Automation01', 'EquipmentName': '自动化测试设备', 'OrganizationStructureCode': '00000.00001.00001', 'StopTime': 3, 'EquipmentGroupCode': 'Q', 'OrganizationStructureName': '注塑车间', 'OrganizationStructureExternalCode': 'ZSCJ', 'EquipmentGroupName': 'Q组', 'OpSign': 1, 'CompanyCode': '00000', 'FactoryCode': '00000.00001'}
+2025-05-30 10:06:59,673 - equipment_ledger_management.py:[74] - [INFO] - 当前执行删除设备台账接口：storeProcessInfoData，
+请求 URL: http://192.168.0.135:8282/EquipmentLedgerApi/RemoveBatchEquipmentLedgerDatas，
+请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxNzU2MTgsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.cB8RSUWME1sQMGWzX9T3bXQX_CidZXKM91wu187ynmI'}，
+请求体: [{'EquipmentCode': 'Automation01', 'EquipmentName': '自动化测试设备', 'OrganizationStructureCode': '00000.00001.00001', 'StopTime': 3, 'EquipmentGroupCode': 'Q', 'OrganizationStructureName': '注塑车间', 'OrganizationStructureExternalCode': 'ZSCJ', 'EquipmentGroupName': 'Q组', 'OpSign': 1, 'CompanyCode': '00000', 'FactoryCode': '00000.00001'}],
+响应体: {'Record': 1, 'Attach': None, 'Message': '数据删除成功', 'Success': True}
+2025-05-30 10:12:58,631 - delete_data.py:[137] - [INFO] - 物料数据清理完成
+2025-05-30 10:12:59,851 - delete_data.py:[139] - [INFO] - 工序数据清理完成
+2025-05-30 10:13:01,026 - delete_data.py:[141] - [INFO] - 工艺路线数据清理完成
+2025-05-30 10:13:02,183 - equipment_ledger_management.py:[74] - [INFO] - 当前执行删除设备台账接口：storeProcessInfoData，
+请求 URL: http://192.168.0.135:8282/EquipmentLedgerApi/RemoveBatchEquipmentLedgerDatas，
+请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxNzU5ODEsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.AO77cguxyX-A3fvQNdKKwZmGSxRspvMUDphV2eOVn6c'}，
+请求体: [{'EquipmentCode': 'Automation01', 'EquipmentName': '自动化测试设备', 'OrganizationStructureCode': '00000.00001.00001', 'StopTime': 3, 'EquipmentGroupCode': 'Q', 'OrganizationStructureName': '注塑车间', 'OrganizationStructureExternalCode': 'ZSCJ', 'EquipmentGroupName': 'Q组', 'OpSign': 1, 'CompanyCode': '00000', 'FactoryCode': '00000.00001'}],
+响应体: {'Record': 0, 'Attach': None, 'Message': '数据删除成功', 'Success': True}
+2025-05-30 10:13:02,183 - delete_data.py:[143] - [INFO] - 设备台账数据清理完成
+2025-05-30 10:13:02,183 - delete_data.py:[40] - [ERROR] - 未知错误: 'NoneType' object has no attribute 'raise_for_status'
+Traceback (most recent call last):
+  File "D:\apiAutomationRH\Toolbox\delete_data.py", line 28, in delete_data
+    response.raise_for_status()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'raise_for_status'
+2025-05-30 10:15:40,470 - delete_data.py:[137] - [INFO] - 物料数据清理完成
+2025-05-30 10:15:41,899 - delete_data.py:[139] - [INFO] - 工序数据清理完成
+2025-05-30 10:15:43,370 - delete_data.py:[141] - [INFO] - 工艺路线数据清理完成
+2025-05-30 10:15:44,698 - equipment_ledger_management.py:[74] - [INFO] - 当前执行删除设备台账接口：storeProcessInfoData，
+请求 URL: http://192.168.0.135:8282/EquipmentLedgerApi/RemoveBatchEquipmentLedgerDatas，
+请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxNzYxNDMsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.KS9nICNdsmNm0gT2LNs0OxOovbSvUiXFsYModjKayKY'}，
+请求体: [{'EquipmentCode': 'Automation01', 'EquipmentName': '自动化测试设备', 'OrganizationStructureCode': '00000.00001.00001', 'StopTime': 3, 'EquipmentGroupCode': 'Q', 'OrganizationStructureName': '注塑车间', 'OrganizationStructureExternalCode': 'ZSCJ', 'EquipmentGroupName': 'Q组', 'OpSign': 1, 'CompanyCode': '00000', 'FactoryCode': '00000.00001'}],
+响应体: {'Record': 0, 'Attach': None, 'Message': '数据删除成功', 'Success': True}
+2025-05-30 10:15:44,699 - delete_data.py:[143] - [INFO] - 设备台账数据清理完成
+2025-05-30 10:15:44,699 - delete_data.py:[40] - [ERROR] - 未知错误: 'NoneType' object has no attribute 'raise_for_status'
+Traceback (most recent call last):
+  File "D:\apiAutomationRH\Toolbox\delete_data.py", line 28, in delete_data
+    response.raise_for_status()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'raise_for_status'
+2025-05-30 10:20:41,771 - delete_data.py:[153] - [INFO] - 物料数据清理完成
+2025-05-30 10:20:43,599 - delete_data.py:[155] - [INFO] - 工序数据清理完成
+2025-05-30 10:20:45,406 - delete_data.py:[157] - [INFO] - 工艺路线数据清理完成
+2025-05-30 10:20:46,920 - equipment_ledger_management.py:[67] - [INFO] - 准备发送删除请求，URL: http://192.168.0.135:8282/EquipmentLedgerApi/RemoveBatchEquipmentLedgerDatas
+请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxNzY0NDUsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.qVyCLdJICtWoVjA8jKdk5uIMAxUMpjIRyO4X3S_dKNE'}
+请求体: [{'EquipmentCode': 'Automation01', 'EquipmentName': '自动化测试设备', 'OrganizationStructureCode': '00000.00001.00001', 'StopTime': 3, 'EquipmentGroupCode': 'Q', 'OrganizationStructureName': '注塑车间', 'OrganizationStructureExternalCode': 'ZSCJ', 'EquipmentGroupName': 'Q组', 'OpSign': 1, 'CompanyCode': '00000', 'FactoryCode': '00000.00001'}]
+2025-05-30 10:20:46,973 - delete_data.py:[159] - [INFO] - 设备台账数据清理完成
+2025-05-30 10:20:46,973 - delete_data.py:[40] - [ERROR] - 未知错误: 'NoneType' object has no attribute 'raise_for_status'
+Traceback (most recent call last):
+  File "D:\apiAutomationRH\Toolbox\delete_data.py", line 28, in delete_data
+    response.raise_for_status()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'raise_for_status'
+2025-05-30 10:26:15,297 - delete_data.py:[179] - [INFO] - 物料数据清理完成
+2025-05-30 10:26:16,448 - delete_data.py:[181] - [INFO] - 工序数据清理完成
+2025-05-30 10:26:17,613 - delete_data.py:[183] - [INFO] - 工艺路线数据清理完成
+2025-05-30 10:26:18,779 - equipment_ledger_management.py:[67] - [INFO] - 准备发送删除请求，URL: http://192.168.0.135:8282/EquipmentLedgerApi/RemoveBatchEquipmentLedgerDatas
+请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxNzY3NzcsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.EWd-JA7pwXcq-yoKPPyls_u-vBnXkS9RU7Cignnfce8'}
+请求体: [{'EquipmentCode': 'Automation01', 'EquipmentName': '自动化测试设备', 'OrganizationStructureCode': '00000.00001.00001', 'StopTime': 3, 'EquipmentGroupCode': 'Q', 'OrganizationStructureName': '注塑车间', 'OrganizationStructureExternalCode': 'ZSCJ', 'EquipmentGroupName': 'Q组', 'OpSign': 1, 'CompanyCode': '00000', 'FactoryCode': '00000.00001'}]
+2025-05-30 10:26:18,801 - delete_data.py:[185] - [INFO] - 设备台账数据清理完成
+2025-05-30 10:26:18,801 - delete_data.py:[40] - [ERROR] - 未知错误: 'NoneType' object has no attribute 'raise_for_status'
+Traceback (most recent call last):
+  File "D:\apiAutomationRH\Toolbox\delete_data.py", line 28, in delete_data
+    response.raise_for_status()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'raise_for_status'
+2025-05-30 10:30:08,414 - delete_data.py:[184] - [INFO] - 物料数据清理完成
+2025-05-30 10:30:09,556 - delete_data.py:[186] - [INFO] - 工序数据清理完成
+2025-05-30 10:30:10,747 - delete_data.py:[188] - [INFO] - 工艺路线数据清理完成
+2025-05-30 10:30:12,019 - equipment_ledger_management.py:[67] - [INFO] - 准备发送删除请求，URL: http://192.168.0.135:8282/EquipmentLedgerApi/RemoveBatchEquipmentLedgerDatas
+请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxNzcwMTAsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.Fn31BV_u_vYjHhx2s-T3xLXjMJrRSW_P9BjkeNklokg'}
+请求体: [{'EquipmentCode': 'Automation01', 'EquipmentName': '自动化测试设备', 'OrganizationStructureCode': '00000.00001.00001', 'StopTime': 3, 'EquipmentGroupCode': 'Q', 'OrganizationStructureName': '注塑车间', 'OrganizationStructureExternalCode': 'ZSCJ', 'EquipmentGroupName': 'Q组', 'OpSign': 1, 'CompanyCode': '00000', 'FactoryCode': '00000.00001'}]
+2025-05-30 10:30:12,039 - delete_data.py:[190] - [INFO] - 设备台账数据清理完成
+2025-05-30 10:30:12,040 - delete_data.py:[40] - [ERROR] - 未知错误: 'NoneType' object has no attribute 'raise_for_status'
+Traceback (most recent call last):
+  File "D:\apiAutomationRH\Toolbox\delete_data.py", line 28, in delete_data
+    response.raise_for_status()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'raise_for_status'
+2025-05-30 10:41:51,995 - delete_data.py:[187] - [INFO] - 物料数据清理完成
+2025-05-30 10:41:53,163 - delete_data.py:[189] - [INFO] - 工序数据清理完成
+2025-05-30 10:41:54,312 - delete_data.py:[191] - [INFO] - 工艺路线数据清理完成
+2025-05-30 10:41:55,447 - equipment_ledger_management.py:[67] - [INFO] - 准备发送删除请求，URL: http://192.168.0.135:8282/EquipmentLedgerApi/RemoveBatchEquipmentLedgerDatas
+请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxNzc3MTQsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.1jOlZaaajbVXAarakW0LQq4CrUitcVHHG3h8QuykCig'}
+请求体: [{'EquipmentCode': 'Automation01', 'EquipmentName': '自动化测试设备', 'OrganizationStructureCode': '00000.00001.00001', 'StopTime': 3, 'EquipmentGroupCode': 'Q', 'OrganizationStructureName': '注塑车间', 'OrganizationStructureExternalCode': 'ZSCJ', 'EquipmentGroupName': 'Q组', 'OpSign': 1, 'CompanyCode': '00000', 'FactoryCode': '00000.00001'}]
+2025-05-30 10:41:55,464 - delete_data.py:[193] - [INFO] - 设备台账数据清理完成
+2025-05-30 10:41:55,464 - delete_data.py:[26] - [ERROR] - 接口返回空响应
+2025-05-30 10:47:42,567 - delete_data.py:[158] - [INFO] - 物料数据清理完成
+2025-05-30 10:47:43,938 - delete_data.py:[160] - [INFO] - 工序数据清理完成
+2025-05-30 10:47:45,081 - delete_data.py:[162] - [INFO] - 工艺路线数据清理完成
+2025-05-30 10:47:46,189 - equipment_ledger_management.py:[67] - [INFO] - 删除设备台账接口开始调用，URL: http://192.168.0.135:8282/EquipmentLedgerApi/RemoveBatchEquipmentLedgerDatas
+请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxNzgwNjUsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.KCQ4Oq9UPmdLNgww9nUYCBhX4ONsXDyx-mJkKDyTKec'}
+请求体: [{'EquipmentCode': 'Automation01', 'EquipmentName': '自动化测试设备', 'OrganizationStructureCode': '00000.00001.00001', 'StopTime': 3, 'EquipmentGroupCode': 'Q', 'OrganizationStructureName': '注塑车间', 'OrganizationStructureExternalCode': 'ZSCJ', 'EquipmentGroupName': 'Q组', 'OpSign': 1, 'CompanyCode': '00000', 'FactoryCode': '00000.00001'}]
+2025-05-30 10:47:46,209 - delete_data.py:[164] - [INFO] - 设备台账数据清理完成
+2025-05-30 10:47:46,209 - delete_data.py:[26] - [ERROR] - 接口返回空响应
+2025-05-30 10:51:08,007 - equipment_ledger_management.py:[67] - [INFO] - 删除设备台账接口开始调用，URL: http://192.168.0.135:8282/EquipmentLedgerApi/RemoveBatchEquipmentLedgerDatas
+请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxNzgyNjYsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.JbTbgDLvnAgZPR_2yolBTH2G0U_eLlQ0m8ZqEz-eb1k'}
+请求体: [{'EquipmentCode': 'Automation01', 'EquipmentName': '自动化测试设备', 'OrganizationStructureCode': '00000.00001.00001', 'StopTime': 3, 'EquipmentGroupCode': 'Q', 'OrganizationStructureName': '注塑车间', 'OrganizationStructureExternalCode': 'ZSCJ', 'EquipmentGroupName': 'Q组', 'OpSign': 1, 'CompanyCode': '00000', 'FactoryCode': '00000.00001'}]
+2025-05-30 10:51:08,030 - delete_data.py:[31] - [INFO] - 设备台账数据删除成功
+2025-05-30 10:51:09,220 - equipment_ledger_management.py:[40] - [INFO] - 当前执行新增设备台账接口：storeProcessInfoData，
+请求 URL: http://192.168.0.135:8282/EquipmentLedgerApi/StoreEquipmentLedgerData，
+请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxNzgyNjgsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.tEl2sghwDjZ9xClrhcSce9QF8gxqzPVrYv0L6wGuIhs'}，
+请求体: {'EquipmentCode': 'Automation01', 'EquipmentName': '自动化测试设备', 'OrganizationStructureCode': '00000.00001.00001', 'StopTime': 3, 'EquipmentGroupCode': 'Q', 'OrganizationStructureName': '注塑车间', 'OrganizationStructureExternalCode': 'ZSCJ', 'EquipmentGroupName': 'Q组', 'OpSign': 1, 'CompanyCode': '00000', 'FactoryCode': '00000.00001'}
+2025-05-30 10:51:09,220 - equipment_ledger_management.py:[40] - [INFO] - 当前执行新增设备台账接口：storeProcessInfoData，
+请求 URL: http://192.168.0.135:8282/EquipmentLedgerApi/StoreEquipmentLedgerData，
+请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxNzgyNjgsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.tEl2sghwDjZ9xClrhcSce9QF8gxqzPVrYv0L6wGuIhs'}，
+请求体: {'EquipmentCode': 'Automation01', 'EquipmentName': '自动化测试设备', 'OrganizationStructureCode': '00000.00001.00001', 'StopTime': 3, 'EquipmentGroupCode': 'Q', 'OrganizationStructureName': '注塑车间', 'OrganizationStructureExternalCode': 'ZSCJ', 'EquipmentGroupName': 'Q组', 'OpSign': 1, 'CompanyCode': '00000', 'FactoryCode': '00000.00001'}
+2025-05-30 10:51:09,220 - test_equipment_ledger.py:[31] - [INFO] - 本用例正在执行：test_storeEquipmentLedgerData01。获取到的结果是：数据新增成功, 期望的结果是: 数据新增成功
+2025-05-30 10:51:10,465 - equipment_ledger_management.py:[40] - [INFO] - 当前执行新增设备台账接口：storeProcessInfoData，
+请求 URL: http://192.168.0.135:8282/EquipmentLedgerApi/StoreEquipmentLedgerData，
+请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxNzgyNjksImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.6yajFlz-VGVVxhNy5zp7YNIPEh1_x5tE9q2gsZJ7t00'}，
+请求体: {'EquipmentCode': 'Automation01', 'EquipmentName': '自动化测试设备', 'OrganizationStructureCode': '00000.00001.00001', 'StopTime': 3, 'EquipmentGroupCode': 'Q', 'OrganizationStructureName': '注塑车间', 'OrganizationStructureExternalCode': 'ZSCJ', 'EquipmentGroupName': 'Q组', 'OpSign': 1, 'CompanyCode': '00000', 'FactoryCode': '00000.00001'}
+2025-05-30 10:51:10,465 - equipment_ledger_management.py:[40] - [INFO] - 当前执行新增设备台账接口：storeProcessInfoData，
+请求 URL: http://192.168.0.135:8282/EquipmentLedgerApi/StoreEquipmentLedgerData，
+请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxNzgyNjksImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.6yajFlz-VGVVxhNy5zp7YNIPEh1_x5tE9q2gsZJ7t00'}，
+请求体: {'EquipmentCode': 'Automation01', 'EquipmentName': '自动化测试设备', 'OrganizationStructureCode': '00000.00001.00001', 'StopTime': 3, 'EquipmentGroupCode': 'Q', 'OrganizationStructureName': '注塑车间', 'OrganizationStructureExternalCode': 'ZSCJ', 'EquipmentGroupName': 'Q组', 'OpSign': 1, 'CompanyCode': '00000', 'FactoryCode': '00000.00001'}
+2025-05-30 10:51:10,465 - equipment_ledger_management.py:[40] - [INFO] - 当前执行新增设备台账接口：storeProcessInfoData，
+请求 URL: http://192.168.0.135:8282/EquipmentLedgerApi/StoreEquipmentLedgerData，
+请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxNzgyNjksImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.6yajFlz-VGVVxhNy5zp7YNIPEh1_x5tE9q2gsZJ7t00'}，
+请求体: {'EquipmentCode': 'Automation01', 'EquipmentName': '自动化测试设备', 'OrganizationStructureCode': '00000.00001.00001', 'StopTime': 3, 'EquipmentGroupCode': 'Q', 'OrganizationStructureName': '注塑车间', 'OrganizationStructureExternalCode': 'ZSCJ', 'EquipmentGroupName': 'Q组', 'OpSign': 1, 'CompanyCode': '00000', 'FactoryCode': '00000.00001'}
+2025-05-30 10:51:10,465 - test_equipment_ledger.py:[48] - [INFO] - 本用例正在执行：test_storeEquipmentLedgerData02。获取到的结果是：已有重复数据录入!, 期望的结果是: 已有重复数据录入!
+2025-05-30 10:51:11,705 - equipment_ledger_management.py:[40] - [INFO] - 当前执行新增设备台账接口：storeProcessInfoData，
+请求 URL: http://192.168.0.135:8282/EquipmentLedgerApi/StoreEquipmentLedgerData，
+请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxNzgyNzAsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.TG1lct6XxE_UNLtfo8NRJwwhqMk8mzvTPoi8rrfRxaE'}，
+请求体: {'EquipmentCode': 'Automation01', 'EquipmentName': '自动化测试设备', 'OrganizationStructureCode': '00000.00001.00001', 'StopTime': 3, 'EquipmentGroupCode': 'Q', 'OrganizationStructureName': '注塑车间', 'OrganizationStructureExternalCode': 'ZSCJ', 'EquipmentGroupName': 'Q组', 'OpSign': 1, 'CompanyCode': '00000', 'FactoryCode': '00000.00001'}
+2025-05-30 10:51:11,705 - equipment_ledger_management.py:[40] - [INFO] - 当前执行新增设备台账接口：storeProcessInfoData，
+请求 URL: http://192.168.0.135:8282/EquipmentLedgerApi/StoreEquipmentLedgerData，
+请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxNzgyNzAsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.TG1lct6XxE_UNLtfo8NRJwwhqMk8mzvTPoi8rrfRxaE'}，
+请求体: {'EquipmentCode': 'Automation01', 'EquipmentName': '自动化测试设备', 'OrganizationStructureCode': '00000.00001.00001', 'StopTime': 3, 'EquipmentGroupCode': 'Q', 'OrganizationStructureName': '注塑车间', 'OrganizationStructureExternalCode': 'ZSCJ', 'EquipmentGroupName': 'Q组', 'OpSign': 1, 'CompanyCode': '00000', 'FactoryCode': '00000.00001'}
+2025-05-30 10:51:11,705 - equipment_ledger_management.py:[40] - [INFO] - 当前执行新增设备台账接口：storeProcessInfoData，
+请求 URL: http://192.168.0.135:8282/EquipmentLedgerApi/StoreEquipmentLedgerData，
+请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxNzgyNzAsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.TG1lct6XxE_UNLtfo8NRJwwhqMk8mzvTPoi8rrfRxaE'}，
+请求体: {'EquipmentCode': 'Automation01', 'EquipmentName': '自动化测试设备', 'OrganizationStructureCode': '00000.00001.00001', 'StopTime': 3, 'EquipmentGroupCode': 'Q', 'OrganizationStructureName': '注塑车间', 'OrganizationStructureExternalCode': 'ZSCJ', 'EquipmentGroupName': 'Q组', 'OpSign': 1, 'CompanyCode': '00000', 'FactoryCode': '00000.00001'}
+2025-05-30 10:51:11,705 - equipment_ledger_management.py:[40] - [INFO] - 当前执行新增设备台账接口：storeProcessInfoData，
+请求 URL: http://192.168.0.135:8282/EquipmentLedgerApi/StoreEquipmentLedgerData，
+请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxNzgyNzAsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.TG1lct6XxE_UNLtfo8NRJwwhqMk8mzvTPoi8rrfRxaE'}，
+请求体: {'EquipmentCode': 'Automation01', 'EquipmentName': '自动化测试设备', 'OrganizationStructureCode': '00000.00001.00001', 'StopTime': 3, 'EquipmentGroupCode': 'Q', 'OrganizationStructureName': '注塑车间', 'OrganizationStructureExternalCode': 'ZSCJ', 'EquipmentGroupName': 'Q组', 'OpSign': 1, 'CompanyCode': '00000', 'FactoryCode': '00000.00001'}
+2025-05-30 10:51:11,706 - test_equipment_ledger.py:[65] - [INFO] - 本用例正在执行：test_removeBatchEquipmentLedger01。获取到的结果是：已有重复数据录入!, 期望的结果是: 已有重复数据录入!
+2025-05-30 10:51:12,986 - delete_data.py:[31] - [INFO] - 工序数据删除成功
+2025-05-30 10:51:12,986 - delete_data.py:[31] - [INFO] - 工序数据删除成功
+2025-05-30 10:51:14,188 - production_process.py:[33] - [INFO] - 当前执行新增工序接口：storeProcessInfoData，
+请求 URL: http://192.168.0.135:8282/ProductRouteApi/StoreProcessInfoData，
+请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxNzgyNzMsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.kfyYaDymPbACyeuyx4xIZsm_0bkneZZCl5MV3QWA0mY'}，
+请求体: {'ProcessCode': 'Automation01', 'ProcessName': '自动化测试工序01'}
+2025-05-30 10:51:14,188 - production_process.py:[33] - [INFO] - 当前执行新增工序接口：storeProcessInfoData，
+请求 URL: http://192.168.0.135:8282/ProductRouteApi/StoreProcessInfoData，
+请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxNzgyNzMsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.kfyYaDymPbACyeuyx4xIZsm_0bkneZZCl5MV3QWA0mY'}，
+请求体: {'ProcessCode': 'Automation01', 'ProcessName': '自动化测试工序01'}
+2025-05-30 10:51:14,188 - test_process_related.py:[36] - [INFO] - 本用例正在执行：test_storeProcessInfoData01。获取到的结果是：数据新增成功, 期望的结果是: 数据新增成功
+2025-05-30 10:51:15,422 - production_process.py:[33] - [INFO] - 当前执行新增工序接口：storeProcessInfoData，
+请求 URL: http://192.168.0.135:8282/ProductRouteApi/StoreProcessInfoData，
+请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxNzgyNzQsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.ZMsH5Khq5FZsuuCep61JMBynIdvTPvVpyerYU_8BJww'}，
+请求体: {'ProcessCode': 'Automation01', 'ProcessName': '自动化测试工序01'}
+2025-05-30 10:51:15,422 - production_process.py:[33] - [INFO] - 当前执行新增工序接口：storeProcessInfoData，
+请求 URL: http://192.168.0.135:8282/ProductRouteApi/StoreProcessInfoData，
+请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxNzgyNzQsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.ZMsH5Khq5FZsuuCep61JMBynIdvTPvVpyerYU_8BJww'}，
+请求体: {'ProcessCode': 'Automation01', 'ProcessName': '自动化测试工序01'}
+2025-05-30 10:51:15,422 - production_process.py:[33] - [INFO] - 当前执行新增工序接口：storeProcessInfoData，
+请求 URL: http://192.168.0.135:8282/ProductRouteApi/StoreProcessInfoData，
+请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxNzgyNzQsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.ZMsH5Khq5FZsuuCep61JMBynIdvTPvVpyerYU_8BJww'}，
+请求体: {'ProcessCode': 'Automation01', 'ProcessName': '自动化测试工序01'}
+2025-05-30 10:51:15,422 - test_process_related.py:[53] - [INFO] - 本用例正在执行：test_storeProcessInfoData02。获取到的结果是：已有重复数据录入!, 期望的结果是: 已有重复数据录入!
+2025-05-30 10:51:16,604 - test_process_related.py:[69] - [INFO] - 本用例正在执行：test_removeProcessInfoData01。获取到的结果是：数据删除成功, 期望的结果是: 数据删除成功
+2025-05-30 10:51:17,759 - test_process_related.py:[85] - [INFO] - 本用例正在执行：test_storeProcessRoutingData01。获取到的结果是：数据新增成功, 期望的结果是: 数据新增成功
+2025-05-30 10:51:19,019 - test_process_related.py:[101] - [INFO] - 本用例正在执行：test_storeProcessRoutingData02。获取到的结果是：数据新增成功, 期望的结果是: 数据新增成功
+2025-05-30 10:51:20,390 - test_process_related.py:[117] - [INFO] - 本用例正在执行：test_removeProcessRoutingData01。获取到的结果是：数据删除成功, 期望的结果是: 数据删除成功
+2025-05-30 10:51:21,691 - test_process_related.py:[133] - [INFO] - 本用例正在执行：test_adjustProcessRoutingEntry01。获取到的结果是：数据保存成功, 期望的结果是: 数据保存成功
+2025-05-30 10:51:22,935 - production_process.py:[33] - [INFO] - 当前执行新增工序接口：storeProcessInfoData，
+请求 URL: http://192.168.0.135:8282/ProductRouteApi/StoreProcessInfoData，
+请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxNzgyODEsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.LMRnkZNOD930KmG1MTvsk3-qn16MUEC7XsWbBCh359M'}，
+请求体: {'ProcessCode': 'Automation01', 'ProcessName': '自动化测试工序01'}
+2025-05-30 10:51:22,935 - production_process.py:[33] - [INFO] - 当前执行新增工序接口：storeProcessInfoData，
+请求 URL: http://192.168.0.135:8282/ProductRouteApi/StoreProcessInfoData，
+请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxNzgyODEsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.LMRnkZNOD930KmG1MTvsk3-qn16MUEC7XsWbBCh359M'}，
+请求体: {'ProcessCode': 'Automation01', 'ProcessName': '自动化测试工序01'}
+2025-05-30 10:51:22,935 - production_process.py:[33] - [INFO] - 当前执行新增工序接口：storeProcessInfoData，
+请求 URL: http://192.168.0.135:8282/ProductRouteApi/StoreProcessInfoData，
+请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxNzgyODEsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.LMRnkZNOD930KmG1MTvsk3-qn16MUEC7XsWbBCh359M'}，
+请求体: {'ProcessCode': 'Automation01', 'ProcessName': '自动化测试工序01'}
+2025-05-30 10:51:22,935 - production_process.py:[33] - [INFO] - 当前执行新增工序接口：storeProcessInfoData，
+请求 URL: http://192.168.0.135:8282/ProductRouteApi/StoreProcessInfoData，
+请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxNzgyODEsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.LMRnkZNOD930KmG1MTvsk3-qn16MUEC7XsWbBCh359M'}，
+请求体: {'ProcessCode': 'Automation01', 'ProcessName': '自动化测试工序01'}
+2025-05-30 10:51:22,935 - production_process.py:[33] - [INFO] - 当前执行新增工序接口：storeProcessInfoData，
+请求 URL: http://192.168.0.135:8282/ProductRouteApi/StoreProcessInfoData，
+请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxNzgyODEsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.LMRnkZNOD930KmG1MTvsk3-qn16MUEC7XsWbBCh359M'}，
+请求体: {'ProcessCode': 'Automation01', 'ProcessName': '自动化测试工序01'}
+2025-05-30 10:51:22,935 - production_process.py:[33] - [INFO] - 当前执行新增工序接口：storeProcessInfoData，
+请求 URL: http://192.168.0.135:8282/ProductRouteApi/StoreProcessInfoData，
+请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxNzgyODEsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.LMRnkZNOD930KmG1MTvsk3-qn16MUEC7XsWbBCh359M'}，
+请求体: {'ProcessCode': 'Automation01', 'ProcessName': '自动化测试工序01'}
+2025-05-30 10:51:22,935 - production_process.py:[33] - [INFO] - 当前执行新增工序接口：storeProcessInfoData，
+请求 URL: http://192.168.0.135:8282/ProductRouteApi/StoreProcessInfoData，
+请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxNzgyODEsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.LMRnkZNOD930KmG1MTvsk3-qn16MUEC7XsWbBCh359M'}，
+请求体: {'ProcessCode': 'Automation01', 'ProcessName': '自动化测试工序01'}
+2025-05-30 10:51:22,935 - production_process.py:[33] - [INFO] - 当前执行新增工序接口：storeProcessInfoData，
+请求 URL: http://192.168.0.135:8282/ProductRouteApi/StoreProcessInfoData，
+请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxNzgyODEsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.LMRnkZNOD930KmG1MTvsk3-qn16MUEC7XsWbBCh359M'}，
+请求体: {'ProcessCode': 'Automation01', 'ProcessName': '自动化测试工序01'}
+2025-05-30 10:51:22,935 - production_process.py:[33] - [INFO] - 当前执行新增工序接口：storeProcessInfoData，
+请求 URL: http://192.168.0.135:8282/ProductRouteApi/StoreProcessInfoData，
+请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxNzgyODEsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.LMRnkZNOD930KmG1MTvsk3-qn16MUEC7XsWbBCh359M'}，
+请求体: {'ProcessCode': 'Automation01', 'ProcessName': '自动化测试工序01'}
+2025-05-30 10:51:26,851 - test_process_related.py:[152] - [INFO] - 本用例正在执行：test_adjustProcessRoutingEntry01。获取到的结果是：数据保存成功, 期望的结果是: 数据保存成功
+2025-05-30 10:51:28,250 - test_process_related.py:[168] - [INFO] - 本用例正在执行：test_selectManufactureBom01。获取到的结果是：数据保存成功, 期望的结果是: 数据保存成功
+2025-05-30 10:51:29,541 - delete_data.py:[31] - [INFO] - 物料数据删除成功
+2025-05-30 10:51:29,541 - delete_data.py:[31] - [INFO] - 物料数据删除成功
+2025-05-30 10:51:29,541 - delete_data.py:[31] - [INFO] - 物料数据删除成功
+2025-05-30 10:51:30,818 - test_product_materials.py:[28] - [INFO] - 本用例正在执行：test_productaterials01。获取到的结果是：数据新增成功, 期望的结果是: 数据新增成功
+2025-05-30 10:51:32,158 - test_product_materials.py:[45] - [INFO] - 本用例正在执行：test_productaterials02。获取到的结果是：已有重复数据录入!, 期望的结果是:已有重复数据录入!
+2025-05-30 10:51:33,508 - test_product_materials.py:[61] - [INFO] - 本用例正在执行：test_getMaterialInfoAutoQueryDatas01。获取到的结果是：获取数据成功！, 期望的结果是: 获取数据成功！
+2025-05-30 10:51:35,088 - test_product_materials.py:[78] - [INFO] - 本用例正在执行：test_removeMaterialInfoData01。获取到的结果是：数据删除成功, 期望的结果是: 获取数据成功！
+2025-05-30 10:51:37,500 - test_product_materials.py:[96] - [INFO] - 本用例正在执行：test_storeManufactureBomData01。获取到的结果是：数据新增成功, 期望的结果是: 数据新增成功
+2025-05-30 10:51:38,839 - test_product_materials.py:[130] - [INFO] - 本用例正在执行：test_getGetBomMasterViewAutoQueryDatas01。获取到的结果是：获取数据成功！, 期望的结果是:获取数据成功！
+2025-05-30 10:51:41,526 - test_product_materials.py:[147] - [INFO] - 本用例正在执行：test_gremoveManufactureBomData01。获取到的结果是：数据删除成功, 数据删除成功
+2025-05-30 10:51:42,761 - delete_data.py:[31] - [INFO] - 物料数据删除成功
+2025-05-30 10:51:42,761 - delete_data.py:[31] - [INFO] - 物料数据删除成功
+2025-05-30 10:51:42,761 - delete_data.py:[31] - [INFO] - 物料数据删除成功
+2025-05-30 10:51:42,761 - delete_data.py:[31] - [INFO] - 物料数据删除成功
+2025-05-30 10:51:42,935 - test_login.py:[24] - [INFO] - 本用例正在执行：test_login01。获取到的结果是：数据更新成功, 期望的结果是:数据更新成功，返回token
+2025-05-30 10:51:42,935 - test_login.py:[24] - [INFO] - 本用例正在执行：test_login01。获取到的结果是：数据更新成功, 期望的结果是:数据更新成功，返回token
+2025-05-30 10:51:43,144 - test_login.py:[41] - [INFO] - 本用例正在执行：test_login02。获取到的结果是：密码错误, 期望的结果是:账号错误，不返回token
+2025-05-30 10:51:43,144 - test_login.py:[41] - [INFO] - 本用例正在执行：test_login02。获取到的结果是：密码错误, 期望的结果是:账号错误，不返回token
+2025-05-30 10:51:43,144 - test_login.py:[41] - [INFO] - 本用例正在执行：test_login02。获取到的结果是：密码错误, 期望的结果是:账号错误，不返回token
+2025-05-30 10:51:43,203 - test_login.py:[58] - [INFO] - 本用例正在执行：test_login03。获取到的结果是：用户不存在, 期望的结果是:用户不存在，不返回token
+2025-05-30 10:51:43,203 - test_login.py:[58] - [INFO] - 本用例正在执行：test_login03。获取到的结果是：用户不存在, 期望的结果是:用户不存在，不返回token
+2025-05-30 10:51:43,203 - test_login.py:[58] - [INFO] - 本用例正在执行：test_login03。获取到的结果是：用户不存在, 期望的结果是:用户不存在，不返回token
+2025-05-30 10:51:43,203 - test_login.py:[58] - [INFO] - 本用例正在执行：test_login03。获取到的结果是：用户不存在, 期望的结果是:用户不存在，不返回token
+2025-05-30 10:51:48,277 - main1.py:[215] - [INFO] - 钉钉发送状态码: 200
+2025-05-30 10:51:48,278 - main1.py:[148] - [INFO] - 端口 8000 可用，尝试启动服务器...
+2025-05-30 10:51:51,290 - main1.py:[167] - [INFO] - 端口 8000 可连接，生成报告链接...
+2025-05-30 10:51:52,373 - main1.py:[194] - [INFO] - 邮件发送成功
+2025-05-30 10:54:22,628 - delete_data.py:[158] - [INFO] - 物料数据清理完成
+2025-05-30 10:54:23,789 - delete_data.py:[160] - [INFO] - 工序数据清理完成
+2025-05-30 10:54:24,983 - delete_data.py:[162] - [INFO] - 工艺路线数据清理完成
+2025-05-30 10:54:26,108 - equipment_ledger_management.py:[67] - [INFO] - 删除设备台账接口开始调用，URL: http://192.168.0.135:8282/EquipmentLedgerApi/RemoveBatchEquipmentLedgerDatas
+请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxNzg0NjUsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.-sqd4qWZD0vwCKNuL3a7VTHjO2I_4CXFhWMAZpdeOwM'}
+请求体: [{'EquipmentCode': 'Automation01', 'EquipmentName': '自动化测试设备', 'OrganizationStructureCode': '00000.00001.00001', 'StopTime': 3, 'EquipmentGroupCode': 'Q', 'OrganizationStructureName': '注塑车间', 'OrganizationStructureExternalCode': 'ZSCJ', 'EquipmentGroupName': 'Q组', 'OpSign': 1, 'CompanyCode': '00000', 'FactoryCode': '00000.00001'}]
+2025-05-30 10:54:26,127 - delete_data.py:[164] - [INFO] - 设备台账数据清理完成
+2025-05-30 10:54:26,127 - delete_data.py:[26] - [ERROR] - 接口返回空响应
+2025-05-30 11:30:23,067 - factory_model.py:[43] - [ERROR] - 请求发生错误: 404 Client Error: Not Found for url: http://192.168.0.135:8282/FactoryOrganizationApi/StoreOrganizationStructureData，请求 URL: http://192.168.0.135:8282/FactoryOrganizationApi/StoreOrganizationStructureData，请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxODA2MjIsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.fuxnnP_oLqM4TanoQnhVJS4CbXPDp8vOiZsyg4NcrRI'}，请求体: {'OrganizationStructureParentCode': '00000.00001', 'OrganizationStructureCode': 'Automation01', 'OrganizationStructureName': '自动化测试车间', 'OrganizationStructureDisplayName': '自动化专业车间（自动创建）', 'OrganizationType': 'WorkShopInfo', 'OrganizationStructureExternalCode': '', 'SortNum': 1, 'Remark': '', 'OpSign': 1, 'CompanyCode': '00000', 'FactoryCode': '00000.00001'}
+2025-05-30 13:06:17,549 - factory_model.py:[44] - [ERROR] - 请求发生错误: 404 Client Error: Not Found for url: http://192.168.0.135:8282/FactoryOrganizationApi/StoreOrganizationStructureData，请求 URL: http://192.168.0.135:8282/FactoryOrganizationApi/StoreOrganizationStructureData，请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxODYzNzYsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.dz41akC_0x_pKMSsANWNzqqaC8C5g8LiGT9LKZ-0TE4'}，请求体: {'OrganizationStructureParentCode': '00000.00001', 'OrganizationStructureCode': 'Automation01', 'OrganizationStructureName': '自动化测试车间', 'OrganizationStructureDisplayName': '自动化专业车间（自动创建）', 'OrganizationType': 'WorkShopInfo', 'OrganizationStructureExternalCode': '', 'SortNum': 1, 'Remark': '', 'OpSign': 1, 'CompanyCode': '00000', 'FactoryCode': '00000.00001'}
+2025-05-30 13:10:37,456 - factory_model.py:[44] - [ERROR] - 请求发生错误: 404 Client Error: Not Found for url: http://192.168.0.135:8282/FactoryOrganizationApi/StoreOrganizationStructureData，请求 URL: http://192.168.0.135:8282/FactoryOrganizationApi/StoreOrganizationStructureData，请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxODY2MzYsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.fdx-QaUJElmi1qVOgx0ih59i1iKQaTmIrLxkAx5WCu4'}，请求体: {'OrganizationStructureParentCode': '00000.00001', 'OrganizationStructureCode': 'Automation01', 'OrganizationStructureName': '自动化测试车间', 'OrganizationStructureDisplayName': '自动化专业车间（自动创建）', 'OrganizationType': 'WorkShopInfo', 'OrganizationStructureExternalCode': '', 'SortNum': 1, 'Remark': '', 'OpSign': 1, 'CompanyCode': '00000', 'FactoryCode': '00000.00001'}
+2025-05-30 13:14:09,527 - factory_model.py:[57] - [ERROR] - 请求发生错误: 404 Client Error: Not Found for url: http://192.168.0.135:8282/FactoryOrganizationApi/StoreOrganizationStructureData，请求 URL: http://192.168.0.135:8282/FactoryOrganizationApi/StoreOrganizationStructureData，请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxODY4NDgsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.KzWIk8t2VRfxshqUKWYlMOdIphPBzAtF3tJs7nWLbPo'}，请求体: {'OrganizationStructureParentCode': '00000.00001', 'OrganizationStructureCode': 'Automation011', 'OrganizationStructureName': '自动化测试车间', 'OrganizationStructureDisplayName': '自动化测试专用车间（自动生成）', 'OrganizationType': 'WorkShopInfo', 'OrganizationStructureExternalCode': '', 'SortNum': 1, 'Remark': '', 'OpSign': 1, 'CompanyCode': '00000', 'FactoryCode': '00000.00001'}
+2025-05-30 13:20:17,114 - factory_model.py:[57] - [ERROR] - 请求发生错误: 404 Client Error: Not Found for url: http://192.168.0.135:8282/FactoryOrganizationApi/StoreOrganizationStructureData，请求 URL: http://192.168.0.135:8282/FactoryOrganizationApi/StoreOrganizationStructureData，请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxODcyMTUsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.bLPchQXmBnn2GDPWCeEEXAvytSvbNN4SVHpQo14pzCw'}，请求体: {'OrganizationStructureParentCode': '00000.00001', 'OrganizationStructureCode': 'Automation01', 'OrganizationStructureName': '自动化测试车间', 'OrganizationStructureDisplayName': '自动化专业车间（自动创建）', 'OrganizationType': 'WorkShopInfo', 'OrganizationStructureExternalCode': '', 'SortNum': 1, 'Remark': '', 'OpSign': 1, 'CompanyCode': '00000', 'FactoryCode': '00000.00001'}
+2025-05-30 13:22:04,649 - factory_model.py:[57] - [ERROR] - 请求发生错误: 404 Client Error: Not Found for url: http://192.168.0.135:8282/FactoryOrganizationApi/StoreOrganizationStructureData，请求 URL: http://192.168.0.135:8282/FactoryOrganizationApi/StoreOrganizationStructureData，请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxODczMjMsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.OzQUCnK7n3Hpzc0AatoIxillv1FuqQwbxUUe4L7_J_w'}，请求体: {'OrganizationStructureParentCode': '00000.00001', 'OrganizationStructureCode': 'Automation01', 'OrganizationStructureName': '自动化测试车间', 'OrganizationStructureDisplayName': '自动化专业车间（自动创建）', 'OrganizationType': 'WorkShopInfo', 'OrganizationStructureExternalCode': '', 'SortNum': 1, 'Remark': '', 'OpSign': 1, 'CompanyCode': '00000', 'FactoryCode': '00000.00001'}
+2025-05-30 13:25:09,762 - factory_model.py:[57] - [ERROR] - 请求发生错误: 404 Client Error: Not Found for url: http://192.168.0.135:8282/FactoryOrganizationApi/StoreOrganizationStructureData，请求 URL: http://192.168.0.135:8282/FactoryOrganizationApi/StoreOrganizationStructureData，请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxODc1MDgsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.CfKyoT9_6dIrS5WWVuJ7iAP69tku-Ld3dLJiWcYhmeg'}，请求体: {'OrganizationStructureParentCode': '00000.00001', 'OrganizationStructureCode': 'Automation01', 'OrganizationStructureName': '自动化测试车间', 'OrganizationStructureDisplayName': '自动化专业车间（自动创建）', 'OrganizationType': 'WorkShopInfo', 'OrganizationStructureExternalCode': '', 'SortNum': 1, 'Remark': '', 'OpSign': 1, 'CompanyCode': '00000', 'FactoryCode': '00000.00001'}
+2025-05-30 13:40:37,217 - factory_model.py:[86] - [ERROR] - 请求发生错误: 404 Client Error: Not Found for url: http://192.168.0.135:8282/FactoryOrganizationApi/RemoveOrganizationStructureData，请求 URL: http://192.168.0.135:8282/FactoryOrganizationApi/RemoveOrganizationStructureData，请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxODg0MzUsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.wFo7r1KA4tJRQWq3Y1SVjZfxpODWcanZlHS8zlZ9DxA'}，请求体: {'OrganizationStructureCode': 'Automation01', 'OrganizationStructureParentCode': '00000.00001', 'OrganizationStructureName': '自动化测试车间', 'OrganizationStructureDisplayName': '自动化测试车间', 'OrganizationGroup': 'Product', 'CreatorUserId': 10402, 'CreatorUserName': 'CQ', 'CreatorUserRealName': '陈强', 'CompanyCode': '00000', 'FactoryCode': '00000.00001'}
+2025-05-30 13:40:37,217 - factory_model.py:[86] - [ERROR] - 请求发生错误: 404 Client Error: Not Found for url: http://192.168.0.135:8282/FactoryOrganizationApi/RemoveOrganizationStructureData，请求 URL: http://192.168.0.135:8282/FactoryOrganizationApi/RemoveOrganizationStructureData，请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxODg0MzUsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.wFo7r1KA4tJRQWq3Y1SVjZfxpODWcanZlHS8zlZ9DxA'}，请求体: {'OrganizationStructureCode': 'Automation01', 'OrganizationStructureParentCode': '00000.00001', 'OrganizationStructureName': '自动化测试车间', 'OrganizationStructureDisplayName': '自动化测试车间', 'OrganizationGroup': 'Product', 'CreatorUserId': 10402, 'CreatorUserName': 'CQ', 'CreatorUserRealName': '陈强', 'CompanyCode': '00000', 'FactoryCode': '00000.00001'}
+2025-05-30 14:16:39,511 - test_plant_layout.py:[30] - [INFO] - 本用例正在执行：test_storeOrganizationStructureData01。获取到的结果是：数据新增成功, 期望的结果是: 数据新增成功
+2025-05-30 14:16:41,050 - test_plant_layout.py:[46] - [INFO] - 本用例正在执行：test_productaterials01。获取到的结果是：不能在具有唯一索引“OrganizationStructureCode”的对象“dbo.FactoryLayout_OrganizationStructure”中插入重复键的行。重复键值为 (Automation01)。
+语句已终止。, 期望的结果是: 不能在具有唯一索引“OrganizationStructureCode”的对象“dbo.FactoryLayout_OrganizationStructure”中插入重复键的行。重复键值为 (Automation01)。
+语句已终止。
+2025-05-30 14:16:42,445 - test_plant_layout.py:[62] - [INFO] - 本用例正在执行：test_removeOrganizationStructureData01。获取到的结果是：数据删除成功, 期望的结果是: 数据删除成功
+2025-05-30 14:29:36,704 - test_plant_layout.py:[31] - [INFO] - 本用例正在执行：test_storeOrganizationStructureData01。获取到的结果是：数据新增成功, 期望的结果是: 数据新增成功
+2025-05-30 14:29:38,301 - test_plant_layout.py:[47] - [INFO] - 本用例正在执行：test_storeOrganizationStructureData02。获取到的结果是：不能在具有唯一索引“OrganizationStructureCode”的对象“dbo.FactoryLayout_OrganizationStructure”中插入重复键的行。重复键值为 (Automation01)。
+语句已终止。
+2025-05-30 14:29:40,084 - test_plant_layout.py:[63] - [INFO] - 本用例正在执行：test_removeOrganizationStructureData01。获取到的结果是：数据删除成功, 期望的结果是: 数据删除成功
+2025-05-30 14:30:37,214 - test_plant_layout.py:[31] - [INFO] - 本用例正在执行：test_storeOrganizationStructureData01。获取到的结果是：数据新增成功, 期望的结果是: 数据新增成功
+2025-05-30 14:30:39,185 - test_plant_layout.py:[47] - [INFO] - 本用例正在执行：test_storeOrganizationStructureData02。获取到的结果是：不能在具有唯一索引“OrganizationStructureCode”的对象“dbo.FactoryLayout_OrganizationStructure”中插入重复键的行。重复键值为 (Automation01)。
+语句已终止。
+2025-05-30 14:30:40,682 - test_plant_layout.py:[63] - [INFO] - 本用例正在执行：test_removeOrganizationStructureData01。获取到的结果是：数据删除成功, 期望的结果是: 数据删除成功
+2025-05-30 15:15:32,498 - test_plant_layout.py:[31] - [INFO] - 本用例正在执行：test_storeOrganizationStructureData01。获取到的结果是：数据新增成功, 期望的结果是: 数据新增成功
+2025-05-30 15:15:33,756 - test_plant_layout.py:[47] - [INFO] - 本用例正在执行：test_storeOrganizationStructureData02。获取到的结果是：不能在具有唯一索引“OrganizationStructureCode”的对象“dbo.FactoryLayout_OrganizationStructure”中插入重复键的行。重复键值为 (Automation01)。
+语句已终止。
+2025-05-30 15:15:35,102 - test_plant_layout.py:[63] - [INFO] - 本用例正在执行：test_removeOrganizationStructureData01。获取到的结果是：数据删除成功, 期望的结果是: 数据删除成功
+2025-05-30 15:15:36,698 - test_plant_layout.py:[80] - [INFO] - 本用例正在执行：test_storeOrganizationStructureData01。获取到的结果是：不能将值 NULL 插入列 'SortNum'，表 'RH_IndustialPlatform.dbo.FactoryLayout_OrganizationStructure'；列不允许有 Null 值。INSERT 失败。
+语句已终止。, 期望的结果是: 数据新增成功
+2025-05-30 15:15:36,700 - test_plant_layout.py:[85] - [ERROR] - 新增车间接口：test_storeOrganizationStructureData01 断言失败，展开结果与预期不符
+2025-05-30 15:15:38,337 - test_plant_layout.py:[96] - [INFO] - 本用例正在执行：test_storeOrganizationStructureData_productionline02。获取到的结果是：不能将值 NULL 插入列 'SortNum'，表 'RH_IndustialPlatform.dbo.FactoryLayout_OrganizationStructure'；列不允许有 Null 值。INSERT 失败。
+语句已终止。
+2025-05-30 15:15:38,338 - test_plant_layout.py:[101] - [ERROR] - 物料信息维护页面：test_productaterials01 断言失败，展开结果与预期不符
+2025-05-30 15:15:39,565 - test_plant_layout.py:[113] - [INFO] - 本用例正在执行：test_removeOrganizationStructureData_productionline01。获取到的结果是：数据删除成功, 期望的结果是: 数据删除成功
+2025-05-30 15:17:43,445 - test_plant_layout.py:[31] - [INFO] - 本用例正在执行：test_storeOrganizationStructureData01。获取到的结果是：数据新增成功, 期望的结果是: 数据新增成功
+2025-05-30 15:17:44,830 - test_plant_layout.py:[47] - [INFO] - 本用例正在执行：test_storeOrganizationStructureData02。获取到的结果是：不能在具有唯一索引“OrganizationStructureCode”的对象“dbo.FactoryLayout_OrganizationStructure”中插入重复键的行。重复键值为 (Automation01)。
+语句已终止。
+2025-05-30 15:17:46,135 - test_plant_layout.py:[63] - [INFO] - 本用例正在执行：test_removeOrganizationStructureData01。获取到的结果是：数据删除成功, 期望的结果是: 数据删除成功
+2025-05-30 15:17:47,437 - test_plant_layout.py:[80] - [INFO] - 本用例正在执行：test_storeOrganizationStructureData01。获取到的结果是：不能将值 NULL 插入列 'SortNum'，表 'RH_IndustialPlatform.dbo.FactoryLayout_OrganizationStructure'；列不允许有 Null 值。INSERT 失败。
+语句已终止。, 期望的结果是: 数据新增成功
+2025-05-30 15:17:47,438 - test_plant_layout.py:[85] - [ERROR] - 新增车间接口：test_storeOrganizationStructureData01 断言失败，展开结果与预期不符
+2025-05-30 15:17:49,025 - test_plant_layout.py:[96] - [INFO] - 本用例正在执行：test_storeOrganizationStructureData_productionline02。获取到的结果是：不能将值 NULL 插入列 'SortNum'，表 'RH_IndustialPlatform.dbo.FactoryLayout_OrganizationStructure'；列不允许有 Null 值。INSERT 失败。
+语句已终止。
+2025-05-30 15:17:49,026 - test_plant_layout.py:[101] - [ERROR] - 物料信息维护页面：test_productaterials01 断言失败，展开结果与预期不符
+2025-05-30 15:17:50,357 - test_plant_layout.py:[112] - [INFO] - 本用例正在执行：test_removeOrganizationStructureData_productionline01。获取到的结果是：数据删除成功, 期望的结果是: 数据删除成功
+2025-05-30 15:22:59,340 - test_plant_layout.py:[80] - [INFO] - 本用例正在执行：test_storeOrganizationStructureData01。获取到的结果是：不能将值 NULL 插入列 'SortNum'，表 'RH_IndustialPlatform.dbo.FactoryLayout_OrganizationStructure'；列不允许有 Null 值。INSERT 失败。
+语句已终止。, 期望的结果是: 数据新增成功
+2025-05-30 15:22:59,342 - test_plant_layout.py:[85] - [ERROR] - 新增车间接口：test_storeOrganizationStructureData01 断言失败，展开结果与预期不符
+2025-05-30 15:23:01,123 - test_plant_layout.py:[96] - [INFO] - 本用例正在执行：test_storeOrganizationStructureData_productionline02。获取到的结果是：不能将值 NULL 插入列 'SortNum'，表 'RH_IndustialPlatform.dbo.FactoryLayout_OrganizationStructure'；列不允许有 Null 值。INSERT 失败。
+语句已终止。
+2025-05-30 15:23:01,123 - test_plant_layout.py:[101] - [ERROR] - 物料信息维护页面：test_productaterials01 断言失败，展开结果与预期不符
+2025-05-30 15:29:29,696 - test_plant_layout.py:[80] - [INFO] - 本用例正在执行：test_storeOrganizationStructureData01。获取到的结果是：数据新增成功, 期望的结果是: 数据新增成功
+2025-05-30 15:29:32,373 - test_plant_layout.py:[96] - [INFO] - 本用例正在执行：test_storeOrganizationStructureData_productionline02。获取到的结果是：不能在具有唯一索引“OrganizationStructureCode”的对象“dbo.FactoryLayout_OrganizationStructure”中插入重复键的行。重复键值为 (Automation01)。
+语句已终止。
+2025-05-30 15:30:03,591 - test_plant_layout.py:[31] - [INFO] - 本用例正在执行：test_storeOrganizationStructureData01。获取到的结果是：数据新增成功, 期望的结果是: 数据新增成功
+2025-05-30 15:30:05,749 - test_plant_layout.py:[47] - [INFO] - 本用例正在执行：test_storeOrganizationStructureData02。获取到的结果是：不能在具有唯一索引“OrganizationStructureCode”的对象“dbo.FactoryLayout_OrganizationStructure”中插入重复键的行。重复键值为 (Automation01)。
+语句已终止。
+2025-05-30 15:30:07,626 - test_plant_layout.py:[63] - [INFO] - 本用例正在执行：test_removeOrganizationStructureData01。获取到的结果是：数据删除成功, 期望的结果是: 数据删除成功
+2025-05-30 15:30:09,272 - test_plant_layout.py:[80] - [INFO] - 本用例正在执行：test_storeOrganizationStructureData01。获取到的结果是：数据新增成功, 期望的结果是: 数据新增成功
+2025-05-30 15:30:11,415 - test_plant_layout.py:[96] - [INFO] - 本用例正在执行：test_storeOrganizationStructureData_productionline02。获取到的结果是：不能在具有唯一索引“OrganizationStructureCode”的对象“dbo.FactoryLayout_OrganizationStructure”中插入重复键的行。重复键值为 (Automation01)。
+语句已终止。
+2025-05-30 15:30:13,669 - test_plant_layout.py:[112] - [INFO] - 本用例正在执行：test_removeOrganizationStructureData_productionline01。获取到的结果是：数据删除成功, 期望的结果是: 数据删除成功
+2025-05-30 15:31:02,853 - delete_data.py:[31] - [INFO] - 设备台账数据删除成功
+2025-05-30 15:31:05,021 - test_equipment_ledger.py:[30] - [INFO] - 本用例正在执行：test_storeEquipmentLedgerData01。获取到的结果是：数据新增成功, 期望的结果是: 数据新增成功
+2025-05-30 15:31:07,146 - test_equipment_ledger.py:[47] - [INFO] - 本用例正在执行：test_storeEquipmentLedgerData02。获取到的结果是：已有重复数据录入!, 期望的结果是: 已有重复数据录入!
+2025-05-30 15:31:09,242 - test_equipment_ledger.py:[64] - [INFO] - 本用例正在执行：test_removeBatchEquipmentLedger01。获取到的结果是：已有重复数据录入!, 期望的结果是: 已有重复数据录入!
+2025-05-30 15:31:10,986 - test_plant_layout.py:[31] - [INFO] - 本用例正在执行：test_storeOrganizationStructureData01。获取到的结果是：数据新增成功, 期望的结果是: 数据新增成功
+2025-05-30 15:31:12,798 - test_plant_layout.py:[47] - [INFO] - 本用例正在执行：test_storeOrganizationStructureData02。获取到的结果是：不能在具有唯一索引“OrganizationStructureCode”的对象“dbo.FactoryLayout_OrganizationStructure”中插入重复键的行。重复键值为 (Automation01)。
+语句已终止。
+2025-05-30 15:31:14,767 - test_plant_layout.py:[63] - [INFO] - 本用例正在执行：test_removeOrganizationStructureData01。获取到的结果是：数据删除成功, 期望的结果是: 数据删除成功
+2025-05-30 15:31:16,894 - test_plant_layout.py:[80] - [INFO] - 本用例正在执行：test_storeOrganizationStructureData01。获取到的结果是：数据新增成功, 期望的结果是: 数据新增成功
+2025-05-30 15:31:18,754 - test_plant_layout.py:[96] - [INFO] - 本用例正在执行：test_storeOrganizationStructureData_productionline02。获取到的结果是：不能在具有唯一索引“OrganizationStructureCode”的对象“dbo.FactoryLayout_OrganizationStructure”中插入重复键的行。重复键值为 (Automation01)。
+语句已终止。
+2025-05-30 15:31:20,942 - test_plant_layout.py:[112] - [INFO] - 本用例正在执行：test_removeOrganizationStructureData_productionline01。获取到的结果是：数据删除成功, 期望的结果是: 数据删除成功
+2025-05-30 15:31:22,593 - delete_data.py:[31] - [INFO] - 工序数据删除成功
+2025-05-30 15:31:22,593 - delete_data.py:[31] - [INFO] - 工序数据删除成功
+2025-05-30 15:31:24,422 - test_process_related.py:[36] - [INFO] - 本用例正在执行：test_storeProcessInfoData01。获取到的结果是：数据新增成功, 期望的结果是: 数据新增成功
+2025-05-30 15:31:26,238 - test_process_related.py:[53] - [INFO] - 本用例正在执行：test_storeProcessInfoData02。获取到的结果是：已有重复数据录入!, 期望的结果是: 已有重复数据录入!
+2025-05-30 15:31:28,222 - test_process_related.py:[69] - [INFO] - 本用例正在执行：test_removeProcessInfoData01。获取到的结果是：数据删除成功, 期望的结果是: 数据删除成功
+2025-05-30 15:31:30,079 - test_process_related.py:[85] - [INFO] - 本用例正在执行：test_storeProcessRoutingData01。获取到的结果是：数据新增成功, 期望的结果是: 数据新增成功
+2025-05-30 15:31:31,834 - test_process_related.py:[101] - [INFO] - 本用例正在执行：test_storeProcessRoutingData02。获取到的结果是：数据新增成功, 期望的结果是: 数据新增成功
+2025-05-30 15:31:33,658 - test_process_related.py:[117] - [INFO] - 本用例正在执行：test_removeProcessRoutingData01。获取到的结果是：数据删除成功, 期望的结果是: 数据删除成功
+2025-05-30 15:31:35,839 - test_process_related.py:[133] - [INFO] - 本用例正在执行：test_adjustProcessRoutingEntry01。获取到的结果是：数据保存成功, 期望的结果是: 数据保存成功
+2025-05-30 15:31:47,486 - test_process_related.py:[152] - [INFO] - 本用例正在执行：test_adjustProcessRoutingEntry01。获取到的结果是：数据保存成功, 期望的结果是: 数据保存成功
+2025-05-30 15:31:49,751 - test_process_related.py:[168] - [INFO] - 本用例正在执行：test_selectManufactureBom01。获取到的结果是：数据保存成功, 期望的结果是: 数据保存成功
+2025-05-30 15:31:52,021 - test_product_materials.py:[27] - [INFO] - 本用例正在执行：test_productaterials01。获取到的结果是：数据新增成功, 期望的结果是: 数据新增成功
+2025-05-30 15:31:55,475 - test_product_materials.py:[44] - [INFO] - 本用例正在执行：test_productaterials02。获取到的结果是：已有重复数据录入!, 期望的结果是:已有重复数据录入!
+2025-05-30 15:31:59,005 - test_product_materials.py:[60] - [INFO] - 本用例正在执行：test_getMaterialInfoAutoQueryDatas01。获取到的结果是：获取数据成功！, 期望的结果是: 获取数据成功！
+2025-05-30 15:32:02,570 - test_product_materials.py:[77] - [INFO] - 本用例正在执行：test_removeMaterialInfoData01。获取到的结果是：数据删除成功, 期望的结果是: 获取数据成功！
+2025-05-30 15:32:12,044 - delete_data.py:[31] - [INFO] - 设备台账数据删除成功
+2025-05-30 15:32:13,971 - test_equipment_ledger.py:[30] - [INFO] - 本用例正在执行：test_storeEquipmentLedgerData01。获取到的结果是：数据新增成功, 期望的结果是: 数据新增成功
+2025-05-30 15:32:20,819 - delete_data.py:[31] - [INFO] - 设备台账数据删除成功
+2025-05-30 15:32:22,870 - test_equipment_ledger.py:[30] - [INFO] - 本用例正在执行：test_storeEquipmentLedgerData01。获取到的结果是：数据新增成功, 期望的结果是: 数据新增成功
+2025-05-30 15:32:24,868 - test_equipment_ledger.py:[47] - [INFO] - 本用例正在执行：test_storeEquipmentLedgerData02。获取到的结果是：已有重复数据录入!, 期望的结果是: 已有重复数据录入!
+2025-05-30 15:32:26,623 - test_equipment_ledger.py:[64] - [INFO] - 本用例正在执行：test_removeBatchEquipmentLedger01。获取到的结果是：已有重复数据录入!, 期望的结果是: 已有重复数据录入!
+2025-05-30 15:32:28,755 - test_plant_layout.py:[31] - [INFO] - 本用例正在执行：test_storeOrganizationStructureData01。获取到的结果是：数据新增成功, 期望的结果是: 数据新增成功
+2025-05-30 15:32:37,896 - delete_data.py:[31] - [INFO] - 设备台账数据删除成功
+2025-05-30 15:32:42,774 - test_equipment_ledger.py:[30] - [INFO] - 本用例正在执行：test_storeEquipmentLedgerData01。获取到的结果是：数据新增成功, 期望的结果是: 数据新增成功
+2025-05-30 15:32:45,690 - test_equipment_ledger.py:[47] - [INFO] - 本用例正在执行：test_storeEquipmentLedgerData02。获取到的结果是：已有重复数据录入!, 期望的结果是: 已有重复数据录入!
+2025-05-30 15:32:47,934 - test_equipment_ledger.py:[64] - [INFO] - 本用例正在执行：test_removeBatchEquipmentLedger01。获取到的结果是：已有重复数据录入!, 期望的结果是: 已有重复数据录入!
+2025-05-30 15:32:49,625 - test_plant_layout.py:[31] - [INFO] - 本用例正在执行：test_storeOrganizationStructureData01。获取到的结果是：数据新增成功, 期望的结果是: 数据新增成功
+2025-05-30 15:32:51,900 - test_plant_layout.py:[47] - [INFO] - 本用例正在执行：test_storeOrganizationStructureData02。获取到的结果是：不能在具有唯一索引“OrganizationStructureCode”的对象“dbo.FactoryLayout_OrganizationStructure”中插入重复键的行。重复键值为 (Automation01)。
+语句已终止。
+2025-05-30 15:32:53,581 - test_plant_layout.py:[63] - [INFO] - 本用例正在执行：test_removeOrganizationStructureData01。获取到的结果是：数据删除成功, 期望的结果是: 数据删除成功
+2025-05-30 15:32:55,384 - test_plant_layout.py:[80] - [INFO] - 本用例正在执行：test_storeOrganizationStructureData01。获取到的结果是：数据新增成功, 期望的结果是: 数据新增成功
+2025-05-30 15:32:57,169 - test_plant_layout.py:[96] - [INFO] - 本用例正在执行：test_storeOrganizationStructureData_productionline02。获取到的结果是：不能在具有唯一索引“OrganizationStructureCode”的对象“dbo.FactoryLayout_OrganizationStructure”中插入重复键的行。重复键值为 (Automation01)。
+语句已终止。
+2025-05-30 15:32:59,042 - test_plant_layout.py:[112] - [INFO] - 本用例正在执行：test_removeOrganizationStructureData_productionline01。获取到的结果是：数据删除成功, 期望的结果是: 数据删除成功
+2025-05-30 15:33:00,769 - delete_data.py:[31] - [INFO] - 工序数据删除成功
+2025-05-30 15:33:00,769 - delete_data.py:[31] - [INFO] - 工序数据删除成功
+2025-05-30 15:33:02,489 - test_process_related.py:[36] - [INFO] - 本用例正在执行：test_storeProcessInfoData01。获取到的结果是：数据新增成功, 期望的结果是: 数据新增成功
+2025-05-30 15:33:04,445 - test_process_related.py:[53] - [INFO] - 本用例正在执行：test_storeProcessInfoData02。获取到的结果是：已有重复数据录入!, 期望的结果是: 已有重复数据录入!
+2025-05-30 15:33:06,141 - test_process_related.py:[69] - [INFO] - 本用例正在执行：test_removeProcessInfoData01。获取到的结果是：数据删除成功, 期望的结果是: 数据删除成功
+2025-05-30 15:33:08,075 - test_process_related.py:[85] - [INFO] - 本用例正在执行：test_storeProcessRoutingData01。获取到的结果是：数据新增成功, 期望的结果是: 数据新增成功
+2025-05-30 15:33:10,104 - test_process_related.py:[101] - [INFO] - 本用例正在执行：test_storeProcessRoutingData02。获取到的结果是：数据新增成功, 期望的结果是: 数据新增成功
+2025-05-30 15:33:11,796 - test_process_related.py:[117] - [INFO] - 本用例正在执行：test_removeProcessRoutingData01。获取到的结果是：数据删除成功, 期望的结果是: 数据删除成功
+2025-05-30 15:33:13,429 - test_process_related.py:[133] - [INFO] - 本用例正在执行：test_adjustProcessRoutingEntry01。获取到的结果是：数据保存成功, 期望的结果是: 数据保存成功
+2025-05-30 15:33:20,257 - test_process_related.py:[152] - [INFO] - 本用例正在执行：test_adjustProcessRoutingEntry01。获取到的结果是：数据保存成功, 期望的结果是: 数据保存成功
+2025-05-30 15:33:22,196 - test_process_related.py:[168] - [INFO] - 本用例正在执行：test_selectManufactureBom01。获取到的结果是：数据保存成功, 期望的结果是: 数据保存成功
+2025-05-30 15:33:24,390 - test_product_materials.py:[27] - [INFO] - 本用例正在执行：test_productaterials01。获取到的结果是：数据新增成功, 期望的结果是: 数据新增成功
+2025-05-30 15:33:26,158 - test_product_materials.py:[44] - [INFO] - 本用例正在执行：test_productaterials02。获取到的结果是：已有重复数据录入!, 期望的结果是:已有重复数据录入!
+2025-05-30 15:33:28,072 - test_product_materials.py:[60] - [INFO] - 本用例正在执行：test_getMaterialInfoAutoQueryDatas01。获取到的结果是：获取数据成功！, 期望的结果是: 获取数据成功！
+2025-05-30 15:33:29,800 - test_product_materials.py:[77] - [INFO] - 本用例正在执行：test_removeMaterialInfoData01。获取到的结果是：数据删除成功, 期望的结果是: 获取数据成功！
+2025-05-30 15:33:38,331 - delete_data.py:[31] - [INFO] - 设备台账数据删除成功
+2025-05-30 15:33:40,054 - test_equipment_ledger.py:[30] - [INFO] - 本用例正在执行：test_storeEquipmentLedgerData01。获取到的结果是：数据新增成功, 期望的结果是: 数据新增成功
+2025-05-30 15:33:41,791 - test_equipment_ledger.py:[47] - [INFO] - 本用例正在执行：test_storeEquipmentLedgerData02。获取到的结果是：已有重复数据录入!, 期望的结果是: 已有重复数据录入!
+2025-05-30 15:33:43,556 - test_equipment_ledger.py:[64] - [INFO] - 本用例正在执行：test_removeBatchEquipmentLedger01。获取到的结果是：已有重复数据录入!, 期望的结果是: 已有重复数据录入!
+2025-05-30 15:33:45,725 - test_plant_layout.py:[31] - [INFO] - 本用例正在执行：test_storeOrganizationStructureData01。获取到的结果是：数据新增成功, 期望的结果是: 数据新增成功
+2025-05-30 15:33:47,846 - test_plant_layout.py:[47] - [INFO] - 本用例正在执行：test_storeOrganizationStructureData02。获取到的结果是：不能在具有唯一索引“OrganizationStructureCode”的对象“dbo.FactoryLayout_OrganizationStructure”中插入重复键的行。重复键值为 (Automation01)。
+语句已终止。
+2025-05-30 15:33:49,702 - test_plant_layout.py:[63] - [INFO] - 本用例正在执行：test_removeOrganizationStructureData01。获取到的结果是：数据删除成功, 期望的结果是: 数据删除成功
+2025-05-30 15:33:51,780 - test_plant_layout.py:[80] - [INFO] - 本用例正在执行：test_storeOrganizationStructureData01。获取到的结果是：数据新增成功, 期望的结果是: 数据新增成功
+2025-05-30 15:33:53,068 - test_plant_layout.py:[96] - [INFO] - 本用例正在执行：test_storeOrganizationStructureData_productionline02。获取到的结果是：不能在具有唯一索引“OrganizationStructureCode”的对象“dbo.FactoryLayout_OrganizationStructure”中插入重复键的行。重复键值为 (Automation01)。
+语句已终止。
+2025-05-30 15:33:54,288 - test_plant_layout.py:[112] - [INFO] - 本用例正在执行：test_removeOrganizationStructureData_productionline01。获取到的结果是：数据删除成功, 期望的结果是: 数据删除成功
+2025-05-30 15:33:55,919 - delete_data.py:[31] - [INFO] - 工序数据删除成功
+2025-05-30 15:33:55,919 - delete_data.py:[31] - [INFO] - 工序数据删除成功
+2025-05-30 15:33:57,620 - test_process_related.py:[36] - [INFO] - 本用例正在执行：test_storeProcessInfoData01。获取到的结果是：数据新增成功, 期望的结果是: 数据新增成功
+2025-05-30 15:33:59,632 - test_process_related.py:[53] - [INFO] - 本用例正在执行：test_storeProcessInfoData02。获取到的结果是：已有重复数据录入!, 期望的结果是: 已有重复数据录入!
+2025-05-30 15:34:01,366 - test_process_related.py:[69] - [INFO] - 本用例正在执行：test_removeProcessInfoData01。获取到的结果是：数据删除成功, 期望的结果是: 数据删除成功
+2025-05-30 15:34:02,916 - test_process_related.py:[85] - [INFO] - 本用例正在执行：test_storeProcessRoutingData01。获取到的结果是：数据新增成功, 期望的结果是: 数据新增成功
+2025-05-30 15:34:04,845 - test_process_related.py:[101] - [INFO] - 本用例正在执行：test_storeProcessRoutingData02。获取到的结果是：数据新增成功, 期望的结果是: 数据新增成功
+2025-05-30 15:34:06,734 - test_process_related.py:[117] - [INFO] - 本用例正在执行：test_removeProcessRoutingData01。获取到的结果是：数据删除成功, 期望的结果是: 数据删除成功
+2025-05-30 15:34:08,032 - test_process_related.py:[133] - [INFO] - 本用例正在执行：test_adjustProcessRoutingEntry01。获取到的结果是：数据保存成功, 期望的结果是: 数据保存成功
+2025-05-30 15:34:13,164 - test_process_related.py:[152] - [INFO] - 本用例正在执行：test_adjustProcessRoutingEntry01。获取到的结果是：数据保存成功, 期望的结果是: 数据保存成功
+2025-05-30 15:34:14,616 - test_process_related.py:[168] - [INFO] - 本用例正在执行：test_selectManufactureBom01。获取到的结果是：数据保存成功, 期望的结果是: 数据保存成功
+2025-05-30 15:34:15,967 - test_product_materials.py:[27] - [INFO] - 本用例正在执行：test_productaterials01。获取到的结果是：数据新增成功, 期望的结果是: 数据新增成功
+2025-05-30 15:34:17,391 - test_product_materials.py:[44] - [INFO] - 本用例正在执行：test_productaterials02。获取到的结果是：已有重复数据录入!, 期望的结果是:已有重复数据录入!
+2025-05-30 15:34:18,869 - test_product_materials.py:[60] - [INFO] - 本用例正在执行：test_getMaterialInfoAutoQueryDatas01。获取到的结果是：获取数据成功！, 期望的结果是: 获取数据成功！
+2025-05-30 15:34:20,290 - test_product_materials.py:[77] - [INFO] - 本用例正在执行：test_removeMaterialInfoData01。获取到的结果是：数据删除成功, 期望的结果是: 获取数据成功！
+2025-05-30 15:34:22,974 - test_product_materials.py:[95] - [INFO] - 本用例正在执行：test_storeManufactureBomData01。获取到的结果是：数据新增成功, 期望的结果是: 数据新增成功
+2025-05-30 15:34:25,845 - test_product_materials.py:[129] - [INFO] - 本用例正在执行：test_getGetBomMasterViewAutoQueryDatas01。获取到的结果是：获取数据成功！, 期望的结果是:获取数据成功！
+2025-05-30 15:34:28,840 - test_product_materials.py:[146] - [INFO] - 本用例正在执行：test_gremoveManufactureBomData01。获取到的结果是：数据删除成功, 数据删除成功
+2025-05-30 15:34:30,248 - delete_data.py:[31] - [INFO] - 物料数据删除成功
+2025-05-30 15:34:30,248 - delete_data.py:[31] - [INFO] - 物料数据删除成功
+2025-05-30 15:34:30,248 - delete_data.py:[31] - [INFO] - 物料数据删除成功
+2025-05-30 15:34:30,454 - test_login.py:[24] - [INFO] - 本用例正在执行：test_login01。获取到的结果是：数据更新成功, 期望的结果是:数据更新成功，返回token
+2025-05-30 15:34:30,454 - test_login.py:[24] - [INFO] - 本用例正在执行：test_login01。获取到的结果是：数据更新成功, 期望的结果是:数据更新成功，返回token
+2025-05-30 15:34:30,642 - test_login.py:[41] - [INFO] - 本用例正在执行：test_login02。获取到的结果是：密码错误, 期望的结果是:账号错误，不返回token
+2025-05-30 15:34:30,642 - test_login.py:[41] - [INFO] - 本用例正在执行：test_login02。获取到的结果是：密码错误, 期望的结果是:账号错误，不返回token
+2025-05-30 15:34:30,642 - test_login.py:[41] - [INFO] - 本用例正在执行：test_login02。获取到的结果是：密码错误, 期望的结果是:账号错误，不返回token
+2025-05-30 15:34:30,695 - test_login.py:[58] - [INFO] - 本用例正在执行：test_login03。获取到的结果是：用户不存在, 期望的结果是:用户不存在，不返回token
+2025-05-30 15:34:30,695 - test_login.py:[58] - [INFO] - 本用例正在执行：test_login03。获取到的结果是：用户不存在, 期望的结果是:用户不存在，不返回token
+2025-05-30 15:34:30,695 - test_login.py:[58] - [INFO] - 本用例正在执行：test_login03。获取到的结果是：用户不存在, 期望的结果是:用户不存在，不返回token
+2025-05-30 15:34:30,695 - test_login.py:[58] - [INFO] - 本用例正在执行：test_login03。获取到的结果是：用户不存在, 期望的结果是:用户不存在，不返回token
+2025-05-30 15:34:36,144 - main1.py:[215] - [INFO] - 钉钉发送状态码: 200
+2025-05-30 15:34:36,146 - main1.py:[148] - [INFO] - 端口 8000 可用，尝试启动服务器...
+2025-05-30 15:34:39,166 - main1.py:[167] - [INFO] - 端口 8000 可连接，生成报告链接...
+2025-05-30 15:34:40,970 - main1.py:[194] - [INFO] - 邮件发送成功
