@@ -1,1 +1,0 @@
-2025-05-23 17:39:16,073 - test_product_materials.py:[78] - [INFO] - 本用例正在执行：test_removeMaterialInfoData01。获取到的结果是：数据删除成功, 期望的结果是: 获取数据成功！

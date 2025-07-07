@@ -1,1 +1,0 @@
-2025-05-30 15:33:49,702 - test_plant_layout.py:[63] - [INFO] - 本用例正在执行：test_removeOrganizationStructureData01。获取到的结果是：数据删除成功, 期望的结果是: 数据删除成功

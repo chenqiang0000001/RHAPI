@@ -12,7 +12,7 @@ class LoginMomAdmin:
     def __init__(self):
         self.logger = Logger(name="my_logger").get_logger()
 
-    def login_mom_admin(self, pass_word=demo_password3, user_name=demo_username3):
+    def login_mom_admin(self, pass_word=demo_password2, user_name=demo_username2):
         """
         登录接口
         :param pass_word: 登录密码

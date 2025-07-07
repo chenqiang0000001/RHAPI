@@ -1,7 +1,0 @@
-INFO     delete_data:delete_data.py:23 工序数据删除成功
-INFO     EquipmentLedgerManagement:equipment_ledger_management.py:40 当前执行新增设备台账接口：storeProcessInfoData，
-请求 URL: http://192.168.0.135:8282/EquipmentLedgerApi/StoreEquipmentLedgerData，
-请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxNjkwMDEsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.tV0INxjlfn2iY1A9VO-T6ZmQCX6_V_3SMwGcR7YdjqU'}，
-请求体: {'EquipmentCode': 'Automation01', 'EquipmentName': '自动化测试设备', 'OrganizationStructureCode': '00000.00001.00001', 'StopTime': 3, 'EquipmentGroupCode': 'Q', 'OrganizationStructureName': '注塑车间', 'OrganizationStructureExternalCode': 'ZSCJ', 'EquipmentGroupName': 'Q组', 'OpSign': 1, 'CompanyCode': '00000', 'FactoryCode': '00000.00001'}
-INFO     TestEquipmentLedger:test_equipment_ledger.py:31 本用例正在执行：test_storeEquipmentLedgerData01。获取到的结果是：已有重复数据录入!, 期望的结果是: 数据新增成功
-ERROR    TestEquipmentLedger:test_equipment_ledger.py:37 新建设备页面：test_storeEquipmentLedgerData01 断言失败，展开结果与预期不符

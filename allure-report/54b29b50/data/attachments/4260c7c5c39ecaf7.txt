@@ -1,0 +1,1 @@
+[32mINFO    [0m mainprocess_tests:test_mainprocess.py:1048 ===== 开始扫描标签 =====

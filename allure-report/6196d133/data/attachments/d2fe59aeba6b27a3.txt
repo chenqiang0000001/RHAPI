@@ -1,1 +1,0 @@
-2025-05-30 15:34:04,845 - test_process_related.py:[101] - [INFO] - 本用例正在执行：test_storeProcessRoutingData02。获取到的结果是：数据新增成功, 期望的结果是: 数据新增成功

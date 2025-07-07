@@ -1,5 +1,0 @@
-INFO     ProcessRelated:production_process.py:33 当前执行新增工序接口：storeProcessInfoData，
-请求 URL: http://192.168.0.135:8282/ProductRouteApi/StoreProcessInfoData，
-请求头: {'authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxMDQxOCIsIlVzZXJDb2RlIjoiemRoMDEiLCJVc2VyTmFtZSI6IuiHquWKqOWMlua1i-ivleS4k-eUqOi0puWPt--8iOWLv-WKqO-8iSIsIlVzZXJUeXBlIjoiMSIsIkNvbXBhbnlDb2RlIjoiMDAwMDAiLCJGYWN0b3J5Q29kZSI6IiIsIklwIjoiMTkyLjE2OC44Mi4yMDQiLCJPcmdhbml6YXRpb25TdHJ1Y3R1cmVDb2RlIjoiMDAwMDAuMDAwMDEiLCJleHAiOjE3NDkxNjkwMDgsImlzcyI6IlJoLk1lcyIsImF1ZCI6IlJoLk1lcy5TZXJ2aWNlcyJ9.TbiGkAgaIXtr3IocqWWm6SERByyTwgHu2cLfCPmLMEA'}，
-请求体: {'ProcessCode': 'Automation01', 'ProcessName': '自动化测试工序01'}
-INFO     TestProcessRelated:test_process_related.py:53 本用例正在执行：test_storeProcessInfoData02。获取到的结果是：已有重复数据录入!, 期望的结果是: 已有重复数据录入!

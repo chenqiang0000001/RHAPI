@@ -1,2 +1,0 @@
-INFO     delete_data:delete_data.py:31 工序数据删除成功
-INFO     TestProcessRelated:test_process_related.py:36 本用例正在执行：test_storeProcessInfoData01。获取到的结果是：数据新增成功, 期望的结果是: 数据新增成功

@@ -1,0 +1,2 @@
+ERROR    mainprocess_tests:test_mainprocess.py:506 查询车间失败：期望Success=True，实际为False
+assert False == True

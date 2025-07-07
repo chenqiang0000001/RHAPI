@@ -1,2 +1,0 @@
-INFO     TestProcessRelated:test_process_related.py:122 本用例正在执行：test_adjustProcessRoutingEntry01。获取到的结果是：数据保存成功, 期望的结果是: 数据新增成功
-ERROR    TestProcessRelated:test_process_related.py:127 物料信息维护页面：test_adjustProcessRoutingEntry01 断言失败，展开结果与预期不符

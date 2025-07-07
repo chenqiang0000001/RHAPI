@@ -1,0 +1,2 @@
+2025-07-01 16:57:45,967 - test_mainprocess.py:[1285] - [INFO] - ===== 删除物料BOM =====
+2025-07-01 16:57:45,995 - test_mainprocess.py:[1292] - [INFO] - ✓ 删除物料BOM成功

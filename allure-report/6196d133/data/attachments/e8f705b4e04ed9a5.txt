@@ -1,2 +1,0 @@
-INFO     delete_data:delete_data.py:31 设备台账数据删除成功
-INFO     TestEquipmentLedger:test_equipment_ledger.py:30 本用例正在执行：test_storeEquipmentLedgerData01。获取到的结果是：数据新增成功, 期望的结果是: 数据新增成功

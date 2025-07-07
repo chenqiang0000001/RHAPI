@@ -1,0 +1,2 @@
+ERROR    mainprocess_tests:test_mainprocess.py:309 产品工序BOM绑定失败：期望Success=True，实际为False
+assert False == True

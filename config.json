@@ -1,0 +1,21 @@
+{
+    "test_case_format": {
+        "execution_time": "# execution_time:",
+        "priority": "# priority:"
+    },
+    "test_log_format": {
+        "execution_time": "Execution Time:",
+        "is_failed": "Test Failed:"
+    },
+    "pytest_command": "pytest D:\\apiAutomationRH\\TestCase --alluredir=./allure-results -v",
+    "email_config": {
+        "sender": "chq18870425154@163.com",
+        "receivers": ["chenqiangt@cptgroup.cn"],
+        "smtp_server": "smtp.163.com",
+        "smtp_port": 465,
+        "username": "chq18870425154@163.com",
+        "password": "SZgTA33Q25dzp9u7"
+    },
+    "dingtalk_webhook": "https://oapi.dingtalk.com/robot/send?access_token=727fef137b72ab2cabd7dfded3f55a95dbe8dc71c1bd1496f0673f3fc250d33c",
+    "allure_path": "D:\\allure-2.33.0\\bin\\allure.bat"
+}

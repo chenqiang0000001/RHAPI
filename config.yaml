@@ -1,20 +1,33 @@
 # 钉钉配置
 dingtalk:
-  webhook_url: DINGTALK_WEBHOOK
+  webhook_url: ${DINGTALK_WEBHOOK}
 
 # 邮箱配置
 email:
-  sender: ['chenqiangt@cptgroup.cn']
-  receivers: ['chq18870425154@163.com']
-  smtp_server: smtp.cptgroup.cn
-  smtp_port: 587
-  username: chenqiangt@cptgroup.cn
-  password: SZgTA33Q25dzp9u7
+  sender: ${EMAIL_SENDER}
+  receivers: ${EMAIL_RECEIVERS}
+  smtp_server: ${SMTP_SERVER}
+  smtp_port: ${SMTP_PORT}
+  username: ${EMAIL_USERNAME}
+  password: ${EMAIL_PASSWORD}
 
 # 数据库配置
 database:
-  host: 121.40.244.254
-  user: chenqiang
-  password: cozHLpjNiHfOrYBo
-  database: test_femooi
+  host: ${DB_HOST}
+  user: ${DB_USER}
+  password: ${DB_PASSWORD}
+  database: ${DB_NAME}
   charset: utf8
+
+# 环境配置
+environment:
+  allure_path: ${ALLURE_PATH}
+  test_url: ${TEST_URL}
+  formal_url: ${FORMAL_URL}
+  login_url: ${LOGIN_URL}
+
+# 测试配置
+test:
+  parallel: false
+  retry_count: 2
+  timeout: 30

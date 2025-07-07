@@ -10,7 +10,7 @@ fig.suptitle('缺陷统计信息全景图', fontsize=16)
 
 # 1. 缺陷状态分布（左上）
 status_labels = ['已关闭', '遗留']
-status_sizes = [26, 5]
+status_sizes = [30, 2]
 axs[0, 0].pie(status_sizes,
               labels=[f'{label}({size})' for label, size in zip(status_labels, status_sizes)],
               autopct='%1.1f%%',
@@ -20,7 +20,7 @@ axs[0, 0].set_title('缺陷状态分布')
 
 # 2. 缺陷类型分布（右上）
 type_labels = ['逻辑缺陷', '页面缺陷', '需求缺陷']
-type_sizes = [10, 17, 4]
+type_sizes = [12,13,5]
 axs[0, 1].pie(type_sizes,
               labels=[f'{label}\n({size})' for label, size in zip(type_labels, type_sizes)],
               autopct='%1.1f%%',
@@ -29,10 +29,10 @@ axs[0, 1].set_title('缺陷类型分布')
 
 # 3. 优先级分布（左下）
 priority_data = {
-    '最高': {'count': 2, 'color': '#ff6666', 'percent': 6.4},
-    '较高': {'count': 6, 'color': '#ff9966', 'percent': 19.4},
-    '中等': {'count': 17, 'color': '#ffcc00', 'percent': 54.8},
-    '较低': {'count': 6, 'color': '#99ff99', 'percent': 19.4},
+    '最高': {'count': 7, 'color': '#ff6666', 'percent': 23.3},
+    '较高': {'count': 10, 'color': '#ff9966', 'percent': 33.3},
+    '中等': {'count': 8, 'color': '#ffcc00', 'percent': 26.7},
+    '较低': {'count': 5, 'color': '#99ff99', 'percent': 16.7},
     '最低': {'count': 0, 'color': '#ccccff', 'percent': 0}
 }
 
@@ -52,10 +52,10 @@ axs[1, 0].set_ylabel('缺陷数量')
 
 # 4. 处理人分布（右下）
 owners_data = {
-    '胡科益': 9,
-    '刘佳炜': 14,
-    '共同处理': 3,
-    '挂起':5
+    '黄成祥': 10,
+    '刘佳炜': 16,
+    '共同处理': 4,
+    '挂起':2
 }
 colors = ['#66b3ff', '#ffcc99', '#c2f0c2','#ffcc99']
 axs[1, 1].bar(owners_data.keys(),

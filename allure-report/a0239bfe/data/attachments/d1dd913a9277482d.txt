@@ -1,0 +1,1 @@
+[32mINFO    [0m mainprocess_tests:test_mainprocess.py:962 ===== 开始查看SOP =====

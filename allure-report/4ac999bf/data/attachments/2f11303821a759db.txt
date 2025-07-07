@@ -1,0 +1,2 @@
+2025-07-07 10:25:57,186 - test_mainprocess.py:[309] - [ERROR] - 产品工序BOM绑定失败：期望Success=True，实际为False
+assert False == True

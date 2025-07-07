@@ -1,0 +1,3 @@
+INFO     mainprocess_tests:test_mainprocess.py:780 ===== 开始查询派工单 =====
+INFO     ProductionScheduling:production_plan.py:158 请求体: {'ProductionDispatchCode': '', 'BindProductionDispatchCode': '', 'ProcessTaskCode': '', 'ProductionPlanCode': 'PL202507070877', 'ProcessCode': None, 'ProcessName': '', 'EquipmentCode': None, 'EquipmentName': '', 'MouldCode': None, 'MouldName': '', 'ProductCode': None, 'ProductName': '', 'IsPaged': True, 'PageSize': 10, 'PageIndex': 1, 'CompanyCode': '00000', 'FactoryCode': '00000.00001'}
+INFO     ProductionScheduling:production_plan.py:161 响应体: {"TotalCount":0,"SkipCount":0,"DataHeadFields":[],"Record":0,"Attach":[],"Message":"未获取到相关数据!","Success":false}

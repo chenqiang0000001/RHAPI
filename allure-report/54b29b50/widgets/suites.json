@@ -1,0 +1,1 @@
+{"total":2,"items":[{"uid":"eeaeb42b6788683356624e0fd40e6ec5","name":"TestCase.functional_tests","statistic":{"failed":4,"broken":0,"skipped":0,"passed":26,"unknown":0,"total":30}},{"uid":"f181fedf7838cc07846d7d1580a8b3ae","name":"TestCase.integration_tests","statistic":{"failed":0,"broken":0,"skipped":0,"passed":56,"unknown":0,"total":56}}]}

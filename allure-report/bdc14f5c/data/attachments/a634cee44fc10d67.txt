@@ -1,0 +1,1 @@
+INFO     mainprocess_tests:test_mainprocess.py:977 ===== 开始创建首检单 =====

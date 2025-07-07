@@ -1,0 +1,2 @@
+INFO     TestProcessRelated:test_process_related.py:141 本用例正在执行：test_adjustProcessRoutingEntry01。获取到的结果是：工序变更成功！, 期望的结果是: 数据保存成功
+ERROR    TestProcessRelated:test_process_related.py:146 产品绑定工艺路线接口：test_adjustProcessRoutingEntry01 断言失败，展开结果与预期不符

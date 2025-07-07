@@ -1,3 +1,0 @@
-2025-05-30 15:33:55,919 - delete_data.py:[31] - [INFO] - 工序数据删除成功
-2025-05-30 15:33:55,919 - delete_data.py:[31] - [INFO] - 工序数据删除成功
-2025-05-30 15:33:57,620 - test_process_related.py:[36] - [INFO] - 本用例正在执行：test_storeProcessInfoData01。获取到的结果是：数据新增成功, 期望的结果是: 数据新增成功

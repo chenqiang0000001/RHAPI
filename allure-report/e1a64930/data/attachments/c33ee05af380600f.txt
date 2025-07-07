@@ -1,0 +1,2 @@
+INFO     mainprocess_tests:test_mainprocess.py:1300 ===== 删除物料 =====
+INFO     mainprocess_tests:test_mainprocess.py:1307 ✓ 删除物料成功

@@ -1,1 +1,0 @@
-2025-05-23 17:35:55,764 - test_product_materials.py:[45] - [INFO] - 本用例正在执行：test_productaterials02。获取到的结果是：已有重复数据录入!, 期望的结果是:已有重复数据录入!

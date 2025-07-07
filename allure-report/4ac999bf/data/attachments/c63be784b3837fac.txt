@@ -1,0 +1,2 @@
+INFO     mainprocess_tests:test_mainprocess.py:1285 ===== 删除物料BOM =====
+INFO     mainprocess_tests:test_mainprocess.py:1294 BOM版本或ID为空，跳过删除

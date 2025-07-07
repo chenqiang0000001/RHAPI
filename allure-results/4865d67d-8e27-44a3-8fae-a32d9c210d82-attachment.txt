@@ -1,2 +1,0 @@
-2025-05-30 15:33:38,331 - delete_data.py:[31] - [INFO] - 设备台账数据删除成功
-2025-05-30 15:33:40,054 - test_equipment_ledger.py:[30] - [INFO] - 本用例正在执行：test_storeEquipmentLedgerData01。获取到的结果是：数据新增成功, 期望的结果是: 数据新增成功

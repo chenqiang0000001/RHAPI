@@ -1,0 +1,4 @@
+INFO     FactoryModel:production_plan.py:73 请求体: [{'ProductionPlanCode': 'PL202507070877', 'Id': 673, 'expand': False, 'index': 1, 'select': True, 'ProcessRoutingCode': 'Automation01-2', '__edit': True, '__edit_disable': False, '__delete': True, '__delete_disable': False, 'isEdit': True, 'LastModifierUserName': 'zdh01', 'LastModifierUserRealName': 'zdh01', 'ProductCode': 'Automation01', 'ProductName': '自动化测试物料01'}]
+INFO     FactoryModel:production_plan.py:76 响应体: {"Record":0,"Attach":null,"Message":"由于目标计算机积极拒绝，无法连接。 (192.168.0.135:8283)","Success":false}
+ERROR    mainprocess_tests:test_mainprocess.py:600 确认生产计划失败：期望Success=True，实际为False
+assert False == True

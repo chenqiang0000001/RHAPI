@@ -1,1 +1,0 @@
-INFO     TestEquipmentLedger:test_equipment_ledger.py:47 本用例正在执行：test_storeEquipmentLedgerData02。获取到的结果是：已有重复数据录入!, 期望的结果是: 已有重复数据录入!

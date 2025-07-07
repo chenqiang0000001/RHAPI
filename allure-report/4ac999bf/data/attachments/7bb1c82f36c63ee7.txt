@@ -1,0 +1,1 @@
+INFO     mainprocess_tests:test_mainprocess.py:870 ===== 开始生产 =====

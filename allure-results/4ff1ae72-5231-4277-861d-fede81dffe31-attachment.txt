@@ -1,1 +1,0 @@
-INFO     TestProcessRelated:test_process_related.py:117 本用例正在执行：test_removeProcessRoutingData01。获取到的结果是：数据删除成功, 期望的结果是: 数据删除成功

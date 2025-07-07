@@ -1,0 +1,13 @@
+2025-07-01 16:38:23,869 - test_mainprocess.py:[1315] - [INFO] - ===== 开始集中清理测试数据，防止未删除数据 =====
+2025-07-01 16:38:23,869 - test_mainprocess.py:[1321] - [INFO] - 清理生产计划: PL202507010859
+2025-07-01 16:38:23,870 - test_mainprocess.py:[1326] - [INFO] - 清理派工单: DL202507011086
+2025-07-01 16:38:23,870 - test_mainprocess.py:[1331] - [INFO] - 清理检验单: Ic20250701295Ic
+2025-07-01 16:38:23,913 - test_mainprocess.py:[1341] - [INFO] - ✓ 删除物料BOM
+2025-07-01 16:38:23,936 - test_mainprocess.py:[1348] - [INFO] - ✓ 删除工序
+2025-07-01 16:38:23,960 - test_mainprocess.py:[1355] - [INFO] - ✓ 删除工艺路线
+2025-07-01 16:38:23,995 - test_mainprocess.py:[1362] - [INFO] - ✓ 删除产品工艺路线
+2025-07-01 16:38:24,104 - test_mainprocess.py:[1369] - [INFO] - ✓ 删除物料
+2025-07-01 16:38:24,123 - test_mainprocess.py:[1376] - [INFO] - ✓ 删除设备台账
+2025-07-01 16:38:24,174 - test_mainprocess.py:[1383] - [INFO] - ✓ 删除产线
+2025-07-01 16:38:24,230 - test_mainprocess.py:[1390] - [INFO] - ✓ 删除车间
+2025-07-01 16:38:24,230 - test_mainprocess.py:[1394] - [INFO] - 测试数据清理完成
