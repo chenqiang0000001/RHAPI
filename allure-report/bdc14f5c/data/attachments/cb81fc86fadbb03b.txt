@@ -1,1 +1,0 @@
-2025-07-01 15:03:39,575 - test_product_materials.py:[43] - [INFO] - 本用例正在执行：test_productaterials02。获取到的结果是：数据新增成功

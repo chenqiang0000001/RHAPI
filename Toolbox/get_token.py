@@ -7,7 +7,7 @@ from Public.variables.login import *
 from Public.address.mom import *
 
 
-def get_token(pass_word=demo_password2, user_name=demo_username2):
+def get_token(pass_word=demo_password3, user_name=demo_username3):
     """
     登录接口，获取有效的 authorization
     :param pass_word: 登录密码

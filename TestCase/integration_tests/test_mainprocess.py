@@ -1,5 +1,8 @@
 import pytest
 import allure
+
+from Business.mom_admin.lighting_management.call_processing import AndenCallProcessing
+from Business.mom_admin.lighting_management.lighting_configuration import LightingConfiguration
 from Business.mom_admin.production_modeling.factory_model import FactoryModel
 from Business.mom_admin.factory_modeling.production_process import ProcessRelated
 from Business.mom_admin.factory_modeling.product_materials import ProductMaterials
@@ -14,24 +17,28 @@ from Business.mom_admin.ESOP.product_process_SOP import ProductProcessSOP
 from Toolbox.random_container import random_characters
 from Business.pda.label_operation import LabelOperation
 from Public.variables.mom_admin import factory_modeling as fm
+from markers import grade_1
 
 
 @allure.feature("主流程集成测试")
 class TestMainProcess:
     """主流程测试类，模拟完整生产业务流程的端到端测试
     测试流程覆盖：
-    1. 工厂基础数据维护（车间、产线、设备）
+    1. 工厂基础数据维护（车间、产线、设备.安灯规则等）
     2. 工艺数据管理（工序池、工艺路线、BOM）
     3. 生产计划管理（计划创建、确认、下达）
     4. 生产执行过程（派工、生产启动、SOP查看）
-
+    5. 质量控制（QC方案、QC单）
+    6. 标签拆分/上料
+    7.安灯呼叫及处理
+    8.报工/完工
     测试方法按业务流程顺序编号，前序测试创建的数据会被后续测试使用
     """
 
     @pytest.fixture(autouse=True, scope='class')
     @classmethod
     def setup_and_teardown(cls):
-        cls.logger = Logger(name="mainprocess_tests").get_logger()  # 日志记录器类，来自Toolbox.log_module
+        cls.logger = Logger(name="TestMainProcess").get_logger()  # 日志记录器类，来自Toolbox.log_module
 
         # 前置条件：调用批量删除接口，保证执行前无数据残留
         with allure.step("前置条件：清理测试数据残留"):
@@ -55,6 +62,8 @@ class TestMainProcess:
         cls.QC = ProductInspectionPlan()
         cls.label_op = LabelOperation()  # PDA标签操作类
         cls.PS = ProductionScheduling()  # 派工业务类
+        cls.Anden = LightingConfiguration()  # 安灯配置类
+        cls.Anden_all = AndenCallProcessing()  # 安灯呼叫及处理类
         # ==================== 跨用例数据传递变量 ====================
         # 物料相关数据
         cls.material_id = None  # 物料ID，由test_02查询获取，用于后续BOM、工艺路线等绑定
@@ -95,9 +104,15 @@ class TestMainProcess:
         cls.inspect_order_code = None  # 检验单编码，由test_36查询获取，用于质量检验流程
         cls.inspection_sheet_id = None  # 检验单ID，用于检验结果提交
 
+        # 安灯相关数据
+        cls.andon_rule_id = None  # 安灯规则ID
+        cls.andon_call_id = None  # 安灯呼叫时间ID
+        cls.andon_OrderCode = None  # 安灯呼叫编码
+
         # 检验配置数据
         cls.IsFirstInspect = None  # 是否首检标识，由test_07查询工序获取，用于首检单创建判断
-
+    
+    @grade_1
     @allure.title("新增物料")
     @allure.description("创建一条新的物料信息，期望新增成功")
     def test_01_material_info_maintenance(self):
@@ -113,6 +128,7 @@ class TestMainProcess:
             self.logger.error(f"新增物料失败：{e}")
             raise e
 
+    @grade_1
     @allure.title("查询物料")
     @allure.description("查询已创建的物料，提取物料ID")
     def test_02_inquire_about_materials(self):
@@ -129,6 +145,7 @@ class TestMainProcess:
             self.logger.error(f"查询物料失败：{e}")
             raise e
 
+    @grade_1
     @allure.title("新增物料BOM")
     @allure.description("为物料新增BOM，期望新增成功")
     def test_03_add_material_bom(self):
@@ -144,6 +161,7 @@ class TestMainProcess:
             self.logger.error(f"新增物料BOM失败：{e}")
             raise e
 
+    @grade_1
     @allure.title("新增物料BOM明细")
     @allure.description("为BOM绑定物料明细，期望新增成功")
     def test_04_add_material_bom_details(self):
@@ -158,6 +176,7 @@ class TestMainProcess:
             self.logger.error(f"新增物料BOM明细失败：{e}")
             raise e
 
+    @grade_1
     @allure.title("查询物料BOM")
     @allure.description("查询物料BOM，提取BOM ID")
     def test_05_add_product_materials(self):
@@ -174,6 +193,7 @@ class TestMainProcess:
             self.logger.error(f"查询物料BOM失败：{e}")
             raise e
 
+    @grade_1
     @allure.title("新增工序")
     @allure.description("新增工序，期望新增成功")
     def test_06_add_process(self):
@@ -188,6 +208,7 @@ class TestMainProcess:
             self.logger.error(f"新增工序失败：{e}")
             raise e
 
+    @grade_1
     @allure.title("查询工序")
     @allure.description("查询工序，提取工序ID")
     def test_07_inquire_about_process(self):
@@ -205,6 +226,7 @@ class TestMainProcess:
             self.logger.error(f"查询工序失败：{e}")
             raise e
 
+    @grade_1
     @allure.title("新增工艺路线")
     @allure.description("新增工艺路线，期望新增成功")
     def test_08_add_process_route(self):
@@ -219,6 +241,7 @@ class TestMainProcess:
             self.logger.error(f"新增工艺路线失败：{e}")
             raise e
 
+    @grade_1
     @allure.title("查询工艺路线")
     @allure.description("查询工艺路线，提取工艺路线ID")
     def test_09_inquire_about_process_route(self):
@@ -235,6 +258,7 @@ class TestMainProcess:
             self.logger.error(f"查询工艺路线失败：{e}")
             raise e
 
+    @grade_1
     @allure.title("工艺路线绑定工序")
     @allure.description("工艺路线绑定工序，期望绑定成功")
     def test_10_adjustProcessRoutingEntry(self):
@@ -251,6 +275,7 @@ class TestMainProcess:
             self.logger.error(f"工艺路线绑定工序失败：{e}")
             raise e
 
+    @grade_1
     @allure.title("产品绑定工艺路线")
     @allure.description("产品绑定工艺路线，期望绑定成功")
     def test_11_StoreProductProcessRouteData(self):
@@ -265,6 +290,7 @@ class TestMainProcess:
             self.logger.error(f"产品绑定工艺路线失败：{e}")
             raise e
 
+    @grade_1
     @allure.title("工艺路线绑定产品")
     @allure.description("工艺路线绑定产品，期望绑定成功")
     def test_12_storeProductProcessRouteData(self):
@@ -279,6 +305,7 @@ class TestMainProcess:
             self.logger.error(f"工艺路线绑定产品失败：{e}")
             raise e
 
+    @grade_1
     @allure.title("查询产品工艺路线")
     @allure.description("查询产品工艺路线，提取ID")
     def test_13_GetProductProcessRouteAutoQueryDatas(self):
@@ -295,6 +322,7 @@ class TestMainProcess:
             self.logger.error(f"查询产品工艺路线失败：{e}")
             raise e
 
+    @grade_1
     @allure.title("产品工序BOM绑定")
     @allure.description("产品工序BOM绑定，期望绑定成功")
     def test_14_selectManufactureBom(self):
@@ -309,6 +337,7 @@ class TestMainProcess:
             self.logger.error(f"产品工序BOM绑定失败：{e}")
             raise e
 
+    @grade_1
     @allure.title("新增设备台账")
     @allure.description("新增设备台账，期望新增成功")
     def test_15_add_equipment_ledger(self):
@@ -323,6 +352,7 @@ class TestMainProcess:
             self.logger.error(f"新增设备台账失败：{e}")
             raise e
 
+    @grade_1
     @allure.title("查询设备台账")
     @allure.description("查询设备台账，提取设备ID")
     def test_16_inquire_about_equipment_ledger(self):
@@ -339,6 +369,7 @@ class TestMainProcess:
             self.logger.error(f"查询设备台账失败：{e}")
             raise e
 
+    @grade_1
     @allure.title("新增ESOP文件")
     @allure.description("新增ESOP文件，期望新增成功")
     def test_17_add_ESOP_file(self):
@@ -355,6 +386,7 @@ class TestMainProcess:
             self.logger.error(f"新增ESOP文件失败：{e}")
             raise e
 
+    @grade_1
     @allure.title("审核ESOP文件")
     @allure.description("审核ESOP文件，期望审核成功")
     def test_18_audit_ESOP_file(self):
@@ -387,6 +419,7 @@ class TestMainProcess:
             self.logger.error(f"审核ESOP文件失败：{e}")
             raise e
 
+    @grade_1
     @allure.title("新增工艺路线ESOP文件")
     @allure.description("新增工艺路线ESOP文件，期望新增成功")
     def test_19_add_process_route_ESOP_file(self):
@@ -407,6 +440,7 @@ class TestMainProcess:
             self.logger.error(f"新增工艺路线ESOP文件失败：{e}")
             raise e
 
+    @grade_1
     @allure.title("审核工艺路线ESOP文件")
     @allure.description("审核工艺路线ESOP文件，期望审核成功")
     def test_20_audit_process_route_ESOP_file(self):
@@ -476,6 +510,7 @@ class TestMainProcess:
             self.logger.error(f"审核工艺路线ESOP文件失败：{e}")
             raise e
 
+    @grade_1
     @allure.title("新增车间")
     @allure.description("新增车间，期望新增成功")
     def test_21_add_workshop(self):
@@ -490,6 +525,7 @@ class TestMainProcess:
             self.logger.error(f"新增车间失败：{e}")
             raise e
 
+    @grade_1
     @allure.title("查询车间")
     @allure.description("查询车间，提取车间ID")
     def test_23_GetWorkshopAutoQueryDatas(self):
@@ -506,6 +542,7 @@ class TestMainProcess:
             self.logger.error(f"查询车间失败：{e}")
             raise e
 
+    @grade_1
     @allure.title("新增产线")
     @allure.description("新增产线，期望新增成功")
     def test_24_add_production_line(self):
@@ -520,6 +557,7 @@ class TestMainProcess:
             self.logger.error(f"新增产线失败：{e}")
             raise e
 
+    @grade_1
     @allure.title("查询产线")
     @allure.description("查询产线，提取产线ID")
     def test_25_GetProductionLineAutoQueryDatas(self):
@@ -536,6 +574,7 @@ class TestMainProcess:
             self.logger.error(f"查询产线失败：{e}")
             raise e
 
+    @grade_1
     @allure.title("创建检验方案")
     @allure.description("创建检验方案，期望创建成功")
     def test_26_createProductInspectSchemaData(self):
@@ -550,9 +589,41 @@ class TestMainProcess:
             self.logger.error(f"创建检验方案失败：{e}")
             raise e
 
+    @grade_1
+    @allure.title("创建安灯规则")
+    @allure.description("创建安灯规则，期望创建成功")
+    def test_27_StoreAndonCallHandleRulesData(self):
+        with allure.step("调用接口创建安灯规则"):
+            response = self.Anden.StoreAndonCallHandleRulesData()
+        try:
+            assert response is not None, "createProductInspectSchemaData接口返回None"
+            assert response.status_code == 200, f"期望状态码200，实际为{response.status_code}"
+            response_body = response.json()
+            assert response_body['Success'] == True, f"期望Success=True，实际为{response_body['Success']}"
+        except AssertionError as e:
+            self.logger.error(f"创建安灯规则失败：{e}")
+            raise e
+
+    @grade_1
+    @allure.title("查询安灯规则")
+    @allure.description("查询安灯规则，期望查询成功")
+    def test_28_GetAndonCallHandleRulesAutoQueryDatas(self):
+        with allure.step("调用接口查询安灯规则"):
+            response = self.Anden.GetAndonCallHandleRulesAutoQueryDatas()
+        try:
+            assert response is not None, "createProductInspectSchemaData接口返回None"
+            assert response.status_code == 200, f"期望状态码200，实际为{response.status_code}"
+            response_body = response.json()
+            assert response_body['Success'] == True, f"期望Success=True，实际为{response_body['Success']}"
+            TestMainProcess.andon_rule_id = response_body['Attach'][0]['Id']
+        except AssertionError as e:
+            self.logger.error(f"查询安灯规则失败：{e}")
+            raise e
+
+    @grade_1
     @allure.title("创建生产计划")
     @allure.description("创建生产计划，期望创建成功")
-    def test_27_create_production_plan(self):
+    def test_29_create_production_plan(self):
         with allure.step("调用接口创建生产计划"):
             response = self.production_plan.storeProductionPlanOrderData()
         try:
@@ -568,9 +639,10 @@ class TestMainProcess:
             self.logger.error(f"创建生产计划失败：{e}")
             raise e
 
+    @grade_1
     @allure.title("确认生产计划")
     @allure.description("确认生产计划，期望确认成功")
-    def test_28_confirm_production_plan(self):
+    def test_30_confirm_production_plan(self):
         with allure.step("调用接口确认生产计划"):
             assert TestMainProcess.production_plan_code and TestMainProcess.production_plan_id, "缺少生产计划信息"
             confirm_body = {
@@ -600,9 +672,10 @@ class TestMainProcess:
             self.logger.error(f"确认生产计划失败：{e}")
             raise e
 
+    @grade_1
     @allure.title("下达生产计划")
     @allure.description("下达生产计划，期望下达成功")
-    def test_29_issued_production_plan(self):
+    def test_31_issued_production_plan(self):
         with allure.step("调用接口下达生产计划"):
             assert TestMainProcess.production_plan_code and TestMainProcess.production_plan_id, "缺少生产计划信息"
             assert TestMainProcess.BOMVersion, "缺少BOM版本信息"
@@ -708,9 +781,10 @@ class TestMainProcess:
             raise e
 
     # ========== 生产执行 ==========
+    @grade_1
     @allure.title("创建派工单")
     @allure.description("创建生产派工单，期望创建成功")
-    def test_30_create_dispatch_order(self):
+    def test_32_create_dispatch_order(self):
         """创建派工单"""
         self.logger.info("===== 开始创建派工单 =====")
         assert TestMainProcess.production_plan_code, "缺少生产计划单号"
@@ -773,9 +847,10 @@ class TestMainProcess:
             create_response = response.json()
             assert create_response['Success'] == True
 
+    @grade_1
     @allure.title("查询派工单")
     @allure.description("查询已创建的派工单，提取派工单号")
-    def test_31_query_dispatch_order(self):
+    def test_33_query_dispatch_order(self):
         """查询派工单"""
         self.logger.info("===== 开始查询派工单 =====")
         assert TestMainProcess.production_plan_code, "缺少生产计划单号"
@@ -815,9 +890,10 @@ class TestMainProcess:
             self.logger.info(
                 f"查询到派工单号: {TestMainProcess.dispatch_code}, 工序任务号: {TestMainProcess.process_task_code}")
 
+    @grade_1
     @allure.title("派工单下达")
     @allure.description("下达派工单，期望下达成功")
-    def test_32_issued_dispatch_order(self):
+    def test_34_issued_dispatch_order(self):
         """派工单下达"""
         self.logger.info("===== 开始派工单下达 =====")
         assert TestMainProcess.dispatch_code, "缺少派工单号"
@@ -863,9 +939,10 @@ class TestMainProcess:
             create_response = response.json()
             assert create_response['Success'] == True
 
+    @grade_1
     @allure.title("开始生产")
     @allure.description("开始生产作业，期望启动成功")
-    def test_33_start_production(self):
+    def test_35_start_production(self):
         """开始生产"""
         self.logger.info("===== 开始生产 =====")
         assert TestMainProcess.dispatch_code and TestMainProcess.production_plan_code and TestMainProcess.process_task_code, "缺少必要参数"
@@ -955,9 +1032,10 @@ class TestMainProcess:
             create_response = response.json()
             assert create_response['Success'] == True
 
+    @grade_1
     @allure.title("查看SOP")
     @allure.description("查看生产SOP文档，期望查看成功")
-    def test_34_view_sop(self):
+    def test_36_view_sop(self):
         """查看SOP"""
         self.logger.info("===== 开始查看SOP =====")
         assert TestMainProcess.dispatch_code, "缺少派工单号"
@@ -970,9 +1048,10 @@ class TestMainProcess:
             assert create_response['Success'] == True
 
     # ========== 质量检验 ==========
+    @grade_1
     @allure.title("创建首检单")
     @allure.description("创建首检检验单，期望创建成功")
-    def test_35_create_first_inspect_order(self):
+    def test_37_create_first_inspect_order(self):
         """创建首检单"""
         self.logger.info("===== 开始创建首检单 =====")
         assert TestMainProcess.dispatch_code, "缺少派工单号"
@@ -984,9 +1063,10 @@ class TestMainProcess:
             create_response = response.json()
             assert create_response['Success'] == True
 
+    @grade_1
     @allure.title("查询检验单")
     @allure.description("查询检验单，提取检验单号")
-    def test_36_query_inspect_order(self):
+    def test_38_query_inspect_order(self):
         """查询检验单"""
         self.logger.info("===== 开始查询检验单 =====")
         assert TestMainProcess.production_plan_code, "缺少生产计划单号"
@@ -1006,9 +1086,10 @@ class TestMainProcess:
             TestMainProcess.inspection_sheet_id = attach[0].get('Id')
             self.logger.info(f"获取到检验单号: {TestMainProcess.inspect_order_code}")
 
+    @grade_1
     @allure.title("开始检验")
     @allure.description("开始质量检验，期望启动成功")
-    def test_37_start_inspect(self):
+    def test_39_start_inspect(self):
         """开始检验"""
         self.logger.info("===== 开始检验 =====")
         assert TestMainProcess.inspect_order_code, "缺少检验单号"
@@ -1022,9 +1103,10 @@ class TestMainProcess:
             create_response = response.json()
             assert create_response['Success'] == True
 
+    @grade_1
     @allure.title("提交检验结果")
     @allure.description("提交质量检验结果，期望提交成功")
-    def test_38_submit_inspect_result(self):
+    def test_40_submit_inspect_result(self):
         """提交检验结果"""
         self.logger.info("===== 开始提交检验结果 =====")
         assert TestMainProcess.inspect_order_code, "缺少检验单号"
@@ -1041,9 +1123,10 @@ class TestMainProcess:
             assert create_response['Success'] == True
 
     # ========== PDA操作 ==========
+    @grade_1
     @allure.title("扫描标签")
     @allure.description("扫描产品标签，期望扫描成功")
-    def test_39_scan_label(self):
+    def test_41_scan_label(self):
         """扫描标签"""
         self.logger.info("===== 开始扫描标签 =====")
 
@@ -1055,8 +1138,9 @@ class TestMainProcess:
             assert create_response['Success'] == True
 
     @allure.title("标签拆分")
+    @grade_1
     @allure.description("拆分产品标签，期望拆分成功")
-    def test_40_label_split(self):
+    def test_42_label_split(self):
         """标签拆分"""
         self.logger.info("===== 开始标签拆分 =====")
 
@@ -1096,8 +1180,9 @@ class TestMainProcess:
                         break
 
     @allure.title("标签合并")
+    @grade_1
     @allure.description("合并产品标签，期望合并成功")
-    def test_41_label_merge(self):
+    def test_43_label_merge(self):
         """标签合并"""
         self.logger.info("===== 开始标签合并 =====")
         # 由于LabelOperation类没有label_merge方法，这里暂时跳过
@@ -1105,8 +1190,9 @@ class TestMainProcess:
         assert True, "标签合并测试跳过"
 
     @allure.title("标签转移")
+    @grade_1
     @allure.description("转移产品标签，期望转移成功")
-    def test_42_label_transfer(self):
+    def test_44_label_transfer(self):
         """标签转移"""
         self.logger.info("===== 开始标签转移 =====")
         # 由于LabelOperation类没有label_transfer方法，这里暂时跳过
@@ -1114,8 +1200,9 @@ class TestMainProcess:
         assert True, "标签转移测试跳过"
 
     @allure.title("标签报废")
+    @grade_1
     @allure.description("报废产品标签，期望报废成功")
-    def test_43_label_scrap(self):
+    def test_45_label_scrap(self):
         """标签报废"""
         self.logger.info("===== 开始标签报废 =====")
         # 由于LabelOperation类没有label_scrap方法，这里暂时跳过
@@ -1123,17 +1210,100 @@ class TestMainProcess:
         assert True, "标签报废测试跳过"
 
     @allure.title("标签完工")
+    @grade_1
     @allure.description("完工产品标签，期望完工成功")
-    def test_44_label_complete(self):
+    def test_46_label_complete(self):
         """标签完工"""
         self.logger.info("===== 开始标签完工 =====")
         # 由于LabelOperation类没有label_complete方法，这里暂时跳过
         self.logger.info("标签完工功能暂未实现，跳过测试")
         assert True, "标签完工测试跳过"
 
+    # ========== 安灯呼叫及处理 ==========
+    @allure.title("安灯呼叫")
+    @grade_1
+    @allure.description("调用安灯呼叫接口，期望呼叫成功")
+    def test_47_call_an_light(self):
+        """
+        安灯呼叫
+        """
+        self.logger.info("===== 开始安灯呼叫 =====")
+        with allure.step("开始安灯呼叫"):
+            response = self.Anden_all.StoreAndonCallDataRecordsData(TestMainProcess.production_plan_code)
+            assert response is not None, "scan_label接口返回None"
+            assert response.status_code == 200
+            create_response = response.json()
+            assert create_response['Success'] == True
+            TestMainProcess.andon_call_id = create_response['Attach']['Id']
+            TestMainProcess.andon_OrderCode = create_response['Attach']['OrderCode']
+            print(TestMainProcess.andon_call_id)
+            print(TestMainProcess.andon_OrderCode)
+
+    @allure.title("安灯签到")
+    @grade_1
+    @allure.description("调用安灯呼叫接口，期望呼叫成功")
+    def test_48_ResponseAndonCallDataRecordsData(self):
+        """
+        安灯签到
+        """
+        self.logger.info("===== 开始安灯签到 =====")
+        with allure.step("开始安灯签到"):
+            response = self.Anden_all.ResponseAndonCallDataRecordsData(TestMainProcess.andon_OrderCode,TestMainProcess.andon_call_id)
+            assert response is not None, "scan_label接口返回None"
+            assert response.status_code == 200
+            create_response = response.json()
+            assert create_response['Success'] == True
+
+    @allure.title("安灯开始处理")
+    @grade_1
+    @allure.description("调用安灯开始处理接口，期望成功")
+    def test_49_StartProcessAndonCallDataRecordsData(self):
+        """
+        安灯开始处理
+        """
+        self.logger.info("===== 安灯开始处理 =====")
+        with allure.step("安灯开始处理"):
+            response = self.Anden_all.StartProcessAndonCallDataRecordsData(TestMainProcess.andon_OrderCode,TestMainProcess.andon_call_id)
+            assert response is not None, "scan_label接口返回None"
+            assert response.status_code == 200
+            create_response = response.json()
+            assert create_response['Success'] == True
+
+    @allure.title("安灯结束处理")
+    @grade_1
+    @allure.description("调用安灯呼结束接口，期望成功")
+    def test_50_EndProcessAndonCallDataRecordsData(self):
+        """
+        安灯结束处理
+        """
+        self.logger.info("===== 安灯结束处理 =====")
+        with allure.step("安灯结束处理"):
+            response = self.Anden_all.EndProcessAndonCallDataRecordsData(TestMainProcess.andon_OrderCode,TestMainProcess.andon_call_id)
+            assert response is not None, "scan_label接口返回None"
+            assert response.status_code == 200
+            create_response = response.json()
+            assert create_response['Success'] == True
+
+    @allure.title("安灯处理确认")
+    @grade_1
+    @allure.description("调用安灯处理确认接口，期望成功")
+    def test_51_ConfirmAndonCallDataRecordsData(self):
+        """
+        安灯处理确认
+        """
+        self.logger.info("===== 安灯处理确认 =====")
+        with allure.step("安灯处理确认"):
+            response = self.Anden_all.ConfirmAndonCallDataRecordsData(TestMainProcess.andon_OrderCode,TestMainProcess.andon_call_id)
+            assert response is not None, "scan_label接口返回None"
+            assert response.status_code == 200
+            create_response = response.json()
+            assert create_response['Success'] == True
+
+    # ========== 上料及完工 ==========
     @allure.title("上料扫描SN")
+    @grade_1
     @allure.description("扫描上料标签SN，期望扫描成功")
-    def test_45_scan_feeding_material(self):
+    def test_52_scan_feeding_material(self):
         """上料扫描SN"""
         self.logger.info("===== 开始上料扫描SN =====")
         assert TestMainProcess.label_split_sn, "缺少拆分后的标签序列号"
@@ -1146,8 +1316,9 @@ class TestMainProcess:
             assert create_response['Success'] == True
 
     @allure.title("确认上料")
+    @grade_1
     @allure.description("确认上料操作，期望确认成功")
-    def test_46_confirm_feeding(self):
+    def test_53_confirm_feeding(self):
         """确认上料"""
         self.logger.info("===== 开始确认上料 =====")
         assert TestMainProcess.dispatch_code and TestMainProcess.label_split_sn, "缺少必要参数"
@@ -1160,8 +1331,9 @@ class TestMainProcess:
             assert create_response['Success'] == True
 
     @allure.title("生产报工")
+    @grade_1
     @allure.description("提交生产报工，期望报工成功")
-    def test_47_production_report(self):
+    def test_54_production_report(self):
         """生产报工"""
         self.logger.info("===== 开始生产报工 =====")
         assert TestMainProcess.dispatch_code, "缺少派工单号"
@@ -1174,8 +1346,9 @@ class TestMainProcess:
             assert create_response['Success'] == True
 
     @allure.title("生产完工")
+    @grade_1
     @allure.description("完成生产作业，期望完工成功")
-    def test_48_production_complete(self):
+    def test_55_production_complete(self):
         """生产完工"""
         self.logger.info("===== 开始生产完工 =====")
         assert TestMainProcess.dispatch_code, "缺少派工单号"
@@ -1189,8 +1362,9 @@ class TestMainProcess:
 
     # ========== 数据清理 ==========
     @allure.title("删除工序")
+    @grade_1
     @allure.description("删除测试创建的工序，期望删除成功")
-    def test_49_delete_process(self):
+    def test_56_delete_process(self):
         """删除工序"""
         self.logger.info("===== 删除工序 =====")
         if TestMainProcess.process_id:
@@ -1204,8 +1378,9 @@ class TestMainProcess:
             self.logger.info("工序ID为空，跳过删除")
 
     @allure.title("删除工艺路线")
+    @grade_1
     @allure.description("删除测试创建的工艺路线，期望删除成功")
-    def test_50_delete_route(self):
+    def test_57_delete_route(self):
         """删除工艺路线"""
         self.logger.info("===== 删除工艺路线 =====")
         if TestMainProcess.process_route_id:
@@ -1219,8 +1394,9 @@ class TestMainProcess:
             self.logger.info("工艺路线ID为空，跳过删除")
 
     @allure.title("删除产品工艺路线")
+    @grade_1
     @allure.description("删除测试创建的产品工艺路线，期望删除成功")
-    def test_51_delete_product_route(self):
+    def test_58_delete_product_route(self):
         """删除产品工艺路线"""
         self.logger.info("===== 删除产品工艺路线 =====")
         if TestMainProcess.process_route_id2:
@@ -1234,8 +1410,9 @@ class TestMainProcess:
             self.logger.info("产品工艺路线ID为空，跳过删除")
 
     @allure.title("删除设备台账")
+    @grade_1
     @allure.description("删除测试创建设备台账，期望删除成功")
-    def test_52_delete_equipment(self):
+    def test_59_delete_equipment(self):
         """删除设备台账"""
         self.logger.info("===== 删除设备台账 =====")
         if TestMainProcess.equipment_ledger_id:
@@ -1249,8 +1426,9 @@ class TestMainProcess:
             self.logger.info("设备台账ID为空，跳过删除")
 
     @allure.title("删除产线")
+    @grade_1
     @allure.description("删除测试创建的产线，期望删除成功")
-    def test_53_delete_production_line(self):
+    def test_60_delete_production_line(self):
         """删除产线"""
         self.logger.info("===== 删除产线 =====")
         if TestMainProcess.production_line_id:
@@ -1264,8 +1442,9 @@ class TestMainProcess:
             self.logger.info("产线ID为空，跳过删除")
 
     @allure.title("删除车间")
+    @grade_1
     @allure.description("删除测试创建的车间，期望删除成功")
-    def test_54_delete_workshop(self):
+    def test_61_delete_workshop(self):
         """删除车间"""
         self.logger.info("===== 删除车间 =====")
         if TestMainProcess.workshop_id:
@@ -1279,8 +1458,9 @@ class TestMainProcess:
             self.logger.info("车间ID为空，跳过删除")
 
     @allure.title("删除物料BOM")
+    @grade_1
     @allure.description("删除测试创建的物料BOM，期望删除成功")
-    def test_55_delete_bom(self):
+    def test_62_delete_bom(self):
         """删除物料BOM"""
         self.logger.info("===== 删除物料BOM =====")
         if TestMainProcess.BOMVersion and TestMainProcess.material_bom_id:
@@ -1294,8 +1474,9 @@ class TestMainProcess:
             self.logger.info("BOM版本或ID为空，跳过删除")
 
     @allure.title("删除物料")
+    @grade_1
     @allure.description("删除测试创建的物料，期望删除成功")
-    def test_56_delete_material(self):
+    def test_63_delete_material(self):
         """删除物料"""
         self.logger.info("===== 删除物料 =====")
         if TestMainProcess.material_id:
@@ -1308,9 +1489,25 @@ class TestMainProcess:
         else:
             self.logger.info("物料ID为空，跳过删除")
 
+    @grade_1
+    @allure.title("删除安灯规则")
+    @allure.description("删除安灯规则，期望删除成功")
+    def test_64_RemoveBatchAndonCallHandleRulesDatas(self):
+        with allure.step("调用接口删除安灯规则"):
+            response = self.Anden.RemoveBatchAndonCallHandleRulesDatas(TestMainProcess.andon_rule_id)
+        try:
+            assert response is not None, "createProductInspectSchemaData接口返回None"
+            assert response.status_code == 200, f"期望状态码200，实际为{response.status_code}"
+            response_body = response.json()
+            assert response_body['Success'] == True, f"期望Success=True，实际为{response_body['Success']}"
+        except AssertionError as e:
+            self.logger.error(f"删除安灯规则失败：{e}")
+            raise e
+
     @allure.title("清理测试数据")
+    @grade_1
     @allure.description("集中清理所有测试数据，防止数据残留")
-    def test_57_cleanup_test_data(self):
+    def test_65_cleanup_test_data(self):
         """清理测试数据"""
         self.logger.info("===== 开始集中清理测试数据，防止未删除数据 =====")
 
@@ -1393,4 +1590,3 @@ class TestMainProcess:
 
         self.logger.info("测试数据清理完成")
         assert True, "清理测试数据完成"
-

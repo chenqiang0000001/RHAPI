@@ -1,1 +1,0 @@
-INFO     TestProcessRelated:test_process_related.py:45 本用例正在执行：test_storeProcessInfoData02。获取到的结果是：数据新增成功

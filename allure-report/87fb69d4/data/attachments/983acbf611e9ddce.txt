@@ -1,2 +1,0 @@
-2025-07-07 10:31:20,923 - test_mainprocess.py:[520] - [ERROR] - 新增产线失败：期望Success=True，实际为False
-assert False == True

@@ -1,2 +1,0 @@
-INFO     mainprocess_tests:test_mainprocess.py:1111 ===== 开始标签转移 =====
-INFO     mainprocess_tests:test_mainprocess.py:1113 标签转移功能暂未实现，跳过测试

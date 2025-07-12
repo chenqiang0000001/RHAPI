@@ -1,2 +1,0 @@
-INFO     mainprocess_tests:test_mainprocess.py:1300 ===== 删除物料 =====
-INFO     mainprocess_tests:test_mainprocess.py:1309 物料ID为空，跳过删除

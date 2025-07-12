@@ -3,6 +3,8 @@ import allure
 from Business.mom_admin.factory_modeling.product_materials import ProductMaterials, MaterialsBOM
 from Toolbox.log_module import Logger
 from Toolbox.random_container import random_characters
+from markers import grade_1
+
 
 @pytest.fixture(scope="class")
 def material_fixture():
@@ -47,9 +49,11 @@ def material_fixture():
 
 @allure.feature("物料与BOM管理")
 class TestMaterials:
+    @grade_1
     def test_01_add_material(self, material_fixture):
         assert material_fixture["material_id"] is not None
 
+    @grade_1
     def test_02_query_material(self, material_fixture):
         response = material_fixture["product_materials"].getMaterialInfoAutoQueryDatas(MaterialCode=material_fixture["material_code"])
         assert response is not None
@@ -57,6 +61,7 @@ class TestMaterials:
         response_body = response.json()
         assert response_body['Success'] is True
 
+    @grade_1
     def test_03_material_uniqueness(self, material_fixture):
         response = material_fixture["product_materials"].storeMaterialInfoData(MaterialCode=material_fixture["material_code"], MaterialName=material_fixture["material_name"])
         assert response is not None
@@ -67,6 +72,7 @@ class TestMaterials:
     # def test_04_add_bom(self, material_fixture):
     #     assert material_fixture["material_bom_id"] is not None
 
+    @grade_1
     def test_05_query_bom(self, material_fixture):
         response = material_fixture["bom"].getGetBomMasterViewAutoQueryDatas(MaterialCode=material_fixture["material_code"])
         assert response is not None
@@ -74,6 +80,7 @@ class TestMaterials:
         response_body = response.json()
         assert 'Success' in response_body
 
+    @grade_1
     def test_06_bom_uniqueness(self, material_fixture):
         response = material_fixture["bom"].storeManufactureBomData(material_fixture["bom_version"], BOMCode=material_fixture["material_code"])
         assert response is not None
@@ -81,6 +88,7 @@ class TestMaterials:
         response_body = response.json()
         assert 'Success' in response_body
 
+    @grade_1
     @allure.title("删除物料BOM")
     def test_07_delete_bom(self, material_fixture):
         with allure.step("调用接口删除物料BOM"):
@@ -90,6 +98,7 @@ class TestMaterials:
         response_body = response.json()
         assert 'Success' in response_body
 
+    @grade_1
     @allure.title("删除物料")
     def test_08_delete_material(self, material_fixture):
         with allure.step("调用接口删除物料"):

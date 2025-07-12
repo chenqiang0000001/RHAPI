@@ -1,2 +1,0 @@
-2025-07-07 10:31:20,545 - test_mainprocess.py:[490] - [ERROR] - 新增车间失败：期望Success=True，实际为False
-assert False == True

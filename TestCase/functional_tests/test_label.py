@@ -3,6 +3,8 @@ import allure
 from Business.pda.label_operation import LabelOperation
 from Toolbox.log_module import Logger
 from Toolbox.random_container import random_characters
+from markers import grade_1
+
 
 @allure.feature("标签管理")
 class TestLabel:
@@ -19,6 +21,7 @@ class TestLabel:
         }
         # 新建标签（如有必要，可在此处调用接口预置标签数据）
 
+    @grade_1
     @allure.title("扫描标签")
     def test_01_scan_label(self):
         with allure.step("调用接口扫描标签"):
@@ -28,6 +31,7 @@ class TestLabel:
         response_body = response.json()
         assert 'Success' in response_body
 
+    @grade_1
     @allure.title("标签拆分")
     def test_02_label_split(self):
         with allure.step("调用接口拆分标签"):

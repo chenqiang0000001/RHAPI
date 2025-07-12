@@ -1,5 +1,6 @@
 import requests
 import random
+import time
 import json
 from datetime import datetime, timedelta
 from get_token import get_token
@@ -14,19 +15,19 @@ class AutomaticRecodingTool:
             # API地址配置
             "api_url": "http://192.168.0.135:8282/SpcDataAnalysisApi/StoreSpcAcquireDataLibData",
             # SPC项目编码
-            "spc_item_code": "hkyceshi001",
+            "spc_item_code": "CQ-666",
             # SPC项目名称
-            "spc_item_name": "轴承内径-移动极差图",
+            "spc_item_name": "判异警告测试项目",
             # 物料编码
-            "material_code": "Zh-Test-03",
+            "material_code": "hcx-20250602-I",
             # 设备编码
-            "equipment_code": "A135",
+            "equipment_code": "A88",
             # 开始日期
             "start_date": "2025-06-01",
             # 结束日期
             "end_date": "2025-07-31",
             # 检验项目编码
-            "inspect_item_code": "CESHI02",
+            "inspect_item_code": "CQ-01",
             # 检验项目名称
             "inspect_item_name": "卷心菜测试项目02",
             # 公司编码
@@ -42,11 +43,12 @@ class AutomaticRecodingTool:
             # 每条记录中的随机数值数量
             "data_count": 10,
             # 随机数最小值
-            "min_value": 100,
+            "min_value": 500,
             # 随机数最大值
-            "max_value": 111,
+            "max_value": 2000,
             # 要提交的数据记录数量
-            "record_count": 1    # 默认为1条记录
+            "record_count": 1,   # 默认为1条记录
+        "record_interval": 28     # 每次提交间隔时间(秒)
         }
         # 请求头
         self.headers = {
@@ -197,6 +199,9 @@ class AutomaticRecodingTool:
             else:
                 print(f"第{i+1}条记录提交失败")
 
+            # 提交间隔时间
+            time.sleep(self.config["record_interval"])
+
         if results:
             print(f"所有记录提交完成，成功{len(results)}/{record_count}条")
             return results
@@ -209,4 +214,4 @@ if __name__ == "__main__":
     tool = AutomaticRecodingTool()
     # 运行SPC自动数据录入工具，可通过参数指定每条记录的数据数量和总记录数
     # 例如: tool.run(data_count=5, record_count=3) 表示生成3条记录，每条包含5个随机数
-    tool.run(data_count=10, record_count=5)  # 使用配置中的默认值
+    tool.run(data_count=10, record_count=60)  # 使用配置中的默认值

@@ -1,2 +1,0 @@
-[32mINFO    [0m mainprocess_tests:test_mainprocess.py:1270 ===== 删除车间 =====
-[32mINFO    [0m mainprocess_tests:test_mainprocess.py:1277 ✓ 删除车间成功

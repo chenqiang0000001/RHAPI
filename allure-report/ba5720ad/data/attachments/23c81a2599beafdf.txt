@@ -1,2 +1,0 @@
-2025-07-07 10:29:38,390 - test_mainprocess.py:[506] - [ERROR] - 查询车间失败：期望Success=True，实际为False
-assert False == True

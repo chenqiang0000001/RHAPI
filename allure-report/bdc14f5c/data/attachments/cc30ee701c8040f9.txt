@@ -1,2 +1,0 @@
-INFO     mainprocess_tests:test_mainprocess.py:1129 ===== 开始标签完工 =====
-INFO     mainprocess_tests:test_mainprocess.py:1131 标签完工功能暂未实现，跳过测试

@@ -1,3 +1,0 @@
-INFO     ProcessRelated:product_process_SOP.py:150 产品工艺文档上传成功，状态码=200
-INFO     ProcessRelated:product_process_SOP.py:151 物料文档审核成功，状态码=200
-INFO     ProcessRelated:product_process_SOP.py:152 物料文档上传成功，状态码=200

@@ -1,2 +1,0 @@
-[32mINFO    [0m mainprocess_tests:test_mainprocess.py:1061 ===== 开始标签拆分 =====
-[32mINFO    [0m mainprocess_tests:test_mainprocess.py:1095 获取到拆分后标签序列号: 20250417TP2025/4/17 9:27:450013-73

@@ -1,0 +1,2 @@
+INFO     TestMainProcess:test_mainprocess.py:1330 ===== 删除设备台账 =====
+INFO     TestMainProcess:test_mainprocess.py:1337 ✓ 删除设备台账成功

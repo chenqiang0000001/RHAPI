@@ -1,3 +1,0 @@
-INFO     delete_data:delete_data.py:82 未查询到物料数据，跳过删除操作
-ERROR    delete_data:delete_data.py:34 接口返回空响应
-INFO     TestProductMaterials:test_product_materials.py:31 本用例正在执行：test_productaterials01。获取到的结果是：数据新增成功

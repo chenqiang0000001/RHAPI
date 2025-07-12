@@ -1,2 +1,0 @@
-[32mINFO    [0m mainprocess_tests:test_mainprocess.py:1195 ===== 删除工序 =====
-[32mINFO    [0m mainprocess_tests:test_mainprocess.py:1202 ✓ 删除工序成功

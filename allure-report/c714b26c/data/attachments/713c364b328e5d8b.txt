@@ -1,2 +1,0 @@
-INFO     mainprocess_tests:test_mainprocess.py:1255 ===== 删除产线 =====
-INFO     mainprocess_tests:test_mainprocess.py:1262 ✓ 删除产线成功

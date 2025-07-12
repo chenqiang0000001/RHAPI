@@ -1,2 +1,0 @@
-[32mINFO    [0m mainprocess_tests:test_mainprocess.py:1120 ===== 开始标签报废 =====
-[32mINFO    [0m mainprocess_tests:test_mainprocess.py:1122 标签报废功能暂未实现，跳过测试

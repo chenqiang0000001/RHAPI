@@ -1,1 +1,0 @@
-INFO     TestProductMaterials:test_product_materials.py:76 未找到物料数据，跳过删除操作

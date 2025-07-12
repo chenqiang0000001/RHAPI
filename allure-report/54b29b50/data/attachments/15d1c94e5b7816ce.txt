@@ -1,2 +1,0 @@
-[32mINFO    [0m mainprocess_tests:test_mainprocess.py:1210 ===== 删除工艺路线 =====
-[32mINFO    [0m mainprocess_tests:test_mainprocess.py:1217 ✓ 删除工艺路线成功

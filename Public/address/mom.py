@@ -73,3 +73,14 @@ apiStoreFeedingMaterialLabelDatas = "IndustrialMaterialApi/StoreFeedingMaterialL
 apiProductionReport = "SingleMachineExecuteApi/ProductionReport"  # 生产报工
 apiCreateFirstInspectOrder = "IpqcProductInspectApi/CreateFirstInspectOrder"  # 发起首检
 apiCompletedProduction = "SingleMachineExecuteApi/CompletedProduction"  # 完成生产
+
+apiStoreAndonCallHandleRulesData = "AndonCallHandleRulesApi/StoreAndonCallHandleRulesData"  # 新增andon规则
+apiGetAndonCallHandleRulesAutoQueryDatas = "AndonCallHandleRulesApi/GetAndonCallHandleRulesAutoQueryDatas"  # 查询andon规则
+apiRemoveBatchAndonCallHandleRulesDatas = "AndonCallHandleRulesApi/RemoveBatchAndonCallHandleRulesDatas"  # 删除andon规则
+apiUpdateAndonCallCategoryParametersData = "AndonCallCategoryParametersApi/UpdateAndonCallCategoryParametersData" # 更新andon二级类别参数
+
+apiStoreAndonCallDataRecordsData = "AndonCallDataRecordsApi/StoreAndonCallDataRecordsData" # 安灯呼叫
+apiResponseAndonCallDataRecordsData = "AndonCallDataRecordsApi/ResponseAndonCallDataRecordsData" # 安灯签到
+apiStartProcessAndonCallDataRecordsData = "AndonCallDataRecordsApi/StartProcessAndonCallDataRecordsData" # 安灯开始处理
+apiEndProcessAndonCallDataRecordsData = "AndonCallDataRecordsApi/EndProcessAndonCallDataRecordsData" # 安灯结束处理
+apiConfirmAndonCallDataRecordsData = "AndonCallDataRecordsApi/ConfirmAndonCallDataRecordsData" # 安灯确认

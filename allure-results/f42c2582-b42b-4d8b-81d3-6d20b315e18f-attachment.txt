@@ -1,0 +1,1 @@
+INFO     TestMainProcess:test_mainprocess.py:1266 ===== 开始生产完工 =====

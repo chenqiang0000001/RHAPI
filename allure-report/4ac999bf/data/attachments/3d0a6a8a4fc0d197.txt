@@ -1,4 +1,0 @@
-INFO     mainprocess_tests:test_mainprocess.py:715 ===== 开始创建派工单 =====
-INFO     mainprocess_tests:test_mainprocess.py:720 [前置] 查询工序任务单（派工用）
-INFO     ProductionScheduling:production_plan.py:142 请求体: {'ProductionPlanCode': 'PL202507070877', 'ProcessTaskCode': '', 'ProductCode': None, 'ProductName': '', 'ProcessRoutingCode': None, 'ProcessCode': None, 'ProcessName': '', 'IsPaged': True, 'PageSize': 10, 'PageIndex': 1, 'CompanyCode': '00000', 'FactoryCode': '00000.00001'}
-INFO     ProductionScheduling:production_plan.py:145 响应体: {"TotalCount":0,"SkipCount":0,"DataHeadFields":[],"Record":0,"Attach":[],"Message":"未获取到相关数据!","Success":false}

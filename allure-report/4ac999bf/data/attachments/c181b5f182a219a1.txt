@@ -1,2 +1,0 @@
-ERROR    mainprocess_tests:test_mainprocess.py:490 新增车间失败：期望Success=True，实际为False
-assert False == True

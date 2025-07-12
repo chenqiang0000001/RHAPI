@@ -1,1 +1,0 @@
-2025-07-01 15:04:38,637 - test_product_materials.py:[55] - [INFO] - 本用例正在执行：test_getMaterialInfoAutoQueryDatas01。获取到的结果是：未获取到相关数据!

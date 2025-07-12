@@ -1,1 +1,0 @@
-INFO     my_logger:test_login.py:43 本用例正在执行：test_login02。获取到的结果是：密码错误

@@ -1,2 +1,0 @@
-INFO     mainprocess_tests:test_mainprocess.py:1102 ===== 开始标签合并 =====
-INFO     mainprocess_tests:test_mainprocess.py:1104 标签合并功能暂未实现，跳过测试

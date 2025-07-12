@@ -1,2 +1,0 @@
-INFO     mainprocess_tests:test_mainprocess.py:1285 ===== 删除物料BOM =====
-INFO     mainprocess_tests:test_mainprocess.py:1292 ✓ 删除物料BOM成功

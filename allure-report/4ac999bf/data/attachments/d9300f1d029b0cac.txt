@@ -1,7 +1,0 @@
-INFO     mainprocess_tests:test_mainprocess.py:1315 ===== 开始集中清理测试数据，防止未删除数据 =====
-INFO     mainprocess_tests:test_mainprocess.py:1321 清理生产计划: PL202507070877
-INFO     mainprocess_tests:test_mainprocess.py:1355 ✓ 删除工艺路线
-INFO     mainprocess_tests:test_mainprocess.py:1362 ✓ 删除产品工艺路线
-INFO     mainprocess_tests:test_mainprocess.py:1376 ✓ 删除设备台账
-INFO     mainprocess_tests:test_mainprocess.py:1383 ✓ 删除产线
-INFO     mainprocess_tests:test_mainprocess.py:1394 测试数据清理完成

@@ -1,2 +1,0 @@
-2025-07-07 10:26:16,160 - test_mainprocess.py:[1285] - [INFO] - ===== 删除物料BOM =====
-2025-07-07 10:26:16,161 - test_mainprocess.py:[1294] - [INFO] - BOM版本或ID为空，跳过删除
