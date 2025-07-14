@@ -1,0 +1,17 @@
+INFO     delete_data:delete_data.py:217 获取物料BOM ID成功: 553, 版本号: XVBI6138056
+INFO     delete_data:delete_data.py:380 物料BOM数据清理完成
+INFO     delete_data:delete_data.py:115 未查询到工序数据，跳过删除操作
+INFO     delete_data:delete_data.py:378 工序数据不存在或已被清理，跳过删除
+INFO     delete_data:delete_data.py:151 获取工艺路线ID成功: 284
+INFO     delete_data:delete_data.py:380 工艺路线数据清理完成
+INFO     delete_data:delete_data.py:181 未查询到产品工艺路线数据，跳过删除操作
+INFO     delete_data:delete_data.py:378 产品工艺路线数据不存在或已被清理，跳过删除
+INFO     delete_data:delete_data.py:82 未查询到物料数据，跳过删除操作
+INFO     delete_data:delete_data.py:378 物料数据不存在或已被清理，跳过删除
+INFO     delete_data:delete_data.py:249 未查询到设备台账数据，跳过删除操作
+INFO     delete_data:delete_data.py:378 设备台账数据不存在或已被清理，跳过删除
+INFO     delete_data:delete_data.py:291 获取产线ID成功: 420
+INFO     delete_data:delete_data.py:380 产线数据清理完成
+INFO     delete_data:delete_data.py:320 未查询到车间数据，跳过删除操作
+INFO     delete_data:delete_data.py:378 车间数据不存在或已被清理，跳过删除
+INFO     TestMainProcess:test_mainprocess.py:49 前置条件：批量删除接口调用成功，测试数据已清理

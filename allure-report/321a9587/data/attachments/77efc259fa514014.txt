@@ -1,0 +1,2 @@
+INFO     TestMainProcess:test_mainprocess.py:1071 ===== 开始查询检验单 =====
+INFO     TestMainProcess:test_mainprocess.py:1087 获取到检验单号: Ic20250713362Ic

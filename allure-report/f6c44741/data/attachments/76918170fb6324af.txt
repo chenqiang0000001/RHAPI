@@ -1,0 +1,2 @@
+INFO     TestMainProcess:test_mainprocess.py:1385 ===== 删除工艺路线 =====
+INFO     TestMainProcess:test_mainprocess.py:1392 ✓ 删除工艺路线成功

@@ -1,0 +1,7 @@
+{
+  "enabled": false,
+  "type": "weekly",
+  "hour": 1,
+  "weekday": 1,
+  "day": 1
+}

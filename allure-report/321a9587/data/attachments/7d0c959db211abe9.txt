@@ -1,0 +1,1 @@
+INFO     TestMainProcess:test_mainprocess.py:1056 ===== 开始创建首检单 =====

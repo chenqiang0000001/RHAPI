@@ -1,0 +1,2 @@
+INFO     FactoryModel:production_plan.py:73 请求体: [{'ProductionPlanCode': 'PL202507130957', 'Id': 748, 'expand': False, 'index': 1, 'select': True, 'ProcessRoutingCode': 'Automation01-2', '__edit': True, '__edit_disable': False, '__delete': True, '__delete_disable': False, 'isEdit': True, 'LastModifierUserName': 'zdh01', 'LastModifierUserRealName': 'zdh01', 'ProductCode': 'Automation01', 'ProductName': '自动化测试物料01'}]
+INFO     FactoryModel:production_plan.py:76 响应体: {"Record":0,"Attach":null,"Message":"ok","Success":true}

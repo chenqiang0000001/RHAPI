@@ -1,0 +1,1 @@
+INFO     TestMainProcess:test_mainprocess.py:1279 ===== 安灯结束处理 =====

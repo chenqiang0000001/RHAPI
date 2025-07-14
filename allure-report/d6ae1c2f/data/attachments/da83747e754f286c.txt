@@ -1,0 +1,13 @@
+INFO     TestMainProcess:test_mainprocess.py:1512 ===== 开始集中清理测试数据，防止未删除数据 =====
+INFO     TestMainProcess:test_mainprocess.py:1518 清理生产计划: PL202507130948
+INFO     TestMainProcess:test_mainprocess.py:1523 清理派工单: DL202507131194
+INFO     TestMainProcess:test_mainprocess.py:1528 清理检验单: Ic20250713361Ic
+INFO     TestMainProcess:test_mainprocess.py:1538 ✓ 删除物料BOM
+INFO     TestMainProcess:test_mainprocess.py:1545 ✓ 删除工序
+INFO     TestMainProcess:test_mainprocess.py:1552 ✓ 删除工艺路线
+INFO     TestMainProcess:test_mainprocess.py:1559 ✓ 删除产品工艺路线
+INFO     TestMainProcess:test_mainprocess.py:1566 ✓ 删除物料
+INFO     TestMainProcess:test_mainprocess.py:1573 ✓ 删除设备台账
+INFO     TestMainProcess:test_mainprocess.py:1580 ✓ 删除产线
+INFO     TestMainProcess:test_mainprocess.py:1587 ✓ 删除车间
+INFO     TestMainProcess:test_mainprocess.py:1591 测试数据清理完成

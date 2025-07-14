@@ -1,0 +1,2 @@
+[32mINFO    [0m TestMainProcess:test_mainprocess.py:1465 ===== 删除物料BOM =====
+[32mINFO    [0m TestMainProcess:test_mainprocess.py:1472 ✓ 删除物料BOM成功

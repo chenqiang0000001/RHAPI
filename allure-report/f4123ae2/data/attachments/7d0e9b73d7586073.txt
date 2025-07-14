@@ -1,0 +1,13 @@
+[32mINFO    [0m TestMainProcess:test_mainprocess.py:1512 ===== 开始集中清理测试数据，防止未删除数据 =====
+[32mINFO    [0m TestMainProcess:test_mainprocess.py:1518 清理生产计划: PL202507130944
+[32mINFO    [0m TestMainProcess:test_mainprocess.py:1523 清理派工单: DL202507131190
+[32mINFO    [0m TestMainProcess:test_mainprocess.py:1528 清理检验单: Ic20250713357Ic
+[32mINFO    [0m TestMainProcess:test_mainprocess.py:1538 ✓ 删除物料BOM
+[32mINFO    [0m TestMainProcess:test_mainprocess.py:1545 ✓ 删除工序
+[32mINFO    [0m TestMainProcess:test_mainprocess.py:1552 ✓ 删除工艺路线
+[32mINFO    [0m TestMainProcess:test_mainprocess.py:1559 ✓ 删除产品工艺路线
+[32mINFO    [0m TestMainProcess:test_mainprocess.py:1566 ✓ 删除物料
+[32mINFO    [0m TestMainProcess:test_mainprocess.py:1573 ✓ 删除设备台账
+[32mINFO    [0m TestMainProcess:test_mainprocess.py:1580 ✓ 删除产线
+[32mINFO    [0m TestMainProcess:test_mainprocess.py:1587 ✓ 删除车间
+[32mINFO    [0m TestMainProcess:test_mainprocess.py:1591 测试数据清理完成

@@ -1,0 +1,1 @@
+{"uid":"98d3104e051c652961429bf95fa0b5d6","name":"suites","children":[{"name":"新增物料","uid":"4bda8d84d06d6bf7","parentUid":"98d3104e051c652961429bf95fa0b5d6","status":"skipped","time":{"start":1752390511124,"stop":1752390511124,"duration":0},"flaky":false,"newFailed":false,"newPassed":false,"newBroken":false,"retriesCount":0,"retriesStatusChange":false,"parameters":[],"tags":[]}]}

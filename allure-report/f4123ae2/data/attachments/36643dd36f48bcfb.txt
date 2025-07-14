@@ -1,0 +1,1 @@
+[32mINFO    [0m TestMainProcess:test_mainprocess.py:1111 ===== 开始提交检验结果 =====

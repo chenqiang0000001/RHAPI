@@ -1,0 +1,1 @@
+INFO     TestMainProcess:test_mainprocess.py:1294 ===== 安灯处理确认 =====

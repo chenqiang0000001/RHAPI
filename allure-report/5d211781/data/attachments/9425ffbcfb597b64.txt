@@ -1,0 +1,2 @@
+[32mINFO    [0m TestMainProcess:test_mainprocess.py:1187 ===== 开始标签合并 =====
+[32mINFO    [0m TestMainProcess:test_mainprocess.py:1189 标签合并功能暂未实现，跳过测试

@@ -1,0 +1,1 @@
+INFO     TestMainProcess:test_mainprocess.py:1249 ===== 开始安灯签到 =====

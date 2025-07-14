@@ -1,0 +1,2 @@
+INFO     TestMainProcess:test_mainprocess.py:1369 ===== 删除工序 =====
+INFO     TestMainProcess:test_mainprocess.py:1376 ✓ 删除工序成功

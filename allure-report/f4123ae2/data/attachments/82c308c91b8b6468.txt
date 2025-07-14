@@ -1,0 +1,1 @@
+[32mINFO    [0m TestMainProcess:test_mainprocess.py:1353 ===== 开始生产完工 =====

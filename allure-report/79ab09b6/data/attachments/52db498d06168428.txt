@@ -1,0 +1,1 @@
+INFO     TestMainProcess:test_mainprocess.py:1094 ===== 开始检验 =====
