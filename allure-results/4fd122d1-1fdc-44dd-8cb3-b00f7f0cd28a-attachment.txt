@@ -1,1 +1,0 @@
-INFO     TestMainProcess:test_mainprocess.py:1125 ===== 开始扫描标签 =====

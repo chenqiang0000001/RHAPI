@@ -1,1 +1,0 @@
-INFO     TestMainProcess:test_mainprocess.py:1034 ===== 开始查看SOP =====

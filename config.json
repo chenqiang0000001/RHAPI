@@ -7,10 +7,10 @@
         "execution_time": "Execution Time:",
         "is_failed": "Test Failed:"
     },
-    "pytest_command": "pytest D:\\apiAutomationRH\\TestCase --alluredir=./allure-results -v",
+    "pytest_command": ".venv\\Scripts\\python.exe -m pytest C:\\RHAPI\\TestCase\\test_integration --alluredir=./allure-results -v",
     "email_config": {
         "sender": "chq18870425154@163.com",
-        "receivers": ["chenqiangt@cptgroup.cn"],
+        "receivers": ["chenqiangt@cptgroup.cn", "yanglei@cptgroup.cn","jingyong@cptgroup.cn"],
         "smtp_server": "smtp.163.com",
         "smtp_port": 465,
         "username": "chq18870425154@163.com",

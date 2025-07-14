@@ -1,1 +1,0 @@
-INFO     TestMainProcess:test_mainprocess.py:1251 ===== 开始生产报工 =====

@@ -375,7 +375,7 @@ class TestMainProcess:
     def test_17_add_ESOP_file(self):
         with allure.step("调用接口新增ESOP文件"):
             response = self.sop.uploadProductProcessDocumentation(
-                file_path=r"D:\apiAutomationRH\test.pdf"
+                file_path=r"C:\RHAPI\test.pdf"
             )
         try:
             assert response is not None, "uploadProductProcessDocumentation接口返回None，请检查接口或依赖服务是否正常"
@@ -425,7 +425,7 @@ class TestMainProcess:
     def test_19_add_process_route_ESOP_file(self):
         with allure.step("调用接口新增工艺路线ESOP文件"):
             response = self.sop.uploadProductProcessDocumentation(
-                file_path=r"D:\apiAutomationRH\test.pdf",
+                file_path=r"C:\RHAPI\test.pdf",
                 material_code=MaterialCode,
                 process_routing_code=ProcessRoutingCode,
                 process_code=ProcessCode,

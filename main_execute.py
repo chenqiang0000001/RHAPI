@@ -10,8 +10,22 @@ from email.mime.text import MIMEText
 from email.header import Header
 from datetime import datetime
 from Toolbox.log_module import Logger
+import logging
+import sys
 
-logger = Logger(name="my_logger").get_logger()  # 实例化日志记录器
+# 日志配置：所有日志写入 run.log，控制台也输出
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s %(levelname)s %(message)s',
+    handlers=[
+        logging.FileHandler('run.log', encoding='utf-8', mode='a'),
+        logging.StreamHandler(sys.stdout)
+    ]
+)
+
+# logger对象
+logger = logging.getLogger("run_tests")
+
 import json
 with open('config.json', 'r', encoding='utf-8') as f:
     config = json.load(f)
@@ -29,10 +43,23 @@ def run_tests():
 
         # 执行测试命令
         command = config["pytest_command"]
-        result = subprocess.run(
-            command,
-            shell=True
-        )
+        try:
+            result = subprocess.run(
+                command,
+                shell=True,
+                capture_output=True,
+                text=True,
+                timeout=1000  # 设置超时时间为1小时，对于测试执行来说更合理
+            )
+        except subprocess.TimeoutExpired as te:
+            logger.error(f"测试执行超时: {te}")
+            return 2
+        except KeyboardInterrupt:
+            logger.warning("用户主动中断测试执行")
+            return 130
+        except Exception as e:
+            logger.error(f"未知错误: {e}")
+            return 1
         # 记录完整执行日志
         logger.debug('测试命令标准输出:\n{}'.format(getattr(result, 'stdout', None)))
         logger.debug('测试命令标准错误:\n{}'.format(getattr(result, 'stderr', None)))
@@ -60,6 +87,26 @@ def generate_report():
         command = [allure_path, "generate", "./allure-results", "-o", report_dir, "--clean"]
         subprocess.run(command, check=True, shell=True)
 
+        # 验证报告静态资源文件
+        static_files = ['styles.css', 'app.js', 'favicon.ico']
+        missing_files = []
+        for file in static_files:
+            # 检查报告目录下直接的静态文件
+            file_path = os.path.join(report_dir, file)
+            if not os.path.exists(file_path):
+                # 检查可能的static子目录
+                plugin_path = os.path.join(report_dir, 'plugins', 'screenDiff', file)
+                static_path = os.path.join(report_dir, 'static', file)
+                if not os.path.exists(plugin_path) and not os.path.exists(static_path):
+                    missing_files.append(file)
+        
+        if missing_files:
+            logger.warning(f"报告目录中缺少以下静态资源文件: {', '.join(missing_files)}")
+            # 如果关键文件缺失，返回None表示报告生成失败
+            if 'styles.css' in missing_files or 'app.js' in missing_files:
+                logger.error("关键静态资源文件缺失，报告生成失败")
+                return None
+
         # 在 Allure 报告中添加优先级和缺陷预测结果
         defects_predictions = predict_defects()
         if defects_predictions is not None:
@@ -79,26 +126,41 @@ def send_dingtalk(report_path, test_result):
     except FileNotFoundError:
         test_data = {"total": 0, "passed": 0, "failed": 0,
                      "priority_stats": {"grade_1": 0, "grade_2": 0, "grade_3": 0, "grade_4": 0}}
-    # 优先从配置文件获取钉钉webhook，其次从环境变量获取
     webhook_url = config.get("dingtalk_webhook") or os.getenv("DINGTALK_WEBHOOK")
     if not webhook_url:
         logger.error("未配置钉钉 Webhook")
         return 500
 
     status_text = "成功" if test_result == 0 else "失败"
+    # 生成 Allure 报告链接（切换为测试平台/report入口）
+    if report_path:
+        try:
+            s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+            s.connect(('8.8.8.8', 80))
+            local_ip = s.getsockname()[0]
+        except Exception:
+            local_ip = '127.0.0.1'
+        finally:
+            s.close()
+        report_link = f"http://{local_ip}:5000/report/{os.path.basename(report_path)}/index.html"
+        report_text = f"[点击查看Allure测试报告]({report_link})"
+    else:
+        report_text = "测试报告生成失败，无报告链接"
+
     message = {
         "msgtype": "markdown",
         "markdown": {
             "title": "自动化测试报告详情",
-            "text": f"### 测试执行{status_text}\n"
-                    f"**生成时间**: {time.strftime('%Y-%m-%d %H:%M:%S')}\n"
-                    f"**用例总数**: {test_data['total']}\n"
-                    f"**成功数量**: {test_data['passed']}\n"
-                    f"**优先级统计**: \n"
-                    f" - @grade_1: {test_data['priority_stats']['grade_1']}\n"
-                    f" - @grade_2: {test_data['priority_stats']['grade_2']}\n"
-                    f" - @grade_3: {test_data['priority_stats']['grade_3']}\n"
-                    f" - @grade_4: {test_data['priority_stats']['grade_4']}\n"
+            "text": f"### 测试执行{status_text}\n"\
+                    f"**生成时间**: {time.strftime('%Y-%m-%d %H:%M:%S')}\n"\
+                    f"**用例总数**: {test_data['total']}\n"\
+                    f"**成功数量**: {test_data['passed']}\n"\
+                    f"**优先级统计**: \n"\
+                    f" - @grade_1: {test_data['priority_stats']['grade_1']}\n"\
+                    f" - @grade_2: {test_data['priority_stats']['grade_2']}\n"\
+                    f" - @grade_3: {test_data['priority_stats']['grade_3']}\n"\
+                    f" - @grade_4: {test_data['priority_stats']['grade_4']}\n"\
+                    f"{report_text}"
         }
     }
     try:
@@ -130,55 +192,23 @@ def send_email(report_dir):
     message['To'] = str(Header(", ".join(receivers), 'utf-8'))
     message['Subject'] = str(Header(subject, 'utf-8'))
 
-    # 生成 Allure 报告链接
-    report_link = None
+    # 生成 Allure 报告链接（切换为测试平台/report入口）
     if report_dir:
-        start_port = 8000
-        max_port = 9000
-        server_port = None
-        for port in range(start_port, max_port):
-            try:
-                # 检查端口是否可用
-                with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
-                    s.bind(('0.0.0.0', port))
-                logger.info(f"端口 {port} 可用，尝试启动服务器...")
-                # 启动 Python 简易 HTTP 服务器
-                if os.name == 'nt':  # Windows 系统
-                    subprocess.Popen(f'python -m http.server {port} --directory {report_dir}', shell=True)
-                else:  # Linux 或 macOS 系统
-                    subprocess.Popen(f'python3 -m http.server {port} --directory {report_dir}', shell=True)
-                server_port = port
-
-                # 增加等待时间
-                time.sleep(3)
-
-                # 检查端口是否可连接
-                s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-                s.connect(("8.8.8.8", 80))
-                local_ip = s.getsockname()[0]
-                s.close()
-                with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as check_sock:
-                    result = check_sock.connect_ex((local_ip, server_port))
-                    if result == 0:
-                        logger.info(f"端口 {server_port} 可连接，生成报告链接...")
-                        report_link = f"http://{local_ip}:{server_port}"
-                        break
-                    else:
-                        logger.error(f"端口 {server_port} 无法连接，可能服务器启动失败，继续尝试下一个端口...")
-                        continue
-            except OSError:
-                # logger.info(f"端口 {port} 已被占用或不可用，继续尝试下一个端口...")
-                continue
-
-        if not report_link:
-            logger.error("未找到可用且可连接的端口")
-
-    if report_link:
-        body = f"尊敬的各位领导.同事:\n  MOM接口自动化测试脚本已运行完成，\n  Allure 报告链接：{report_link}\n   此报告为执行完毕自动发送"
+        # 获取本机IP
+        try:
+            s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+            s.connect(('8.8.8.8', 80))
+            local_ip = s.getsockname()[0]
+        except Exception:
+            local_ip = '127.0.0.1'
+        finally:
+            s.close()
+        report_link = f"http://{local_ip}:5000/report/{os.path.basename(report_dir)}/index.html"
+        body = f"尊敬的各位领导.同事:<br>  MOM接口自动化测试脚本已运行完成，<br>  Allure 报告链接：<a href='{report_link}'>{report_link}</a><br>  此报告为执行完毕自动发送"
     else:
         body = "测试报告生成失败，无报告链接"
 
-    message.attach(MIMEText(body, 'plain', 'utf-8'))
+    message.attach(MIMEText(body, 'html', 'utf-8'))
 
     smtp_obj = None
     try:
@@ -201,16 +231,39 @@ def send_email(report_dir):
 if __name__ == "__main__":
     # 执行测试用例
     test_result = run_tests()
+    logger.info(f"run_tests 返回码: {test_result}")
+    logging.info(f"run_tests 返回码: {test_result}")
+    for handler in logging.getLogger().handlers:
+        handler.flush()
 
     # 生成测试报告
     report_dir = generate_report()
+    logger.info(f"generate_report 返回: {report_dir}")
+    logging.info(f"generate_report 返回: {report_dir}")
+    for handler in logging.getLogger().handlers:
+        handler.flush()
 
     if report_dir:
         # 发送钉钉通知
         ding_status = send_dingtalk(report_dir, test_result)
         logger.info(f"钉钉发送状态码: {ding_status}")
+        logging.info(f"钉钉发送状态码: {ding_status}")
+        for handler in logging.getLogger().handlers:
+            handler.flush()
 
         # 发送邮件
         send_email(report_dir)
+        logger.info("邮件发送完成")
+        logging.info("邮件发送完成")
+        for handler in logging.getLogger().handlers:
+            handler.flush()
     else:
         logger.warning("测试报告生成失败，跳过钉钉通知和邮件发送。")
+        logging.warning("测试报告生成失败，跳过钉钉通知和邮件发送。")
+        for handler in logging.getLogger().handlers:
+            handler.flush()
+
+    # 脚本结束标记
+    logging.info('===TEST_FINISHED===')
+    for handler in logging.getLogger().handlers:
+        handler.flush()

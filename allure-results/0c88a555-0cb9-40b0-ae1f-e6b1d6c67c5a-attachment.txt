@@ -1,1 +1,0 @@
-INFO     TestMainProcess:test_mainprocess.py:1236 ===== 开始确认上料 =====

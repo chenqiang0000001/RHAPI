@@ -22,7 +22,7 @@ class ProductProcessSOP:
         self.logger = Logger(name="ProcessRelated").get_logger()
         self.logger.debug("初始化ProductProcessSOP类，已获取授权令牌")
 
-    def upLoadESopFileMaterialCollection(self, file_path=r"D:\apiAutomationRH\test.pdf", material_code=MaterialCode, material_name=MaterialName):
+    def upLoadESopFileMaterialCollection(self, file_path=r"C:\RHAPI\test.pdf", material_code=MaterialCode, material_name=MaterialName):
         """
         上传物料文档
         """
@@ -100,7 +100,7 @@ class ProductProcessSOP:
                 f"请求发生错误: {e}，请求 URL: {urlCreateProductInspectSchemaData}，请求头: {self.headers}，请求体: {uploads}")
             raise e
 
-    def uploadProductProcessDocumentation(self, file_path=r"D:\apiAutomationRH\test.pdf", material_code=MaterialCode, process_routing_code=ProcessRoutingCode, process_code=ProcessCode, process_name=ProcessName):
+    def uploadProductProcessDocumentation(self, file_path=r"C:\RHAPI\test.pdf", material_code=MaterialCode, process_routing_code=ProcessRoutingCode, process_code=ProcessCode, process_name=ProcessName):
         """
         上传产品工艺文档
         """
@@ -224,7 +224,7 @@ class ProductProcessSOP:
 
 if __name__ == '__main__':
     response = ProductProcessSOP().uploadProductProcessDocumentation(
-        file_path=r"D:\apiAutomationRH\test.pdf",
+        file_path=r"C:\RHAPI\test.pdf\test.pdf",
         material_code="cecec",
         process_routing_code="cecec1-1",  # 确保这个值是有效的工艺路线编码
         process_code="GX001",             # 示例工序编码
