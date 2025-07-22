@@ -1,8 +1,8 @@
 import requests
-from Public.address.mom import *
+from Public.address.mom import get_url, apiStoreMaterialInfoData, apiGetMaterialInfoAutoQueryDatas, apiRemoveMaterialInfoData, apiGetBomMasterViewAutoQueryDatas, apiStoreManufactureBomData, apiStoreBatchManufactureBomDetailDatas, apiRemoveManufactureBomData
 from Toolbox.log_module import Logger
 from Public.variables.mom_admin.factory_modeling import *
-from Toolbox.get_token import get_token
+from Toolbox.config_headers import get_headers
 
 
 class ProductMaterials:
@@ -10,12 +10,10 @@ class ProductMaterials:
     产品物料相关接口封装
     """
 
-    def __init__(self):
-        authorization = get_token()
-        self.headers = {
-            "authorization": authorization
-        }
+    def __init__(self, timezone=None):
+        self.headers = get_headers(timezone=timezone)
         self.logger = Logger(name="ProductMaterials").get_logger()
+        self.url = get_url()
 
     def storeMaterialInfoData(self, MaterialCode=MaterialCode, MaterialName=MaterialName):
         """
@@ -70,7 +68,7 @@ class ProductMaterials:
             "CompanyCode": "00000",
             "FactoryCode": "00000.00001"
         }
-        urlStoreMaterialInfoData = url + apiStoreMaterialInfoData
+        urlStoreMaterialInfoData = self.url + apiStoreMaterialInfoData
         try:
             response = requests.post(url=urlStoreMaterialInfoData, headers=self.headers, json=uploads)
             response.raise_for_status()
@@ -88,7 +86,7 @@ class ProductMaterials:
         uploads = {
             "MaterialCode":MaterialCode
         }
-        urlGetMaterialInfoAutoQueryDatas = url + apiGetMaterialInfoAutoQueryDatas
+        urlGetMaterialInfoAutoQueryDatas = self.url + apiGetMaterialInfoAutoQueryDatas
         try:
             response = requests.post(url=urlGetMaterialInfoAutoQueryDatas, headers=self.headers, json=uploads)
             response.raise_for_status()
@@ -109,7 +107,7 @@ class ProductMaterials:
             "MaterialName": MaterialName,
             "Id": material_id
         }
-        urlRemoveMaterialInfoData = url + apiRemoveMaterialInfoData
+        urlRemoveMaterialInfoData = self.url + apiRemoveMaterialInfoData
         try:
             response = requests.post(url=urlRemoveMaterialInfoData, headers=self.headers, json=uploads)
             response.raise_for_status()
@@ -123,12 +121,10 @@ class MaterialsBOM:
     """
     物料BOM相关接口
     """
-    def __init__(self):
-        authorization = get_token()
-        self.headers = {
-            "authorization": authorization
-        }
+    def __init__(self, timezone=None):
+        self.headers = get_headers(timezone=timezone)
         self.logger = Logger(name="MaterialsBOM").get_logger()
+        self.url = get_url()
 
     def storeManufactureBomData(self,BOMVersion,BOMCode=BOMCode):
         """
@@ -147,7 +143,7 @@ class MaterialsBOM:
             "CompanyCode": "00000",
             "FactoryCode": "00000.00001"
         }
-        urlStoreManufactureBomData = url + apiStoreManufactureBomData
+        urlStoreManufactureBomData = self.url + apiStoreManufactureBomData
         try:
             response = requests.post(url=urlStoreManufactureBomData, headers=self.headers, json=uploads)
             response.raise_for_status()
@@ -170,12 +166,12 @@ class MaterialsBOM:
             "MaterialCode": MaterialCode,
         }
         try:
-            urlGetBomMasterViewAutoQueryDatas = url + apiGetBomMasterViewAutoQueryDatas
+            urlGetBomMasterViewAutoQueryDatas = self.url + apiGetBomMasterViewAutoQueryDatas
             response = requests.post(url=urlGetBomMasterViewAutoQueryDatas, headers=self.headers, json=uploads)
             response.raise_for_status()
             return response
         except requests.RequestException as e:
-            logger.error(
+            self.logger.error(
                 f"请求发生错误: {e}，请求 URL: {urlGetBomMasterViewAutoQueryDatas}，请求头: {self.headers}，请求体: {uploads}")
             return None
 
@@ -223,12 +219,12 @@ class MaterialsBOM:
             "BOMBasicCode": BOMBasicCode
         }]
         try:
-            urlStoreBatchManufactureBomDetailDatas = url + apiStoreBatchManufactureBomDetailDatas
+            urlStoreBatchManufactureBomDetailDatas = self.url + apiStoreBatchManufactureBomDetailDatas
             response = requests.post(url=urlStoreBatchManufactureBomDetailDatas, headers=self.headers, json=uploads)
             response.raise_for_status()
             return response
         except requests.RequestException as e:
-            logger.error(
+            self.logger.error(
                 f"请求发生错误: {e}，请求 URL: {urlStoreBatchManufactureBomDetailDatas}，请求头: {self.headers}，请求体: {uploads}")
             return None
 
@@ -277,7 +273,7 @@ class MaterialsBOM:
             "typeTitle": "产",
             "typeTooltipTitle": "物料+半成品+成品"
         }
-        urlRemoveManufactureBomData = url + apiRemoveManufactureBomData
+        urlRemoveManufactureBomData = self.url + apiRemoveManufactureBomData
         try:
             response = requests.post(url=urlRemoveManufactureBomData, headers=self.headers, json=uploads)
             response.raise_for_status()

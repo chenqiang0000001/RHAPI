@@ -1,19 +1,21 @@
 import requests
-from Public.address.mom import *
+from Public.address.mom import get_url, apiCreateProductInspectSchemaData, apiGetIpqcProductInspectOrderDatas, \
+    apiStartInspectProcessInspectOrder, apiSubmitProcessInspectOrderData
 from Toolbox.log_module import Logger
 from Public.variables.mom_admin.factory_modeling import *
-from Toolbox.get_token import get_token
+from Toolbox.config_headers import get_headers
 
 class ProductInspectionPlan:
     """
     产品检验方案相关接口
     """
     def __init__(self):
-        authorization = get_token()
+        authorization = get_headers()["authorization"]
         self.headers = {
             "authorization": authorization
         }
         self.logger = Logger(name="FactoryModel").get_logger()
+        self.url = get_url()
 
     def createProductInspectSchemaData(self):
         """
@@ -61,11 +63,10 @@ class ProductInspectionPlan:
                 "CompanyCode": "00000",
                 "FactoryCode": "00000.00001"
             }
-        urlCreateProductInspectSchemaData = url + apiCreateProductInspectSchemaData
+        urlCreateProductInspectSchemaData = self.url + apiCreateProductInspectSchemaData
         try:
             response = requests.post(url=urlCreateProductInspectSchemaData, headers=self.headers, json=uploads)
             response.raise_for_status()
-            print(f"新增产品检验方案响应{response.json()}")
             return response
         except requests.RequestException as e:
             self.logger.error(
@@ -81,7 +82,7 @@ class ProductInspectionPlan:
                 "CompanyCode": "00000",
                 "FactoryCode": "00000.00001"
         }
-        urlCreateProductInspectSchemaData = url + apiCreateProductInspectSchemaData
+        urlCreateProductInspectSchemaData = self.url + apiCreateProductInspectSchemaData
         try:
             response = requests.post(url=urlCreateProductInspectSchemaData, headers=self.headers, json=uploads)
             response.raise_for_status()
@@ -95,12 +96,10 @@ class InspectionSheet:
     """
     检验任务单相关接口
     """
-    def __init__(self):
-        authorization = get_token()
-        self.headers = {
-            "authorization": authorization
-        }
+    def __init__(self, timezone=None):
+        self.headers = get_headers(timezone=timezone)
         self.logger = Logger(name="FactoryModel").get_logger()
+        self.url = get_url()
 
     def getIpqcProductInspectOrderDatas(self,ProductionPlanCode):
         """
@@ -112,7 +111,7 @@ class InspectionSheet:
             "CompanyCode": "00000",
             "FactoryCode": "00000.00001"
         }
-        urlGetIpqcProductInspectOrderDatas = url + apiGetIpqcProductInspectOrderDatas
+        urlGetIpqcProductInspectOrderDatas = self.url + apiGetIpqcProductInspectOrderDatas
         try:
             response = requests.post(url=urlGetIpqcProductInspectOrderDatas, headers=self.headers, json=uploads)
             response.raise_for_status()
@@ -134,7 +133,7 @@ class InspectionSheet:
             "CompanyCode": "00000",
             "FactoryCode": "00000.00001"
         }
-        urlStartInspectProcessInspectOrder = url + apiStartInspectProcessInspectOrder
+        urlStartInspectProcessInspectOrder = self.url + apiStartInspectProcessInspectOrder
         try:
             response = requests.post(url=urlStartInspectProcessInspectOrder, headers=self.headers, json=uploads)
             response.raise_for_status()
@@ -175,7 +174,7 @@ class InspectionSheet:
             "CompanyCode": "00000",
             "FactoryCode": "00000.00001",
         }
-        urlSubmitProcessInspectOrderData = url + apiSubmitProcessInspectOrderData
+        urlSubmitProcessInspectOrderData = self.url + apiSubmitProcessInspectOrderData
         try:
             response = requests.post(url=urlSubmitProcessInspectOrderData, headers=self.headers, json=uploads)
             response.raise_for_status()

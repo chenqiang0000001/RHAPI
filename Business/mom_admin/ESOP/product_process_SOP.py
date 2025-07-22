@@ -5,21 +5,19 @@ from pprint import pformat
 sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))))
 
 import requests
-from Public.address.mom import *
+from Public.address.mom import get_url, apiUpLoadESopFileMaterialCollection, apiUpLoadESopFileProcessCollection, apiCreateProductInspectSchemaData, apiAuditESopMaterialProcessRoutingDatas, apiGetESopMaterialAutoQueryDatas, apiGetESopMaterialProcessRoutingAutoQueryDatas
 from Toolbox.log_module import Logger
 from Public.variables.mom_admin.factory_modeling import *
-from Toolbox.get_token import get_token
+from Toolbox.config_headers import get_headers
 
 class ProductProcessSOP:
     """
     产品工艺文档相关接口封装
     """
-    def __init__(self):
-        authorization = get_token()
-        self.headers = {
-            "authorization": authorization
-        }
+    def __init__(self, timezone=None):
+        self.headers = get_headers(timezone=timezone)
         self.logger = Logger(name="ProcessRelated").get_logger()
+        self.url = get_url()
         self.logger.debug("初始化ProductProcessSOP类，已获取授权令牌")
 
     def upLoadESopFileMaterialCollection(self, file_path=r"C:\RHAPI\test.pdf", material_code=MaterialCode, material_name=MaterialName):
@@ -31,7 +29,7 @@ class ProductProcessSOP:
             self.logger.error(f"文件路径不存在: {file_path}")
             return None
 
-        urlUpLoadESopFileMaterialCollection = url + apiUpLoadESopFileMaterialCollection
+        urlUpLoadESopFileMaterialCollection = self.url + apiUpLoadESopFileMaterialCollection
         try:
             with open(file_path, 'rb') as f:
                 files = [
@@ -90,7 +88,7 @@ class ProductProcessSOP:
             "SopType": "-1:ProductMaterialFile:SopData",
             "Id":Material_documentation_id
         }
-        urlCreateProductInspectSchemaData = url + apiCreateProductInspectSchemaData
+        urlCreateProductInspectSchemaData = self.url + apiCreateProductInspectSchemaData
         try:
             response = requests.post(url=urlCreateProductInspectSchemaData, headers=self.headers, json=uploads)
             response.raise_for_status()
@@ -109,7 +107,7 @@ class ProductProcessSOP:
             self.logger.error(f"文件路径不存在: {file_path}")
             return None
 
-        urlUpLoadESopFileProcessCollection = url + apiUpLoadESopFileProcessCollection
+        urlUpLoadESopFileProcessCollection = self.url + apiUpLoadESopFileProcessCollection
         try:
             with open(file_path, 'rb') as f:
                 files = [
@@ -164,7 +162,7 @@ class ProductProcessSOP:
         审核工艺路线ESOP文件
         :param audit_data_list: 审核数据列表（list of dict）
         """
-        url_audit = url + "ESopApi/AuditESopMaterialProcessRoutingDatas"
+        url_audit = self.url + apiAuditESopMaterialProcessRoutingDatas
         self.logger.debug(f"审核工艺路线ESOP文件，请求体: {audit_data_list}")
         try:
             response = requests.post(url=url_audit, headers=self.headers, json=audit_data_list)
@@ -179,7 +177,7 @@ class ProductProcessSOP:
         """
         查询物料ESOP文件，返回接口原始响应
         """
-        url_query = url + "ESopApi/GetESopMaterialAutoQueryDatas"
+        url_query = self.url + apiGetESopMaterialAutoQueryDatas
         body = {
             "MaterialCode": material_code,
             "MaterialCategoryCode": material_category_code,
@@ -205,7 +203,7 @@ class ProductProcessSOP:
         """
         查询工艺路线ESOP文件，返回接口原始响应
         """
-        url_query = url + "ESopApi/GetESopMaterialProcessRoutingAutoQueryDatas"
+        url_query = self.url + apiGetESopMaterialProcessRoutingAutoQueryDatas
         body = {
             "ProcessRoutingCode": process_routing_code,
             "MaterialCode": material_code,

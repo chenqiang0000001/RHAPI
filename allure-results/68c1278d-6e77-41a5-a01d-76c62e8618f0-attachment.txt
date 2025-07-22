@@ -1,2 +1,0 @@
-INFO     TestMainProcess:test_mainprocess.py:1449 ===== 删除车间 =====
-INFO     TestMainProcess:test_mainprocess.py:1456 ✓ 删除车间成功

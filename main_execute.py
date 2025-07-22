@@ -5,6 +5,7 @@ import time
 import uuid
 import smtplib
 import socket
+import yaml
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from email.header import Header
@@ -49,6 +50,7 @@ def run_tests():
                 shell=True,
                 capture_output=True,
                 text=True,
+                encoding='utf-8',
                 timeout=1000  # 设置超时时间为1小时，对于测试执行来说更合理
             )
         except subprocess.TimeoutExpired as te:
@@ -183,7 +185,7 @@ def send_email(report_dir):
     password = config["email_config"]["password"]
 
     # 邮件标题
-    current_date = datetime.now().strftime("%Y-%m-%d")
+    current_date = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     subject = f"陈强的自动化测试报告{current_date}"
 
     # 创建邮件对象
@@ -204,7 +206,13 @@ def send_email(report_dir):
         finally:
             s.close()
         report_link = f"http://{local_ip}:5000/report/{os.path.basename(report_dir)}/index.html"
-        body = f"尊敬的各位领导.同事:<br>  MOM接口自动化测试脚本已运行完成，<br>  Allure 报告链接：<a href='{report_link}'>{report_link}</a><br>  此报告为执行完毕自动发送"
+        with open('config.yaml', 'r', encoding='utf-8') as f:
+            yaml_config = yaml.safe_load(f)
+        environment = yaml_config.get('environment', {})
+        env_type = environment.get('current', 'test')
+        env_url = environment.get('test_url' if env_type == 'test' else 'formal_url', '')
+        env_info = f"当前环境：{'测试环境' if env_type == 'test' else '正式环境'}, 环境地址：{env_url}<br>"
+        body = env_info + f"尊敬的各位领导.同事:<br>  MOM接口自动化测试脚本已运行完成, <br>  Allure 报告链接：<a href='{report_link}'>{report_link}</a><br>  测试内容:生产主流程 <br>   测试范围:前置条件：自动数据清除，防止残留数据1.产品物料：新增物料，查询物料，新增物料BOM.新增物料BOM明细.查询物料BOM 2.产品工艺：新增工序.查询工序.新增工艺路线.查询工艺路线.工艺路线绑定工序.产品绑定工艺路线.工艺路线绑定产品.查询产品工艺路线.产品工序BOM绑定 3.设备台账：新增设备台账.查询设备台账 4.ESOP:新增ESOP文件.审核ESOP文件.新增工艺路线ESOP文件审核工艺路线.ESOP文件 5.工厂布局：新增车间.查询车间.新增产线.查询产线 6.质量管理：创建检验方案 7.安灯管理：创建安灯规则.查询安灯规则  8.生产管理：创建生产计划.确认生产计划.下达生产计划.创建派工单.查询派工单.派工单下达 9.开工及查看SOP:开始生产.查看SOP 10.质量检验：创建首检单.查询检验单.开始检验.提交检验结果 11.标签拆分：扫描标签.标签拆分 12.安灯呼叫：安灯呼叫.安灯签到.安灯开始处理.安灯结束处理.安灯处理确认 13.上料及完工：上料扫描SN.确认上料.生产报工.生产完工 14.数据清理：删除工序.删除工艺路线.删除设备台账.删除产线.删除车间.删除物料BOM.删除物料.删除安灯规则 <br>   此报告为执行完毕自动发送"
     else:
         body = "测试报告生成失败，无报告链接"
 

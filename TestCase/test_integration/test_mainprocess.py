@@ -9,6 +9,7 @@ from Business.mom_admin.factory_modeling.product_materials import ProductMateria
 from Business.mom_admin.factory_modeling.product_materials import MaterialsBOM
 from Business.mom_admin.equipment_management.equipment_ledger_management import EquipmentLedgerManagement
 from Business.mom_admin.quality_control.QC_scheme import ProductInspectionPlan, InspectionSheet
+from Business.mom_admin.system_management.configuration_management import ConfigurationManagement
 from Public.variables.mom_admin.factory_modeling import *
 from Toolbox.log_module import Logger
 from Business.mom_admin.production_management.production_plan import ProductionPlan, ProductionScheduling
@@ -46,6 +47,8 @@ class TestMainProcess:
                 from Toolbox.delete_data import DataCleaner
                 cleaner = DataCleaner()
                 cleaner.clean_related_data()
+                ConfigurationManagement().StoreOrganizationStructureSystemConfigurationData() #
+                cls.logger.info("前置条件：系统管理-自动生成组织代码关闭")
                 cls.logger.info("前置条件：批量删除接口调用成功，测试数据已清理")
             except Exception as e:
                 cls.logger.warning(f"前置条件：批量删除接口调用失败，但不影响测试执行: {str(e)}")
@@ -375,7 +378,7 @@ class TestMainProcess:
     def test_17_add_ESOP_file(self):
         with allure.step("调用接口新增ESOP文件"):
             response = self.sop.uploadProductProcessDocumentation(
-                file_path=r"C:\RHAPI\test.pdf"
+                file_path=r"C:\RH-ZHICE1.0\test.pdf"
             )
         try:
             assert response is not None, "uploadProductProcessDocumentation接口返回None，请检查接口或依赖服务是否正常"
@@ -425,7 +428,7 @@ class TestMainProcess:
     def test_19_add_process_route_ESOP_file(self):
         with allure.step("调用接口新增工艺路线ESOP文件"):
             response = self.sop.uploadProductProcessDocumentation(
-                file_path=r"C:\RHAPI\test.pdf",
+                file_path=r"C:\RH-ZHICE1.0\test.pdf",
                 material_code=MaterialCode,
                 process_routing_code=ProcessRoutingCode,
                 process_code=ProcessCode,

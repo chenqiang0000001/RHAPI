@@ -1,19 +1,17 @@
 import requests
-from Public.address.mom import *
+from Public.address.mom import get_url, apiStoreProcessInfoData, apiRemoveProcessInfoData, apiGetProcessInfoAutoQueryDatas, apiStoreProcessRoutingData, apiRemoveProcessRoutingData, apiGetProcessRoutingAutoQueryDatas, apiGetProductProcessRouteAutoQueryDatas, apiRemoveBatchProductProcessRouteDatas, apiAdjustProcessRoutingEntry, apiStoreProductProcessRouteData, apiStoreBatchProductProcessRouteDatas, apiSelectManufactureBom
 from Toolbox.log_module import Logger
 from Public.variables.mom_admin.factory_modeling import *
-from Toolbox.get_token import get_token
+from Toolbox.config_headers import get_headers
 
 class ProcessRelated:
     """
     工序相关接口封装
     """
-    def __init__(self):
-        authorization = get_token()
-        self.headers = {
-            "authorization": authorization
-        }
+    def __init__(self, timezone=None):
+        self.headers = get_headers(timezone=timezone)
         self.logger = Logger(name="ProcessRelated").get_logger()
+        self.url = get_url()
 
     def storeProcessInfoData(self,ProcessCode=ProcessCode, ProcessName=ProcessName):
         """
@@ -47,7 +45,7 @@ class ProcessRelated:
             "CompanyCode": "00000",
             "FactoryCode": "00000.00001"
         }
-        urlStoreProcessInfoData = url + apiStoreProcessInfoData
+        urlStoreProcessInfoData = self.url + apiStoreProcessInfoData
         try:
             response = requests.post(url=urlStoreProcessInfoData, headers=self.headers, json=uploads)
             response.raise_for_status()
@@ -69,7 +67,7 @@ class ProcessRelated:
             "CompanyCode": "00000",
             "FactoryCode": "00000.00001"
         }
-        urlGetProcessInfoAutoQueryDatas = url + apiGetProcessInfoAutoQueryDatas
+        urlGetProcessInfoAutoQueryDatas = self.url + apiGetProcessInfoAutoQueryDatas
         try:
             response = requests.post(url=urlGetProcessInfoAutoQueryDatas, headers=self.headers, json=uploads)
             response.raise_for_status()
@@ -91,7 +89,7 @@ class ProcessRelated:
             "CompanyCode": CompanyCode,
             "Id": processId
         }
-        urlRemoveProcessInfoData = url + apiRemoveProcessInfoData
+        urlRemoveProcessInfoData = self.url + apiRemoveProcessInfoData
         try:
             response = requests.post(url=urlRemoveProcessInfoData, headers=self.headers, json=uploads)
             response.raise_for_status()
@@ -112,7 +110,7 @@ class ProcessRelated:
             "ProcessRoutingName": ProcessRoutingName,
             "CompanyCode": CompanyCode,
         }
-        urlStoreProcessRoutingData = url + apiStoreProcessRoutingData
+        urlStoreProcessRoutingData = self.url + apiStoreProcessRoutingData
         try:
             response = requests.post(url=urlStoreProcessRoutingData, headers=self.headers, json=uploads)
             response.raise_for_status()
@@ -136,7 +134,7 @@ class ProcessRelated:
             "CompanyCode": "00000",
             "FactoryCode": "00000.00001"
         }
-        urlGetProcessRoutingAutoQueryDatas = url + apiGetProcessRoutingAutoQueryDatas
+        urlGetProcessRoutingAutoQueryDatas = self.url + apiGetProcessRoutingAutoQueryDatas
         try:
             response = requests.post(url=urlGetProcessRoutingAutoQueryDatas, headers=self.headers, json=uploads)
             response.raise_for_status()
@@ -163,7 +161,7 @@ class ProcessRelated:
             "FactoryCode": "00000.00001",
 
         }
-        urlRemoveProcessRoutingData = url + apiRemoveProcessRoutingData
+        urlRemoveProcessRoutingData = self.url + apiRemoveProcessRoutingData
         try:
             response = requests.post(url=urlRemoveProcessRoutingData, headers=self.headers, json=uploads)
             response.raise_for_status()
@@ -187,7 +185,7 @@ class ProcessRelated:
             "CompanyCode": "00000",
             "FactoryCode": "00000.00001"
         }
-        urlGetProductProcessRouteAutoQueryDatas = url + apiGetProductProcessRouteAutoQueryDatas
+        urlGetProductProcessRouteAutoQueryDatas = self.url + apiGetProductProcessRouteAutoQueryDatas
         try:
             response = requests.post(url=urlGetProductProcessRouteAutoQueryDatas, headers=self.headers, json=uploads)
             response.raise_for_status()
@@ -212,7 +210,7 @@ class ProcessRelated:
             "FactoryCode": "00000.00001",
             "Id": product_process_id
         }]
-        urlRemoveBatchProductProcessRouteDatas = url + apiRemoveBatchProductProcessRouteDatas
+        urlRemoveBatchProductProcessRouteDatas = self.url + apiRemoveBatchProductProcessRouteDatas
         try:
             response = requests.post(url=urlRemoveBatchProductProcessRouteDatas, headers=self.headers, json=uploads)
             response.raise_for_status()
@@ -238,7 +236,7 @@ class ProcessRelated:
                     }],
                     "CompanyCode": CompanyCode, #公司代码
                 }
-        urlAdjustProcessRoutingEntry = url + apiAdjustProcessRoutingEntry
+        urlAdjustProcessRoutingEntry = self.url + apiAdjustProcessRoutingEntry
         try:
             response = requests.post(url=urlAdjustProcessRoutingEntry, headers=self.headers, json=uploads)
             response.raise_for_status()
@@ -264,7 +262,7 @@ class ProcessRelated:
             "CompanyCode": "00000",
             "FactoryCode": "00000.00001"
         }
-        urlStoreProductProcessRouteData = url + apiStoreProductProcessRouteData
+        urlStoreProductProcessRouteData = self.url + apiStoreProductProcessRouteData
         try:
             response = requests.post(url=urlStoreProductProcessRouteData, headers=self.headers, json=uploads)
             response.raise_for_status()
@@ -286,7 +284,7 @@ class ProcessRelated:
             "CompanyCode": "00000",
             "FactoryCode": "00000.00001"
         }]
-        urlStoreBatchProductProcessRouteDatas = url + apiStoreBatchProductProcessRouteDatas
+        urlStoreBatchProductProcessRouteDatas = self.url + apiStoreBatchProductProcessRouteDatas
         try:
             response = requests.post(url=urlStoreBatchProductProcessRouteDatas, headers=self.headers, json=uploads)
             response.raise_for_status()
@@ -310,7 +308,7 @@ class ProcessRelated:
             "ProcessRoutingEntryCode": "1e56b589-ac1a-49ec-8e01-810847408e6d",
             "ProductCode": MaterialCode
         }
-        urlSelectManufactureBom = url + apiSelectManufactureBom
+        urlSelectManufactureBom = self.url + apiSelectManufactureBom
         try:
             response = requests.post(url=urlSelectManufactureBom, headers=self.headers, json=uploads)
             response.raise_for_status()

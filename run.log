@@ -1,10 +1,11 @@
-2025-07-14 10:13:39,825 INFO run_tests 返回码: 0
-2025-07-14 10:13:39,826 INFO run_tests 返回码: 0
-2025-07-14 10:13:42,111 INFO generate_report 返回: allure-report/c86c7612
-2025-07-14 10:13:42,111 INFO generate_report 返回: allure-report/c86c7612
-2025-07-14 10:13:42,336 INFO 钉钉发送状态码: 200
-2025-07-14 10:13:42,336 INFO 钉钉发送状态码: 200
-2025-07-14 10:13:43,892 INFO 邮件发送成功
-2025-07-14 10:13:44,118 INFO 邮件发送完成
-2025-07-14 10:13:44,118 INFO 邮件发送完成
-2025-07-14 10:13:44,118 INFO ===TEST_FINISHED===
+2025-07-22 10:32:34,361 INFO run_tests 返回码: 0
+2025-07-22 10:32:34,362 INFO run_tests 返回码: 0
+Report successfully generated to allure-report\601c6406
+2025-07-22 10:32:38,329 INFO generate_report 返回: allure-report/601c6406
+2025-07-22 10:32:38,330 INFO generate_report 返回: allure-report/601c6406
+2025-07-22 10:32:38,609 INFO 钉钉发送状态码: 200
+2025-07-22 10:32:38,609 INFO 钉钉发送状态码: 200
+2025-07-22 10:32:41,402 INFO 邮件发送成功
+2025-07-22 10:32:41,476 INFO 邮件发送完成
+2025-07-22 10:32:41,477 INFO 邮件发送完成
+2025-07-22 10:32:41,477 INFO ===TEST_FINISHED===

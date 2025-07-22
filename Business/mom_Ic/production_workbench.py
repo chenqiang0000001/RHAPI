@@ -1,18 +1,18 @@
 import requests
-from Public.address.mom import *
+from Public.address.mom import get_url, apiGetCanProductionDispatchOrderDatas, apiStartProduction, \
+    apiScanFeedingMaterialLabelData, apiProductionReport, apiCreateFirstInspectOrder, apiCompletedProduction, \
+    apiGetESopMaterialProcessRoutingAutoQueryDatas, apiGetProductionDispatchOrderDataByCode, \
+    apiStoreFeedingMaterialLabelDatas
 from Toolbox.log_module import Logger
 from Public.variables.mom_admin.factory_modeling import *
-from Toolbox.get_token import get_token
+from Toolbox.config_headers import get_headers
 
 class SingleUnitMaterial:
     """
     单机单料相关接口
     """
-    def __init__(self):
-        authorization = get_token()
-        self.headers = {
-            "authorization": authorization
-        }
+    def __init__(self, timezone=None):
+        self.headers = get_headers(timezone=timezone)
         self.logger = Logger(name="FactoryModel").get_logger()
 
     def getCanProductionDispatchOrderDatas(self):
@@ -30,7 +30,7 @@ class SingleUnitMaterial:
             "CompanyCode": "00000",
             "FactoryCode": "00000.00001"
         }
-        urlGetCanProductionDispatchOrderDatas = url + apiGetCanProductionDispatchOrderDatas
+        urlGetCanProductionDispatchOrderDatas = get_url() + apiGetCanProductionDispatchOrderDatas
         try:
             response = requests.post(url=urlGetCanProductionDispatchOrderDatas, headers=self.headers, json=uploads)
             response.raise_for_status()
@@ -52,7 +52,7 @@ class SingleUnitMaterial:
             "CompanyCode": "00000",
             "FactoryCode": "00000.00001"
         }
-        urlGetProductionDispatchOrderDataByCode = url + apiGetProductionDispatchOrderDataByCode
+        urlGetProductionDispatchOrderDataByCode = get_url() + apiGetProductionDispatchOrderDataByCode
         try:
             response = requests.post(url=urlGetProductionDispatchOrderDataByCode, headers=self.headers, json=uploads)
             response.raise_for_status()
@@ -72,7 +72,7 @@ class SingleUnitMaterial:
             "CompanyCode": "00000",
             "FactoryCode": "00000.00001"
         }
-        urlGetESopMaterialProcessRoutingAutoQueryDatas = url + apiGetESopMaterialProcessRoutingAutoQueryDatas
+        urlGetESopMaterialProcessRoutingAutoQueryDatas = get_url() + apiGetESopMaterialProcessRoutingAutoQueryDatas
         try:
             response = requests.post(url=urlGetESopMaterialProcessRoutingAutoQueryDatas, headers=self.headers, json=uploads)
             response.raise_for_status()
@@ -217,7 +217,7 @@ class SingleUnitMaterial:
         }
         print(f"开工请求参数: {uploads}")
         uploads.update(kwargs)
-        urlStartProduction = url + apiStartProduction
+        urlStartProduction = get_url() + apiStartProduction
         try:
             response = requests.post(url=urlStartProduction, headers=self.headers, json=uploads)
             response.raise_for_status()
@@ -234,7 +234,7 @@ class SingleUnitMaterial:
         uploads = {
             "SN":SN
         }
-        urlScanFeedingMaterialLabelData = url + apiScanFeedingMaterialLabelData
+        urlScanFeedingMaterialLabelData = get_url() + apiScanFeedingMaterialLabelData
         try:
             response = requests.post(url=urlScanFeedingMaterialLabelData, headers=self.headers, json=uploads)
             response.raise_for_status()
@@ -327,7 +327,7 @@ class SingleUnitMaterial:
             "CompanyCode": "00000",
             "FactoryCode": "00000.00001"
         }
-        urlStoreFeedingMaterialLabelDatas = url + apiStoreFeedingMaterialLabelDatas
+        urlStoreFeedingMaterialLabelDatas = get_url() + apiStoreFeedingMaterialLabelDatas
         try:
             response = requests.post(url=urlStoreFeedingMaterialLabelDatas, headers=self.headers, json=uploads)
             response.raise_for_status()
@@ -354,7 +354,7 @@ class SingleUnitMaterial:
             "CompanyCode": "00000",
             "FactoryCode": "00000.00001"
         }
-        urlProductionReport = url + apiProductionReport
+        urlProductionReport = get_url() + apiProductionReport
         try:
             response = requests.post(url=urlProductionReport, headers=self.headers, json=uploads)
             response.raise_for_status()
@@ -380,7 +380,7 @@ class SingleUnitMaterial:
             "CompanyCode": "00000",
             "FactoryCode": "00000.00001"
         }
-        urlCreateFirstInspectOrder = url + apiCreateFirstInspectOrder
+        urlCreateFirstInspectOrder = get_url() + apiCreateFirstInspectOrder
         try:
             response = requests.post(url=urlCreateFirstInspectOrder, headers=self.headers, json=uploads)
             response.raise_for_status()
@@ -406,7 +406,7 @@ class SingleUnitMaterial:
             "CompanyCode": "00000",
             "FactoryCode": "00000.00001"
         }
-        urlCompletedProduction = url + apiCompletedProduction
+        urlCompletedProduction = get_url() + apiCompletedProduction
         try:
             response = requests.post(url=urlCompletedProduction, headers=self.headers, json=uploads)
             response.raise_for_status()

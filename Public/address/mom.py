@@ -1,12 +1,23 @@
+import yaml
+import os
 # 项目URL
+config_path = os.path.join(os.path.dirname(__file__), '../../config.yaml')
+
+def get_url():
+    with open(config_path, 'r', encoding='utf-8') as f:
+        config = yaml.safe_load(f)
+    env = config.get('environment', {}).get('current', 'test')
+    testUrl = "http://192.168.0.135:8282/"  # 测试环境url
+    formalUrl = "http://192.168.0.143:8282/"  # 正式环境url
+    return testUrl if env == 'test' else formalUrl
+
 testUrl = "http://192.168.0.135:8282/"  # 测试环境url
 formalUrl = "http://192.168.0.143:8282/"  # 正式环境url
-urlLogin1 = "http://192.168.0.135:8288/"  # 登录url
-url = testUrl
-# 新增PDA服务base url
+urlLogin1 = "http://192.168.0.135:8288/"  # V2url
 pdaUrl = "http://192.168.0.135:8283/"  # PDA相关接口url（如标签扫描、拆分等）
 apiLogin = "account/login"  # MOM登录接口后缀
 
+apiStoreOrganizationStructureSystemConfigurationData = "SystemBusinessApi/StoreOrganizationStructureSystemConfigurationData" #配置系统参数
 # MES系统
 # 工厂建模
 apiStoreMaterialInfoData = "MaterialInfoApi/StoreMaterialInfoData"  # 新增物料
@@ -64,9 +75,10 @@ apiIssuedBatchProductionDispatchOrderDatas = "ProductionDispatchApi/IssuedBatchP
 #工控端
 apiGetCanProductionDispatchOrderDatas = "SingleMachineExecuteApi/GetCanProductionDispatchOrderDatas"  #查询选择派工单
 apiGetProductionDispatchOrderDataByCode = "SingleMachineExecuteApi/GetProductionDispatchOrderDataByCode"  #查询派工单详情
+apiGetProductionDispatchOrderAutoQueryDatas = "ProductionDispatchApi/GetProductionDispatchOrderAutoQueryDatas"  # 查询派工单
+apiGetCanDispatchProcessTaskOrderDatas = "ProductionDispatchApi/GetCanDispatchProcessTaskOrderDatas"  # 查询可派工工序任务单
 
 apiGetESopMaterialProcessRoutingAutoQueryDatas = "ESopApi/GetESopMaterialProcessRoutingAutoQueryDatas"  # 查看ESOP文件
-
 apiStartProduction = "SingleMachineExecuteApi/StartProduction"   # 启动生产
 apiScanFeedingMaterialLabelData = "IndustrialMaterialApi/ScanFeedingMaterialLabelData"  # 扫描投料物料标签
 apiStoreFeedingMaterialLabelDatas = "IndustrialMaterialApi/StoreFeedingMaterialLabelDatas"  # 确认上料
@@ -84,3 +96,10 @@ apiResponseAndonCallDataRecordsData = "AndonCallDataRecordsApi/ResponseAndonCall
 apiStartProcessAndonCallDataRecordsData = "AndonCallDataRecordsApi/StartProcessAndonCallDataRecordsData" # 安灯开始处理
 apiEndProcessAndonCallDataRecordsData = "AndonCallDataRecordsApi/EndProcessAndonCallDataRecordsData" # 安灯结束处理
 apiConfirmAndonCallDataRecordsData = "AndonCallDataRecordsApi/ConfirmAndonCallDataRecordsData" # 安灯确认
+
+apiAuditESopMaterialProcessRoutingDatas = "ESopApi/AuditESopMaterialProcessRoutingDatas"  # 审核工艺路线ESOP文件
+apiGetESopMaterialAutoQueryDatas = "ESopApi/GetESopMaterialAutoQueryDatas"  # 查询物料ESOP文件
+
+apiScanLabel = "MobileLabelOperationApi/ScanLabel"  # PDA标签扫描
+apiLabelSplit = "MobileLabelOperationApi/LabelSplit"  # PDA标签拆分
+

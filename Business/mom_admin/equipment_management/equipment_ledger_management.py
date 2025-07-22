@@ -1,19 +1,18 @@
 import requests
-from Public.address.mom import *
+from Public.address.mom import get_url, apiStoreEquipmentLedgerData, apiGetEquipmentLedgerAutoQueryDatas, \
+    apiRemoveBatchEquipmentLedger
 from Toolbox.log_module import Logger
 from Public.variables.mom_admin.factory_modeling import *
-from Toolbox.get_token import get_token
+from Toolbox.config_headers import get_headers
 
 class EquipmentLedgerManagement:
     """
     设备台账管理接口封装
     """
-    def __init__(self):
-        authorization = get_token()
-        self.headers = {
-            "authorization": authorization
-        }
+    def __init__(self, timezone=None):
+        self.headers = get_headers(timezone=timezone)
         self.logger = Logger(name="EquipmentLedgerManagement").get_logger()
+        self.url = get_url()
     def storeEquipmentLedgerData(self,EquipmentCode=EquipmentCode, EquipmentName=EquipmentName):
         """
         新增设备台账
@@ -33,7 +32,7 @@ class EquipmentLedgerManagement:
             "CompanyCode": "00000",
             "FactoryCode": "00000.00001"
         }
-        urlStoreEquipmentLedgerData = url + apiStoreEquipmentLedgerData
+        urlStoreEquipmentLedgerData = self.url + apiStoreEquipmentLedgerData
         try:
             response = requests.post(url=urlStoreEquipmentLedgerData, headers=self.headers, json=uploads)
             response.raise_for_status()
@@ -56,7 +55,7 @@ class EquipmentLedgerManagement:
             "CompanyCode": "00000",
             "FactoryCode": "00000.00001"
         }
-        urlGetEquipmentLedgerAutoQueryDatas = url + apiGetEquipmentLedgerAutoQueryDatas
+        urlGetEquipmentLedgerAutoQueryDatas = self.url + apiGetEquipmentLedgerAutoQueryDatas
         try:
             response = requests.post(url=urlGetEquipmentLedgerAutoQueryDatas, headers=self.headers, json=uploads)
             response.raise_for_status()
@@ -88,7 +87,7 @@ class EquipmentLedgerManagement:
             "NeedUpdateFields": {},
             "Id": equipment_id
         }]
-        urlRemoveBatchEquipmentLedger = url + apiRemoveBatchEquipmentLedger
+        urlRemoveBatchEquipmentLedger = self.url + apiRemoveBatchEquipmentLedger
         try:
             response = requests.post(url=urlRemoveBatchEquipmentLedger, headers=self.headers, json=uploads)
             

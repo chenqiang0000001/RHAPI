@@ -1,32 +1,24 @@
-# 钉钉配置
+database:
+  charset: utf8
+  database: ${DB_NAME}
+  host: ${DB_HOST}
+  password: ${DB_PASSWORD}
+  user: ${DB_USER}
 dingtalk:
   webhook_url: ${DINGTALK_WEBHOOK}
-
-# 邮箱配置
 email:
-  sender: ${EMAIL_SENDER}
-  receivers: ${EMAIL_RECEIVERS}
-  smtp_server: ${SMTP_SERVER}
-  smtp_port: ${SMTP_PORT}
-  username: ${EMAIL_USERNAME}
   password: ${EMAIL_PASSWORD}
-
-# 数据库配置
-database:
-  host: ${DB_HOST}
-  user: ${DB_USER}
-  password: ${DB_PASSWORD}
-  database: ${DB_NAME}
-  charset: utf8
-
-# 环境配置
+  receivers: ${EMAIL_RECEIVERS}
+  sender: ${EMAIL_SENDER}
+  smtp_port: ${SMTP_PORT}
+  smtp_server: ${SMTP_SERVER}
+  username: ${EMAIL_USERNAME}
 environment:
   allure_path: ${ALLURE_PATH}
-  test_url: ${TEST_URL}
-  formal_url: ${FORMAL_URL}
-  login_url: ${LOGIN_URL}
-
-# 测试配置
+  current: test
+  formal_url: http://192.168.0.143:8282/
+  login_url: http://192.168.0.135:8288/account/login
+  test_url: http://192.168.0.135:8282/
 test:
   parallel: false
   retry_count: 2

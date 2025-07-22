@@ -1,19 +1,20 @@
 import requests
-from Public.address.mom import *
+from Public.address.mom import get_url, apiStoreProductionPlanOrderData, apiGetProductionPlanOrderAutoQueryDatas, \
+    apiConfirmBatchProductionPlanOrderDatas, apiIssuedBatchProductionPlanOrderDatas, \
+    apiCreateBatchProductionDispatchOrderData, apiIssuedBatchProductionDispatchOrderDatas, \
+    apiGetProductionDispatchOrderAutoQueryDatas, apiGetCanDispatchProcessTaskOrderDatas
 from Toolbox.log_module import Logger
 from Public.variables.mom_admin.factory_modeling import *
-from Toolbox.get_token import get_token
+from Toolbox.config_headers import get_headers
 
 class ProductionPlan:
     """
     生产计划相关接口
     """
-    def __init__(self):
-        authorization = get_token()
-        self.headers = {
-            "authorization": authorization
-        }
+    def __init__(self, timezone=None):
+        self.headers = get_headers(timezone=timezone)
         self.logger = Logger(name="FactoryModel").get_logger()
+        self.url = get_url()
 
     def storeProductionPlanOrderData(self):
         """
@@ -40,7 +41,7 @@ class ProductionPlan:
         }
         self.logger.info(f"请求体: {uploads}")
         try:
-            response = requests.post(url=url + apiStoreProductionPlanOrderData, headers=self.headers, json=uploads)
+            response = requests.post(url=self.url + apiStoreProductionPlanOrderData, headers=self.headers, json=uploads)
             self.logger.info(f"响应体: {getattr(response, 'text', response)}")
             return response
         except Exception as e:
@@ -55,7 +56,7 @@ class ProductionPlan:
         uploads = {
             "ProductionPlanCode": [ProductionPlanCode],  # 改为数组格式
         }
-        urlGetProductionPlanOrderAutoQueryDatas = url + apiGetProductionPlanOrderAutoQueryDatas
+        urlGetProductionPlanOrderAutoQueryDatas = self.url + apiGetProductionDispatchOrderAutoQueryDatas
         try:
             response = requests.post(url=urlGetProductionPlanOrderAutoQueryDatas, headers=self.headers, json=uploads)
             response.raise_for_status()
@@ -69,7 +70,7 @@ class ProductionPlan:
         """
         计划单确认，参数为列表
         """
-        urlConfirmBatchProductionPlanOrderDatas = url + apiConfirmBatchProductionPlanOrderDatas
+        urlConfirmBatchProductionPlanOrderDatas = self.url + apiConfirmBatchProductionPlanOrderDatas
         self.logger.info(f"请求体: {plan_data_list}")
         try:
             response = requests.post(url=urlConfirmBatchProductionPlanOrderDatas, headers=self.headers, json=plan_data_list)
@@ -83,7 +84,7 @@ class ProductionPlan:
         """
         计划单下达，参数为列表
         """
-        urlIssuedBatchProductionPlanOrderDatas = url + apiIssuedBatchProductionPlanOrderDatas
+        urlIssuedBatchProductionPlanOrderDatas = self.url + apiIssuedBatchProductionPlanOrderDatas
         self.logger.info(f"请求体: {plan_data_list}")
         try:
             response = requests.post(url=urlIssuedBatchProductionPlanOrderDatas, headers=self.headers, json=plan_data_list)
@@ -97,21 +98,18 @@ class ProductionScheduling:
     """
     生产调度相关接口
     """
-    def __init__(self):
-        authorization = get_token()
-        self.headers = {
-            "authorization": authorization
-        }
+    def __init__(self, timezone=None):
+        self.headers = get_headers(timezone=timezone)
         self.logger = Logger(name="ProductionScheduling").get_logger()
+        self.url = get_url()
 
     def createBatchProductionDispatchOrder(self, dispatch_data_list):
         """
         快捷派工，参数为列表
         """
-        urlCreateBatchProductionDispatchOrderData = url + apiCreateBatchProductionDispatchOrderData
         self.logger.info(f"请求体: {dispatch_data_list}")
         try:
-            response = requests.post(url=urlCreateBatchProductionDispatchOrderData, headers=self.headers, json=dispatch_data_list)
+            response = requests.post(url=self.url + apiCreateBatchProductionDispatchOrderData, headers=self.headers, json=dispatch_data_list)
             self.logger.info(f"响应体: {getattr(response, 'text', response)}")
             return response
         except Exception as e:
@@ -122,10 +120,9 @@ class ProductionScheduling:
         """
         派工单下达，参数为列表
         """
-        urlIssuedBatchProductionDispatchOrderDatas = url + apiIssuedBatchProductionDispatchOrderDatas
         self.logger.info(f"请求体: {dispatch_data_list}")
         try:
-            response = requests.post(url=urlIssuedBatchProductionDispatchOrderDatas, headers=self.headers, json=dispatch_data_list)
+            response = requests.post(url=self.url + apiIssuedBatchProductionDispatchOrderDatas, headers=self.headers, json=dispatch_data_list)
             self.logger.info(f"响应体: {getattr(response, 'text', response)}")
             return response
         except Exception as e:
@@ -138,7 +135,7 @@ class ProductionScheduling:
         :param body: 查询参数dict，需包含ProductionPlanCode等
         :return: requests响应对象
         """
-        url_get = url + "ProductionDispatchApi/GetCanDispatchProcessTaskOrderDatas"
+        url_get = self.url + apiGetCanDispatchProcessTaskOrderDatas
         self.logger.info(f"请求体: {body}")
         try:
             response = requests.post(url=url_get, headers=self.headers, json=body)
@@ -154,7 +151,7 @@ class ProductionScheduling:
         :param body: 查询参数dict，需包含ProductionPlanCode等
         :return: requests响应对象
         """
-        url_get = url + "ProductionDispatchApi/GetProductionDispatchOrderAutoQueryDatas"
+        url_get = self.url + apiGetProductionDispatchOrderAutoQueryDatas
         self.logger.info(f"请求体: {body}")
         try:
             response = requests.post(url=url_get, headers=self.headers, json=body)

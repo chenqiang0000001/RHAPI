@@ -1,5 +1,5 @@
 import requests
-from Public.address.mom import *
+from Public.address.mom import get_url, urlLogin1, apiLogin
 from Public.variables.login import *
 from Toolbox.log_module import Logger
 

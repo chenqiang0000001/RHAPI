@@ -1,2 +1,0 @@
-INFO     TestMainProcess:test_mainprocess.py:1207 ===== 开始标签报废 =====
-INFO     TestMainProcess:test_mainprocess.py:1209 标签报废功能暂未实现，跳过测试

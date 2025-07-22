@@ -1,19 +1,18 @@
 import requests
-from Public.address.mom import *
+from Public.address.mom import get_url, apiStoreAndonCallHandleRulesData, apiRemoveBatchAndonCallHandleRulesDatas, \
+    apiGetAndonCallHandleRulesAutoQueryDatas, apiUpdateAndonCallCategoryParametersData
 from Toolbox.log_module import Logger
 from Public.variables.mom_admin.factory_modeling import *
-from Toolbox.get_token import get_token
+from Toolbox.config_headers import get_headers
 
 class LightingConfiguration:
     """
     安灯配置维护
     """
-    def __init__(self):
-        authorization = get_token()
-        self.headers = {
-            "authorization": authorization
-        }
+    def __init__(self, timezone=None):
+        self.headers = get_headers(timezone=timezone)
         self.logger = Logger(name="FactoryModel").get_logger()
+        self.url = get_url()
 
     def StoreAndonCallHandleRulesData(self,OrganizationStructureCode=OrganizationStructureCode, OrganizationStructureName=OrganizationStructureName):
         """
@@ -53,7 +52,7 @@ class LightingConfiguration:
             "CompanyCode": "00000",
             "FactoryCode": "00000.00001"
         }
-        urlStoreAndonCallHandleRulesData = url + apiStoreAndonCallHandleRulesData
+        urlStoreAndonCallHandleRulesData = self.url + apiStoreAndonCallHandleRulesData
         try:
             response = requests.post(url=urlStoreAndonCallHandleRulesData, headers=self.headers, json=uploads)
             response.raise_for_status()
@@ -80,7 +79,7 @@ class LightingConfiguration:
             "CompanyCode": "00000",
             "FactoryCode": "00000.00001"
         }
-        urlGetAndonCallHandleRulesAutoQueryDatas = url + apiGetAndonCallHandleRulesAutoQueryDatas
+        urlGetAndonCallHandleRulesAutoQueryDatas = self.url + apiGetAndonCallHandleRulesAutoQueryDatas
         try:
             response = requests.post(url=urlGetAndonCallHandleRulesAutoQueryDatas, headers=self.headers, json=uploads)
             response.raise_for_status()
@@ -155,7 +154,7 @@ class LightingConfiguration:
             "__delete_disable": False
         }]
 
-        urlRemoveBatchAndonCallHandleRulesDatas = url + apiRemoveBatchAndonCallHandleRulesDatas
+        urlRemoveBatchAndonCallHandleRulesDatas = self.url + apiRemoveBatchAndonCallHandleRulesDatas
         try:
             response = requests.post(url=urlRemoveBatchAndonCallHandleRulesDatas, headers=self.headers, json=uploads)
             response.raise_for_status()
@@ -203,7 +202,7 @@ class LightingConfiguration:
             "__delete": True,
             "__delete_disable": False
         }
-        UpdateAndonCallCategoryParametersData = url + apiUpdateAndonCallCategoryParametersData
+        UpdateAndonCallCategoryParametersData = self.url + apiUpdateAndonCallCategoryParametersData
         try:
             response = requests.post(url=UpdateAndonCallCategoryParametersData, headers=self.headers, json=uploads)
             response.raise_for_status()
@@ -222,5 +221,5 @@ if __name__ == '__main__':
     # res2 = LightingConfiguration().RemoveBatchAndonCallHandleRulesDatas(27)
     print(res.json())
     # print(res1.json())
-    print(id)
+    # print(id)
     # print(res2.json())

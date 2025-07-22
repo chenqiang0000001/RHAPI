@@ -1,17 +1,14 @@
 import requests
-from Public.address.mom import *
+from Public.address.mom import get_url, pdaUrl, apiScanLabel, apiLabelSplit
 from Toolbox.log_module import Logger
-from Toolbox.get_token import get_token
+from Toolbox.config_headers import get_headers
 
 class LabelOperation:
     """
     PDA标签相关接口封装
     """
-    def __init__(self):
-        authorization = get_token()
-        self.headers = {
-            "authorization": authorization
-        }
+    def __init__(self, timezone=None):
+        self.headers = get_headers(timezone=timezone)
         self.logger = Logger(name="LabelOperation").get_logger()
 
     def scan_label(self, sn):
@@ -24,7 +21,7 @@ class LabelOperation:
             "FactoryCode": "00000.00001",
             "CompanyCode": "00000"
         }
-        url_scan = pdaUrl + "MobileLabelOperationApi/ScanLabel"
+        url_scan = pdaUrl + apiScanLabel
         try:
             response = requests.post(url=url_scan, headers=self.headers, json=uploads)
             response.raise_for_status()
@@ -38,7 +35,7 @@ class LabelOperation:
         标签拆分
         :param split_body: dict，标签拆分完整请求体
         """
-        url_split = pdaUrl + "MobileLabelOperationApi/LabelSplit"
+        url_split = pdaUrl + apiLabelSplit
         try:
             response = requests.post(url=url_split, headers=self.headers, json=split_body)
             response.raise_for_status()

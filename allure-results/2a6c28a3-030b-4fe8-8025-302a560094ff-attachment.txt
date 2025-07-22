@@ -1,1 +1,0 @@
-INFO     TestMainProcess:test_mainprocess.py:1264 ===== 安灯开始处理 =====

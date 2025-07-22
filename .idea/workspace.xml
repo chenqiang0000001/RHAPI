@@ -5,7 +5,184 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e7f9779e-2eb7-4ecf-a207-6f6b491d52ce" name="默认变更列表" comment="增加“智测平台”可视化页面">
+      <change beforePath="$PROJECT_DIR$/.idea/MarsCodeWorkspaceAppSettings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/MarsCodeWorkspaceAppSettings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Business/mom_Ic/production_workbench.py" beforeDir="false" afterPath="$PROJECT_DIR$/Business/mom_Ic/production_workbench.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Business/mom_admin/ESOP/product_process_SOP.py" beforeDir="false" afterPath="$PROJECT_DIR$/Business/mom_admin/ESOP/product_process_SOP.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Business/mom_admin/equipment_management/equipment_ledger_management.py" beforeDir="false" afterPath="$PROJECT_DIR$/Business/mom_admin/equipment_management/equipment_ledger_management.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Business/mom_admin/factory_modeling/product_materials.py" beforeDir="false" afterPath="$PROJECT_DIR$/Business/mom_admin/factory_modeling/product_materials.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Business/mom_admin/factory_modeling/production_process.py" beforeDir="false" afterPath="$PROJECT_DIR$/Business/mom_admin/factory_modeling/production_process.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Business/mom_admin/lighting_management/call_processing.py" beforeDir="false" afterPath="$PROJECT_DIR$/Business/mom_admin/lighting_management/call_processing.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Business/mom_admin/lighting_management/lighting_configuration.py" beforeDir="false" afterPath="$PROJECT_DIR$/Business/mom_admin/lighting_management/lighting_configuration.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Business/mom_admin/login_mom/login_mom_admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/Business/mom_admin/login_mom/login_mom_admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Business/mom_admin/production_management/production_plan.py" beforeDir="false" afterPath="$PROJECT_DIR$/Business/mom_admin/production_management/production_plan.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Business/mom_admin/production_modeling/factory_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/Business/mom_admin/production_modeling/factory_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Business/mom_admin/quality_control/QC_scheme.py" beforeDir="false" afterPath="$PROJECT_DIR$/Business/mom_admin/quality_control/QC_scheme.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Business/pda/label_operation.py" beforeDir="false" afterPath="$PROJECT_DIR$/Business/pda/label_operation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Public/address/mom.py" beforeDir="false" afterPath="$PROJECT_DIR$/Public/address/mom.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestCase/test_integration/debug_mainprocess.py" beforeDir="false" afterPath="$PROJECT_DIR$/TestCase/test_integration/debug_mainprocess.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestCase/test_integration/test_mainprocess.py" beforeDir="false" afterPath="$PROJECT_DIR$/TestCase/test_integration/test_mainprocess.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestCase/test_integration/test_stats.json" beforeDir="false" afterPath="$PROJECT_DIR$/TestCase/test_integration/test_stats.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Toolbox/automatic_recoding.py" beforeDir="false" afterPath="$PROJECT_DIR$/Toolbox/automatic_recoding.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Toolbox/get_token.py" beforeDir="false" afterPath="$PROJECT_DIR$/Toolbox/config_headers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/00a8e695-94de-4e60-ab01-2cf5a5aed8e5-attachment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/00dc10a4-3249-4f93-b087-c71a98d09668-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/015782fc-526c-48e1-9341-0d1509c7d936-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/03abdd53-46a7-48b4-a0be-a5d0a1b7d79f-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/03b95c59-1a25-44ee-b70a-bf5b4bfa1b96-attachment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/0c2efeec-cc8a-42b3-b3f7-757e5867d687-attachment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/0d5d0b2e-bd5e-4c62-952e-b7c9385f1021-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/0d953023-77c6-4f75-9484-99e70911ddaa-attachment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/0f623e13-c1d9-4828-89c2-2edb3f873785-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/110f33ec-67cd-4c38-adc9-3f2e4646ff55-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/116522fc-361c-4eac-9a75-bd7e75724dac-attachment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/11b2c5a9-60aa-4a68-8628-e873829df1b3-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/12bbb385-dd9a-45a7-af43-e2c04b5263e1-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/146045e5-a9a6-4786-9d08-c24a53d7518f-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/1489c4b1-aad0-4575-a567-098e98b25ec5-attachment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/14fa3def-d173-4bd2-b4c3-3d45da900115-attachment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/17500512-8895-4b75-b2e3-60c9090dba65-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/188a4d6d-1748-4f7f-8d43-518bd744ee8b-attachment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/1c8e40c7-391c-4f85-97b2-2a24bb3e1148-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/1e264cb8-a884-4351-991f-58adb21b6b52-attachment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/1e8d9ac5-67c8-407a-a008-dc71d1db3889-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/1e9c00c2-136a-4aae-9b01-4f3f37e69f97-attachment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/1edf6522-668c-4b5c-b309-ec7c7bb4a9fb-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/1ff6ca88-42b1-4922-acfe-f1827bb29e53-attachment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/200f0e28-0b9a-49ce-9fe4-6dd49d19db2e-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/204da1d7-d868-4ac8-ace9-3906ad6c7350-attachment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/219b0520-45a6-411d-a58f-c4f4374b20db-attachment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/22a7d877-fbae-465e-b711-e900d6562724-attachment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/22e6747b-6dfe-41ef-bb86-423e5fcffd21-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/245f841d-4772-4afb-89e4-6340fc92494e-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/289078d8-7927-4907-90d3-43b2125dc282-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/2a6c28a3-030b-4fe8-8025-302a560094ff-attachment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/2ce2ea2c-79ea-4d81-8be8-769c7bf5c01c-attachment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/2f1cc14c-e89b-4a8b-91c1-3e850adf6de3-attachment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/312bc848-1318-4d7f-bbc9-62c41767bea1-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/31e25da5-d697-4b46-90d6-8fe79bbe79b5-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/320d30d4-36cb-433b-b60f-2fd9e93ca8a3-attachment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/34b1ebdb-0918-4ea4-b32c-f31cc22882a5-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/37919d85-a0ea-4340-ac45-89a8bca4a585-attachment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/37d7c0e0-8e96-4a4a-9455-64119d6b2665-attachment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/39bc743d-b1e7-496f-9cf1-a5c491cb88c8-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/3caf229c-8d6d-4928-a870-6421c5e14687-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/3d094ced-eee8-4dd5-8e71-2d69fa477daa-attachment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/3d8f4e73-86af-48cc-9a74-ea48edbf3387-attachment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/3e86f8c2-6718-474e-a792-47cdaf8adca3-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/3fbe04c4-b1e7-4e27-8b5a-02d4dd818f5d-attachment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/444029db-0195-4cd3-a4b8-03efbcced8f4-attachment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/44976f4b-338f-420a-85b6-39264388bbac-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/45e2cd4a-a934-4d74-b2e1-671823cdb3cb-attachment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/49a99aae-c4ba-43f9-aefb-00b2cb075828-attachment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/4a700e25-5663-436e-921f-1886340049ce-attachment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/4ce64f2e-f250-41a9-bbfe-301cdd1f98e5-attachment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/4da02e59-7241-4509-94f0-1425f0233520-attachment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/4ebfccdc-b385-4000-8e76-5c0f7b75fda4-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/52f853c2-1ed4-4320-b047-1b33a58d5c21-attachment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/5452831e-ce24-4e37-8acf-4651ac848de4-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/54a1b6d3-2dce-4141-8369-155e88357fad-attachment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/54f483c2-0bb3-4d61-93ec-82d2dd440dbe-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/57c35e16-836d-49fb-a91e-55aafa026a1d-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/5c0ce3f5-b53c-45ed-9834-0e2543cb71f7-attachment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/5daf6efb-ffa4-4373-adfe-532d44990a0a-attachment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/615a20d4-c621-40a4-b891-97acbaca1697-attachment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/6248d1a7-9cba-4c4d-874b-954125aca8c9-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/63f15eaf-3246-466e-afbb-1758ce9c86dd-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/67779316-7b0d-40a9-ae8c-754d9d2f94e2-attachment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/68767b44-ad53-49e3-be97-3d68f03355be-attachment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/68c1278d-6e77-41a5-a01d-76c62e8618f0-attachment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/68cffbd6-410c-44f2-b720-72ab7c20e5bf-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/69206d93-6f74-4980-bdb2-87ba500e255b-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/6bd62be8-d371-490d-b056-39552ccb510e-attachment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/6db15dbb-017d-4609-b533-33a923992f97-attachment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/6e2427ea-464b-43c8-a549-4de495093f26-attachment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/6e74b1de-75df-4908-bf72-13b44ad83a4f-attachment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/72870c1f-6064-4b17-bd0e-f44dc05ee082-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/746518ba-6725-40d0-b6d2-e7b8aaeac35b-attachment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/74bb0e51-2418-4034-90f8-e74bd35858e5-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/75ffd5de-bbed-46e3-b895-84ca67534841-attachment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/78d42539-5f92-4d64-b066-d7fe31db52a0-attachment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/7bf39731-207b-4a83-a245-02a9fcde684c-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/7c604d85-f382-42bb-b0b4-700f7b3d618e-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/81b16805-2b3e-4d4d-9c16-de5f1d808cbf-attachment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/82f799d0-d559-4a2f-be48-f627f32a5ad0-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/851bd7e6-b138-4b24-9ede-03a59e243e37-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/8784f9de-de77-45e6-8fa0-af4e49877acb-attachment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/8d90901e-619d-4186-ab5c-d0591f98344c-attachment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/8df0cc95-bfb6-49bc-b2a7-ce165aa82537-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/8f6b8956-8d67-48d9-aec4-743a814552d4-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/8fa045c1-d4d4-41b9-8cc4-17bae6bb9242-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/9018c1ed-7c61-4dc2-a023-214d9af8c053-attachment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/909728fc-0c5f-4fc2-937d-b63b24bc87ac-attachment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/92094d71-3a9c-495d-a5d9-c24828fdefa2-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/9945df1a-a1a9-4996-99d3-778c9da587d6-attachment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/9ada28ba-dfcc-47b7-8c26-2687b6cdd941-attachment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/9bdd6620-4c5c-465e-868b-eaa2d752b092-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/9d3d9e91-45d5-404c-8b92-5ad42f086166-attachment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/9dfbdcb5-43e6-49aa-9efc-12d5c1ca8334-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/9ed291ef-5beb-40e5-a7a5-457b7f938a27-attachment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/9f6b7ea4-da2d-4446-b8b2-946aa7a74f02-attachment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/a11c85e9-6b2f-4f92-9b2f-5616a7b01121-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/a1a58837-fe94-4743-96ae-c4a592a12100-attachment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/a59cc4ce-88c6-4403-9294-7e9f89a802c7-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/a64caa93-4433-43eb-b0a9-f5d95268e0a7-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/a66a3b10-3713-43e1-8a50-29c72b0d7fc7-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/a754d57f-48f5-4961-81b6-ebebe3ff26dd-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/a94ed1f9-8719-4ff4-999a-7e05864c20af-attachment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/aa6a81fa-804e-47d7-94f5-316e4497cb7c-attachment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/aab9960b-d239-478d-8445-aae5a6903528-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/ab9717e7-2a91-48ec-a976-b61446d98a39-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/b2f08234-2cd8-42ba-b788-648530efb4f6-attachment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/b3fb40b7-2169-474d-ab17-0426eeab77d5-attachment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/b7634634-015f-4225-93b7-255178845b17-attachment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/bb7dd45d-2ca4-4c73-9640-31c2893c081d-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/bc88fcdd-c5d5-4261-913e-d2892c6f6ebb-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/bddc6310-3e25-4a8c-99c4-96ef03aa82f5-attachment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/be8da160-5b09-46f9-bc1b-3f7ca41bf7c0-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/bf14e75f-c481-410e-920f-ed80c8a99a48-attachment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/c21db0ed-2284-4b41-8fb6-4e31233a0c7f-attachment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/c523afa1-bfc0-4605-ad48-2604aeb4e3e5-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/c57a38aa-8e2f-4a01-ae7f-97f9412e78dd-attachment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/c5e7f1c8-6eec-4919-b1d6-a9cd16a1cc2f-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/c82e3e4a-d863-4fa4-b27a-853bd481a7bf-attachment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/c9c2e9a9-a65a-424e-9719-86325d97fd33-attachment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/d4596a99-9f6d-4672-844a-15ed3bef161c-attachment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/d613d04e-e16b-452d-be97-40edbd12a73d-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/d7889c5c-0959-4dcf-977f-53e58126ac44-attachment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/d7da7afb-1189-4f62-a082-bd8bf61c988c-attachment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/d86c4e75-9092-4f76-823f-f47dbf2148f4-attachment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/d95562d5-ccce-43c0-a245-31d8fe5f87af-attachment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/dae8067c-f93b-4fcc-b4b2-ebd495e2d72c-attachment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/dbde2fae-1b5b-4e00-98d7-90378a3dc6db-attachment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/dc7e55f1-0a9f-4f02-b905-52fe5b622764-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/e20e207a-aa2e-42da-aeaf-86f5f71bf2da-attachment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/e37eadd0-fd0b-480c-94c6-6b064fb9687e-attachment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/e4847e2a-224e-4034-833b-c64886ad25e8-attachment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/e4b2787f-a43d-4e75-b71c-080d99d0e554-attachment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/e4ebb2a2-ea49-4e40-b908-597db33c7077-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/ecd296cb-d671-4516-816a-6d85a4b3f7a3-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/ed623dd4-0335-4fa4-ada4-c14a37d3c5d2-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/ef73204d-b1c5-43fb-98af-c803427ee4d5-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/f0c6ff1a-55cf-4ead-bf0b-d77121e30dd2-attachment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/f54844df-120f-471b-a96a-272ba60cebc2-attachment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/f81c066b-93a6-4c73-8657-58d6e007ce60-attachment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/f91aa1dc-7aa2-4f45-9935-10000a8677e7-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/fb12bdc5-2c32-4146-b97e-9f0a7d665312-attachment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/fb39f6c9-c47e-44d7-bad8-1b47a466de56-attachment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/fb5a9fef-530b-4a07-9f08-c908d0aea1cb-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/fb601923-05c9-476e-80a6-9350456c7056-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/fcf09c9a-5f47-4c35-b5f1-903511c47453-attachment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/ff666fae-7313-44f8-9dc1-66b415926587-attachment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/ff885a06-c891-49bf-819c-40902cb0d81a-attachment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/ffe4b89e-651d-4e84-8fbf-aa1e4020ee32-attachment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_execute.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_execute.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.in" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.in" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run.log" beforeDir="false" afterPath="$PROJECT_DIR$/run.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_server.py" beforeDir="false" afterPath="$PROJECT_DIR$/web_server.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,8 +247,8 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/main1.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/Business/mom_admin/factory_modeling/product_materials.py" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Business/mom_admin/lighting_management/lighting_configuration.py" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
@@ -96,9 +273,12 @@
     "Python 测试.pytest (test_mainprocess.py 内).executor": "Run",
     "Python 测试.pytest (test_plant_layout.py 内).executor": "Run",
     "Python 测试.pytest (test_process_related.py 内).executor": "Debug",
+    "Python 测试.pytest (web_server.py 内).executor": "Run",
     "Python.QC_scheme.executor": "Run",
     "Python.automatic_recoding.executor": "Run",
     "Python.call_processing.executor": "Run",
+    "Python.configuration_management.executor": "Run",
+    "Python.debug_mainprocess (1).executor": "Run",
     "Python.debug_mainprocess.executor": "Run",
     "Python.delete_data.executor": "Run",
     "Python.equipment_ledger_management.executor": "Run",
@@ -124,7 +304,7 @@
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "D:/apiAutomationRH",
+    "last_opened_file_path": "C:/RH-ZHICE1.0",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -143,8 +323,8 @@
       <recent name="D:\apiAutomationRH\Business\mom_admin\login" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.web_server">
-    <configuration name="call_processing" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python 测试.pytest (web_server.py 内)">
+    <configuration name="debug_mainprocess (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="apiAutomationRH" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -153,35 +333,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Business/mom_admin/lighting_management" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/TestCase/test_integration" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Business/mom_admin/lighting_management/call_processing.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="debug_mainprocess" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="apiAutomationRH" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/TestCase/integration_tests" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/TestCase/integration_tests/debug_mainprocess.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/TestCase/test_integration/debug_mainprocess.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -213,7 +370,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="web_server" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="product_materials" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="apiAutomationRH" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -222,12 +379,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Business/mom_admin/factory_modeling" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/web_server.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Business/mom_admin/factory_modeling/product_materials.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -236,7 +393,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="pytest (C:/RHAPI/TestCase/functional_tests/test_factory_modeling/test_process_related.py 内)" type="tests" factoryName="py.test" nameIsGenerated="true">
+    <configuration name="pytest (C:/RH-ZHICE1.0/TestCase/functional_tests/test_factory_modeling/test_process_related.py 内)" type="tests" factoryName="py.test" nameIsGenerated="true">
       <module name="apiAutomation(ruiHui)" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -272,21 +429,39 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
+    <configuration name="pytest (web_server.py 内)" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="apiAutomationRH" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/web_server.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
     <list>
-      <item itemvalue="Python.web_server" />
-      <item itemvalue="Python.call_processing" />
-      <item itemvalue="Python.debug_mainprocess" />
+      <item itemvalue="Python.product_materials" />
+      <item itemvalue="Python.debug_mainprocess (1)" />
       <item itemvalue="Python.main_execute" />
-      <item itemvalue="Python 测试.pytest (C:/RHAPI/TestCase/functional_tests/test_factory_modeling/test_process_related.py 内)" />
+      <item itemvalue="Python 测试.pytest (C:/RH-ZHICE1.0/TestCase/functional_tests/test_factory_modeling/test_process_related.py 内)" />
+      <item itemvalue="Python 测试.pytest (web_server.py 内)" />
       <item itemvalue="Python 测试.pytest (test_mainprocess.py 内)" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.web_server" />
-        <item itemvalue="Python.main_execute" />
-        <item itemvalue="Python.debug_mainprocess" />
+        <item itemvalue="Python 测试.pytest (web_server.py 内)" />
         <item itemvalue="Python 测试.pytest (test_mainprocess.py 内)" />
-        <item itemvalue="Python.call_processing" />
+        <item itemvalue="Python.product_materials" />
+        <item itemvalue="Python.main_execute" />
+        <item itemvalue="Python.debug_mainprocess (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -352,7 +527,18 @@
       <workItem from="1752308109031" duration="3752000" />
       <workItem from="1752381449256" duration="16805000" />
       <workItem from="1752398738827" duration="8276000" />
-      <workItem from="1752460113953" duration="2143000" />
+      <workItem from="1752460113953" duration="3146000" />
+      <workItem from="1752463644850" duration="673000" />
+      <workItem from="1752471257806" duration="1363000" />
+      <workItem from="1752546521843" duration="31000" />
+      <workItem from="1752645360363" duration="798000" />
+      <workItem from="1752712973811" duration="286000" />
+      <workItem from="1752803575764" duration="2801000" />
+      <workItem from="1752807051581" duration="128000" />
+      <workItem from="1752808316516" duration="4282000" />
+      <workItem from="1752818522506" duration="3615000" />
+      <workItem from="1753057328326" duration="29861000" />
+      <workItem from="1753154271827" duration="5303000" />
     </task>
     <task id="LOCAL-00001" summary="新增获取token并验证工具  修改框架结构">
       <created>1745997741106</created>
@@ -480,13 +666,6 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/TestCase/test_integration/test_mainprocess.py</url>
-          <line>531</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-      </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
           <properties notifyOnTerminate="true" exception="BaseException">
@@ -498,6 +677,8 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/apiAutomationRH$production_process.coverage" NAME="production_process 覆盖结果" MODIFIED="1748515799461" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Business/mom_admin/factory_modeling" />
+    <SUITE FILE_PATH="coverage/RHAPI__V1_0_0$configuration_management.coverage" NAME="configuration_management 覆盖结果" MODIFIED="1752646109114" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Business/mom_admin/system_management" />
+    <SUITE FILE_PATH="coverage/RH_ZHICE1_0$pytest__web_server_py__.coverage" NAME="pytest (web_server.py 内) 覆盖结果" MODIFIED="1753162435828" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/apiAutomationRH$mom.coverage" NAME="mom 覆盖结果" MODIFIED="1748567744846" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Public/address" />
     <SUITE FILE_PATH="coverage/apiAutomationRH$product_materials.coverage" NAME="product_materials 覆盖结果" MODIFIED="1748513046947" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Business/mom_admin/factory_modeling" />
     <SUITE FILE_PATH="coverage/apiAutomationRH$delete_data.coverage" NAME="delete_data 覆盖结果" MODIFIED="1748573659690" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Toolbox" />
@@ -505,8 +686,14 @@
     <SUITE FILE_PATH="coverage/RHAPI$debug_mainprocess.coverage" NAME="debug_mainprocess 覆盖结果" MODIFIED="1752304142373" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TestCase/integration_tests" />
     <SUITE FILE_PATH="coverage/apiAutomationRH$pytest__test_plant_layout_py__.coverage" NAME="pytest (test_plant_layout.py 内) 覆盖结果" MODIFIED="1748590199256" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TestCase/functional_tests/test_factory_modeling" />
     <SUITE FILE_PATH="coverage/RHAPI$web_server.coverage" NAME="web_server 覆盖结果" MODIFIED="1752461193797" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/RH_ZHICE1_0$debug_mainprocess__1_.coverage" NAME="debug_mainprocess (1) 覆盖结果" MODIFIED="1753077589586" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TestCase/test_integration" />
     <SUITE FILE_PATH="coverage/apiAutomationRH$pie_chart.coverage" NAME="pie_chart 覆盖结果" MODIFIED="1749110918215" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Toolbox" />
+    <SUITE FILE_PATH="coverage/RH_ZHICE1_0$main_execute.coverage" NAME="main_execute 覆盖结果" MODIFIED="1753079051976" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/RH_ZHICE1_0$web_server.coverage" NAME="web_server 覆盖结果" MODIFIED="1753075575506" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/RHAPI$main_execute.coverage" NAME="main_execute 覆盖结果" MODIFIED="1752391959921" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/RHAPI__V1_0_0$web_server.coverage" NAME="web_server 覆盖结果" MODIFIED="1752712991925" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/RH_ZHICE1_0$product_materials.coverage" NAME="product_materials 覆盖结果" MODIFIED="1753081716090" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Business/mom_admin/factory_modeling" />
+    <SUITE FILE_PATH="coverage/RH_ZHICE1_0$pytest__test_mainprocess_py__.coverage" NAME="pytest (test_mainprocess.py 内) 覆盖结果" MODIFIED="1753082755573" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TestCase/test_integration" />
     <SUITE FILE_PATH="coverage/apiAutomationRH$factory_model.coverage" NAME="factory_model 覆盖结果" MODIFIED="1748590106202" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Business/mom_admin/production_modeling" />
     <SUITE FILE_PATH="coverage/apiAutomationRH$equipment_ledger_management.coverage" NAME="equipment_ledger_management 覆盖结果" MODIFIED="1748571130880" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Business/mom_admin/equipment_management/equipment_ledger" />
     <SUITE FILE_PATH="coverage/apiAutomationRH$main1.coverage" NAME="main1 覆盖结果" MODIFIED="1748591496858" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

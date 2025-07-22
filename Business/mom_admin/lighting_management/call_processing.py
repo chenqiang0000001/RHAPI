@@ -1,19 +1,17 @@
 import requests
-from Public.address.mom import *
+from Public.address.mom import get_url, apiStoreAndonCallDataRecordsData, apiResponseAndonCallDataRecordsData, apiStartProcessAndonCallDataRecordsData, apiEndProcessAndonCallDataRecordsData, apiConfirmAndonCallDataRecordsData
 from Toolbox.log_module import Logger
 from Public.variables.mom_admin.factory_modeling import *
-from Toolbox.get_token import get_token
+from Toolbox.config_headers import get_headers
 
 class AndenCallProcessing:
     """
     安灯呼叫与处理
     """
-    def __init__(self):
-        authorization = get_token()
-        self.headers = {
-            "authorization": authorization
-        }
+    def __init__(self, timezone=None):
+        self.headers = get_headers(timezone=timezone)
         self.logger = Logger(name="AndenCallProcessing").get_logger()
+        self.url = get_url()
 
     def StoreAndonCallDataRecordsData(self,ProductionPlanCode):
         """
@@ -41,7 +39,7 @@ class AndenCallProcessing:
             "CompanyCode": "00000",
             "FactoryCode": "00000.00001"
         }
-        urlStoreAndonCallDataRecordsData = url + apiStoreAndonCallDataRecordsData
+        urlStoreAndonCallDataRecordsData = self.url + apiStoreAndonCallDataRecordsData
         try:
             response = requests.post(url=urlStoreAndonCallDataRecordsData, headers=self.headers, json=uploads)
             response.raise_for_status()
@@ -103,7 +101,7 @@ class AndenCallProcessing:
             },
             "Id": call_out_id,
         }
-        urlResponseAndonCallDataRecordsData = url + apiResponseAndonCallDataRecordsData
+        urlResponseAndonCallDataRecordsData = self.url + apiResponseAndonCallDataRecordsData
         try:
             response = requests.post(url=urlResponseAndonCallDataRecordsData, headers=self.headers, json=uploads)
             response.raise_for_status()
@@ -179,7 +177,7 @@ class AndenCallProcessing:
             "__endProcess": False,
             "OpSign": 2
         }
-        urlStartProcessAndonCallDataRecordsData = url + apiStartProcessAndonCallDataRecordsData
+        urlStartProcessAndonCallDataRecordsData = self.url + apiStartProcessAndonCallDataRecordsData
         try:
             response = requests.post(url=urlStartProcessAndonCallDataRecordsData, headers=self.headers, json=uploads)
             response.raise_for_status()
@@ -267,7 +265,7 @@ class AndenCallProcessing:
             "__endProcess_disable": False,
             "OpSign": 2
         }
-        urlEndProcessAndonCallDataRecordsData = url + apiEndProcessAndonCallDataRecordsData
+        urlEndProcessAndonCallDataRecordsData = self.url + apiEndProcessAndonCallDataRecordsData
         try:
             response = requests.post(url=urlEndProcessAndonCallDataRecordsData, headers=self.headers, json=uploads)
             response.raise_for_status()
@@ -346,7 +344,7 @@ class AndenCallProcessing:
             "__confirm": True,
             "__confirm_disable": False
         }
-        urlConfirmAndonCallDataRecordsData = url + apiConfirmAndonCallDataRecordsData
+        urlConfirmAndonCallDataRecordsData = self.url + apiConfirmAndonCallDataRecordsData
         try:
             response = requests.post(url=urlConfirmAndonCallDataRecordsData, headers=self.headers, json=uploads)
             response.raise_for_status()

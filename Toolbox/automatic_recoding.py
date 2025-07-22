@@ -3,13 +3,14 @@ import random
 import time
 import json
 from datetime import datetime, timedelta
-from get_token import get_token
+from config_headers import get_token
+from Toolbox.config_headers import get_headers
 
 class AutomaticRecodingTool:
     """
     SPC自动数据录入工具类
     """
-    def __init__(self):
+    def __init__(self, timezone=None):
         # 配置项
         self.config = {
             # API地址配置
@@ -51,11 +52,7 @@ class AutomaticRecodingTool:
         "record_interval": 28     # 每次提交间隔时间(秒)
         }
         # 请求头
-        self.headers = {
-            "Content-Type": "application/json",
-            "Authorization": get_token()
-            # 如需认证，请在此处添加Authorization头
-        }
+        self.headers = get_headers(timezone=timezone)
 
     def generate_random_data(self, count):
         """生成指定数量的随机数值"""

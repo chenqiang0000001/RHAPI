@@ -1,19 +1,17 @@
 import requests
-from Public.address.mom import *
+from Public.address.mom import get_url, apiStoreWorkShopInfoData, apiStoreProductionLineData, apiRemoveWorkShopInfoData, apiRemoveProductionLineData, apiGetAllProductionLineAutoQueryDatas, apiGetAllWorkShopInfoAutoQueryDatas
 from Toolbox.log_module import Logger
 from Public.variables.mom_admin.factory_modeling import *
-from Toolbox.get_token import get_token
+from Toolbox.config_headers import get_headers
 
 class FactoryModel:
     """
     工厂建模相关接口
     """
-    def __init__(self):
-        authorization = get_token()
-        self.headers = {
-            "authorization": authorization
-        }
+    def __init__(self, timezone=None):
+        self.headers = get_headers(timezone=timezone)
         self.logger = Logger(name="FactoryModel").get_logger()
+        self.url = get_url()
 
     def storeOrganizationStructureData(self,OrganizationStructureCode=OrganizationStructureCode, OrganizationStructureName=OrganizationStructureName):
         """
@@ -35,7 +33,7 @@ class FactoryModel:
             "CompanyCode": "00000",
             "FactoryCode": "00000.00001"
         }
-        urlStoreWorkShopInfoData = testUrl + apiStoreWorkShopInfoData
+        urlStoreWorkShopInfoData = self.url + apiStoreWorkShopInfoData
         try:
             response = requests.post(url=urlStoreWorkShopInfoData, headers=self.headers, json=uploads)
             response.raise_for_status()
@@ -60,7 +58,7 @@ class FactoryModel:
             "CompanyCode": "00000",
             "FactoryCode": "00000.00001"
         }
-        urlGetAllWorkShopInfoAutoQueryDatas = testUrl + apiGetAllWorkShopInfoAutoQueryDatas
+        urlGetAllWorkShopInfoAutoQueryDatas = self.url + apiGetAllWorkShopInfoAutoQueryDatas
         try:
             response = requests.post(url=urlGetAllWorkShopInfoAutoQueryDatas, headers=self.headers, json=uploads)
             response.raise_for_status()
@@ -102,7 +100,7 @@ class FactoryModel:
             "__parameterConfig": True,
             "__parameterConfig_disable": False
         }
-        urlRemoveWorkShopInfoData = testUrl + apiRemoveWorkShopInfoData
+        urlRemoveWorkShopInfoData = self.url + apiRemoveWorkShopInfoData
         try:
             response = requests.post(url=urlRemoveWorkShopInfoData, headers=self.headers, json=uploads)
             response.raise_for_status()
@@ -133,7 +131,7 @@ class FactoryModel:
             "CompanyCode": "00000",
             "FactoryCode": "00000.00001"
         }
-        urlStoreProductionLineData = testUrl + apiStoreProductionLineData
+        urlStoreProductionLineData = self.url + apiStoreProductionLineData
         try:
             response = requests.post(url=urlStoreProductionLineData, headers=self.headers, json=uploads)
             response.raise_for_status()
@@ -154,7 +152,7 @@ class FactoryModel:
             "PageSize": 10,
             "PageIndex": 1,
            }
-        urlGetAllProductionLineAutoQueryDatas = testUrl + apiGetAllProductionLineAutoQueryDatas
+        urlGetAllProductionLineAutoQueryDatas = self.url + apiGetAllProductionLineAutoQueryDatas
         try:
             response = requests.post(url=urlGetAllProductionLineAutoQueryDatas, headers=self.headers, json=uploads)
             response.raise_for_status()
@@ -180,7 +178,7 @@ class FactoryModel:
             "FactoryCode": "00000.00001"
             }
 
-        urlRemoveProductionLineData = testUrl + apiRemoveProductionLineData
+        urlRemoveProductionLineData = self.url + apiRemoveProductionLineData
         try:
             response = requests.post(url=urlRemoveProductionLineData, headers=self.headers, json=uploads)
             response.raise_for_status()

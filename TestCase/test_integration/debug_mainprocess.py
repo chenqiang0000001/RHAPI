@@ -337,7 +337,7 @@ class DebugMainProcess:
             # test_17: 新增ESOP文件
             print("test_17: 新增ESOP文件")
             response = self.sop.uploadProductProcessDocumentation(
-                file_path=r"D:\apiAutomationRH\test.pdf"
+                file_path=r"C:\RH-ZHICE1.0\test.pdf"
             )
             if response and response.json().get('Success') == True:
                 print("✓ 新增ESOP文件成功")
@@ -372,7 +372,7 @@ class DebugMainProcess:
             # test_19: 新增工艺路线ESOP文件
             print("test_19: 新增工艺路线ESOP文件")
             response = self.sop.uploadProductProcessDocumentation(
-                file_path=r"D:\apiAutomationRH\test.pdf",
+                file_path=r"C:\RH-ZHICE1.0\test.pdf",
                 material_code=MaterialCode,
                 process_routing_code=ProcessRoutingCode,
                 process_code=ProcessCode,

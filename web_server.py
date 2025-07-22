@@ -2,20 +2,25 @@ import os
 import subprocess
 import threading
 import signal
-from flask import Flask, send_from_directory, render_template_string, jsonify, Response, request, redirect, url_for, session
+from flask import Flask, send_from_directory, render_template_string, jsonify, Response, request, redirect, url_for, \
+    session, current_app
 import glob
 import json
 from apscheduler.schedulers.background import BackgroundScheduler
 from apscheduler.triggers.cron import CronTrigger
 import atexit
 import uuid
+from Toolbox.config_headers import COMMON_TIMEZONES
+import tzlocal
+import yaml
+import requests
 
 app = Flask(__name__)
 app.secret_key = 'rh_secret_key_2024'  # 用于session
 
 REPORT_ROOT = "allure-report"
 MAIN_EXEC = "main_execute.py"
-LOG_FILE = "run.log"
+LOG_FILE = "Log/run.log"
 
 # 保存当前运行的进程对象
 from typing import Optional
@@ -30,6 +35,49 @@ SCHEDULE_CONFIG_FILE = 'schedule_config.json'
 scheduler = BackgroundScheduler()
 scheduler.start()
 atexit.register(lambda: scheduler.shutdown(wait=False))
+
+CONFIG_YAML = 'config.yaml'
+
+def get_current_env():
+    with open(CONFIG_YAML, 'r', encoding='utf-8') as f:
+        config = yaml.safe_load(f)
+    return config.get('environment', {}).get('current', 'test')
+
+def set_current_env(env):
+    with open(CONFIG_YAML, 'r', encoding='utf-8') as f:
+        config = yaml.safe_load(f)
+    config.setdefault('environment', {})['current'] = env
+    with open(CONFIG_YAML, 'w', encoding='utf-8') as f:
+        yaml.safe_dump(config, f, allow_unicode=True)
+
+def check_api_available(url):
+    try:
+        health_url = url.rstrip('/') + '/account/login'
+        resp = requests.post(health_url, json={}, timeout=3)
+        return True, ''
+    except Exception as e:
+        return False, str(e)
+
+@app.route('/api/env', methods=['GET'])
+def api_get_env():
+    return jsonify({'env': get_current_env()})
+
+@app.route('/api/env', methods=['POST'])
+def api_set_env():
+    env = request.json.get('env')
+    if env not in ['test', 'formal']:
+        return jsonify({'error': 'Invalid env'}), 400
+    # 读取目标环境URL
+    with open(CONFIG_YAML, 'r', encoding='utf-8') as f:
+        config = yaml.safe_load(f)
+    url = config['environment'].get(f'{env}_url') or config['environment'].get(f'{env}_url'.upper())
+    if not url:
+        return jsonify({'error': f'未配置{env}_url'}), 400
+    ok, msg = check_api_available(url)
+    if not ok:
+        return jsonify({'error': f'环境{env}接口不可用: {msg}'}), 400
+    set_current_env(env)
+    return jsonify({'success': True})
 
 def load_schedule_config():
     if os.path.exists(SCHEDULE_CONFIG_FILE):
@@ -103,6 +151,24 @@ def get_report_case_count(report_dir):
     except Exception:
         pass
     return 0
+
+def get_timezone_display(tz):
+    # 简单映射，可根据需要扩展
+    mapping = {
+        'Asia/Shanghai': '东八区',
+        'UTC': '零时区',
+        'Asia/Tokyo': '东京',
+        'Asia/Seoul': '首尔',
+        'Europe/London': '伦敦',
+        'Europe/Berlin': '柏林',
+        'America/New_York': '纽约',
+        'America/Los_Angeles': '洛杉矶',
+        'Australia/Sydney': '悉尼',
+        'Asia/Kolkata': '印度',
+        'Asia/Bangkok': '东七区',
+        'Asia/Jakarta': '东七区'
+    }
+    return mapping.get(tz, tz)
 
 @app.route(f"/{LOGO_FILENAME}")
 def logo():
@@ -303,6 +369,8 @@ body { margin:0; font-family: 'Segoe UI', 'Arial', 'PingFang SC', 'Microsoft YaH
     <ul class="menu-list">
         <li onclick="location.href='/'" class="active">测试面板</li>
         <li onclick="location.href='/schedule'">定时任务</li>
+        <li onclick="location.href='/env-manage'">环境管理</li>
+        <li onclick="location.href='/system-config'">系统配置</li>
         <li onclick="location.href='/logout'">退出登录</li>
     </ul>
 </div>
@@ -351,6 +419,12 @@ document.addEventListener('DOMContentLoaded', function() {
         loadLog();
         if(currentLog === 'run.log') startLog();
     });
+    // 页面加载时自动检测是否有最新报告，有则显示按钮
+    fetch('/latest-report').then(r=>r.json()).then(data=>{
+        if(data.url){
+            document.getElementById('reportBtn').style.display = '';
+        }
+    });
 });
 function loadLog() {
     fetch(`/log?filename=${encodeURIComponent(currentLog)}`).then(r=>r.text()).then(txt=>{
@@ -382,23 +456,24 @@ function stopTest() {
     fetch('/stop-tests', {method: 'POST'})
     .then(r => r.json())
     .then(data => {
-        if(data.success){
-            document.getElementById('msg').innerText = '已请求停止';
-        }else{
-            document.getElementById('msg').innerText = '停止失败：' + data.error;
-        }
+        document.getElementById('msg').innerText = '测试已停止！';
+        // 停止后也检测报告
+        fetch('/latest-report').then(r=>r.json()).then(data=>{
+            if(data.url){
+                document.getElementById('reportBtn').style.display = '';
+            }
+        });
+        document.getElementById('runBtn').disabled = false;
         document.getElementById('stopBtn').disabled = true;
+        running = false;
     });
 }
 function startLog() {
     if(logTimer) clearInterval(logTimer);
     logTimer = setInterval(()=>{
-        if(currentLog !== 'run.log') { clearInterval(logTimer); return; }
-        fetch(`/log?filename=run.log`).then(r=>r.text()).then(txt=>{
-            let logElem = document.getElementById('log');
-            logElem.innerText = txt;
-            logElem.scrollTop = logElem.scrollHeight;
-            if(txt.includes('===TEST_FINISHED===')) {
+        loadLog();
+        fetch('/latest-report').then(r=>r.json()).then(data=>{
+            if(data.url){
                 clearInterval(logTimer);
                 document.getElementById('msg').innerText = '测试已完成！';
                 document.getElementById('reportBtn').style.display = '';
@@ -431,9 +506,20 @@ if(currentLog === 'run.log') startLog();
 
 @app.route("/run-tests", methods=["POST"])
 def run_tests():
+    # 检查当前环境接口可用性
+    with open(CONFIG_YAML, 'r', encoding='utf-8') as f:
+        config = yaml.safe_load(f)
+    env = config.get('environment', {}).get('current', 'test')
+    url = config['environment'].get(f'{env}_url') or config['environment'].get(f'{env}_url'.upper())
+    if not url:
+        return jsonify({'success': False, 'error': f'未配置{env}_url'}), 400
+    ok, msg = check_api_available(url)
+    if not ok:
+        return jsonify({'success': False, 'error': f'当前环境接口不可用: {msg}'}), 400
     def run_script():
         try:
-            with open(LOG_FILE, 'w', encoding='utf-8') as f:
+            log_path = os.path.join(os.getcwd(), LOG_FILE)
+            with open(log_path, 'w', encoding='utf-8') as f:
                 f.write('')
         except Exception:
             pass
@@ -466,10 +552,9 @@ def stop_tests():
 
 @app.route("/logs/list")
 def list_logs():
-    log_files = glob.glob(os.path.join("Log", "*.log"))
+    os.makedirs(os.path.join(os.getcwd(), "Log"), exist_ok=True)
+    log_files = glob.glob(os.path.join(os.getcwd(), "Log", "*.log"))
     log_files = [os.path.basename(f) for f in log_files]
-    if os.path.exists("run.log"):
-        log_files = ["run.log"] + [f for f in log_files if f != "run.log"]
     return jsonify({"logs": log_files})
 
 @app.route("/reports/list")
@@ -486,16 +571,50 @@ def list_reports():
 @app.route("/log")
 def get_log():
     filename = request.args.get("filename", "run.log")
-    if filename == "run.log":
-        path = "run.log"
+    content = ''
+    
+    # 初始化日志目录路径
+    log_dir = os.path.join(os.getcwd(), 'Log')  # 固定日志目录到项目根目录下的Log文件夹
+    os.makedirs(log_dir, exist_ok=True)
+    current_app.config['LOG_DIR'] = log_dir
+    
+    if filename == 'directory':
+        if os.path.isdir(log_dir):
+            log_files = sorted(
+                [f for f in os.listdir(log_dir) if f.endswith('.log')],
+                key=lambda x: os.path.getmtime(os.path.join(log_dir, x)),
+                reverse=True
+            )
+            for log_file in log_files:
+                file_path = os.path.join(log_dir, log_file)
+                if os.path.isfile(file_path):
+                    try:
+                        with open(file_path, 'r', encoding='utf-8', errors='ignore') as f:
+                            content += f'\n=== {log_file} ===\n'
+                            content += f.read()
+                    except Exception as e:
+                        continue
     else:
-        path = os.path.join("Log", filename)
-    try:
-        with open(path, "r", encoding="utf-8") as f:
-            content = f.read()[-5000:]
-        return Response(content, mimetype="text/plain; charset=utf-8")
-    except Exception as e:
-        return Response(str(e), mimetype="text/plain; charset=utf-8")
+        # 添加路径合法性检查
+        if not filename or '/' in filename or '\\' in filename:
+            return '非法文件名', 400
+            
+        file_path = os.path.join(log_dir, filename)
+        if os.path.exists(file_path):
+            try:
+                with open(file_path, 'r', encoding='utf-8', errors='ignore') as f:
+                    content = f.read()
+                return content
+            except PermissionError as pe:
+                app.logger.error(f"Permission denied: {str(pe)}")
+                return "无权限访问日志文件"
+            except Exception as e:
+                return f"日志读取失败: {e}"
+        return content
+
+@app.route('/test-status')
+def test_status():
+    return jsonify({'running': current_process['proc'].poll() is None if current_process else False})
 
 @app.route("/latest-report")
 def latest_report():
@@ -562,6 +681,8 @@ input:checked + .slider:before { transform:translateX(24px); }
     <ul class="menu-list">
         <li onclick="location.href='/'">测试面板</li>
         <li onclick="location.href='/schedule'" class="active">定时任务</li>
+        <li onclick="location.href='/env-manage'">环境管理</li>
+        <li onclick="location.href='/system-config'">系统配置</li>
         <li onclick="location.href='/logout'">退出登录</li>
     </ul>
 </div>
@@ -731,5 +852,162 @@ def schedule_task_toggle():
     update_scheduler()
     return jsonify({"success": True, "msg": "任务状态已更新"})
 
+@app.route("/env-manage", methods=["GET"])
+def env_manage():
+    if 'user' not in session:
+        return redirect(url_for('login'))
+    return render_template_string('''
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>环境管理 - 瑞辉智测平台</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/png" href="/RH_logo.png">
+<style>
+body { margin:0; font-family: 'Segoe UI', 'Arial', 'PingFang SC', 'Microsoft YaHei', sans-serif; background: #f5fafd; }
+.navbar { width:100%; height:60px; background:rgba(173,216,230,0.9); display:flex; align-items:center; padding:0 30px; box-shadow:0 2px 10px rgba(0,0,0,0.1); }
+.navbar-title { color:white; font-size:1.5rem; font-weight:600; letter-spacing:1px; }
+.menu { width:220px; background:#0d2236; min-height:100vh; position:fixed; top:0; left:0; color:#fff; }
+.menu-title { font-size:1.3rem; font-weight:600; padding:30px 0 20px 0; text-align:center; letter-spacing:2px; }
+.menu-list { list-style:none; padding:0; margin:0; }
+.menu-list li { padding:18px 40px; cursor:pointer; font-size:1.1rem; transition:background 0.2s; }
+.menu-list li.active, .menu-list li:hover { background:#1976d2; color:#fff; }
+.main { margin-left:220px; padding:40px 20px; max-width:700px; }
+.panel { background:#fff; border-radius:18px; box-shadow:0 4px 24px rgba(0,0,0,0.08); padding:40px; }
+.panel-title { font-size:1.6rem; font-weight:600; color:#1976d2; margin-bottom:30px; text-align:center; }
+.btn { padding:10px 32px; border:none; border-radius:10px; background:#1976d2; color:white; font-size:1.1rem; font-weight:600; cursor:pointer; transition:background 0.2s; }
+.btn:disabled { opacity:0.6; cursor:not-allowed; }
+</style>
+</head>
+<body>
+<div class="navbar"><div class="navbar-title">瑞辉智测平台</div></div>
+<div class="menu">
+    <div class="menu-title">瑞辉智测平台</div>
+    <ul class="menu-list">
+        <li onclick="location.href='/'">测试面板</li>
+        <li onclick="location.href='/schedule'">定时任务</li>
+        <li onclick="location.href='/env-manage'" class="active">环境管理</li>
+        <li onclick="location.href='/system-config'">系统配置</li>
+        <li onclick="location.href='/logout'">退出登录</li>
+    </ul>
+</div>
+<div class="main">
+    <div class="panel">
+        <div class="panel-title">环境管理</div>
+        <form id="envForm">
+          <label><input type="radio" name="env" value="test"> 测试环境</label>
+          <label><input type="radio" name="env" value="formal"> 正式环境</label>
+          <button class="btn" type="submit">保存</button>
+        </form>
+        <script>
+        fetch('/api/env').then(r=>r.json()).then(data=>{
+          document.querySelector(`input[name=\"env\"][value=\"${data.env}\"]`).checked = true;
+        });
+        document.getElementById('envForm').onsubmit = function(e){
+          e.preventDefault();
+          const env = document.querySelector('input[name="env"]:checked').value;
+          fetch('/api/env', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({env})
+          }).then(r=>r.json()).then(data=>{
+            if(data.success) alert('环境已切换');
+            else alert('切换失败');
+          });
+        };
+        </script>
+    </div>
+</div>
+</body></html>
+''')
+
+@app.route("/system-config", methods=["GET", "POST"])
+def system_config():
+    if 'user' not in session:
+        return redirect(url_for('login'))
+    # 处理POST
+    if request.method == 'POST':
+        tz = request.form.get('timezone')
+        if tz == 'auto':
+            session.pop('user_timezone', None)
+        elif tz:
+            session['user_timezone'] = tz
+    # 获取当前设备时区
+    try:
+        device_tz = tzlocal.get_localzone_name()
+    except Exception:
+        device_tz = 'Asia/Shanghai'
+    device_tz_display = get_timezone_display(device_tz)
+    # 当前生效时区
+    current_tz = session.get('user_timezone') or device_tz
+    current_tz_display = get_timezone_display(current_tz)
+    # 构造下拉列表
+    tz_options = [('auto', f'自动获取设备时区（当前：{device_tz}，{device_tz_display}）')]
+    for tz in COMMON_TIMEZONES:
+        label = tz
+        remark = get_timezone_display(tz)
+        if remark != tz:
+            label = f'{tz}（{remark}）'
+        tz_options.append((tz, label))
+    return render_template_string('''
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>系统配置 - 瑞辉智测平台</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/png" href="/RH_logo.png">
+<style>
+body { margin:0; font-family: 'Segoe UI', 'Arial', 'PingFang SC', 'Microsoft YaHei', sans-serif; background: #f5fafd; }
+.navbar { width:100%; height:60px; background:rgba(173,216,230,0.9); display:flex; align-items:center; padding:0 30px; box-shadow:0 2px 10px rgba(0,0,0,0.1); }
+.navbar-title { color:white; font-size:1.5rem; font-weight:600; letter-spacing:1px; }
+.menu { width:220px; background:#0d2236; min-height:100vh; position:fixed; top:0; left:0; color:#fff; }
+.menu-title { font-size:1.3rem; font-weight:600; padding:30px 0 20px 0; text-align:center; letter-spacing:2px; }
+.menu-list { list-style:none; padding:0; margin:0; }
+.menu-list li { padding:18px 40px; cursor:pointer; font-size:1.1rem; transition:background 0.2s; }
+.menu-list li.active, .menu-list li:hover { background:#1976d2; color:#fff; }
+.main { margin-left:220px; padding:40px 20px; max-width:700px; }
+.panel { background:#fff; border-radius:18px; box-shadow:0 4px 24px rgba(0,0,0,0.08); padding:40px; }
+.panel-title { font-size:1.6rem; font-weight:600; color:#1976d2; margin-bottom:30px; text-align:center; }
+.form-row { display:flex; align-items:center; margin-bottom:18px; }
+.form-label { width:120px; font-size:1.1rem; color:#1976d2; }
+select { padding:8px 16px; border-radius:8px; border:1px solid #bbdefb; font-size:1rem; margin-right:16px; }
+.btn { padding:10px 32px; border:none; border-radius:10px; background:#1976d2; color:white; font-size:1.1rem; font-weight:600; cursor:pointer; transition:background 0.2s; }
+.btn:disabled { opacity:0.6; cursor:not-allowed; }
+</style>
+</head>
+<body>
+<div class="navbar"><div class="navbar-title">瑞辉智测平台</div></div>
+<div class="menu">
+    <div class="menu-title">瑞辉智测平台</div>
+    <ul class="menu-list">
+        <li onclick="location.href='/'">测试面板</li>
+        <li onclick="location.href='/schedule'">定时任务</li>
+        <li onclick="location.href='/env-manage'">环境管理</li>
+        <li onclick="location.href='/system-config'" class="active">系统配置</li>
+        <li onclick="location.href='/logout'">退出登录</li>
+    </ul>
+</div>
+<div class="main">
+    <div class="panel">
+        <div class="panel-title">系统配置</div>
+        <form method="post">
+            <div class="form-row">
+                <span class="form-label">切换用户所在时区</span>
+                <select name="timezone">
+                    {% for val, label in tz_options %}
+                    <option value="{{ val }}" {% if (val == 'auto' and not session_tz) or (val == session_tz) %}selected{% endif %}>{{ label }}</option>
+                    {% endfor %}
+                </select>
+                <button class="btn" type="submit">保存</button>
+            </div>
+            <div style="margin-top:18px; color:#1976d2;">当前时区：<b>{{ current_tz }}（{{ current_tz_display }}）</b></div>
+        </form>
+    </div>
+</div>
+</body></html>
+''', tz_options=tz_options, current_tz=current_tz, current_tz_display=current_tz_display, session_tz=session.get('user_timezone'))
+
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000, debug=True) 
+    app.run(host="0.0.0.0", port=5000, debug=True)
